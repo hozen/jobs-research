@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>决策模式库 — 乔布斯研究</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600&family=Charter:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #ffffff; --text: #1a1a1a; --meta: #888888; --rule: #e0e0e0; --max-w: 720px; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: var(--bg); color: var(--text); font-family: 'Noto Serif SC','Charter',serif; font-size: 17px; line-height: 1.7; max-width: var(--max-w); margin: 0 auto; padding: 0 24px 80px; }
+a { color: var(--text); text-decoration: underline; text-decoration-color: var(--rule); }
+a:hover { text-decoration-color: var(--text); }
+h1 { font-size: 22px; font-weight: 600; margin: 48px 0 8px; }
+h2 { font-size: 15px; font-weight: 600; color: var(--meta); text-transform: uppercase; letter-spacing: 1px; margin: 40px 0 16px; padding-top: 24px; border-top: 1px solid var(--rule); }
+ul { list-style: none; }
+li { margin: 8px 0; }
+li a { font-size: 16px; }
+.meta { font-size: 13px; color: var(--meta); margin-left: 8px; }
+.back { font-size: 14px; color: var(--meta); margin-bottom: 24px; }
+.pattern { margin: 24px 0; padding: 16px 0; border-bottom: 1px solid var(--rule); }
+.pattern-name { font-size: 17px; font-weight: 600; margin-bottom: 6px; }
+.pattern-desc { font-size: 15px; color: var(--meta); margin-bottom: 8px; }
+.pattern-cases { font-size: 14px; color: var(--meta); }
+footer { margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--rule); font-size: 13px; color: var(--meta); }
+footer a { color: var(--meta); }
+</style>
+</head>
+<body>
+<main>
+<p class="back">← <a href="index.html">乔布斯研究</a></p>
+<h1>决策模式库</h1>
+
+<p style="margin:12px 0 32px;color:var(--meta);font-size:15px;">
+跨案例归纳 · 提炼 Jobs 决策中的重复规律
+</p>
+
+<div class="pattern">
+  <div class="pattern-name">逆向整合（Vertical Integration）</div>
+  <div class="pattern-desc">在产业链关键节点亲自掌控，而非依赖外部供应商。</div>
+  <div class="pattern-cases">适用案例：Apple I（自制电路板）、NeXT（自制硬件+OS）、iPhone（App Store闭环）、Apple Store（自建零售）</div>
+</div>
+
+<div class="pattern">
+  <div class="pattern-name">扁平化权威（Flat Authority）</div>
+  <div class="pattern-desc">拒绝科层制，直接掌控关键决策，不经过中间层。</div>
+  <div class="pattern-cases">适用案例：Macintosh 部门自治、设计师直接汇报、审批跳过管理层</div>
+</div>
+
+<div class="pattern">
+  <div class="pattern-name">精品策略（One to N）</div>
+  <div class="pattern-desc">在一个周期内只推一款产品，集中全部资源，而非多产品线并行。</div>
+  <div class="pattern-cases">适用案例：iMac G3、-iPod 初代、iPhone 初代均只出一个型号</div>
+</div>
+
+<div class="pattern">
+  <div class="pattern-name">沉默否决（Silent Veto）</div>
+  <div class="pattern-desc">不明确反对，只以沉默或忽略表达否决；最终项目不了了之。</div>
+  <div class="pattern-cases">适用案例：Lisa 团队收到 Macintosh 项目合并否决（Jobs 要求），多个项目在无正式拒绝的情况下被废弃</div>
+</div>
+
+<div class="pattern">
+  <div class="pattern-name">竞争身份构建（Competitive Identity）</div>
+  <div class="pattern-desc">将竞争者定义为"敌人"或"不同物种"，而非可并存的对手。</div>
+  <div class="pattern-cases">适用案例：1985 年后视 Microsoft 为"敌人"、将 PC 定义为"次等物种"</div>
+</div>
+
+<div class="pattern">
+  <div class="pattern-name">现实扭曲立场（Reality Distortion Field）</div>
+  <div class="pattern-desc">通过极强的个人信念与表达，让团队相信看似不可能之事，从而实现它。</div>
+  <div class="pattern-cases">适用案例：Macintosh 团队在时间内交付（"你是在浪费自己的生命"）、iPod 9 个月从概念到产品</div>
+</div>
+
+<div class="pattern">
+  <div class="pattern-name">渠道控制（Channel Control）</div>
+  <div class="pattern-desc">通过控制分销渠道，确保产品不被淹没在货架竞争中。</div>
+  <div class="pattern-cases">适用案例：Apple Store（2001）打破传统经销商体系，直接控制顾客体验</div>
+</div>
+
+<div class="pattern">
+  <div class="pattern-name">平台锁定（Platform Lock-in）</div>
+  <div class="pattern-desc">通过专属配件、专有格式、生态绑定让用户难以迁移。</div>
+  <div class="pattern-cases">适用案例：iPod+iTunes 封闭生态、App Store 政策、MFi 配件认证</div>
+</div>
+
+<div class="pattern">
+  <div class="pattern-name">视觉语言垄断（Visual Monopoly）</div>
+  <div class="pattern-desc">将品牌视觉语言注册为商标，垄断核心识别元素。</div>
+  <div class="pattern-cases">适用案例：iPhone 圆角矩形、macOS Aqua 视觉效果、Helvetica 字体的 Apple 用法</div>
+</div>
+
+<div class="pattern">
+  <div class="pattern-name">时机延迟（Strategic Delay）</div>
+  <div class="pattern-desc">看到市场未成熟，主动推迟产品，等待正确的进入时间点。</div>
+  <div class="pattern-cases">适用案例：iPod 进入音乐播放器市场（2001）、iPhone 进入智能手机（2007）均晚于竞争对手</div>
+</div>
+
+</main>
+<footer>
+<a href="index.html">← 返回首页</a>
+</footer>
+</body>
+</html>
