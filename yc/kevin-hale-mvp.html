@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="YC创业笔记——Kevin Hale：如何打造MVP，以及为什么MVP不是最简可行产品，而是最快找到用户的产品。">
+<title>Kevin Hale：如何打造MVP — YC创业笔记</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto Serif+SC:wght@400;600&family=Charter:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #ffffff; --text: #1a1a1a; --meta: #888888; --rule: #e0e0e0; --max-w: 720px; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: var(--bg); color: var(--text); font-family: 'Noto Serif SC','Charter',serif; font-size: 17px; line-height: 1.8; max-width: var(--max-w); margin: 0 auto; padding: 0 24px 80px; }
+header { padding: 48px 0 32px; border-bottom: 1px solid var(--rule); margin-bottom: 48px; }
+header h1 { font-size: 26px; font-weight: 600; margin-bottom: 12px; }
+.byline { font-size: 14px; color: var(--meta); }
+h2 { font-size: 20px; font-weight: 600; margin: 40px 0 16px; border-top: 1px solid var(--rule); padding-top: 20px; }
+p { margin: 16px 0; }
+blockquote { border-left: 3px solid var(--rule); padding-left: 20px; margin: 24px 0; color: #555; font-style: italic; }
+.back { font-size: 14px; color: var(--meta); margin-bottom: 24px; }
+.back a { color: var(--meta); text-decoration: none; }
+.back a:hover { text-decoration: underline; }
+footer { margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--rule); font-size: 13px; color: var(--meta); }
+footer a { color: var(--meta); }
+.quote-box { background: #f9f9f9; border-radius: 8px; padding: 20px 24px; margin: 24px 0; }
+.quote-box p { margin: 0; font-size: 16px; }
+.quote-box .attribution { font-size: 13px; color: var(--meta); margin-top: 8px; }
+.tension { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 24px 0; }
+.tension-item { border: 1px solid var(--rule); border-radius: 8px; padding: 20px; }
+.tension-item h3 { font-size: 14px; font-weight: 600; margin-bottom: 8px; }
+.tension-item p { margin: 0; font-size: 14px; }
+@media (max-width: 600px) {
+  .tension { grid-template-columns: 1fr; }
+  body { font-size: 18px; padding: 0 20px 60px; max-width: 100%; }
+  header h1 { font-size: 24px; }
+  h2 { font-size: 18px; }
+}
+</style>
+</head>
+<body>
+<main>
+<p class="back">← <a href="index.html">乔布斯研究站</a> / <a href="index.html">YC创业笔记</a></p>
+
+<header>
+<h1>Kevin Hale：如何打造MVP</h1>
+<p class="byline">YC 合伙人 · YC Startup School · MVP 的正确理解</p>
+</header>
+
+<p>MVP 这个词现在已经是创业界的日常用语，但大多数人理解的 MVP 是错的。Kevin Hale 在 YC Startup School 的讲座中反复强调一个观点：<strong>MVP 不是"最简可行产品"（Minimal Viable Product），而是"最快找到用户的产品"（Minimum Valuable Product）。</strong>这个重新定义揭示了 MVP 的真正含义。</p>
+
+<h2>两种 MVP 的区别</h2>
+
+<p>最常见的误解是把 MVP 理解为"功能最少的产品"——既然是"最简"，那就把功能砍到最少，能跑起来就行。这个理解把 MVP 变成了"半成品"的借口。</p>
+
+<p>Kevin Hale 的定义强调的是"价值"（Valuable）而不是"可行"（Viable）——你的产品必须能够清晰传递核心价值，让用户在使用后能够明确感受到"这解决了我的问题"。</p>
+
+<div class="quote-box">
+  <p>"你的 MVP 必须能够讲清楚一件事：你能解决什么问题，以及为什么你的方案比不做方案更好。"</p>
+  <p class="attribution">— Kevin Hale, YC Startup School</p>
+</div>
+
+<p>这个标准比"功能最少"要严格得多。你可以只有一个功能，但如果这个功能不能让人感受到价值，它就不是 MVP，而是"功能残缺的产品"。</p>
+
+<h2>用户访谈的正确方式</h2>
+
+<p>Kevin Hale 在 YC 的另一个核心洞见是：MVP 阶段最重要的不是产品，而是用户访谈。他说，很多创业者把用户访谈误解为"收集反馈"，但真正的用户访谈是"验证假设"——你在访谈前必须有一个核心假设，然后通过访谈验证这个假设是否成立。</p>
+
+<blockquote>
+<p>"如果你在访谈中只是问用户'你想要什么功能'，你永远得不到真实答案。用户不是产品经理，他们无法告诉你下一个伟大的产品应该长什么样。"</p>
+</blockquote>
+
+<p>这个观点与乔布斯的方法论形成了微妙的张力。乔布斯说"不要问用户想要什么"——这是对的，因为用户确实不知道。但乔布斯指的是产品方向，而不是用户需求。对乔布斯来说，"用户需要一台更便宜的电脑"是一个伪问题，但"用户需要一种更自然的人机交互方式"是一个真实的需求。</p>
+
+<h2>乔布斯"不问用户"与 YC"持续用户访谈"之间的张力</h2>
+
+<div class="tension">
+  <div class="tension-item">
+    <h3>乔布斯的方法</h3>
+    <p>乔布斯不做用户调查，因为他相信用户不知道自己想要什么，直到你把产品放到他们面前。他追求的是"让产品自己说话"——产品出来后用户的反应是最真实的验证。</p>
+  </div>
+  <div class="tension-item">
+    <h3>YC 的方法</h3>
+    <p>YC 强调持续的用户访谈，通过对话发现用户自己都没有意识到的真实需求。MVP 阶段用最小成本快速验证这个需求是否真实存在。</p>
+  </div>
+</div>
+
+<p>这两种方法看似矛盾，但其实是在不同的创业阶段使用不同的工具：</p>
+
+<ul>
+  <li>乔布斯的方法更适合在已经有明确方向后的产品打造阶段</li>
+  <li>YC 的方法更适合在没有方向时的探索阶段</li>
+</ul>
+
+<h2>MVP 的哲学含义</h2>
+
+<p>Kevin Hale 在讲座中提到了一个有意思的观点：MVP 的本质是一种"认识论"——你怎么知道你做的事情是对的？传统的产品开发流程是先想清楚再做，而 MVP 的逻辑是"你不可能想清楚，所以先做"——通过快速试错来获得真实的认知。</p>
+
+<p>这与科学家用的"假设-验证"方法论是一致的。你有一个关于市场的假设（而不是一个关于用户的调研结论），你用 MVP 来验证这个假设。成功了就继续，失败了就快速调整方向。</p>
+
+<blockquote>
+<p>"一个好的创业想法，在 MVP 阶段就会显示增长信号。如果没有增长信号，要么是产品没有传递价值，要么是目标用户找错了。"</p>
+</blockquote>
+
+<h2>一个批判性视角</h2>
+
+<p>YC 的 MVP 方法论有一个盲区：它假设"增长"是判断产品是否成功的唯一标准。但有些产品的价值不是用增长来衡量的——例如，一些服务弱势群体的产品，在 MVP 阶段可能增长很慢，但已经创造了巨大的社会价值。</p>
+
+<p>乔布斯在 2007 年发布 iPhone 时，也不是从 MVP 开始的——第一代 iPhone 没有复制粘贴、没有第三方应用、续航很短。如果按照 YC 的框架，这个产品不可能通过内部的"MVP 测试"。但乔布斯知道，有些产品需要"一步到位"的体验，而不是"先发布再迭代"。</p>
+
+<p>这里的教训是：MVP 方法论是一种工具，不是教条。理解它的适用条件，比机械地执行它更重要。</p>
+
+<footer>
+<p>本页面是 YC 创业笔记 Day 6 内容，配合 YC Startup School 课程阅读效果更佳。</p>
+<p><a href="index.html">← YC创业笔记</a></p>
+</footer>
+</main>
+</body>
+</html>
