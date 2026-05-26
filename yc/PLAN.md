@@ -2,6 +2,15 @@
 
 ---
 
+## 当前状态（2026-05-26 更新）
+
+**执行状态：**
+- Day 1-7 内容已全部完成并推送
+- 视频嵌入待按计划更新（部分视频BVID待确认）
+- 每日一个主题的执行节奏尚未启动（Day 2 从2026-05-27开始）
+
+---
+
 ## 目标
 YC 板块 → jobs-research 同款品味分析风格，适合开车通勤消费的视频 + 笔记内容
 
@@ -9,15 +18,15 @@ YC 板块 → jobs-research 同款品味分析风格，适合开车通勤消费�
 
 ## 计划框架
 
-| 日期 | 主题 | 内容 |
-|------|------|------|
-| Day 1 | 方法论基础 | `how-to-start-a-startup.html` + `should-you-start.html` ✅已完成 |
-| Day 2 | Paul Graham 品味分析 | `paul-graham-style.html` + 视频嵌入 |
-| Day 3 | Sam Altman 风格分析 | `sam-altman-style.html` + 视频嵌入 |
-| Day 4 | Kevin Hale：如何评估创业想法 | YC 如何评估早期想法 |
-| Day 5 | Garry Tan：YC 文化 | 如何被全球最牛创业孵化器选中 |
-| Day 6 | Kevin Hale：如何打造MVP | YC Startup School |
-| Day 7 | OpenAI 连接 YC | Sam Altman + OpenAI 专题 |
+| 日期 | 主题 | 页面 | 视频BVID | 状态 |
+|------|------|------|---------|------|
+| Day 1 | 方法论基础 | `how-to-start-a-startup.html` + `should-you-start.html` | BV1cb421n7mP（Sam Altman YC课程） | ✅ 完成 |
+| Day 2 | Paul Graham 品味分析 | `paul-graham-style.html` | 待确认（PG本人视频稀缺） | ✅ 完成 |
+| Day 3 | Sam Altman 风格分析 | `sam-altman-style.html` | BV1cb421n7mP（同Day1课程） | ✅ 完成 |
+| Day 4 | Kevin Hale：如何评估创业想法 | `kevin-hale-idea-evaluation.html` | 待确认 | ✅ 完成 |
+| Day 5 | Garry Tan：YC 文化 | `garry-tan-culture.html` | BV1beduBjE8a（彭博社专访） | ✅ 完成 |
+| Day 6 | Kevin Hale：如何打造MVP | `kevin-hale-mvp.html` | BV1U8411z7FQ（Twitch创始人） | ✅ 完成 |
+| Day 7 | OpenAI 连接 YC | `openai-yc-connection.html` | BV1ca4y1Q7cs（Sam Altman DevDay） | ✅ 完成 |
 
 ---
 
@@ -27,9 +36,11 @@ YC 板块 → jobs-research 同款品味分析风格，适合开车通勤消费�
 
 **目标页面：** `paul-graham-style.html`
 
-**视频候选：**
-- BV1beduBjE8a：彭博社专访 Garry Tan（YC总裁）
-- 搜索 Paul Graham 本人演讲视频
+**视频状态：** 待确认
+
+Paul Graham 本人很少录制视频，YC 课程本身由 Sam Altman 主讲。Plan视频候选：
+- 搜索 Paul Graham Stanford interview 或 YC interview
+- 备用：使用 Paul Graham 官方博客文章配合文字分析
 
 **内容方向：**
 - PG 的散文风格：为什么他的文章比大多数"创业导师"更有穿透力？
@@ -43,8 +54,7 @@ YC 板块 → jobs-research 同款品味分析风格，适合开车通勤消费�
 
 **目标页面：** `sam-altman-style.html`
 
-**视频候选：**
-- 搜索 Sam Altman YC Startup School 或 D8 访谈
+**视频：** BV1cb421n7mP（Sam Altman YC创业学院2014）
 
 **内容方向：**
 - Altman 的决策风格：极度专注、极度坦诚
@@ -58,8 +68,7 @@ YC 板块 → jobs-research 同款品味分析风格，适合开车通勤消费�
 
 **目标页面：** `kevin-hale-idea-evaluation.html`
 
-**视频候选：**
-- YC Startup School 中 Kevin Hale 相关内容
+**视频状态：** 待确认（BVID待查找）
 
 **内容方向：**
 - YC 如何在3分钟内判断一个创业想法是否值得讨论
@@ -73,8 +82,7 @@ YC 板块 → jobs-research 同款品味分析风格，适合开车通勤消费�
 
 **目标页面：** `garry-tan-culture.html`
 
-**视频候选：**
-- BV1beduBjE8a：彭博社专访 YC 总裁 Garry Tan
+**视频：** BV1beduBjE8a（彭博社专访 Garry Tan，YC总裁）
 
 **内容方向：**
 - YC 的文化基因：偏执、专注、极端坦诚
@@ -88,8 +96,7 @@ YC 板块 → jobs-research 同款品味分析风格，适合开车通勤消费�
 
 **目标页面：** `kevin-hale-mvp.html`
 
-**视频候选：**
-- BV1U8411z7FQ：Twitch创始人讲MVP（YC Startup School）
+**视频：** BV1U8411z7FQ（Twitch创始人：如何构建MVP，YC Startup School）
 
 **内容方向：**
 - MVP 不是"最简可行产品"，而是"最快找到用户的产品"
@@ -103,8 +110,7 @@ YC 板块 → jobs-research 同款品味分析风格，适合开车通勤消费�
 
 **目标页面：** `openai-yc-connection.html`
 
-**视频候选：**
-- 搜索 Sam Altman + OpenAI 相关视频
+**视频：** BV1ca4y1Q7cs（OpenAI DevDay 主题演讲 by Sam Altman【中英完整版】）
 
 **内容方向：**
 - OpenAI 为什么先在 YC 孵化？
@@ -117,11 +123,13 @@ YC 板块 → jobs-research 同款品味分析风格，适合开车通勤消费�
 
 ## 执行节奏
 
-每12小时心跳醒来：
+**每12小时心跳醒来：**
 1. 扫描队列（5分钟）
 2. 执行当日 YC 内容任务（约10小时）
 3. 推送 GitHub（约30分钟）
 4. 记录到 HEARTBEAT.md
+
+**第一天执行：** 2026-05-27 早上
 
 ---
 
@@ -129,3 +137,10 @@ YC 板块 → jobs-research 同款品味分析风格，适合开车通勤消费�
 - 每个页面都有 Bilibili 视频嵌入（中英字幕优先）
 - 批判性视角，不只是复述，和乔布斯研究站风格一致
 - 内容适合开车时的听觉消费（语速适中、逻辑清晰）
+
+---
+
+## 待完成
+
+- [ ] 确认 Day 2 Paul Graham 视频（BVID）
+- [ ] 确认 Day 4 Kevin Hale 评估创业想法视频（BVID）
