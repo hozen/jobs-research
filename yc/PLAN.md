@@ -6,7 +6,7 @@
 
 **执行状态：**
 - Day 1-7 内容已全部完成并推送
-- 视频嵌入待按计划更新（部分视频BVID待确认）
+- 视频嵌入全部完成（所有BVID已确认）
 - 每日一个主题的执行节奏尚未启动（Day 2 从2026-05-27开始）
 
 ---
@@ -21,9 +21,9 @@ YC 板块 → jobs-research 同款品味分析风格，适合开车通勤消费�
 | 日期 | 主题 | 页面 | 视频BVID | 状态 |
 |------|------|------|---------|------|
 | Day 1 | 方法论基础 | `how-to-start-a-startup.html` + `should-you-start.html` | BV1cb421n7mP（Sam Altman YC课程） | ✅ 完成 |
-| Day 2 | Paul Graham 品味分析 | `paul-graham-style.html` | 待确认（PG本人视频稀缺） | ✅ 完成 |
+| Day 2 | Paul Graham 品味分析 | `paul-graham-style.html` | BV1GHm9BRE8M（PG YC课程专属） | ✅ 完成 |
 | Day 3 | Sam Altman 风格分析 | `sam-altman-style.html` | BV1cb421n7mP（同Day1课程） | ✅ 完成 |
-| Day 4 | Kevin Hale：如何评估创业想法 | `kevin-hale-idea-evaluation.html` | 待确认 | ✅ 完成 |
+| Day 4 | Kevin Hale：如何评估创业想法 | `kevin-hale-idea-evaluation.html` | BV15J411z7s8（Kevin Hale YC2019专属） | ✅ 完成 |
 | Day 5 | Garry Tan：YC 文化 | `garry-tan-culture.html` | BV1beduBjE8a（彭博社专访） | ✅ 完成 |
 | Day 6 | Kevin Hale：如何打造MVP | `kevin-hale-mvp.html` | BV1U8411z7FQ（Twitch创始人） | ✅ 完成 |
 | Day 7 | OpenAI 连接 YC | `openai-yc-connection.html` | BV1ca4y1Q7cs（Sam Altman DevDay） | ✅ 完成 |
@@ -68,7 +68,7 @@ Paul Graham 本人很少录制视频，YC 课程本身由 Sam Altman 主讲。Pl
 
 **目标页面：** `kevin-hale-idea-evaluation.html`
 
-**视频状态：** 待确认（BVID待查找）
+**视频状态：** BV15J411z7s8 ✅
 
 **内容方向：**
 - YC 如何在3分钟内判断一个创业想法是否值得讨论
@@ -142,5 +142,5 @@ Paul Graham 本人很少录制视频，YC 课程本身由 Sam Altman 主讲。Pl
 
 ## 待完成
 
-- [ ] 确认 Day 2 Paul Graham 视频（BVID）
-- [ ] 确认 Day 4 Kevin Hale 评估创业想法视频（BVID）
+- [x] 确认 Day 2 Paul Graham 视频 → BV1GHm9BRE8M ✅
+- [x] 确认 Day 4 Kevin Hale 评估创业想法视频 → BV15J411z7s8 ✅
