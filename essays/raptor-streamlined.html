@@ -30,6 +30,10 @@ blockquote { border-left: 3px solid var(--rule); padding: 4px 0 4px 20px; margin
 .hero { background: #f9f9f9; border-radius: 8px; padding: 24px; margin: 0 0 32px; }
 .hero h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; }
 .hero p { font-size: 15px; color: #555; line-height: 1.7; margin: 8px 0; }
+.figure { margin: 32px 0; }
+.figure img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 4px; }
+.figure .cap { font-size: 13px; color: var(--meta); margin-top: 8px; line-height: 1.5; padding-left: 12px; border-left: 2px solid var(--rule); }
+.figure.tweet img { max-width: 600px; margin: 0 auto; border-radius: 8px; }
 .footer { margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--rule); font-size: 13px; color: var(--meta); }
 .footer a { color: var(--meta); }
 
@@ -70,9 +74,19 @@ blockquote { border-left: 3px solid var(--rule); padding: 4px 0 4px 20px; margin
 
 <p>如果你是 SpaceX 关注者,大概率见过那张三台 Raptor 引擎并排的著名图片。Raptor 是 SpaceX 星舰 (Starship) 使用的发动机——猎鹰 9 号 (Falcon 9) 和猎鹰重型 (Falcon Heavy) 用的是 Merlin 引擎。它在 2016 年首次试车,2019 年装在 Starhopper 上首飞,2020 年装在 Starship 原型机上首飞,2023 年装在完整 Starship 堆栈上首飞。从那以后,它一直在进化——从 Raptor 1 那团纠缠的管线和导线,变成了今年 5 月首飞的 Raptor 3 的流畅、极简造型。</p>
 
+<figure class="figure">
+  <img src="img/raptor/01_three_raptor_comparison.jpg" alt="Raptor 1, 2, 3 三代引擎对比" loading="lazy">
+  <div class="cap">三台 Raptor 引擎并排:Raptor 1 (左) → Raptor 2 (中) → Raptor 3 (右)。Raptor 3 完全省掉了外露管路、传感器、热盾;推力反增 35%。</div>
+</figure>
+
 <em class="en-source">"If you're reading this, there's a very good chance you've seen this famous image of three iterations of SpaceX's Raptor rocket engine. ... Since then, it's continued to improve, going from the tangle of pipes and wires you can see on the Raptor 1 to the smooth, streamlined design of the Raptor 3, which first flew in May of this year."</em>
 
 <p>这种变化太剧烈,以至于很多人一开始根本不信是真的——ULA (United Launch Alliance) 时任 CEO Tory Bruno 发推说「没必要为了展示一台部分组装的引擎而做夸大」,随后 SpaceX 总裁 Gwynne Shotwell 转推了一张 Raptor 3 成功点火的照片作为回应。</p>
+
+<figure class="figure tweet">
+  <img src="img/raptor/02_raptor3_firing.jpg" alt="Raptor 3 点火试车,Gwynne Shotwell 推文截图" loading="lazy">
+  <div class="cap">Raptor 3 试车点火。Gwynne Shotwell 在 Tory Bruno 质疑后发布了这张图作为回应——「对一台『部分组装』的引擎来说,效果还不错。」</div>
+</figure>
 
 <em class="en-source">"The evolution is so dramatic that many folks initially believed that it wasn't real; Tory Bruno, the then-CEO of space launch company United Launch Alliance, tweeted that there was 'no need to exaggerate this by showing a partially assembled engine,' which was followed by SpaceX president Gwynne Shotwell tweeting a picture of the Raptor 3 firing successfully."</em>
 
@@ -104,6 +118,16 @@ blockquote { border-left: 3px solid var(--rule); padding: 4px 0 4px 20px; margin
 
 <p>冷气推进器简单可靠,但推力有上限。要更大推力,最直接的办法是用两种推进剂:一种燃料 (比如煤油) 加一种氧化剂 (比如液氧),在燃烧室里一起燃烧,产生高温气体从火箭喷管后端喷出。这样不只是利用推进剂里的压力能,还把化学键里储存的能量也转化成推力。用推进剂储罐的压力把燃料和氧化剂压进燃烧室的发动机叫「压力馈送发动机 (pressure-fed engine)」。阿波罗登月舱上升段用的就是这种——它用四氧化二氮 (N₂O₄) 做氧化剂、用一种叫 Aerozine 50 的燃料,两者都靠压力压送。</p>
 
+<figure class="figure">
+  <img src="img/raptor/03_cold_gas_thruster.jpg" alt="冷气推进器原理图" loading="lazy">
+  <div class="cap">冷气推进器原理图——最简单的火箭发动机形态(加压气体从喷管喷出)。</div>
+</figure>
+
+<figure class="figure">
+  <img src="img/raptor/04_manned_maneuvering_unit.jpg" alt="NASA 载人机动单元(MMU)" loading="lazy">
+  <div class="cap">NASA 的载人机动单元 (MMU)——使用冷气推进器做航天器姿态调整。</div>
+</figure>
+
 <em class="en-source">"An engine that uses the pressure of the propellant tanks to force fuel and oxidizer into the combustion chamber is called a pressure-fed engine. The engine used for the ascent stage of the Apollo Lunar Module was this type of engine: it used nitrogen tetroxide (N2O4) as an oxidizer and a fuel called Aerozine 50, both pressurized."</em>
 
 <p>但这就引出一个问题:为了让燃烧室里的高温燃气不会倒流进燃料和氧化剂管路 (让燃烧室「饿死」),燃烧室压力必须比推进剂储罐和管路里的压力低。但对一台紧凑、强力的火箭发动机来说,我们又想要燃烧室压力非常高。你可以靠提高储罐压力解决,但很快就不现实了——压力越高,储罐和管路就要越厚越重,才能保证不爆。更聪明的办法:把推进剂低压储存,用一台泵把压力加上去再送进燃烧室。这是现代大推力火箭发动机的标准做法——几乎所有入轨火箭发动机都用某种泵来给燃料和氧化剂加压。</p>
@@ -111,6 +135,11 @@ blockquote { border-left: 3px solid var(--rule); padding: 4px 0 4px 20px; margin
 <em class="en-source">"A better solution is to store the propellants at low pressure, and then feed them through a pump that increases their pressure before they reach the combustion chamber. This is the standard way to build a powerful rocket engine, and virtually every engine used for putting a rocket into orbit uses a pump of some kind to pressurize the fuel and oxidizer."</em>
 
 <p>新问题来了:由于要处理的流量大、要加的压力高,这些泵需要巨大的功率来运转。比如土星五号火箭 F-1 发动机的涡轮泵,大约需要 41 兆瓦的功率——略低于 S8G 核反应堆给俄亥俄级潜艇螺旋桨轴输出的功率。</p>
+
+<figure class="figure">
+  <img src="img/raptor/06_f1_saturn_v.jpg" alt="土星五号火箭的 F-1 发动机" loading="lazy">
+  <div class="cap">土星五号火箭的 F-1 发动机——右上角可见燃料和氧化剂的涡轮泵,正是驱动泵所需的 41 MW 庞然大物。</div>
+</figure>
 
 <em class="en-source">"The turbopump on the F-1 engine used on the Saturn V, for instance, required around 41 megawatts of power, slightly less than the power the S8G nuclear reactor delivers to the propeller shaft of an Ohio-class submarine."</em>
 
@@ -127,6 +156,11 @@ blockquote { border-left: 3px solid var(--rule); padding: 4px 0 4px 20px; margin
 <em class="en-source">"Another option is to burn some of the fuel and oxidizer to drive the pump, but then route the burned propellant through the main combustion chamber along with the unburned fuel/oxidizer. This is known as 'staged combustion,' and the smaller combustion chamber used to drive the pumps is called the 'preburner.' This is a more complex arrangement than a gas generator cycle, but it's also more efficient, since the hot exhaust that drives the turbopump isn't just wastefully vented."</em>
 
 <p>对大多数分级燃烧发动机,只有一部分推进剂走预燃室——剩下的绕过去直接进主燃烧室。但 SpaceX 的 Raptor 用的是分级燃烧里更激进的一种:「全流量 (full-flow)」。全流量发动机有两台预燃室,一台驱动燃料泵,一台驱动氧气泵。所有推进剂都流过预燃室:在第一台里,少量氧化剂在大量燃料中燃烧 (大部分燃料没烧完);在第二台里,少量燃料在大量氧气中燃烧 (大部分氧气没烧完)。富燃料和富氧气的两股气流一起进主燃烧室,在那里完全燃烧。</p>
+
+<figure class="figure">
+  <img src="img/raptor/07_full_flow_schematic_wiki.jpg" alt="全流量分级燃烧原理图" loading="lazy">
+  <div class="cap">全流量分级燃烧原理图(来源:Wikipedia)——注意两台预燃室(顶部黄色与底部黄色),一股富燃料、一股富氧气都送进主燃烧室。</div>
+</figure>
 
 <em class="en-source">"But SpaceX's Raptor uses a particular type of staged combustion known as 'full flow.' In a full-flow engine there are two preburners, one that drives the fuel pump and one that drives the oxygen pump. All the propellant gets routed through the preburners: in one of them, a small amount of oxidizer is burned in the presence of a large amount of fuel (leaving most of the fuel unburned), while in the other a small amount of fuel is burned in the presence of a large amount of oxidizer (leaving most of the oxidizer unburned). The fuel-rich and oxidizer-rich exhaust streams then both enter the main combustion chamber, where they're burned together."</em>
 
@@ -148,9 +182,19 @@ blockquote { border-left: 3px solid var(--rule); padding: 4px 0 4px 20px; margin
 
 <p>先看 Raptor 1 的一些原理图。下方这张由俄罗斯推进工程师 Elisei Maslov 在 2019 年绘制。</p>
 
+<figure class="figure">
+  <img src="img/raptor/05_maslov_raptor1_schematic.jpg" alt="Raptor 1 原理图,Elisei Maslov 2019 年制" loading="lazy">
+  <div class="cap">Raptor 1 原理图,Elisei Maslov 2019 年制。能看到顶部氧气预燃室总成、侧面燃料预燃室总成、再生冷却管路。</div>
+</figure>
+
 <em class="en-source">"To start, let's look at some schematics of version 1 of the Raptor. The image below was created by Elisei Maslov, a Russian propulsion engineer, in 2019."</em>
 
 <p>另一张有用的 Raptor 1 原理图是 NASASpaceFlight 论坛用户「hisdirt」2019 年 12 月做的。这张特别有用,因为它在 Raptor 引擎的 3D 模型上 (在 Revit 里建出来的,真想不到) 标注了各种引擎部件。</p>
+
+<figure class="figure">
+  <img src="img/raptor/08_raptor3_fan_schematic.jpg" alt="Raptor 引擎综合原理图,含 R1/R2/R3 参数对比" loading="lazy">
+  <div class="cap">Raptor 3 综合原理图(推特用户 TheSpaceEngineer 制,2025 年 1 月)。图右下角列出 R1/R2/R3 核心参数:推力、比冲、室压、推重比都在全面提升。</div>
+</figure>
 
 <em class="en-source">"Another useful Raptor version 1 schematic is the one below, created by NASASpaceFlight forum member 'hisdirt' in December 2019. This is particularly useful because it calls out the various engine components on an actual 3D model of the engine (modeled in Revit, of all things)."</em>
 
@@ -160,9 +204,19 @@ blockquote { border-left: 3px solid var(--rule); padding: 4px 0 4px 20px; margin
 
 <p>下一张是 NASASpaceFlight 用户「Livingjw」和「HVM」2022 年 2 月做的 (来自 Wikipedia),展示 Raptor 2。这张不如 Maslov 的详细——基本只显示了氧气和甲烷的流向——但布局一样:顶部氧气泵总成,侧面燃料泵总成。</p>
 
+<figure class="figure">
+  <img src="img/raptor/11_raptor2_schematic.jpg" alt="Raptor 2 原理图,NASASpaceFlight 用户制" loading="lazy">
+  <div class="cap">Raptor 2 原理图(NASASpaceFlight 用户 Livingjw / HVM 制,2022 年 2 月)。</div>
+</figure>
+
 <em class="en-source">"The next schematic, made by NASASpaceFlight users 'Livingjw' and 'HVM' in February of 2022, is from Wikipedia, and it shows version 2 of the Raptor. This is less detailed than Maslov's schematic — it basically just shows the flow of oxygen and methane — but it shows the same basic arrangement: oxygen pump assembly on the top, fuel pump assembly on the side."</em>
 
 <p>而这张是推特用户「TheSpaceEngineer」2025 年 1 月发的,展示 Raptor 3。</p>
+
+<figure class="figure">
+  <img src="img/raptor/09_raptor1_vs_raptor3_schematic.jpg" alt="Raptor 1 与 Raptor 3 原理图并排比较" loading="lazy">
+  <div class="cap">Raptor 1 与 Raptor 3 原理图并排比较。注意:管路合并成「公共脐带」,氦气管路消失,热交换器取消,去预燃室的一条燃料管路也没了。</div>
+</figure>
 
 <em class="en-source">"And this schematic, posted by Twitter user 'TheSpaceEngineer' in January 2025, shows version 3 of the Raptor."</em>
 
@@ -188,6 +242,11 @@ blockquote { border-left: 3px solid var(--rule); padding: 4px 0 4px 20px; margin
 
 <p>更可靠的改动来源,当然是 Elon Musk 和 SpaceX 的发言。2022 年 NASASpaceFlight 关于 Starship 进度的报道指出,Raptor 2 重新设计了「从涡轮机械到燃烧室喷管到电子设备」的一切,涡轮泵缩小了,预燃室控制器「被移到箱子里,而不是遍布引擎」。Everyday Astronaut 关于同一次更新的报道也提到「很多阀门被合并成阀板 (valve plates)」。在最近 (9 月 5 日) 回复前 Reddit CEO Yishan Wong 的推特时,Musk 列出了 Raptor 历次改动的一份短清单:</p>
 
+<figure class="figure tweet">
+  <img src="img/raptor/15_musk_sept5_tweet.jpg" alt="Elon Musk 2026 年 9 月 5 日推文,列出 Raptor 历次改动" loading="lazy">
+  <div class="cap">Elon Musk 2026 年 9 月 5 日的推文,列出 Raptor 历次改动:次级推进剂/吹除管路、电源/传感线、传感器、电子箱、主燃烧室火花塞都被逐步拿掉。推文获 64.9 万浏览、1.5 万赞。</div>
+</figure>
+
 <em class="en-source">"A 2022 NASASpaceFlight article about SpaceX's update on the Starship progress noted that 'everything from turbomachinery to chamber nozzle to electronics' was redesigned on Raptor 2, the turbopump had shrunk, and the preburner controllers 'had been moved to boxes rather than being all over the engine.' An Everyday Astronaut article about the same update also notes that 'many valves were combined into valve plates.' In a recent response to a September 5 tweet by Yishan Wong, the former CEO of Reddit, Musk ran down a short list of changes in the Raptor over time."</em>
 
 <h3>4.1 传感器:开发机的必备项,量产机的累赘</h3>
@@ -206,15 +265,35 @@ blockquote { border-left: 3px solid var(--rule); padding: 4px 0 4px 20px; margin
 
 <p>Musk 还提到,很多螺栓法兰连接被改成了焊接连接,减重、减少可能漏的接头,代价是可维护性变差。这个过程似乎仍在进行——早期 Raptor 3 照片显示引擎主体上有一个大的螺栓法兰,后来照片里它已经被取消:</p>
 
+<figure class="figure">
+  <img src="img/raptor/16_raptor1_vs_raptor3.jpg" alt="Raptor 1 与 Raptor 3 直接对比" loading="lazy">
+  <div class="cap">Raptor 1 与 Raptor 3 的直接对比:右边那台几乎看不到任何外露连接件。</div>
+</figure>
+
 <em class="en-source">"Musk also notes that a lot of bolted flange connections were replaced by welded connections, reducing mass and joints that can leak at the expense of serviceability. This appears to be still taking place, as early Raptor 3 photos show a large bolted flange on the main body of the engine that in later photos has been eliminated."</em>
 
 <h3>4.4 3D 打印:把复杂性藏进引擎内部</h3>
 
 <p>Raptor 3 上一个更大的改动是,很多管路其实没被取消,而是被移到引擎内部——通过 3D 打印很多部件实现 (Musk 之前提过 SpaceX「拥有世界上最先进的 3D 金属打印技术」,2024 年公司还授权了 Velo3D 的 3D 金属打印技术)。事实上,Raptor 3 的特写照片里就能看到 3D 打印的层纹:</p>
 
+<figure class="figure">
+  <img src="img/raptor/17_3d_printing_closeup.jpg" alt="Raptor 3 特写,可见 3D 打印层纹" loading="lazy">
+  <div class="cap">Raptor 3 特写——可见 3D 打印的层纹(摄影:Ying Zhang,经 catdlr 转载于 NASASpaceFlight 论坛)。</div>
+</figure>
+
 <em class="en-source">"Another substantial change on Raptor 3 is that much of the piping hasn't been eliminated, but moved internally, by way of 3D printing many of the components (Musk has previously noted that SpaceX 'has the most advanced 3D metal printing technology in the world,' and in 2024 the company licensed the 3D metal printing technology of Velo3D). Close-up photos of the Raptor 3, in fact, appear to show 3D printing lines."</em>
 
 <blockquote>把管路内部化的目的是取消更多部件——特别是热盾和灭火系统。Raptor 1 和 2 上那堆大质量的导线和管路,需要一个又大又重的热盾,把它们从火箭尾焰的高温里保护起来。把各种推进剂管路内部化、再加上内部冷却系统,这个热盾和灭火系统就可以取消。事实上,Raptor 1 → 3 最大质量减重,来自「飞行器侧」引擎硬件的取消——这几乎可以肯定主要是热盾。</blockquote>
+
+<figure class="figure">
+  <img src="img/raptor/19_raptor_with_heat_shield.jpg" alt="Raptor 1 / 2 上的大质量热盾" loading="lazy">
+  <div class="cap">Raptor 1 / 2 装在火箭上的样子,可见包覆引擎的大质量热盾(来源:Elon Musk 推特)。</div>
+</figure>
+
+<figure class="figure tweet">
+  <img src="img/raptor/20_musk_raptor3_tweet.jpg" alt="Elon Musk 关于 Raptor 3 的推文" loading="lazy">
+  <div class="cap">Elon Musk 关于 Raptor 3 的推文:取消热盾与灭火系统,推力/重量/效率全面提升。</div>
+</figure>
 
 <em class="en-source">"The purpose of this internalization is the removal of more parts, in particular the heat shield and fire suppression systems. The huge mass of wire and pipes on version 1 and version 2 of the Raptor required a large, heavy heat shield to protect it from the heat of the rocket exhaust. Internalizing the various propellant lines and adding internal cooling systems allows this heat shield and fire protection system to be eliminated. In fact, the biggest mass change from version 1 to version 3 of the Raptor comes from mass removal of 'vehicle side' engine hardware, which is almost certainly largely the heat shield."</em>
 
