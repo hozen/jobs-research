@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="深度翻译 Aswath Damodaran《Stock Prices, Earnings and Cashflows: The AI Effect plays through!》(2026-10-08):从 10 年期美债收益率 5.29%、股票 ERP 3.70% 入手,拆解 AI 资本开支狂潮如何体现在 2026 Q2 财报里($133B 增 capex、$1.8T 增 book equity),以及四种投资者选择。">
+<title>AI 浪潮的财报真相——Damodaran 拆解 2026 美股 · 中英对照 — 乔布斯研究</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600&family=Charter:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #ffffff; --text: #1a1a1a; --meta: #888888; --rule: #e0e0e0; --max-w: 720px; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: var(--bg); color: var(--text); font-family: 'Noto Serif SC','Charter',serif; font-size: 17px; line-height: 1.7; max-width: var(--max-w); margin: 0 auto; padding: 0 24px 80px; }
+a { color: var(--text); text-decoration: underline; text-decoration-color: var(--rule); }
+a:hover { text-decoration-color: var(--text); }
+h1 { font-size: 22px; font-weight: 600; margin: 48px 0 8px; letter-spacing: -0.3px; }
+h2 { font-size: 15px; font-weight: 600; color: var(--meta); text-transform: uppercase; letter-spacing: 1px; margin: 40px 0 16px; padding-top: 24px; border-top: 1px solid var(--rule); }
+h2 .en { display: block; font-size: 14px; color: var(--meta); text-transform: none; letter-spacing: 0; font-weight: 400; font-style: italic; margin-top: 4px; }
+h3 { font-size: 17px; font-weight: 600; margin: 32px 0 12px; }
+.back { font-size: 14px; color: var(--meta); margin-bottom: 24px; }
+.meta { font-size: 13px; color: var(--meta); margin-left: 8px; }
+p { margin: 16px 0; }
+strong { font-weight: 600; }
+em.en-source { display: block; font-family: 'Charter', serif; font-size: 14px; font-style: italic; color: var(--meta); margin: 8px 0 24px; padding-left: 12px; border-left: 2px solid var(--rule); }
+blockquote { border-left: 3px solid var(--rule); padding: 4px 0 4px 20px; margin: 24px 0; color: #555; font-style: italic; }
+.source { font-size: 13px; color: var(--meta); margin-top: 12px; }
+.byline { font-size: 14px; color: var(--meta); margin: 8px 0 32px; }
+.tag-row { margin: 16px 0 32px; }
+.tag { display: inline-block; font-size: 12px; padding: 2px 10px; background: var(--rule); border-radius: 12px; color: var(--meta); margin-right: 6px; }
+.hero { background: #f9f9f9; border-radius: 8px; padding: 24px; margin: 0 0 32px; }
+.hero h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; }
+.hero p { font-size: 15px; color: #555; line-height: 1.7; margin: 8px 0; }
+.footer { margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--rule); font-size: 13px; color: var(--meta); }
+.footer a { color: var(--meta); }
+table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+th, td { padding: 6px 10px; border: 1px solid var(--rule); text-align: left; }
+th { background: #f5f5f5; font-weight: 600; }
+.figure { margin: 32px 0; }
+.figure img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 4px; }
+.figure .cap { font-size: 13px; color: var(--meta); margin-top: 8px; line-height: 1.5; padding-left: 12px; border-left: 2px solid var(--rule); }
+@media (max-width: 600px) {
+  body { font-size: 16px; padding: 0 18px 60px; max-width: 100%; }
+  h1 { font-size: 20px; }
+  h2 { font-size: 14px; }
+  table { font-size: 12px; }
+  th, td { padding: 4px 6px; }
+}
+</style>
+</head>
+<body>
+
+<p class="back">← <a href="../index.html">乔布斯研究</a> · <a href="index.html">站主随笔</a></p>
+
+<h1>AI 浪潮的财报真相——Damodaran 拆解 2026 美股的股价、盈利与现金流</h1>
+<p class="byline">
+  Stock Prices, Earnings and Cashflows: The AI Effect plays through! · 全文中英对照翻译<br>
+  原文：<a href="https://aswathdamodaran.blogspot.com/2026/10/stock-prices-earnings-and-cashflows-ai.html">Aswath Damodaran · Musings on Markets</a> · 2026-10-08<br>
+  译者：站主（Mr. Buffett 委托）· 2026-10-17
+</p>
+
+<p class="tag-row">
+  <span class="tag">Damodaran</span>
+  <span class="tag">AI 资本开支</span>
+  <span class="tag">ERP</span>
+  <span class="tag">美股财报</span>
+  <span class="tag">纳斯达克</span>
+  <span class="tag">价值投资</span>
+</p>
+
+<div class="hero">
+<h3>核心论点</h3>
+<p>2026 年 9 月,10 年期美债收益率单月上涨 54 个基点(在 1962 年以来 770 个月度变化中位列前 10%),而美股不为所动——9 月全市场新增市值 2.5 万亿美元,其中 1.5 万亿来自科技股。这背后的会计真相是:<strong>AI 资本开支的钱从 hyperscaler(Meta/Alphabet/Amazon/Microsoft)流向 Nvidia/TSMC/Broadcom/Constellation/Equinix 等供应商,在加总报表上变成了"惊人的盈利增长"</strong>。</p>
+<p>但这种增长是脆弱的:Q2 2026 美国企业盈利同比涨 57%(从 5760 亿到 9040 亿),同期 capex 涨 36%(1330 亿),book equity 涨 13%(1.8 万亿),book debt 涨 8%(1.9 万亿)。S&P 500 把盈利回馈投资者的比例从过去 20 年的 80%+ 跌到 63%——也就是说,<strong>赚的钱大量被锁进 AI 数据中心,而不是回到股东口袋</strong>。Damodaran 给投资者四个选择:all in / 跟市场 / 怀疑 / 做空,并说自己选第二个,但加仓的全是现金。</p>
+</div>
+
+<h2>一、股价与利率:9 月的"反常"抗跌<span class="en">Stock Prices and Rates</span></h2>
+
+<p>在我 2026 年 8 月底的帖子里,我讨论过 2026 年的利率走势,惊叹于股票在利率上行的背景下持续上涨。我把这种韧性归因于 2026 年企业实际盈利高于预期,同时 2027-2028 年的预期盈利也在上调。现在 9 月的数据已经出来,值得重新审视——尤其因为 9 月经历了记忆中最猛烈的国债收益率上涨之一,而股价依然稳住了。具体来说,我想看看美国企业总体及分板块的盈利,试图追溯盈利增长的来源,以及这些增长的盈利在企业资产负债表和现金流上是怎么体现的。</p>
+
+<em class="en-source">"In a post at the end of August 2026, I talked about interest rates in 2026 and marveled at the capacity of equities to keep rising in the face of rising rates. I argued that the resilience of stocks during the year could be traced to higher-than-expected earnings being reported by companies in 2026, and a concurrent increase in expected earnings in 2027 and 2028."</em>
+
+<p>在我那篇利率帖子里,我按日追踪了 8 月底之前的国债收益率;先把图表更新到动荡的 9 月:</p>
+
+<p>10 年期美债收益率从月初 4.75% 涨到月底 5.29%——54 个基点的单月涨幅,在 1962-2026 年间 770 个月度变化中能排进前 10%。在利率飙升之下,9 月美股总体撑住了:</p>
+
+<em class="en-source">"I had described the rise in rates between January and August as gradual, but the rise in rates in September was anything but, as the ten-year rate rose from 4.75% at the start of the month to 5.29% at the end. In fact, to put the 54 basis point rise in the ten-year rate in context... the September rise in rates would put in the top ten percent of 770 monthly rate changes."</em>
+
+<p>9 月全美股市值增加 2.5 万亿美元,其中约 1.5 万亿来自科技板块。分季度看全年市场表现:技术、能源、原材料三大板块贡献最大;全市场约 50% 的公司年内上涨,但 Q3 约 65% 的股票价格下跌——<strong>指数被头部少数公司拉抬,绝大多数公司其实在跌</strong>。</p>
+
+<em class="en-source">"The market added $2.5 trillion in market capitalization across all stocks in September 2026, but almost $1.5 trillion of that came from technology... three sectors - technology, energy and materials have carried the market, with technology being the biggest contributor to market gains. The second is that the percent of companies within each sector that are up for the year is about 50% across the market, and in the third quarter, about 65% of all listed stocks saw dropping stock prices."</em>
+
+<p>面对混乱的因子(增长、利率、现金回馈),我做了 18 年来每月都做的估算:用当前股价、预期盈利和现金流增长率,反推出股市的隐含 ERP(equity risk premium,股票风险溢价)。10 月初的结果:</p>
+
+<table>
+<thead><tr><th>指标</th><th>数值(2026-10-01)</th></tr></thead>
+<tbody>
+<tr><td>10 年期美债收益率(无风险利率)</td><td>5.29%(上月 5.07%)</td></tr>
+<tr><td>股票预期回报</td><td>8.99%(年初 8.41%)</td></tr>
+<tr><td>股票风险溢价(ERP)</td><td>3.70%(上月 3.92%)</td></tr>
+</tbody>
+</table>
+
+<p>ERP 跌破 4% 是今年首次——但**和年初相比,股票预期回报也涨了**(因为利率涨了)。市场对股票的"风险厌恶定价"反而压缩了一点。</p>
+
+<em class="en-source">"That calculation, which I have done at the start of each month since September 2008, yields an expected return of 8.99% for equities and an equity risk premium of 3.70% (3.92%) over the ten-year treasury rate (dollar riskfree rate) of 5.29% (5.07%) at the start of October 2026... even as the ten-year treasury rate has climbed this year from 4.18% to 5.29%, the expected return on stocks has also gone up from 8.41% at the start of 2026 to 8.99% on September 30, 2026."</em>
+
+<h2>二、AI 资本开支狂潮:会计与公司金融的后果<span class="en">The AI Cap Ex Boom</span></h2>
+
+<p>关注股价和利率容易让人忘记驱动价值的根本:企业的投资、融资、现金回馈政策。当下,AI 是这一切的核心,也是市场对利率上行的"抗药性"的来源。先看几万亿 AI capex 怎么在财报里体现:</p>
+
+<em class="en-source">"The focus on stock prices and interest rates can sometimes distract us from paying attention to corporate investing, financing and cash return policies that drive value. It should not surprise you, given the times we live in, that AI is at the heart of the business story that is driving corporate behavior."</em>
+
+<p>AI 故事之所以复杂,是因为它涉及两类公司:</p>
+
+<ul style="margin: 16px 0; padding-left: 24px;">
+<li><strong>建设者 (builders)</strong>:hyperscaler(Meta、Alphabet、Amazon、Microsoft)。他们花的 capex 在折旧摊销和自由现金流上是负担,要等回本。</li>
+<li><strong>供应商 (suppliers)</strong>:芯片(Nvidia、TSMC)、网络设备(Broadcom、Micron、Marvell)、电力(Constellation Energy)、数据中心地产(Equinix、Digital Realty)。他们的报表上看到的是营收和净利润。</li>
+</ul>
+
+<p>两类公司在加总时抵消——但只要 AI capex 继续加码,供应商的报表会持续好看。Amazon 这种"既是建设者又是供应商"的存在让分项更复杂。</p>
+
+<em class="en-source">"The builders of the architecture are the hyperscalers (Meta, Alphabet, Amazon, Microsoft et al.), and the money they spend on cap ex will cause lower earnings... The money spent on AI cap ex though becomes revenues to the chip makers (Nvidia and TSMC leading the way), network equipment manufacturers (Broadcom, Micron and Marvel, to name just three), power plant builders (Constellation Energy et al.) and even real estate developers focused on data centers (Equinix, Digital Realty), and ultimately net profits (with net margins driving the bottom line)."</em>
+
+<p>两个数据上的注意:</p>
+<ol style="margin: 16px 0; padding-left: 24px;">
+<li>很多 AI 关键玩家(Anthropic、OpenAI 等)是私有的,公开市场数据只覆盖上市公司——所以总账是低估的</li>
+<li>部分 AI 投资走合资公司或表外实体,会计上的负债和折旧反映不完整</li>
+</ol>
+
+<p>全美上市公司 Q2 2026 资本开支比 Q2 2025 涨 <strong>1330 亿美元(+36%)</strong>。前 10 大 hyperscaler 占了 2 万亿+ 的 AI capex;集中度极高。</p>
+
+<em class="en-source">"Even with the caveats about understatement, but you can still see that cap ex in the second quarter of 2026, which is our last completed quarter of reported financials, was up $133.4 billion from the cap ex in the second quarter of 2025, an increase of almost 36%."</em>
+
+<p>资产负债表上,book equity 同比涨 13%(+1.8 万亿美元),book debt 涨 8%(+1.9 万亿美元)。科技板块最激进:book equity +30%,debt +18.8%。</p>
+
+<em class="en-source">"Across all US stocks, the book equity has increased almost 13%, between the second quarter of 2025 and the second quarter of 2026, and total debt is up almost 8%. In dollar terms, the book equity at US companies increased by $1.8 trillion between the second quarter of 2025 and the second quarter of 2026, and book debt by $1.9 trillion, over the same period. Technology... has seen much bigger increases in both numbers, with book equity rising almost 30% and total debt up about 18.8%."</em>
+
+<h2>三、盈利数据:供应商吃下"建设者的痛"<span class="en">Earnings and Cashflow Reality</span></h2>
+
+<p>看盈利,重点不是看 capex(那只能压低自由现金流),而是看<strong>净利</strong>——因为 capex 花出去的钱会变成供应商的营收和净利。Q1 和 Q2 2026 同比:</p>
+
+<table>
+<thead><tr><th>季度</th><th>2025 同期</th><th>2026</th><th>同比增速</th></tr></thead>
+<tbody>
+<tr><td>Q1 2026 净利</td><td>5,110 亿美元</td><td>6,920 亿美元</td><td><strong>+35%</strong></td></tr>
+<tr><td>Q2 2026 净利</td><td>5,760 亿美元</td><td>9,040 亿美元</td><td><strong>+57%</strong></td></tr>
+</tbody>
+</table>
+
+<p>但这种"惊人增长"是**少数公司的——超过一半公司的净利同比下降**。技术、金融、通信服务领涨;医疗、公用事业、房地产垫底。</p>
+
+<em class="en-source">"in both the first and second quarters of 2026, US companies have seen earnings surge over the corresponding quarters in 2025, with aggregate earnings increasing from $511 billion to $692 billion (translating into an earnings growth rate of 35%, quarter-to-quarter) in the first quarter of 2026 and from $576 billion to $904 billion (translating into an earnings growth rate of 57%, quarter-to-quarter) in the second quarter of 2026."</em>
+
+<p>关键点:净利飙 ≠ 自由现金流飙。Capex 抵掉了很大一部分,实际能分给股东的分红+回购增长慢得多:</p>
+
+<ul style="margin: 16px 0; padding-left: 24px;">
+<li>过去 12 个月分红同比 +5%(+430 亿美元)</li>
+<li>过去 12 个月股票回购同比 +9%(+1070 亿美元)——剔除股票发行后净回购 +7%</li>
+</ul>
+
+<p><strong>全市场盈利 → 股东的"现金回馈率"从过去 20 年 80%+ 跌到 63%</strong>——这是 2004 年以来的低点。</p>
+
+<em class="en-source">"For much of the last two decades, US companies have returned 80% or more, and sometimes more than 100% of their earnings, to shareholders in dividends and buybacks. Starting in about 2024, you can see a divergence with earnings rising much faster than cash returns, and in the last twelve months leading into 2026, the companies in the S&P 500 returned 63% of their earnings to shareholders, a low not seen since 2004."</em>
+
+<p>过去 10 年批评美企"回购太多、不投资主业"的人,现在又批评它们"该回购的不回购、跑去搞 AI capex"。结论:这些批评者怎么都能找到骂点。</p>
+
+<h2>四、AI 商业落地的会计与市场后果<span class="en">The AI Business Resolution</span></h2>
+
+<p>AI 投资赌的是一件事:AI 作为生意,既能撑得起巨大市场,也能让赢家长期维持高利润。这个路径是可能的,但分歧巨大——</p>
+
+<ul style="margin: 16px 0; padding-left: 24px;">
+<li>三大不确定性:总可服务市场(TAM)大小、单位经济/营业利润率水平、护城河与竞争优势</li>
+<li>唯一共识:已经砸了几万亿;乐观派和悲观派都拿不出短期证据——要等"AI 产品市场有实质内容"才能定论</li>
+</ul>
+
+<p>Damodaran 给出三个情景的会计/市场后果:</p>
+
+<table>
+<thead><tr><th>情景</th><th>对 hyperscaler</th><th>对供应商</th><th>对市场</th></tr></thead>
+<tbody>
+<tr><td><strong>最好(AI 兑现)</strong></td><td>capex 回报超资本成本;债权人均数偿清;企业变得<em>更资本密集</em></td><td>持续高增长</td><td>AI 中心公司股价再涨;会计跟得上</td></tr>
+<tr><td><strong>最坏(AI 失败)</strong></td><td>大规模 capex 减值;部分高杠杆公司违约</td><td>营收急降;部分破产</td><td>股价先暴跌,会计后写减</td></tr>
+<tr><td><strong>中间(部分成功)</strong></td><td>收回一点,但低于资本成本</td><td>分化</td><td>持续震荡</td></tr>
+</tbody>
+</table>
+
+<blockquote>
+<strong>关键判断</strong>:Damodaran 押注市场会先动,会计会跟。"如果 AI 不兑现,等到会计减值再卖 AI 公司——你已经等太久了。"<br><br>
+——Damodaran
+</blockquote>
+
+<em class="en-source">"Given that AI business surprises will have both market and accounting consequences, I will hazard a guess that the market will lead in this process and accounting will follow. In short, if AI is working better (worse) than expected, you should see stock prices at AI-centered businesses rise (fall) before you see accountants respond."</em>
+
+<h2>五、投资者的四个选择<span class="en">An Investor Perspective: Four Choices</span></h2>
+
+<p>AI 故事悬而未决,但市场和公司不能等——他们在用真金白银做选择(投资 capex、定价股票)。这让美股、美国经济变成一场对 AI 的豪赌:成功则赢家通吃,失败则巨额减值 + 股价腰斩。</p>
+
+<p>投资者有<strong>四个选择</strong>,没有"坐着不动"这第五个选项:</p>
+
+<h3>1. All in,押 AI 大胜</h3>
+
+<p>押 AI 是不可阻挡的力量,会改变生活和工作方式,AI 公司会赢得这场颠覆。这是 Aschenbrenner《Situational Awareness》讲的故事。Aschenbrenner 自己被杠杆干掉了,但**减杠杆后模仿他的策略**(买 AI 颠覆者/卖 AI 被颠覆者)在长期可能赢。</p>
+
+<em class="en-source">"Go all in on the AI story winning (and doing it soon): The first bet is that AI is an unstoppable force, destined to change the way we live and work, with AI businesses reaping the benefits of the disruption. It was the story that Leo Aschenbrenner built Situational Awareness around, and while excessive leverage, driven by hubris and over-conviction, brought him down, it is possible that you could mimic his strategy, of buying the AI disruptors and/or selling the AI disrupted, albeit with far less leverage, and win in the long term."</em>
+
+<h3>2. 跟市场共识</h3>
+
+<p>看市场把什么 AI 故事定价了,跟着走。当前市场定价:AI 会出现大量大公司——从 AI 架构商(Nvidia 是当前最大赢家)到 LLM 厂商(SpaceX 上市 + OpenAI、Anthropic 私募)。被动投资者已经在"隐式选这个"——S&P 500 基金有部分暴露,total market 基金暴露更完全。</p>
+
+<em class="en-source">"Go with the market consensus: In an age where we worship at the altar of crowd wisdom in almost everything we do, you could examine what the market is pricing in, as its AI story, and go along. At the moment, at least, the market seems to be building in the expectation that AI will be a major disruption that will give rise to large and valuable businesses..."</em>
+
+<h3>3. 怀疑论者</h3>
+
+<p>不信 AI 故事,或至少相信 AI 不会大到能撑住当前定价和投资。可以把钱导向<strong>不太可能被 AI 改变的行业</strong>(食品加工、休闲娱乐)或<strong>AI 威胁较小的地区</strong>(欧盟可能因监管、中国/东南亚因 AI 太贵替代人力)。</p>
+
+<em class="en-source">"Be an AI skeptic: There are many reasons to be skeptical about the AI story, and for some, that skepticism may not be strong enough to lead you to act on it, you can steer your new investing away from the AI space, investing in businesses that are least likely to be altered by AI (food processing and leisure) and in geographies where AI is less likely to be a threat, such as the EU..."</em>
+
+<h3>4. 做空 AI</h3>
+
+<p>确信 AI 要崩。最少要减仓美股换成现金。激进可以反向做 Aschenbrenner——做空 AI 受益股、做多 AI 颠覆对象股。但过去两年试过这条路的人基本都输了——"市场可以保持非理性的时间,比你保持偿付能力的时间长"。</p>
+
+<em class="en-source">"Crash out on the AI story: If your belief that AI will fail hardens into a conviction that failure is imminent, you can try to actively cash in on your story... This has not been a winning strategy for many of the traders and investors who have tried it out for the last two years, and it is worth remembering the adage that markets can stay irrational longer than you can stay solvent."</em>
+
+<h2>六、Damodaran 自己的选择<span class="en">Damodaran's Personal Choice</span></h2>
+
+<p>Damodaran 选了**第二个(跟市场共识)**,但实际操作加了现金 buffer:</p>
+
+<blockquote>
+我持有 5 只 Mag Seven(除 Tesla 和 Nvidia),其中 4 只(Amazon、Alphabet、Meta、Microsoft)是 AI capex 重仓。但过去一两年我加仓的主要是现金(短期国债,4% 收益),所以我的组合现在比平时现金比例高得多。<br><br>
+我肯定错过了机会,但至少睡得安稳了。<strong>我的建议是:在 AI 丛林里找到一条能让你通过"睡眠测试"的路</strong>。
+</blockquote>
+
+<em class="en-source">"I am personally going with the 'market consensus' choice for the bulk of my portfolio, since I do hold five of the Mag Seven (all except Tesla and Nvidia) and four of my holdings in this group (Amazon, Alphabet, Meta and Microsoft) are heavy investors in AI cap ex, but the new money added to my portfolio in the last year or two has gone mostly into cash (short term treasuries, yielding 4%) for much of the last year, leaving my portfolios more cash-laden than usual. I have left money on the table undoubtedly by doing so, but it has helped me sleep better at night, and my advice to you is that you find a pathway in the AI jungle that helps you pass the sleep test as well."</em>
+
+<h2>七、被忽视的"人力资本"风险<span class="en">Human Capital Considerations</span></h2>
+
+<p>最后一块拼图:有一项"投资组合"还不在你的账户里——你的**人力资本**(未来职业收入)。如果你相信 AI 会颠覆你的行业,应该把财务资本导向 AI 暴露低的资产来对冲。</p>
+
+<em class="en-source">"There is one final piece of this puzzle that bears watching, and that is a portion of your portfolio that does not show up (yet) in your holdings. The income you will earn in your occupation, over the rest of your working life, is human capital, and to the extent that you believe that AI disruption is coming for your profession, it behooves you to direct your financial capital away from the businesses most exposed to AI disruption to balance your portfolio."</em>
+
+<p>Damodaran 自嘲"老到不用太担心这个"。对年轻人来说,这条比选哪个 AI 股票都更重要。</p>
+
+<h2>译注:为什么这篇文章与乔布斯研究相关</h2>
+
+<p>这篇文章表面是美股 AI 估值,但和乔布斯研究的主题有强共振:</p>
+
+<ol style="margin: 16px 0; padding-left: 24px;">
+<li><strong>会计≠真相</strong>:Damodaran 反复强调"市场先动,会计后跟"——这正是 Jobs 1995 年 NeXT 困境、Palm 1996 出货、苹果 1998 iMac 时的判断(财务报表都是滞后指标)</li>
+<li><strong>资本配置 vs 业务判断</strong>:Damodaran 对"批评者怎么都能找到骂点"的吐槽,呼应了 Jobs 在 1998 年面对分析师"你为什么不做分销"时的回答——"你必须自己判断产品方向"</li>
+<li><strong>等待"市场有实质内容"再判断</strong>:Damodaran 对 AI 的"早胜利宣言都是基于贫乏证据"的警告,正是 Jobs 1995 年反复强调的:"你不能提前判断一个市场,要等消费者用钱投票"</li>
+</ol>
+
+<p>如果你相信长期复利、相信某些商业模式会自我验证(Steve Jobs 1995 的话:"Apple II 验证了 Apple 的商业模式"),那么 Damodaran 的"市场共识 + 高现金比例"组合可能比看起来更聪明。</p>
+
+<p class="source">
+  来源:<a href="https://aswathdamodaran.blogspot.com/2026/10/stock-prices-earnings-and-cashflows-ai.html">Aswath Damodaran · Stock Prices, Earnings and Cashflows: The AI Effect plays through!</a> · 2026-10-08<br>
+  数据：Damodaran 自有模型估算(以 2026-09-30 收盘数据为基准),原始链接见 <a href="https://pages.stern.nyu.edu/~adamodar/">Damodaran NYU Stern 主页</a><br>
+  关键 ERP 数据(8.99% 预期回报 / 3.70% ERP / 5.29% 10 年期美债)截至 2026-09-30,可直接至 <a href="https://pages.stern.nyu.edu/~adamodar/">Damodaran 数据页</a> 复核
+</p>
+
+<p class="footer">
+  本文为乔布斯研究站「外部长文翻译」,关键术语保留英文原文(ERP / capex / hyperscaler / moats 等),翻译版权归站主所有,原文版权归 Aswath Damodaran 所有。<br>
+  <a href="china-growth-machine.html">← 上一篇:Works in Progress · 中国增长机器</a> · <a href="raptor-streamlined.html">下一篇:Construction Physics · Raptor 引擎的极简主义 →</a> · <a href="index.html">← 返回站主随笔</a>
+</p>
+
+</body>
+</html>
