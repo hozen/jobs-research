@@ -1312,6 +1312,36 @@ li { margin: 8px 0; }
 
 <p>最后，我们的例子假设股票处于公允价值。<strong>股价对"股息情形下的价值计算"并不重要，但对回购情形很重要</strong>。我们的讨论显示，公司整体上在择时上做得不错——也就是说，它们在股票被低估时回购、被高估时卖出。<strong>这会在股东之间造成财富转移，也会让股息方案与回购方案出现差异。</strong></p>
 
+<h2>译者注与数据核验<span class="en">Translator's notes &amp; data verification</span></h2>
+
+<p>本篇译文逐条对照原文 PDF，并对可复核的数据回到了原始出处做反查（FRED 美联储 H.15、Damodaran 标普 500 历史回报、S&amp;P DJI 官方 GICS 权重、SEC 10-K、伯克希尔官方致股东信页、RePEc/WorldCat/Open Library 等）。原文 PDF 与摩根士丹利官网公开版本 <strong>MD5 完全一致</strong>，核验对象即官方发布版。共核 10 组，<strong>核实一致 5 组 / 有出入 5 组 / 查不到公开来源 0 组</strong>。以下是读者需要留意的几处：</p>
+
+<ol>
+<li><strong>巴菲特引文：5 处全部逐字命中官方原文页，年份标注全对。</strong>"Any business craving of the leader, however foolish..."（制度性冲动四条表现之第 3 条）与 "institutional imperative"（"制度性冲动"一词首见）出自 <a href="https://www.berkshirehathaway.com/letters/1989.html">1989 年信</a>；"Once they become CEOs..." 与 "After ten years on the job..." 出自 <a href="https://www.berkshirehathaway.com/letters/1987.html">1987 年信</a>；GEICO 激励三原则出自 <a href="https://www.berkshirehathaway.com/letters/1996.html">1996 年信</a>。原文脚注标注的致股东信年份（4→1987、11→1989、154→1987、176→1996、186→1989）全部正确，可放心引用。</li>
+
+<li><strong>Walmart 案例的 33% 与"三倍"：核实一致，但原文没给起止年份。</strong>原文只说"上市后的最初 15 年"。Walmart 1970 年场外发行、1972 年登陆纽交所，故区间应为 <strong>1972–1987</strong>。按 Yahoo Finance 复权价测算，该期间 WMT 年化总回报约 <strong>30.4%–35.0%</strong>（随起止月份而异），同期标普 500 含息总回报年化约 10.1%–10.7%（Damodaran, NYU Stern），倍数 <strong>2.8–3.3 倍</strong>——与原文"33%、三倍"吻合 ✅。另可佐证"ROIC 远高于资本成本"：据 Walmart FY2003 10-K 内含的 11 年财务摘要自算，FY2001 口径 ROIC 约 <strong>16%</strong>，当年 WACC 约 8%–9%。<strong>注意</strong>：本段在原报告中<strong>没有任何脚注支撑</strong>，属"作者自述"型数据，引用时请自行复核。</li>
+
+<li><strong>10 年期国债收益率 7.5% / 2.5%：精确命中。</strong>FRED DGS10 日度序列复算：1970–1979 全期均值 <strong>7.4983%</strong>（各年年度均值再平均 7.4997%），与原文 7.5% 吻合；取 2015–2024 为"过去 10 年"窗口得 <strong>2.4796%</strong>（月频 GS10 为 2.4816%），与原文 2.5% 吻合 ✅。唯一需注意：若按报告发布日 2025 年 11 月滚动 10 年计算则为 2.67%（应舍入为 2.7%），原文的 2.5% 对应的是与其余图表一致的 1970–2024 数据截止窗口。</li>
+
+<li><strong>Lovallo 等人的 5,760 / 38 / "不到 1%"：全部核实一致，且分母得到闭环验证。</strong>论文原句为 "Only 27 (0.47%) and <strong>38 (0.67%)</strong> observations are to the right of the peak"；38 ÷ 5,760 = 0.66%，与论文自报的 0.67% 吻合 ✅。期刊出处 Strategic Management Journal, 2020, 41(8): 1365–1380，DOI 10.1002/smj.3157，卷期页码逐字准确。⚠️ 一处口径差异：报告图 1 图内标注"过度再配置公司占 1%–2%"，正文说"不到 1%"——图内是摩根士丹利对论文图的二次标注，正文是论文"越过峰值"的观测占比，<strong>阅读时勿混</strong>。</li>
+
+<li><strong>附录数学：全部独立复算通过，两处仅为舍入微差。</strong>现金流现值 999.99 ≈ US$1,000、每股 US$10、终值 1,000 × 1.07⁶ = <strong>1,500.73</strong>、IRR = <strong>6.9998% ≈ 7%</strong>，股息表与回购表六行数值<strong>逐格复现</strong>（末年回购 US$15.007 × 51.489 股 = US$772.70）✅。其中"股息 US$1,371.2 + 再投资 US$129.5 = US$1,500.7"经<strong>两条独立路径互验</strong>（终值 1,500.7156 − 名义股息 1,371.2 = 129.5156；股息表再投资列求和亦为 129.51）——这是恒等式，不是巧合。两处微差：① 回购平均成本精确值为 1,371.2 ÷ 100 = <strong>US$13.712</strong>，原文列示的 13.71 系舍入值（100 × 13.71 = 1,371.0）；② 第 6 年的 772.7 是为使六年现值恰等于 1,000 而<strong>倒推的配平数</strong>，并非独立给定的现金流。</li>
+
+<li><strong>脚注卷号错一处：Boudoukh 等人的《总派息收益率》论文实为 Vol. 62，不是 63。</strong>原文脚注 26 作 "Journal of Finance, <strong>Vol. 63</strong>, No. 2, April 2007, 877-915"，实际应为 <strong>62(2)</strong>（RePEc / EconPapers / Scilit 三源一致，DOI 10.1111/j.1540-6261.2007.01226.x）；期、年月、页码正确，仅卷号错。⚠️ 另：原文称总派息收益率"比单看股息收益率<strong>或回购收益率</strong>都更好"，但该文只构造了 total / net payout yield 与 dividend yield 的对照，<strong>并未单独以"仅回购收益率"作对照</strong>——第二个比较是报告作者的延伸推论。文中"回购相当于股息的 0.1 倍 → 1.3 倍"取自报告自有图 36/40（2024 年约 1,100 / 800 ≈ 1.4 倍），底层数据为专有数据集，无法独立复核。</li>
+
+<li><strong>归因需修正一处：生命周期五阶段的名称出处。</strong>经验基础确实出自 Gort, M. &amp; Klepper, S. (1982), "Time Paths in the Diffusion of Product Innovations," <em>The Economic Journal</em>, 92(367): 630–653（脚注 14(c) 逐字准确 ✅）；但"introduction / growth / maturity / shake-out / decline"这一<strong>通行命名法</strong>主要由 Klepper (1996, <em>American Economic Review</em> 86(3): 562–583) 与 Dickinson (2011, <em>The Accounting Review</em> 86(6): 1969–1994) 确立——Gort &amp; Klepper 1982 原文的阶段表述在二手文献中常记作 emergence / growth / shakeout / decline / stabilization。把五个名字直接归给 1982 年那篇并不严谨。（这也解释了摩根士丹利自家 2023 年姊妹篇为何写的是"Dickinson <em>named the stages</em>"。）</li>
+
+<li><strong>脚注副标题漏印一处 + 措辞无法公开复核。</strong>原文脚注 181 作 <em>The Value Imperative: Managing <strong>for</strong> Superior Shareholder Returns</em>（正确），脚注 104 却作 "Managing Superior Shareholder Returns"（<strong>漏 "for"</strong>）——同一部书在同一份文件里写法不一，本译文统一采用前者。书目信息（James M. McTaggart、Peter W. Kontes、Michael C. Mankins 著，The Free Press 纽约 1994 年，ISBN 0029206707）经 Open Library / WorldCat / Internet Archive / AbeBooks 四源一致 ✅。但该书 1994 年版全文不公开流通，脚注所标 pp.239–252 处的"四条资源配置原则"<strong>无法由公众来源逐字复核</strong>。⚠️ 另请注意：同作者另有姊妹作 <em>Value: The Four Cornerstones of Corporate Finance</em>（"四大基石"一语出自该书），与本文所引"资源配置四原则"<strong>不是同一概念</strong>，勿混用；该书 2008 年另有 Harvard Business Review Press 再版。</li>
+
+<li><strong>两处依赖专有数据，外部无法核验。</strong>① <strong>Morningstar 资本配置评级</strong>：方法论、三支柱（balance sheet health / investment efficacy / shareholder distributions）、评级名称（Poor / Standard / Exemplary）、脚注 13 的作者与日期均核实一致 ✅，该评级原名 Stewardship Rating、2020-12-09 起改称现名——但"覆盖约 1,850 家美国上市公司"与"截至 2025 年 9 月 16% / 78% / 5%"是摩根士丹利基于 Morningstar 数据自行统计的，<strong>Morningstar 从不公开披露覆盖家数或评级分布</strong>，此处无法独立核验（另：16+78+5=99%，缺 1 个百分点，疑为四舍五入）。② <strong>1970 年 S&amp;P 500 行业构成 26% / 30%</strong>：2024 年的 52% / 13% 可用 S&amp;P Dow Jones Indices 官方 GICS 权重交叉验证（2025-12 口径 51.7% / 13.8%），但 1970 年的两个数字系摩根士丹利自行回溯估算——GICS 体系 1999 年才建立，S&amp;P DJI 未发布过 1970 年行业权重。⚠️ 另注：报告图 10 注明"房地产板块自 2016 年起自金融板块分拆"，跨 1970–2024 的比较含此口径断点。</li>
+
+<li><strong>两处易混提醒。</strong>① 报告图 1 说的"绝大多数公司低于事业部之间最优资本配置的阈值"，与 Lovallo 论文的"越过峰值"是<strong>两个不同的量</strong>，前者是摩根士丹利自己的实证观察，后者是被引论文的观测占比。② GICS 的 11 个行业板块与公司生命周期五阶段是两回事，切勿混用。③ 本译文<strong>未收录</strong>原文第 71–88 页的摩根士丹利重要披露与免责声明，请以原文为准。</li>
+</ol>
+
+<div class="note">
+  <strong>站主注</strong>：这份报告的框架对站主自己的组合纪律是一面镜子。报告第一条原则是<strong>零基准的资本配置</strong>——每个事业部都用同一根资本成本线来问"这门生意该配多少资本"，而不是每个部门自己找理由要钱；这正是 A/B/C 三类分层想要解决的事：<strong>不该占位的仓位占着位，机会成本就是最贵的那笔隐性支出</strong>。第四条原则<strong>对坏增长零容忍</strong>，对应的是"公司维度的价值提升"与"组合维度的取舍"必须分开判断——一个公司的基本面在变好，不等于这个仓位就该一直留着。<br><br>
+  而第五条最扎人：<strong>知道资产的价值，并随时准备采取行动创造价值</strong>。这要求每笔持仓都有一条事先写好的"我错了怎么办"——报告里那句"确认管理层是否了解价格与价值的区别"换成站主自己的语言就是：<strong>你是在等价格回到价值，还是在等一个关于基本面改变的新证据？</strong>前者是拖延，后者才是投资。
+</div>
 
 <h2>原文注释与数据来源<span class="en">Endnotes &amp; sources</span></h2>
 
