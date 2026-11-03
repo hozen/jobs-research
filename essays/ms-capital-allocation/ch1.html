@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="完整翻译 Morgan Stanley《Capital Allocation: Results, Analysis, and Assessment》(Counterpoint Global, Mauboussin & Callahan, 2025-11-05):用 1970–2024 的 55 年数据拆解资本配置的八种备选方案(并购、SG&A、capex、研发、营运资本、剥离、股息、回购),并给出五条原则与一张评估管理层资本配置能力的清单。含 48 张原图。">
+<title>资本配置：五条原则，看管理层会不会把钱花对地方 · 中英对照 — 乔布斯研究</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600&family=Charter:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #ffffff; --text: #1a1a1a; --meta: #888888; --rule: #e0e0e0; --max-w: 720px; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: var(--bg); color: var(--text); font-family: 'Noto Serif SC','Charter',serif; font-size: 17px; line-height: 1.7; max-width: var(--max-w); margin: 0 auto; padding: 0 24px 80px; overflow-wrap: anywhere; }
+a { color: var(--text); text-decoration: underline; text-decoration-color: var(--rule); }
+a:hover { text-decoration-color: var(--text); }
+h1 { font-size: 22px; font-weight: 600; margin: 48px 0 8px; letter-spacing: -0.3px; }
+h2 { font-size: 15px; font-weight: 600; color: var(--meta); text-transform: uppercase; letter-spacing: 1px; margin: 40px 0 16px; padding-top: 24px; border-top: 1px solid var(--rule); }
+h2 .en { display: block; font-size: 14px; color: var(--meta); text-transform: none; letter-spacing: 0; font-weight: 400; font-style: italic; margin-top: 4px; }
+h3 { font-size: 17px; font-weight: 600; margin: 32px 0 12px; }
+h3 .en { display: block; font-size: 14px; color: var(--meta); font-weight: 400; font-style: italic; margin-top: 2px; }
+.back { font-size: 14px; color: var(--meta); margin-bottom: 24px; }
+.meta { font-size: 13px; color: var(--meta); margin-left: 8px; }
+p { margin: 16px 0; }
+strong { font-weight: 600; }
+em.en-source { display: block; font-family: 'Charter', serif; font-size: 14px; font-style: italic; color: var(--meta); margin: 8px 0 24px; padding-left: 12px; border-left: 2px solid var(--rule); }
+blockquote { border-left: 3px solid var(--rule); padding: 4px 0 4px 20px; margin: 24px 0; color: #555; font-style: italic; }
+.source { font-size: 13px; color: var(--meta); margin-top: 12px; }
+.byline { font-size: 14px; color: var(--meta); margin: 8px 0 32px; }
+.tag-row { margin: 16px 0 32px; }
+.tag { display: inline-block; font-size: 12px; padding: 2px 10px; background: var(--rule); border-radius: 12px; color: var(--meta); margin-right: 6px; }
+.hero { background: #f9f9f9; border-radius: 8px; padding: 24px; margin: 0 0 32px; }
+.hero h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; }
+.hero p { font-size: 15px; color: #555; line-height: 1.7; margin: 8px 0; }
+.footer { margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--rule); font-size: 13px; color: var(--meta); }
+.footer a { color: var(--meta); }
+table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+.table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 16px 0; }
+.table-wrap table { margin: 0; min-width: 420px; }
+th, td { padding: 6px 10px; border: 1px solid var(--rule); text-align: left; }
+th { background: #f5f5f5; font-weight: 600; }
+.figure { margin: 32px 0; }
+.figure img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 4px; }
+.figure .cap { font-size: 13px; color: var(--meta); margin-top: 8px; line-height: 1.5; padding-left: 12px; border-left: 2px solid var(--rule); }
+.note { background: #f9f9f9; border-left: 3px solid #d4503a; border-radius: 4px; padding: 14px 18px; margin: 24px 0; font-size: 15px; color: #555; }
+.note strong { color: var(--text); }
+ol, ul { padding-left: 24px; margin: 16px 0; }
+li { margin: 8px 0; }
+@media (max-width: 600px) {
+  body { font-size: 16px; padding: 0 18px 60px; }
+  h1 { font-size: 20px; }
+  h2 { font-size: 14px; }
+  table { font-size: 12px; }
+  th, td { padding: 4px 6px; }
+}
+</style>
+</head>
+
+<style>
+.kicker { font-size: 13px; color: var(--meta); letter-spacing: .5px; margin: 0 0 6px; }
+h1 .en { display: block; font-size: 15px; font-weight: 400; font-style: italic; color: var(--meta); margin-top: 6px; letter-spacing: 0; }
+.chnav { margin: 48px 0 0; padding-top: 20px; border-top: 1px solid var(--rule); display: flex; gap: 16px; flex-wrap: wrap; justify-content: space-between; font-size: 14px; }
+.chnav a { color: var(--meta); text-decoration: none; }
+.chnav a:hover { color: var(--text); text-decoration: underline; }
+.toc-list { list-style: none; padding: 0; margin: 24px 0 0; }
+.toc-list li { margin: 0; padding: 16px 0; border-bottom: 1px solid var(--rule); }
+.toc-list a { font-size: 17px; font-weight: 600; text-decoration: none; }
+.toc-list a:hover { text-decoration: underline; }
+.toc-list .en { display: block; font-size: 13px; font-style: italic; color: var(--meta); font-weight: 400; margin-top: 4px; }
+.toc-list .sub { display: block; font-size: 14px; color: #555; margin-top: 6px; line-height: 1.6; }
+.toc-list .badge { font-size: 12px; color: var(--meta); }
+</style>
+</head>
+<body>
+
+<p class="back">← <a href="../index.html">站主随笔</a> · <a href="index.html">资本配置 · 分章阅读</a></p>
+
+<p class="kicker">资本配置：五条原则，看管理层会不会把钱花对地方 · 中英对照 · 第 1 / 9 章</p>
+
+<h1>导言：资本配置是 CEO 的首要职责<span class="en">Introduction</span></h1>
+
+<p>资本配置是动态的，而且有证据表明公司完全可以做得比现在更好。例如，学者们测量了公司在不同业务单元之间重新配置资本的程度：0 表示各事业部当年的资本开支与上一年持平，1 表示彻底重新配置；然后他们把重新配置的程度与资产回报率（ROA，一种衡量公司表现的指标）的改善幅度做比较（见图表 1）。理论上，公司应该把资本投向最优化、最高效的用途，而不考虑过去是怎么花钱的。</p>
+
+<em class="en-source">Capital allocation is dynamic and there is evidence that companies can be better at it than they are. For example, scholars measured how much capital companies reallocated from one business unit to another, with zero indicating that capital spending across divisions was the same as in the prior year and one reflecting complete reallocation. They then compared the degree of reallocation to the improvement in return on assets, a measure of corporate performance (see exhibit 1).</em>
+
+<p>竞争格局与各业务单元前景的变化，说明<strong>一定程度的重新配置是合理的</strong>。研究者确实找到了一个最优的重新配置程度。但他们同时发现：5,760 个观测样本中，只有 38 个高于这个阈值——不到 1%。换句话说，<strong>绝大多数公司只要提高重新配置的程度，就能改善自己的财务表现</strong>.<sup>5</sup></p>
+
+<em class="en-source">Changes in the competitive landscape and in the prospects of the business units suggest that some reallocation is appropriate. The researchers in fact found an optimal degree of reallocation. But they also discovered that only 38 of the 5,760 observations, or less than 1 percent, were above that threshold. In other words, the vast majority of companies could improve their financial performance by increasing their reallocation.</em>
+
+<p>这种行为与<strong>现状偏差（status quo bias）</strong>一致——即使存在更优的替代方案，人们仍倾向于继续做自己正在做的事。<sup>6</sup> 它也符合<strong>承诺升级（escalation of commitment）</strong>：我们宁愿在一个既有承诺上再加码，也不愿改变方向。<sup>7</sup></p>
+
+<em class="en-source">This behavior is consistent with status quo bias, which suggests that people tend to continue doing what they are doing even in the presence of preferable alternatives. It is also compatible with the escalation of commitment, the idea that we would rather escalate a commitment to a prior action than change course.</em>
+
+<figure class="figure">
+<img src="../img/ms-capital-allocation/ex01_capital-reallocation-and-incremental-return-on-asset.jpg" alt="横轴为业务单元间的资本重新配置程度，纵轴为相对零重新配置的 ROA 改善幅度：98–99% 的公司落在重新配置过少的区间，1–2% 落在过度的区间">
+<div class="cap">图 1｜资本重新配置程度与增量资产回报率（原文 Exhibit 1: Capital Reallocation and Incremental Return on Assets）。这条 U 形曲线说明：几乎所有公司都停留在"重新配置太少"的一侧，只有不到 1% 的公司跨过了最优阈值。资料来源：Counterpoint Global，基于 Lovallo、Campa 与其他学者的研究。</div>
+</figure>
+
+<p>有若干因素让管理团队无法把资本配置到尽可能好的程度。第一点很简单：<strong>他们没有一套清晰而正确的流程</strong>。资本配置归根结底是评估机会、并执行那些有吸引力的机会；这需要根据形势随时决定自己该当买方还是卖方，需要一定的<strong>超脱与分析敏捷性</strong>。</p>
+
+<em class="en-source">There are a handful of factors that keep management teams from allocating capital as well as they could. The first, simply, is that they do not have a clear and correct process for doing so. Capital allocation is ultimately about assessing opportunities and executing on the ones that are attractive. As such, it requires a willingness to be a buyer or a seller given the circumstances. This necessitates some dispassion and analytical agility.</em>
+
+<p>几乎每一个资本配置问题的答案都是"<strong>视情况而定</strong>"。在某个价格上回购股票，可能正是提升存量股东每股价值的好办法；而在另一个价格上卖出，则可能是合算的。<sup>8</sup> 一次战略性收购在某个价格上会为收购方增加价值，在更高的价格上则会毁损价值。而<strong>资产剥离</strong>——很多高管觉得它远不如收购诱人——同样可能对股东有利。</p>
+
+<em class="en-source">The answer to nearly every capital allocation question is, "it depends." Buying back stock at one price may be a great way to add value per share for ongoing holders whereas selling it at another price may be desirable. A strategic acquisition will add to an acquirer's value at a certain price but destroy value at a higher one. And divestitures, which many executives find less compelling than acquisitions, can be beneficial for shareholders.</em>
+
+<p><strong>估值是把这些决策绑在一起的那根绳子。</strong><strong>估值商（valuation quotient）</strong>用公司市值去除那些依赖估值的决策金额。这个比率衡量的是：<strong>估值对整体股东价值有多重要</strong>。<sup>9</sup></p>
+
+<em class="en-source">Valuation is the tie that binds these decisions. The valuation quotient divides a company's decisions that rely on valuation by its market capitalization. This measures how important valuation is to overall shareholder value.</em>
+
+<p>图表 2 显示，1970 至 2024 年间，美国公司的估值商平均为 <strong>10%</strong>。我们在分子中计入的估值类决策包括：发行普通股与优先股所得的款项、并购（M&A）总额（含资产剥离）、以及回购股票支付的现金；然后用年初时美股总市值去除它。对于估值商偏高的公司，<strong>估值错误会压低其股东总回报（TSR）</strong>——如果这些错误跨越多年、涉及多笔资本配置决策，影响就更大。</p>
+
+<em class="en-source">Exhibit 2 shows that the valuation quotient for U.S. companies averaged 10 percent from 1970 through 2024. The valuation decisions we consider in the numerator include the proceeds from issuance of common and preferred stock, total mergers and acquisitions (M&A) including divestitures, and cash paid for share buybacks. We divide the sum of these decisions by the market capitalization of U.S. stocks at the beginning of the year. For companies with high valuation quotients, valuation errors limit total shareholder returns (TSR), especially if they span multiple years and capital allocation decisions.</em>
+
+<p>某种意义上，高管应当像投资组合经理那样行事：把资本配置到有望赚取超额回报的机会上，同时剥离那些在别人手里更值钱的资产。但<strong>高管的资本配置与投资者的资本配置有两处实质性的不同</strong>。<sup>10</sup> 其一，高管的决定<strong>往往难以逆转</strong>——比如拆掉一笔大型收购，代价高昂且耗时。其二，高管通常<strong>对自己投资的结果还握有一定的主导权</strong>，因为他们可以随时调整资源、战略与战术。</p>
+
+<em class="en-source">In a sense, executives should act like investment portfolio managers in that they allocate capital to opportunities that have the potential to earn excess returns and divest assets that are worth more to others. But capital allocation for executives is different than it is for investors in two ways that are meaningful. Decisions by executives are often hard to reverse. For example, unwinding a large acquisition can be costly and time consuming. On the other hand, executives generally have some control over the outcomes for the investments they make. This is because they can shift resources, strategies, and tactics as necessary.</em>
+
+<figure class="figure">
+<img src="../img/ms-capital-allocation/ex02_valuation-quotient-for-u-s-companies-1970-2024.jpg" alt="美股估值商 1970–2024 年走势，柱状为估值商、右轴为估值商长期均值，1970–2024 平均约 10%">
+<div class="cap">图 2｜美国公司的估值商，1970–2024（原文 Exhibit 2: Valuation Quotient for U.S. Companies, 1970-2024）。估值商＝依赖估值的资本配置决策总额 ÷ 年初美股总市值；1970–2024 年平均约 10%，意味着每年约 10% 的市值波动源于估值决策。资料来源：Counterpoint Global；Compustat；FactSet。</div>
+</figure>
+
+<p><strong>激励是阻碍有效资本配置的第二个因素</strong>，它们通常反映了委托—代理问题带来的成本。资产的所有者（<strong>委托人</strong>）与负责管理资产的人（<strong>代理人</strong>）的目标可能冲突。股东是委托人，高管是代理人。比如，公司规模与高管薪酬之间存在正相关关系；结果就是，管理层可能<strong>有动机通过收购来做大公司</strong>——哪怕那些交易对股东毫无价值可言。另外，高管还可能把自己的薪酬挂钩到<strong>与价值创造没有直接关系的</strong>财务或非财务指标上。这些做法都会给股东制造"<strong>代理成本</strong>"。</p>
+
+<em class="en-source">Incentives are the second factor that impedes effective capital allocation. These generally reflect the costs that arise from the principal-agent problem. The goals of the owners of assets, the principals, and those in charge of managing the assets, the agents, can come into conflict. Shareholders are the principals and executives are the agents. For instance, there is a positive relationship between firm size and executive compensation. As a result, managers may have an incentive to grow through acquisitions even in cases where the deals add no value for shareholders. Further, executives may peg their compensation to financial or non-financial metrics that have no direct link to value creation. These actions create "agency costs" for shareholders.</em>
+
+<p>最后是沃伦·巴菲特所说的"<strong>制度性强制（institutional imperative）</strong>"。<sup>11</sup> 它说的是：高管会在实践上（包括薪酬与资本配置）"<strong>不假思索地</strong>"相互模仿；而公司内部的较低层级人士，会迅速为 CEO 想做的任何事情找出业务上的理由。<sup>12</sup></p>
+
+<em class="en-source">Finally, there is what Warren Buffett calls the "institutional imperative." This says executives will "mindlessly" imitate one another in their practices, including compensation and capital allocation, and that junior people within a firm will be quick to come up with business justifications to support whatever the CEO wants to do.</em>
+
+<p>金融服务公司 <strong>Morningstar</strong> 依据资产负债表实力、投资眼光以及对股东分配的适当性，为美国约 1,850 家上市公司打出<strong>资本配置评级</strong>。在 2025 年 9 月已评级公司中，16% 的公司三方面都足够出色、获评"典范"，78% 为"标准"，5% 得分低到被视为"差"。<sup>13</sup></p>
+
+<em class="en-source">Morningstar, a financial services firm, provides a Capital Allocation Rating for roughly 1,850 public companies in the U.S. based on balance sheet strength, investment acumen, and appropriate distributions to shareholders. Of the companies rated as of September 2025, 16 percent score high enough in each area to be deemed exemplary, 78 percent are standard, and 5 percent rate low enough to be considered poor.</em>
+
+<p>评估资本配置时，<strong>判断一家公司处在生命周期的哪个阶段</strong>很重要。许多学者与从业者用"年龄"来拟人化地刻画生命周期，但这是一个有限的度量：不同行业经历生命周期的速度不同，有些公司的学习速度快于竞争对手，而"年龄"本身也有多种算法。</p>
+
+<em class="en-source">Consideration of where a company is in its life cycle is important in assessing capital allocation. Many academics and practitioners depict the life cycle anthropomorphically by using age. This is a limited measure considering that industries move through the life cycle at different rates, some firms learn faster than do their competitors, and age itself can be calculated in multiple ways.</em>
+
+<p>我们发现，<strong>按年龄计算的平均 ROIC 并不会呈现与生命周期相联系的倒 "U" 形</strong>（即 ROIC 先低、达到顶点、再逐步走低）。相反，我们发现<strong>利润与投资的形态是理解生命周期好得多的方式</strong>（见图表 3）。注意，我们假定公司诞生于其首次公开募股（IPO）之日。<sup>14</sup></p>
+
+<em class="en-source">We observed that the average ROIC based on age does not produce the pattern associated with a life cycle of an inverted "U," in which ROIC starts low, reaches an apex, and then drifts lower. Instead, we found that patterns of profits and investment are a much better way to understand the life cycle (see exhibit 3). Note that we assumed companies are born on the date of their initial public offering.</em>
+
+<figure class="figure">
+<img src="../img/ms-capital-allocation/ex03_return-on-invested-capital-in-stages-of-the-corporat.jpg" alt="按生命周期阶段划分的投入资本回报率曲线：引入期低、成长与成熟期上升、淘汰与衰退期下滑">
+<div class="cap">图 3｜企业生命周期各阶段的投入资本回报率（原文 Exhibit 3: Return on Invested Capital in Stages of the Corporate Life Cycle）。ROIC 按总量口径计算，并对内部生成的无形资产作了调整，1970–2024。资料来源：Counterpoint Global；Compustat；FactSet。</div>
+</figure>
+
+<p>我们的分析建立在密西西比大学会计学教授 <strong>Victoria Dickinson</strong> 的工作之上。Dickinson 的研究起点是经济学教授 <strong>Steven Klepper</strong> 与 <strong>Michael Gort</strong> 提出的、基于实证的生命周期框架，它把企业划分为五个阶段：<strong>引入期（introduction）、成长期（growth）、成熟期（maturity）、淘汰期（shake-out）、衰退期（decline）</strong>。随后她把各阶段与现金流量表中的结果挂钩，让这套分类更严谨。这一形态的推论是：<strong>对生意的投资往往在生命周期靠前时最大，而向股东返还资本的倾向在靠后时更高</strong>。</p>
+
+<em class="en-source">Our analysis is based on work by Victoria Dickinson, a professor of accounting at the University of Mississippi. Dickinson starts with research by Steven Klepper and Michael Gort, professors of economics, who developed an empirically-grounded life cycle framework based on five stages: introduction, growth, maturity, shake-out, and decline. She then added rigor to the classification by linking the stages to results within the statement of cash flows. Reflecting this pattern, investment in the business tends to be greatest toward the beginning of the life cycle and the proclivity to return capital to shareholders is higher toward the end.</em>
+
+<p>本报告分三部分。<strong>第一部分</strong>打基础：回顾资本的来源、资本配置的备选方案，以及 1970 年以来美国公司如何配置资本；我们也考察增长与投入资本回报率，以理解为什么资本配置对高管与投资者而言始终重要。</p>
+
+<em class="en-source">This report has three parts. The first establishes the foundation by reviewing the sources of capital, alternatives for capital allocation, and how companies in the United States have allocated capital since 1970. We also look at growth and return on invested capital to understand why capital allocation remains an important consideration for executives and investors.</em>
+
+<p><strong>第二部分</strong>逐一更细致地检视每一种资本配置备选方案。我们这项工作的新意在于<strong>纳入了无形资产投资</strong>——它无疑重要，却天生难以衡量。我们还借助学术研究获得一个统览视角，并在合适的地方提供一个思考价值创造前景的框架。</p>
+
+<em class="en-source">Next, we review each of the capital allocation alternatives in more detail. What is new in our work is the inclusion of intangible investments, which are undoubtedly important but inherently difficult to measure. We also draw on academic research to gain a synoptic view and, where appropriate, provide a framework for thinking about the prospects for value creation.</em>
+
+<p><strong>第三部分</strong>给出一些评估公司资本配置能力的准则，包括：检视公司过去如何配置资本、度量投入资本回报率、考虑激励所起的作用，以及<strong>应当指导资本配置的五条核心原则</strong>。</p>
+
+<em class="en-source">Finally, we offer some guidelines for assessing a company's capital allocation skills. These include examining how the firm has allocated capital in the past, measurement of return on invested capital, consideration of the role of incentives, and five core principles that should guide capital allocation.</em>
+
+<p>学术研究考察过各种资本配置方式（并购、股份回购、首次派息等）所对应的股价<strong>累计异常收益（CAR）</strong>。<sup>15</sup> CAR 的计算试图通过剔除大盘涨跌的影响，来隔离出某项公告本身的作用。把这些工作与其他资本配置形式的具体研究结合起来，我们得以对<strong>股票市场对各类活动能否创造价值的评价</strong>做出一个粗略排序。注意，这些汇总结果<strong>并未考虑每个案例的具体情形</strong>——换句话说，它说明的是平均而言的结果，个别案例的结果可能非常不同。</p>
+
+<em class="en-source">Academic research has investigated the cumulative abnormal return (CAR) for stock prices associated with various capital allocation alternatives, including M&A, share buybacks, and dividend initiations. The CAR calculation tries to isolate the impact of an announcement by removing changes associated with the stock market. Combining this work with specific research on other forms of capital allocation allows us to create a rough ranking of the stock market's assessment of potential value creation by activity. Note that these summary results do not consider the specific circumstances of each case.</em>
+
+<p><strong>分拆、资产剥离、首次派息、股份回购、偿还债务、资本开支，以及部分无形资产投资</strong>，都与正的超额 TSR 相关联。研发（R&D）往往<strong>对价值中性</strong>，并购对买方而言也是如此。而<strong>股权融资</strong>——包括 IPO 与增发——平均而言预示的是负的超额收益。</p>
+
+<em class="en-source">Spin-offs, divestitures, dividend initiations, share buybacks, debt prepayments, capital expenditures, and some intangible investments are associated with positive excess TSRs. Research and development (R&D) tends to be value-neutral, as is M&A for the buyer. And equity issuance, including initial public offerings and seasoned equity offerings, predicts negative excess returns on average.</em>
+
+<p><strong>资产增长是个粗糙的工具</strong>，但它能预测异常收益：资产增长高的公司，其 TSR 低于资产增长低的公司。<sup>16</sup> 资产收缩与高于资产扩张的 TSR 相关。<strong>这一实证观察已被写进多因子资产定价模型</strong>，值得关注。<sup>17</sup> 但资产增长终究是投资的一个糟糕代理变量，而且它忽略了内部生成的无形资产投资的兴起。<sup>18</sup> 至于为何会出现这样一条普遍结论，可能的解释是：由股权发行或股权注销推动的资产水平变化。<sup>19</sup></p>
+
+<em class="en-source">Asset growth is a blunt tool that predicts abnormal returns. Specifically, companies with high asset growth earn lower TSRs than companies with low asset growth. Asset contraction is associated with higher TSRs than asset expansion. This empirical observation has been built into multi-factor asset pricing models and is worthy of attention. But asset growth is ultimately a poor proxy for investment and neglects the rise of investments in internally-generated intangible assets. Changes in asset levels fueled either by equity issuance or retirement might explain the broad result.</em>
+
+<p>下面我们开始打基础：回顾金融资本的来源与去向、1970 年以来公司如何使用这些资本，以及为什么资本配置始终是一个重要的投资考量。</p>
+
+<em class="en-source">We now lay the foundation by reviewing the sources and uses of financial capital, how companies have spent that capital since 1970, and why capital allocation remains an important investment consideration.</em>
+
+<div class="chnav">
+  <span><a href="../ms-capital-allocation.html">← 全文版</a></span>
+  <span><a href="index.html">目录</a></span>
+  <span><a href="ch2.html">第 2 章 · 基础：钱从哪来、钱到哪去 →</a></span>
+</div>
+
+<p class="footer">
+  本文为乔布斯研究站「外部长文翻译」，关键术语保留英文原文（ROIC / NOPAT / TSR / SBC / SG&amp;A / IRR 等），翻译版权归站主所有，原文版权归 Morgan Stanley Investment Management 所有。<br>
+  <a href="../edgepoint-exponential.html">← 上一篇：EdgePoint · 96.3% 的公司加起来不如国债</a> · <a href="../index.html">← 返回站主随笔</a>
+</p>
+
+</body>
+</html>

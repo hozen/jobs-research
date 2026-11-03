@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="完整翻译 Morgan Stanley《Capital Allocation: Results, Analysis, and Assessment》(Counterpoint Global, Mauboussin & Callahan, 2025-11-05):用 1970–2024 的 55 年数据拆解资本配置的八种备选方案(并购、SG&A、capex、研发、营运资本、剥离、股息、回购),并给出五条原则与一张评估管理层资本配置能力的清单。含 48 张原图。">
+<title>资本配置：五条原则，看管理层会不会把钱花对地方 · 中英对照 — 乔布斯研究</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600&family=Charter:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #ffffff; --text: #1a1a1a; --meta: #888888; --rule: #e0e0e0; --max-w: 720px; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: var(--bg); color: var(--text); font-family: 'Noto Serif SC','Charter',serif; font-size: 17px; line-height: 1.7; max-width: var(--max-w); margin: 0 auto; padding: 0 24px 80px; overflow-wrap: anywhere; }
+a { color: var(--text); text-decoration: underline; text-decoration-color: var(--rule); }
+a:hover { text-decoration-color: var(--text); }
+h1 { font-size: 22px; font-weight: 600; margin: 48px 0 8px; letter-spacing: -0.3px; }
+h2 { font-size: 15px; font-weight: 600; color: var(--meta); text-transform: uppercase; letter-spacing: 1px; margin: 40px 0 16px; padding-top: 24px; border-top: 1px solid var(--rule); }
+h2 .en { display: block; font-size: 14px; color: var(--meta); text-transform: none; letter-spacing: 0; font-weight: 400; font-style: italic; margin-top: 4px; }
+h3 { font-size: 17px; font-weight: 600; margin: 32px 0 12px; }
+h3 .en { display: block; font-size: 14px; color: var(--meta); font-weight: 400; font-style: italic; margin-top: 2px; }
+.back { font-size: 14px; color: var(--meta); margin-bottom: 24px; }
+.meta { font-size: 13px; color: var(--meta); margin-left: 8px; }
+p { margin: 16px 0; }
+strong { font-weight: 600; }
+em.en-source { display: block; font-family: 'Charter', serif; font-size: 14px; font-style: italic; color: var(--meta); margin: 8px 0 24px; padding-left: 12px; border-left: 2px solid var(--rule); }
+blockquote { border-left: 3px solid var(--rule); padding: 4px 0 4px 20px; margin: 24px 0; color: #555; font-style: italic; }
+.source { font-size: 13px; color: var(--meta); margin-top: 12px; }
+.byline { font-size: 14px; color: var(--meta); margin: 8px 0 32px; }
+.tag-row { margin: 16px 0 32px; }
+.tag { display: inline-block; font-size: 12px; padding: 2px 10px; background: var(--rule); border-radius: 12px; color: var(--meta); margin-right: 6px; }
+.hero { background: #f9f9f9; border-radius: 8px; padding: 24px; margin: 0 0 32px; }
+.hero h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; }
+.hero p { font-size: 15px; color: #555; line-height: 1.7; margin: 8px 0; }
+.footer { margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--rule); font-size: 13px; color: var(--meta); }
+.footer a { color: var(--meta); }
+table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+.table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 16px 0; }
+.table-wrap table { margin: 0; min-width: 420px; }
+th, td { padding: 6px 10px; border: 1px solid var(--rule); text-align: left; }
+th { background: #f5f5f5; font-weight: 600; }
+.figure { margin: 32px 0; }
+.figure img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 4px; }
+.figure .cap { font-size: 13px; color: var(--meta); margin-top: 8px; line-height: 1.5; padding-left: 12px; border-left: 2px solid var(--rule); }
+.note { background: #f9f9f9; border-left: 3px solid #d4503a; border-radius: 4px; padding: 14px 18px; margin: 24px 0; font-size: 15px; color: #555; }
+.note strong { color: var(--text); }
+ol, ul { padding-left: 24px; margin: 16px 0; }
+li { margin: 8px 0; }
+@media (max-width: 600px) {
+  body { font-size: 16px; padding: 0 18px 60px; }
+  h1 { font-size: 20px; }
+  h2 { font-size: 14px; }
+  table { font-size: 12px; }
+  th, td { padding: 4px 6px; }
+}
+</style>
+</head>
+
+<style>
+.kicker { font-size: 13px; color: var(--meta); letter-spacing: .5px; margin: 0 0 6px; }
+h1 .en { display: block; font-size: 15px; font-weight: 400; font-style: italic; color: var(--meta); margin-top: 6px; letter-spacing: 0; }
+.chnav { margin: 48px 0 0; padding-top: 20px; border-top: 1px solid var(--rule); display: flex; gap: 16px; flex-wrap: wrap; justify-content: space-between; font-size: 14px; }
+.chnav a { color: var(--meta); text-decoration: none; }
+.chnav a:hover { color: var(--text); text-decoration: underline; }
+.toc-list { list-style: none; padding: 0; margin: 24px 0 0; }
+.toc-list li { margin: 0; padding: 16px 0; border-bottom: 1px solid var(--rule); }
+.toc-list a { font-size: 17px; font-weight: 600; text-decoration: none; }
+.toc-list a:hover { text-decoration: underline; }
+.toc-list .en { display: block; font-size: 13px; font-style: italic; color: var(--meta); font-weight: 400; margin-top: 4px; }
+.toc-list .sub { display: block; font-size: 14px; color: #555; margin-top: 6px; line-height: 1.6; }
+.toc-list .badge { font-size: 12px; color: var(--meta); }
+</style>
+</head>
+<body>
+
+<p class="back">← <a href="../index.html">站主随笔</a> · <a href="index.html">资本配置 · 分章阅读</a></p>
+
+<p class="kicker">资本配置：五条原则，看管理层会不会把钱花对地方 · 中英对照 · 第 2 / 9 章</p>
+
+<h1>基础：钱从哪来、钱到哪去<span class="en">Foundation: Where the Money Comes From and Where It Goes</span></h1>
+<p>评估资本配置，要从理解资本从哪里来、以及公司把钱花到哪里开始（见图 4）。</p>
+
+<figure class="figure">
+<img src="../img/ms-capital-allocation/ex04_sources-and-uses-of-financial-capital.jpg" alt="美国公司金融资本的来源与用途示意图，全章以此为框架展开">
+<div class="cap">图 4｜金融资本的来源与用途（原文 Exhibit 4: Sources and Uses of Financial Capital）· 资料来源：Counterpoint Global.</div>
+</figure>
+
+
+
+<h3>资本来源 <span class="en">Sources of Capital</span></h3>
+
+<p>资本的来源可以是外部的，也可以是内部的。外部资本来自发行股权或债务（包括租赁）。初创公司和年轻公司通常需要获取外部资本，因为在能够以足够规模销售商品或服务、从而吸收这些前期生产费用之前，它们必须先发生并承担这些成本。股份支付（SBC）本身也是一种股权发行。</p>
+
+<p>判断一家公司是否需要外部资本，一种方法是把它的税后净营业利润（NOPAT）增长率与其投入资本回报率（ROIC）作比较。无论年轻还是成熟，增长快于自身增量 ROIC 的公司都需要获取外部资本。如果公司的 ROIC 高于资本成本，这本身没问题，甚至是可取的。<sup>20</sup></p>
+
+<em class="en-source">Firms, young or old, that grow faster than their incremental ROICs need to access external capital. This is fine, indeed desirable, if the company’s ROIC is in excess of the cost of capital.</em>
+
+<p>一个经典案例是全球零售商沃尔玛（Walmart）：在上市后的最初 15 年里，它的增长快于自身的 ROIC。关键在于，正因为它的 ROIC 远高于资本成本，这家公司创造了大量价值。尽管沃尔玛需要外部资本来支撑增长，其股票在此期间仍实现了 33% 的年化股东总回报（TSR），是同期标普 500 指数的三倍。</p>
+
+<em class="en-source">Even though Walmart required external capital to support its growth, the stock delivered an annual total shareholder return of 33 percent during that period, three times that of the S&amp;P 500.</em>
+
+<p>内部资本来自业务自身产生的现金。这包括经营活动现金流和资产出售所得，后者实质上是把一串未来现金流一次性折成今天的总额。当增长低于 ROIC 时，公司就会有资金可以返还给股东，或补充进资产负债表。</p>
+
+<p>图 5 显示了 1970 年以来美国公司的资本来源。内部融资一直是主要来源。公司也持续增加新债，只有在经济处于衰退的若干年份例外。这种发行方式与稳定的资本结构相符。</p>
+
+<p>该图还显示，公司平均而言是在净回购股权。请注意，这项分析不包括以股份支付形式进行的股权发行。但即使把 SBC 费用考虑在内，股权净发行额仍为负。<sup>21</sup></p>
+
+<em class="en-source">But net equity issuance is negative even after taking SBC expense into consideration.</em>
+
+<p>内部融资承担了很高比例的投资资金，这既可以看作好事，也可以看作坏事。好的一面是，美国上市公司的 ROIC 足够高，几乎不需要求助于资本市场来为增长融资。坏的一面是，公司可以把内部经营产生的资金投向毁损股东价值的投资。从资本市场筹资则意味着公司的支出计划会受到审视。事实上，证据显示健康的资本市场能够改善资本配置。<sup>22</sup></p>
+
+<em class="en-source">In fact, the evidence shows that healthy capital markets improve capital allocation.</em>
+
+<p>著名的经济学家、金融史学家彼得·伯恩斯坦（Peter Bernstein）提出过一个思想实验：让公司把全部盈利都分配给股东，然后再向市场募集投资资金。他的逻辑是：既然市场比公司更擅长配置资本，那么经过这道关卡，整体的资本配置就会得到改善。<sup>23</sup></p>
+
+<p>债务占总资本比率是衡量资本结构——也就是公司如何为经营融资——的指标。图 6 显示了 1970 至 2024 年美国公司（不含金融行业）的这一比率。我们把它定义为债务的账面价值，除以债务的账面价值加上股权的市值。2024 年该比率为 15%，而长期平均为 26%，并在 2025 年上半年继续走低。请注意，尽管这一时期利率总体下行，资本结构反而变得更加保守。例如，美国 10 年期国债收益率在 20 世纪 70 年代的年均值为 7.5%，而过去 10 年的平均值为 2.5%。</p>
+
+<em class="en-source">That ratio for 2024 was 15 percent versus the long-term average of 26 percent, and it continued to trend lower in the first half of 2025.</em>
+
+<figure class="figure">
+<img src="../img/ms-capital-allocation/ex05_sources-of-capital-1970-2024.jpg" alt="美国公司资本来源的历史变化：内部融资一直是主要来源，债务发行稳定增加">
+<div class="cap">图 5｜资本来源，1970–2024（原文 Exhibit 5: Sources of Capital, 1970-2024）· 资料来源：Counterpoint Global；美国联邦储备系统理事会研究与统计部，Flow of Funds Accounts Table F.103。注：本项分析未反映以股权形式支付的薪酬所对应的股权发行。</div>
+</figure>
+
+<h3>资本用途 <span class="en">Uses of Capital</span></h3>
+
+<p>公司使用资本，要么投向业务本身，要么为索取权人（claimholders）提供回报。对业务内部的投资包括资本开支（capex）、营运资本、研发（R&D）投资，以及剔除研发后的销售、一般及行政费用（SG&A）投资（属于无形资产投资）。公司也可以进行并购（M&A）等外部投资。区分两类支出很重要：一类是为了追求创造价值的增长而自主决定的现金支出，另一类是维持当前经营所必需的支出。<sup>24</sup></p>
+
+<p>图 7 显示了 2024 年美国公司如何配置资本，既以绝对金额计，也以占销售额的百分比计。总支出为 US$7.5 万亿。其中 US$0.3 万亿的资产剥离已包含在并购金额中。</p>
+
+<em class="en-source">Total spending was $7.5 trillion. Divestitures of $0.3 trillion are included in the M&amp;A amount.</em>
+
+<figure class="figure">
+<img src="../img/ms-capital-allocation/ex06_debt-to-total-capital-ratio-1970-2024.jpg" alt="美国公司（不含金融行业）债务占总资本比率从 1970 年到 2024 年的走势">
+<div class="cap">图 6｜债务占总资本比率，1970–2024（原文 Exhibit 6: Debt-to-Total Capital Ratio, 1970-2024）· 资料来源：Counterpoint Global；Compustat；FactSet。注：基于合计金额；美国公司不含金融行业；等于债务账面价值 /（债务账面价值 + 股权市值）。</div>
+</figure>
+
+<figure class="figure">
+<img src="../img/ms-capital-allocation/ex07_capital-deployment-2024.jpg" alt="2024 年美国公司的资本配置：按绝对金额与占销售额百分比列示各类支出">
+<div class="cap">图 7｜2024 年的资本配置（原文 Exhibit 7: Capital Deployment, 2024）· 资料来源：Counterpoint Global；FactSet；LSEG。注：投资 SG&A（剔除研发）、研发投资和净营运资本变动三项统计不含金融公司；基于自然年度；R&D＝研发；SG&A＝销售、一般及行政费用。</div>
+</figure>
+
+<p>图 8 显示了 1970 年以来按来源划分的支出情况。数据揭示出一些值得注意的模式：</p>
+
+<ul>
+<li>并购（M&amp;A）始终占公司所配置资本中相当大的一块。但并购往往具有很强的周期性，与经济和牛市的起伏同步。例如，1998 年互联网泡沫期间，并购占销售额的比例高达 20%；1980 年美国经济处于衰退时则低至 1%。平均值约为 7%。
+<em class="en-source">For example, M&amp;A was as high as 20 percent of sales in 1998 during the dot-com boom and as low as 1 percent of sales in 1980 when the U.S. economy was in recession. The average was about 7 percent.</em></li>
+<li>剔除研发后的销售、一般及行政费用（SG&amp;A）投资，是形成无形资产的内部支出。反映全经济范围内无形资产投资的稳步增加，这一项目从 1970 年占销售额的 9.3% 升至 2020 年的峰值 11.2%，随后在 2024 年回落至 10.1%。<sup>25</sup> 若加上研发投资，同期无形资产投资总支出从占销售额的 10.2% 升至 13.4%。</li>
+<li>从 1970 年到 2024 年，资本开支占销售额的比重持续下降，这与投资从有形资产转向无形资产的趋势一致。具体而言，资本开支在 1970 年为销售额的 8.8%，1973 年见顶于 9.4%，随后逐步走低，2009 年降至谷底 5.5%。此后支出有所反弹，2024 年为销售额的 6.3%。资本开支的下降，也反映出美国上市公司行业构成的变化。</li>
+<li>股份回购直到 1982 年之后才超过销售额的 0.3%，当时一项规则变化使回购更具可行性。（我们在回购一节中对此有更详细的讨论。）在整个期间，尽管时有阶段性起伏，回购占销售额的比例一路走高，在 2007 年和 2018 年两次达到销售额 5.5% 的峰值，随后滑落至 2024 年的 4.6%。这显示出公司返还资本给股东的方式发生了显著变化。从 1970 年到 2024 年，回购规模从相当于股息的 0.1 倍升至 1.3 倍。总回报收益率——股息加回购再除以股权市值——在解释股东回报方面，比单独的股息收益率或回购收益率都做得更好。<sup>26</sup>
+<em class="en-source">Total payout yield, dividends plus buybacks divided by equity market capitalization, does a better job of explaining shareholder returns than either dividend or buyback yield alone.</em></li>
+</ul>
+
+<figure class="figure">
+<img src="../img/ms-capital-allocation/ex08_capital-deployment-1970-2024.jpg" alt="1970 至 2024 年美国公司按来源划分的支出构成与变化">
+<div class="cap">图 8｜资本配置，1970–2024（原文 Exhibit 8: Capital Deployment, 1970-2024）· 资料来源：Counterpoint Global；Compustat；FactSet；Mergerstat；LSEG。注：投资 SG&A（剔除研发）和研发投资不含金融公司；R&D＝研发；SG&A＝销售、一般及行政费用。</div>
+</figure>
+
+<ul>
+<li>在我们衡量的这段时期里，各种资本配置形式的增长率并不相同。值得注意的是增长率的标准差，也就是每一类支出项目在年度之间的波动幅度（见图 9）。例如，并购年度增长率的标准差大约是资本开支的五倍，股份回购的波动性接近股息的六倍。虽然回购和股息可以说可以相互替代，但管理层通常把回购视为可自由支配的支出，把股息视为不可触碰的底线。
+<em class="en-source">For example, the standard deviation of the annual growth rate in M&amp;A was roughly five times higher than that for capital expenditures, and share buybacks were nearly six times as volatile as dividends.</em></li>
+</ul>
+
+<p>图 10 显示了标普 500（S&amp;P 500）指数行业构成的变迁，该指数追踪美国最大的 500 家上市公司的市值。这些变化有助于解释，为什么今天公司配置资本的方式与几十年前不同。在这段时期内，信息技术、医疗保健和通信服务在市场中的占比翻了一番，从 1970 年的 26% 升至 2024 年的 52%。与此同时，工业、能源和原材料的占比下降超过一半，从 30% 降至指数的 13%（见图 11）。从有形投资向无形投资的结构变化，与行业构成的这一演变相互吻合。</p>
+
+<em class="en-source">Information technology, healthcare, and communication services doubled as a share of the market over this period, from 26 percent in 1970 to 52 percent in 2024.</em>
+
+<figure class="figure">
+<img src="../img/ms-capital-allocation/ex09_growth-and-volatility-of-uses-of-capital-1970-2024.jpg" alt="1970 至 2024 年各类资本用途的增长率与波动性比较">
+<div class="cap">图 9｜资本用途的增长率与波动性，1970–2024（原文 Exhibit 9: Growth and Volatility of Uses of Capital, 1970-2024）· 资料来源：Counterpoint Global；Compustat；FactSet；LSEG。注：并购、资产剥离、资本开支、股份回购和股息一项采用全部公司数据；投资 SG&A（剔除研发）和研发投资不含金融公司；资产剥离数据自 1980 年开始；净营运资本因存在部分负值而被剔除；资产剥离属于现金来源；R&D＝研发；SG&A＝销售、一般及行政费用。</div>
+</figure>
+
+<figure class="figure">
+<img src="../img/ms-capital-allocation/ex10_sector-composition-of-the-s-p-500-1970-2024.jpg" alt="标普 500 指数行业构成 1970 至 2024 年的变迁">
+<div class="cap">图 10｜标普 500 的行业构成，1970–2024（原文 Exhibit 10: Sector Composition of the S&amp;P 500, 1970-2024）· 资料来源：S&amp;P Dow Jones Indices；Compustat；FactSet；Counterpoint Global 估算。注：房地产业自 2016 年起从金融行业中拆分。</div>
+</figure>
+
+<figure class="figure">
+<img src="../img/ms-capital-allocation/ex11_shift-toward-intangible-heavy-sectors-in-the-s-p-500.jpg" alt="标普 500 指数向无形资产密集型行业转移的趋势">
+<div class="cap">图 11｜标普 500 向无形资产密集型行业转移，1970–2024（原文 Exhibit 11: Shift Toward Intangible-Heavy Sectors in the S&amp;P 500, 1970-2024）· 资料来源：S&amp;P Dow Jones Indices；Compustat；FactSet；Counterpoint Global 估算。</div>
+</figure>
+
+<h3>投入资本回报率与投入资本增长的近期趋势 <span class="en">Recent Trends in ROIC and Growth in Invested Capital</span></h3>
+
+<p>资本配置之所以是一个重要的投资议题，是因为上市公司的整体 ROIC 超过了整体增长率。这意味着美国上市公司创造的现金多于其投入的现金。经内部生成的无形资产调整后，1970 至 2024 年的平均 ROIC 为 9.2%（见图 12）。同样经无形资产投资调整后，NOPAT 的平均增长率为 7.9%。</p>
+
+<em class="en-source">The average ROIC, adjusted for internally-generated intangible assets, was 9.2 percent from 1970 through 2024 (see exhibit 12). The average growth rate in NOPAT, also adjusted for intangible investment, was 7.9 percent.</em>
+
+<p>图 13 显示，经通胀调整后，投入资本的平均增长率为 4.3%，该数字基于过去 3 年的年化增长率（滚动三年年化增长率）。我们对投入资本的定义剔除了超额现金。自 1970 年以来，包含回购和股息在内的整体投资以 7.5% 的速度增长。</p>
+
+<figure class="figure">
+<img src="../img/ms-capital-allocation/ex12_aggregate-return-on-invested-capital-1970-2024.jpg" alt="美国上市公司整体投入资本回报率 1970 至 2024 年的变化">
+<div class="cap">图 12｜整体投入资本回报率，1970–2024（原文 Exhibit 12: Aggregate Return on Invested Capital, 1970-2024）· 资料来源：Counterpoint Global；Compustat；FactSet。注：投入资本已反映内部生成的无形资产；不含金融行业。</div>
+</figure>
+
+<figure class="figure">
+<img src="../img/ms-capital-allocation/ex13_real-annual-change-in-invested-capital-1970-2024.jpg" alt="美国公司投入资本的实际年度变化，1970 至 2024">
+<div class="cap">图 13｜投入资本的实际年度变化，1970–2024（原文 Exhibit 13: Real Annual Change in Invested Capital, 1970-2024）· 资料来源：Counterpoint Global；Compustat；FactSet。注：投入资本已反映内部生成的无形资产；不含金融行业。</div>
+</figure>
+
+<p>超额现金的生成与行业构成的变化叠加，导致现金和短期（ST）投资的余额上升。<sup>27</sup> 图 14 显示了我们对美国公司超额现金及短期投资占资产总额百分比的估计。1970 至 2024 年的平均值为 5.8%，2024 年为 7.5%。</p>
+
+<em class="en-source">The average was 5.8 percent from 1970 to 2024 and was 7.5 percent in 2024.</em>
+
+<p>这笔超额现金和短期投资中相当可观的一部分，集中在少数几家公司手里，包括苹果（Apple）、字母表（Alphabet）和微软（Microsoft）。截至 2024 年末，各公司报告显示，这笔资金总额的四分之一由 10 家公司持有，三分之一由前 21 家公司持有，一半由 67 家公司持有。</p>
+
+<em class="en-source">As of year-end 2024, company reports show that one-quarter of the total was held by 10 companies, one-third by the top 21, and one-half by 67 firms.</em>
+
+<p>投资者需要考虑这些公司将如何使用这些超额资金。虽然这笔现金并不能赚取资本的机会成本，但它可以在融资环境困难时提供缓冲，并且在出现有吸引力的机会时可能具有期权价值。</p>
+
+<p>下面我们逐一讨论资本配置的各项备选方案。</p>
+
+<figure class="figure">
+<img src="../img/ms-capital-allocation/ex14_excess-cash-total-assets-1970-2024.jpg" alt="美国公司超额现金与短期投资占总资产比例，1970 至 2024">
+<div class="cap">图 14｜超额现金/总资产，1970–2024（原文 Exhibit 14: Excess Cash/Total Assets, 1970-2024）· 资料来源：Counterpoint Global；Compustat；FactSet。注：基于合计金额；超额现金假设必要现金余额为销售额的 2%；不含金融行业。</div>
+</figure>
+
+<div class="chnav">
+  <span><a href="ch1.html">← 第 1 章 · 导言：资本配置是 CEO 的首要职责</a></span>
+  <span><a href="index.html">目录</a></span>
+  <span><a href="ch3.html">第 3 章 · 资本配置的其他选项 →</a></span>
+</div>
+
+<p class="footer">
+  本文为乔布斯研究站「外部长文翻译」，关键术语保留英文原文（ROIC / NOPAT / TSR / SBC / SG&amp;A / IRR 等），翻译版权归站主所有，原文版权归 Morgan Stanley Investment Management 所有。<br>
+  <a href="../edgepoint-exponential.html">← 上一篇：EdgePoint · 96.3% 的公司加起来不如国债</a> · <a href="../index.html">← 返回站主随笔</a>
+</p>
+
+</body>
+</html>

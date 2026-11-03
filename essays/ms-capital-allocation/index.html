@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="完整翻译 Morgan Stanley《Capital Allocation: Results, Analysis, and Assessment》(Counterpoint Global, Mauboussin & Callahan, 2025-11-05):用 1970–2024 的 55 年数据拆解资本配置的八种备选方案(并购、SG&A、capex、研发、营运资本、剥离、股息、回购),并给出五条原则与一张评估管理层资本配置能力的清单。含 48 张原图。">
+<title>资本配置：五条原则，看管理层会不会把钱花对地方 · 中英对照 — 乔布斯研究</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600&family=Charter:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #ffffff; --text: #1a1a1a; --meta: #888888; --rule: #e0e0e0; --max-w: 720px; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: var(--bg); color: var(--text); font-family: 'Noto Serif SC','Charter',serif; font-size: 17px; line-height: 1.7; max-width: var(--max-w); margin: 0 auto; padding: 0 24px 80px; overflow-wrap: anywhere; }
+a { color: var(--text); text-decoration: underline; text-decoration-color: var(--rule); }
+a:hover { text-decoration-color: var(--text); }
+h1 { font-size: 22px; font-weight: 600; margin: 48px 0 8px; letter-spacing: -0.3px; }
+h2 { font-size: 15px; font-weight: 600; color: var(--meta); text-transform: uppercase; letter-spacing: 1px; margin: 40px 0 16px; padding-top: 24px; border-top: 1px solid var(--rule); }
+h2 .en { display: block; font-size: 14px; color: var(--meta); text-transform: none; letter-spacing: 0; font-weight: 400; font-style: italic; margin-top: 4px; }
+h3 { font-size: 17px; font-weight: 600; margin: 32px 0 12px; }
+h3 .en { display: block; font-size: 14px; color: var(--meta); font-weight: 400; font-style: italic; margin-top: 2px; }
+.back { font-size: 14px; color: var(--meta); margin-bottom: 24px; }
+.meta { font-size: 13px; color: var(--meta); margin-left: 8px; }
+p { margin: 16px 0; }
+strong { font-weight: 600; }
+em.en-source { display: block; font-family: 'Charter', serif; font-size: 14px; font-style: italic; color: var(--meta); margin: 8px 0 24px; padding-left: 12px; border-left: 2px solid var(--rule); }
+blockquote { border-left: 3px solid var(--rule); padding: 4px 0 4px 20px; margin: 24px 0; color: #555; font-style: italic; }
+.source { font-size: 13px; color: var(--meta); margin-top: 12px; }
+.byline { font-size: 14px; color: var(--meta); margin: 8px 0 32px; }
+.tag-row { margin: 16px 0 32px; }
+.tag { display: inline-block; font-size: 12px; padding: 2px 10px; background: var(--rule); border-radius: 12px; color: var(--meta); margin-right: 6px; }
+.hero { background: #f9f9f9; border-radius: 8px; padding: 24px; margin: 0 0 32px; }
+.hero h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; }
+.hero p { font-size: 15px; color: #555; line-height: 1.7; margin: 8px 0; }
+.footer { margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--rule); font-size: 13px; color: var(--meta); }
+.footer a { color: var(--meta); }
+table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+.table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 16px 0; }
+.table-wrap table { margin: 0; min-width: 420px; }
+th, td { padding: 6px 10px; border: 1px solid var(--rule); text-align: left; }
+th { background: #f5f5f5; font-weight: 600; }
+.figure { margin: 32px 0; }
+.figure img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 4px; }
+.figure .cap { font-size: 13px; color: var(--meta); margin-top: 8px; line-height: 1.5; padding-left: 12px; border-left: 2px solid var(--rule); }
+.note { background: #f9f9f9; border-left: 3px solid #d4503a; border-radius: 4px; padding: 14px 18px; margin: 24px 0; font-size: 15px; color: #555; }
+.note strong { color: var(--text); }
+ol, ul { padding-left: 24px; margin: 16px 0; }
+li { margin: 8px 0; }
+@media (max-width: 600px) {
+  body { font-size: 16px; padding: 0 18px 60px; }
+  h1 { font-size: 20px; }
+  h2 { font-size: 14px; }
+  table { font-size: 12px; }
+  th, td { padding: 4px 6px; }
+}
+</style>
+</head>
+
+<style>
+.kicker { font-size: 13px; color: var(--meta); letter-spacing: .5px; margin: 0 0 6px; }
+h1 .en { display: block; font-size: 15px; font-weight: 400; font-style: italic; color: var(--meta); margin-top: 6px; letter-spacing: 0; }
+.chnav { margin: 48px 0 0; padding-top: 20px; border-top: 1px solid var(--rule); display: flex; gap: 16px; flex-wrap: wrap; justify-content: space-between; font-size: 14px; }
+.chnav a { color: var(--meta); text-decoration: none; }
+.chnav a:hover { color: var(--text); text-decoration: underline; }
+.toc-list { list-style: none; padding: 0; margin: 24px 0 0; }
+.toc-list li { margin: 0; padding: 16px 0; border-bottom: 1px solid var(--rule); }
+.toc-list a { font-size: 17px; font-weight: 600; text-decoration: none; }
+.toc-list a:hover { text-decoration: underline; }
+.toc-list .en { display: block; font-size: 13px; font-style: italic; color: var(--meta); font-weight: 400; margin-top: 4px; }
+.toc-list .sub { display: block; font-size: 14px; color: #555; margin-top: 6px; line-height: 1.6; }
+.toc-list .badge { font-size: 12px; color: var(--meta); }
+</style>
+</head>
+<body>
+
+<p class="back">← <a href="../index.html">站主随笔</a> · <a href="../ms-capital-allocation.html">单页全文版</a></p>
+
+<p class="kicker">Morgan Stanley · Counterpoint Global Insights（Consilient Observer）· 2025-11-05</p>
+<h1>资本配置：五条原则，看管理层会不会把钱花对地方<span class="en">Capital Allocation: Results, Analysis, and Assessment</span></h1>
+<p class="byline">
+  全文中英对照 · 按章节阅读 · 48 张原图 · 正文 57 页 + 注释 13 页<br>
+  原文：<a href="https://www.morganstanley.com/im/publication/insights/articles/article_capitalallocation.pdf">article_capitalallocation.pdf</a>（88 页）·
+  作者：Michael J. Mauboussin &amp; Dan Callahan · 译者：站主（Mr. Buffett 委托）
+</p>
+
+<div class="hero">
+  <h3>一句话核心论点</h3>
+  <p>资本配置是管理层创造价值的<strong>第一职责</strong>，但绝大多数公司做得很差：事业部之间几乎不做资本再配置，估值错误吞噬回报，激励机制反而在鼓励扩张与规模。这份报告用 <strong>1970–2024 年</strong>的 55 年数据逐项体检八种资本配置方式，最后给出<strong>五条原则</strong>和一张<strong>评估清单</strong>——用来判断一家公司的管理层究竟会不会把钱花在刀刃上。</p>
+  <div class="tag-row">
+    <span class="tag">零基准配置</span>
+    <span class="tag">为战略而投</span>
+    <span class="tag">不搞资本配给</span>
+    <span class="tag">对坏增长零容忍</span>
+    <span class="tag">分清价格与价值</span>
+  </div>
+
+<ul class="toc-list">
+  <li><a href="ch1.html">1. 导言：资本配置是 CEO 的首要职责</a><span class="en">Introduction</span><span class="sub">为什么资本配置是 CEO 的第一职责；事业部之间几乎不做资本再配置的证据（图 1）。</span></li>
+  <li><a href="ch2.html">2. 基础：钱从哪来、钱到哪去</a><span class="en">Foundation: Where the Money Comes From and Where It Goes</span><span class="sub">内部资金与外部融资的来源结构、八种用途的长期占比：capex / 研发 / 并购 / SG&A / 营运资本 / 剥离 / 股息 / 回购。</span></li>
+  <li><a href="ch3.html">3. 资本配置的其他选项</a><span class="en">Capital Allocation Alternatives</span><span class="sub">六种备选方案逐一验：并购、SG&A、研发、资本开支、营运资本、剥离，以及股息与回购的等价性。</span></li>
+  <li><span>4. 评估管理层的资本配置能力 <span class="badge">（即将上线）</span></span><span class="en">Assessing Management’s Capital Allocation Skills</span><span class="sub">估值商、ROIIC、TSR 与激励：怎么用数据判断管理层到底会不会配置资本（含微软、亿滋等案例）。</span></li>
+  <li><span>5. 结论 <span class="badge">（即将上线）</span></span><span class="en">Conclusion</span><span class="sub">全文结论：资本配置的五条原则。</span></li>
+  <li><span>6. 评估资本配置能力的清单 <span class="badge">（即将上线）</span></span><span class="en">Checklist for Assessing Capital Allocation Skills</span><span class="sub">一张可直接拿去用的评估清单（Checklist）。</span></li>
+  <li><span>7. 附录：股息与股份回购的等价性 <span class="badge">（即将上线）</span></span><span class="en">Appendix: The Equivalence of Dividends and Share Buybacks</span><span class="sub">附录：为什么股息与股份回购在理论上是等价的（含税与信号两种摩擦）。</span></li>
+  <li><span>8. 译者注与数据核验 <span class="badge">（即将上线）</span></span><span class="en">Translator's notes &amp; data verification</span><span class="sub">译者注与数据核验：原文数字与公开来源逐项对照的结果。</span></li>
+  <li><span>9. 原文注释与数据来源 <span class="badge">（即将上线）</span></span><span class="en">Endnotes &amp; sources</span><span class="sub">原文 190 条注释、参考文献与免责声明。</span></li>
+</ul>
+
+<p class="footer">
+  单页全文版：<a href="../ms-capital-allocation.html">ms-capital-allocation.html</a>（一页读完，便于搜索与打印）<br>
+  <a href="../index.html">← 返回站主随笔</a>
+</p>
+
+</body>
+</html>
