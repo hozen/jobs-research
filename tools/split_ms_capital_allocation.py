@@ -88,7 +88,8 @@ def main() -> int:
     assert len(lost) < 4000, f"h2 之前的内容过多（{len(lost)} 字），可能漏了正文"
 
     OUT_DIR.mkdir(exist_ok=True)
-    wanted = BATCHES[args.batch] if args.batch else list(range(1, 10))
+    wanted = ([n for b in range(1, args.batch + 1) for n in BATCHES[b]]
+               if args.batch else list(range(1, 10)))
 
     def rel_fix(s: str) -> str:
         """章节页在 essays/ms-capital-allocation/ 下 —— 相对资源加一层 ../"""
@@ -103,6 +104,14 @@ def main() -> int:
         zh = re.sub(r"<[^>]+>", "", zh).strip()
         en = re.search(r'<span class="en">(.*?)</span>', inner, re.S)
         return zh, (re.sub(r"<[^>]+>", "", en.group(1)).strip() if en else "")
+
+    def page_head(title: str, desc: str = "") -> str:
+        """按章重写 <title> / description（分享卡与搜索结果看这个）。"""
+        h = re.sub(r"<title>.*?</title>", f"<title>{title}</title>", head, count=1, flags=re.S)
+        if desc:
+            h = re.sub(r'<meta name="description" content="[^"]*"',
+                       f'<meta name="description" content="{desc}"', h, count=1)
+        return h
 
     for n in wanted:
         chunk = rel_fix(chapters[n])
@@ -119,7 +128,8 @@ def main() -> int:
             next_link = f'<span style="color:var(--meta)">第 {n+1} 章 · {CHAPTER_TITLES[n+1]}（下一批上线）</span>'
         else:
             next_link = f'<a href="ch{n+1}.html">第 {n+1} 章 · {CHAPTER_TITLES[n+1]} →</a>'
-        page = f"""{head}
+        page = f"""{page_head(f'第 {n} 章 · {zh} · 资本配置（中英对照）— 乔布斯研究',
+                                f'Morgan Stanley《资本配置》中英对照翻译第 {n} / 9 章：{zh}（{en}）。全文 48 张原图，按章节阅读。')}
 <style>{EXTRA_CSS}</style>
 </head>
 <body>
@@ -169,7 +179,8 @@ def main() -> int:
     hero = re.search(r'<div class="hero">.*?</div>\n', body, re.S)
     hero_html = hero.group(0) if hero else ""
 
-    index = f"""{head}
+    index = f"""{page_head('资本配置 · 分章阅读（中英对照全文 9 章）— 乔布斯研究',
+                            'Morgan Stanley《Capital Allocation》中英对照全文，按章节阅读：9 章 · 48 张原图 · 1970–2024 五十五年数据。')}
 <style>{EXTRA_CSS}</style>
 </head>
 <body>
