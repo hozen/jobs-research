@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="这一讲不讲道理，只摆表。Damodaran 把七家形态截然不同的公司的利润表并排摊开：Peloton（招股书里的年轻公司）、Netflix（高速成长）、Coca-Cola（成熟）、Toyota（老化）、Total（资源型）、HSBC（金融服务）、Dr. Reddy's（制药）。
+
+他用的框架是&lt;strong&gt;企业生命周期&lt;/strong&gt;：同一张利润表模板，在初创、成长、成熟、衰退四个阶段会长出完全不同的内容——初创公司是「亏损加速扩大」，成熟公司是「利润走平、与收入同步增长」，而商品型公司压根没有 gross profit 这一行，金融服务公司的收入端坐着的是净利息收入而不是销售收入。
+
+结尾他不客气：会计准则在全球范围内是在&lt;strong&gt;趋同&lt;/strong&gt;而不是分化，所以理论上这些数字应该可以横向比较；但在实践中，费用怎么计量、怎么归类的口径不一致，会让比较出问题。这正是第 5 讲要处理的那些「会计口径不一致」的真实来源。">
+<title>第 2A 讲 · 利润表比较：把七家公司并排放在一起看 · 会计101 中英对照 — 乔布斯研究</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600&family=Charter:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #ffffff; --text: #1a1a1a; --meta: #888888; --rule: #e0e0e0; --max-w: 720px; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: var(--bg); color: var(--text); font-family: 'Noto Serif SC','Charter',serif; font-size: 17px; line-height: 1.7; max-width: var(--max-w); margin: 0 auto; padding: 0 24px 80px; overflow-wrap: anywhere; }
+a { color: var(--text); text-decoration: underline; text-decoration-color: var(--rule); }
+a:hover { text-decoration-color: var(--text); }
+h1 { font-size: 22px; font-weight: 600; margin: 48px 0 8px; letter-spacing: -0.3px; }
+h2 { font-size: 15px; font-weight: 600; color: var(--meta); text-transform: uppercase; letter-spacing: 1px; margin: 40px 0 16px; padding-top: 24px; border-top: 1px solid var(--rule); }
+h2 .en { display: block; font-size: 14px; color: var(--meta); text-transform: none; letter-spacing: 0; font-weight: 400; font-style: italic; margin-top: 4px; }
+h3 { font-size: 17px; font-weight: 600; margin: 32px 0 12px; }
+h3 .en { display: block; font-size: 14px; color: var(--meta); font-weight: 400; font-style: italic; margin-top: 2px; }
+.back { font-size: 14px; color: var(--meta); margin-bottom: 24px; }
+.meta { font-size: 13px; color: var(--meta); margin-left: 8px; }
+p { margin: 16px 0; }
+strong { font-weight: 600; }
+em.en-source { display: block; font-family: 'Charter', serif; font-size: 14px; font-style: italic; color: var(--meta); margin: 8px 0 24px; padding-left: 12px; border-left: 2px solid var(--rule); }
+blockquote { border-left: 3px solid var(--rule); padding: 4px 0 4px 20px; margin: 24px 0; color: #555; font-style: italic; }
+.source { font-size: 13px; color: var(--meta); margin-top: 12px; }
+.byline { font-size: 14px; color: var(--meta); margin: 8px 0 32px; }
+.tag-row { margin: 16px 0 32px; }
+.tag { display: inline-block; font-size: 12px; padding: 2px 10px; background: var(--rule); border-radius: 12px; color: var(--meta); margin-right: 6px; }
+.hero { background: #f9f9f9; border-radius: 8px; padding: 24px; margin: 0 0 32px; }
+.hero h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; }
+.hero p { font-size: 15px; color: #555; line-height: 1.7; margin: 8px 0; }
+.footer { margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--rule); font-size: 13px; color: var(--meta); }
+.footer a { color: var(--meta); }
+table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+.table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 16px 0; }
+.table-wrap table { margin: 0; min-width: 420px; }
+th, td { padding: 6px 10px; border: 1px solid var(--rule); text-align: left; vertical-align: top; }
+th { background: #f5f5f5; font-weight: 600; }
+.figure { margin: 32px 0; }
+.figure img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 4px; }
+.figure .cap { font-size: 13px; color: var(--meta); margin-top: 8px; line-height: 1.5; padding-left: 12px; border-left: 2px solid var(--rule); }
+.note { background: #f9f9f9; border-left: 3px solid #d4503a; border-radius: 4px; padding: 14px 18px; margin: 24px 0; font-size: 15px; color: #555; }
+.note strong { color: var(--text); }
+ol, ul { padding-left: 24px; margin: 16px 0; }
+li { margin: 8px 0; }
+@media (max-width: 600px) {
+  body { font-size: 16px; padding: 0 18px 60px; }
+  h1 { font-size: 20px; }
+  h2 { font-size: 14px; }
+  table { font-size: 12px; }
+  th, td { padding: 4px 6px; }
+}
+</style>
+<style>
+.kicker { font-size: 13px; color: var(--meta); letter-spacing: .5px; margin: 0 0 6px; }
+h1 .en { display: block; font-size: 15px; font-weight: 400; font-style: italic; color: var(--meta); margin-top: 6px; letter-spacing: 0; }
+.video-wrap { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 6px; margin: 24px 0 8px; background: #000; }
+.video-wrap iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+.video-cap { font-size: 13px; color: var(--meta); margin: 0 0 32px; }
+.slide { margin: 0 0 8px; padding: 20px 0 4px; border-top: 1px solid var(--rule); }
+.slide:first-of-type { border-top: none; }
+.slide h3 { margin: 0 0 12px; font-size: 16px; }
+.slide h3 .slide-no { display: inline-block; font-size: 12px; font-weight: 400; color: var(--meta); border: 1px solid var(--rule); border-radius: 10px; padding: 1px 8px; margin-right: 8px; vertical-align: 2px; }
+.slide h3 .en { display: block; font-size: 13px; color: var(--meta); font-style: italic; font-weight: 400; margin-top: 4px; }
+.slide .zh { margin: 0 0 10px; }
+.slide .zh p { margin: 10px 0; }
+.slide .zh ul, .slide .zh ol { margin: 8px 0; padding-left: 22px; }
+.slide .zh li { margin: 6px 0; }
+.en-block { font-family: 'Charter', serif; font-size: 14px; line-height: 1.6; color: var(--meta); background: #fbfbfb; border-left: 2px solid var(--rule); border-radius: 0 4px 4px 0; padding: 10px 14px; margin: 10px 0 0; white-space: pre-wrap; overflow-wrap: anywhere; }
+.en-block .en-label { display: block; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: #aaa; margin-bottom: 6px; }
+.q { margin: 24px 0; padding: 0 0 4px; border-bottom: 1px solid var(--rule); }
+.q .qno { font-size: 13px; color: var(--meta); }
+.q .qzh { font-weight: 600; }
+.q ol { margin: 8px 0; padding-left: 22px; }
+.q .opts { list-style: none; padding-left: 0; margin: 10px 0; }
+.q .opts li { margin: 7px 0; font-size: 15px; line-height: 1.55; }
+.q .opts .en { color: var(--meta); font-size: 13px; font-family: 'Charter', serif; }
+.ans { background: #f9f9f9; border-left: 3px solid #3a7d5c; border-radius: 4px; padding: 12px 16px; margin: 12px 0 24px; font-size: 15px; color: #555; }
+.ans strong { color: var(--text); }
+.toc-list { list-style: none; padding: 0; margin: 24px 0 0; }
+.toc-list li { margin: 0; padding: 16px 0; border-bottom: 1px solid var(--rule); }
+.toc-list a { font-size: 17px; font-weight: 600; text-decoration: none; }
+.toc-list a:hover { text-decoration: underline; }
+.toc-list .en { display: block; font-size: 13px; font-style: italic; color: var(--meta); font-weight: 400; margin-top: 4px; }
+.toc-list .sub { display: block; font-size: 14px; color: #555; margin-top: 6px; line-height: 1.6; }
+.toc-list .badge { font-size: 12px; color: var(--meta); }
+.sessnav { margin: 48px 0 0; padding-top: 20px; border-top: 1px solid var(--rule); display: flex; gap: 16px; flex-wrap: wrap; justify-content: space-between; font-size: 14px; }
+.sessnav a { color: var(--meta); text-decoration: none; }
+.sessnav a:hover { color: var(--text); text-decoration: underline; }
+.glossary td:first-child { white-space: nowrap; font-family: 'Charter', serif; }
+.glossary td:nth-child(2) { color: #555; }
+</style>
+</head>
+<body><p class="back">← <a href="index.html">会计101 · 分讲阅读</a> · <a href="../index.html">站主随笔</a></p>
+<p class="kicker">NYU Stern · Damodaran《Accounting 101》· 第 2A 讲</p>
+<h1>第 2A 讲 · 利润表比较：把七家公司并排放在一起看<span class="en">Income Statement Comparisons</span></h1>
+<p class="byline">讲课视频 · 幻灯 13 张 · 课后题 5 道 · 讲师：Aswath Damodaran（NYU Stern）· 译者：站主（Mr. Buffett 委托）</p>
+<div class="video-wrap"><iframe src="https://www.youtube.com/embed/UYxJl2GvdGw" title="Income Statement Comparisons" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<p class="video-cap">本讲视频：<a href="https://youtu.be/UYxJl2GvdGw">Income Statement Comparisons</a>（YouTube，约 12–20 分钟）· 原始幻灯：<a href="https://www.stern.nyu.edu/~adamodar/pdfiles/Accounting101/slides/session2A.pdf">session2A.pdf</a></p>
+<div class="hero"><h3>一句话核心</h3>
+<p>把七家公司的利润表并排放在一起看，你会看到一个容易被忘掉的常识：<strong>利润表长得都一样，但每家公司塞进去的东西完全不一样。</strong>Peloton 的净亏损和 Coca-Cola 的净利润都是同一行数字，意义却天差地别；Total 的利润几乎全在上游，HSBC 的收入端是利息而不是货款，Dr. Reddy's 的净利润甚至高于它的税前利润。</p>
+<div class="tag-row"><span class="tag">利润表比较</span><span class="tag">企业生命周期</span><span class="tag">商品型公司</span><span class="tag">金融服务</span><span class="tag">制药</span><span class="tag">分部数据</span></div>
+</div>
+<h2>本讲导读<span class="en">Session guide</span></h2><p>这一讲不讲道理，只摆表。Damodaran 把七家形态截然不同的公司的利润表并排摊开：Peloton（招股书里的年轻公司）、Netflix（高速成长）、Coca-Cola（成熟）、Toyota（老化）、Total（资源型）、HSBC（金融服务）、Dr. Reddy's（制药）。
+
+他用的框架是<strong>企业生命周期</strong>：同一张利润表模板，在初创、成长、成熟、衰退四个阶段会长出完全不同的内容——初创公司是「亏损加速扩大」，成熟公司是「利润走平、与收入同步增长」，而商品型公司压根没有 gross profit 这一行，金融服务公司的收入端坐着的是净利息收入而不是销售收入。
+
+结尾他不客气：会计准则在全球范围内是在<strong>趋同</strong>而不是分化，所以理论上这些数字应该可以横向比较；但在实践中，费用怎么计量、怎么归类的口径不一致，会让比较出问题。这正是第 5 讲要处理的那些「会计口径不一致」的真实来源。</p>
+<h2>逐页幻灯（中文在上，英文原文在下）<span class="en">Slide by slide</span></h2>
+<div class="slide" id="s1">
+<h3><span class="slide-no">幻灯 1</span>第 2A 讲：利润表比较<span class="en">SESSION 2A: INCOME STATEMENT COMPARISONS</span></h3>
+<div class="zh"><p>课程封面。本讲是《Accounting for Finance》（给财务报表使用者的会计课）的第 2A 讲，副题是 <strong>Income Statement Comparisons</strong>（利润表比较）。第 2 讲讲的是利润表本身怎么搭起来，这一讲把七家公司的利润表并排摆开：Peloton（招股书里的年轻公司）、Netflix（高速成长）、Coca-Cola（成熟）、Toyota（老化）、Total（资源型）、HSBC（金融服务）、Dr. Reddy's（制药）。</p>
+<p>讲师的方式很朴素：不讲道理，只把表摆出来让你自己看。他想让你记住的是——<strong>利润表长得像，但每家公司塞进去的东西完全不一样。</strong></p></div>
+<div class="en-block"><span class="en-label">English original</span>SESSION 2A: INCOME STATEMENT
+COMPARISONS
+Accounting for Finance</div>
+</div>
+<div class="slide" id="s2">
+<h3><span class="slide-no">幻灯 2</span>利润表：一个生命周期视角<span class="en">Income Statement: A Life Cycle Perspective</span></h3>
+<div class="zh"><p>分节页 + 框架图。讲师给的框架是<strong>企业生命周期</strong>：同一家公司从初创到衰退，利润表上的收入曲线与利润曲线会走出完全不同的形状。</p>
+<p>图上方是两条曲线：Revenues（收入，红线）与 Earnings（盈利，绿线）。收入通常在成熟期见顶并趋平；盈利在初创与早期成长阶段是负的，在高速成长阶段触底回升、穿过零轴，在成熟阶段一路向上，到衰退期掉头，而且<strong>掉得比收入更快</strong>。</p>
+<p>图下方是六个阶段的对照表，分「Revenue & Revenue Growth（收入与收入增长）」和「Profit Patterns（利润形态）」两行：</p>
+<ul><li>Start-up（初创期）：收入规模小但增长率高；亏损，因为业务还在搭建，销售在将来。</li><li>Young Growth（早期成长期）：收入开始有实质规模，增长率仍然高；&lt;strong&gt;亏损加速扩大&lt;/strong&gt;——费用比收入涨得快。</li><li>High Growth（高速成长期）：收入规模已大且仍在增长；收入涨得比费用快，亏损收窄、利润开始出现。</li><li>Mature Growth（成熟成长期）：收入规模大但增速回落；&lt;strong&gt;规模效应（economies of scale）开始起作用&lt;/strong&gt;，利润持续攀升。</li><li>Mature Stable（成熟稳定期）：收入规模大但停滞；利润走平，与收入同步增长。</li><li>Decline（衰退期）：收入开始下滑；利润下滑，且通常比收入掉得更快。</li></ul></div>
+<div class="en-block"><span class="en-label">English original</span>Income Statement: A Life Cycle Perspective</div>
+<figure class="figure"><img src="../img/accounting101/session2A-p02.jpg" alt="企业生命周期图：收入与盈利两条曲线，加六个阶段的收入特征与利润形态表" loading="lazy"><figcaption class="cap">企业生命周期图：上方是 Revenues（收入）与 Earnings（盈利）随时间的两条曲线，横轴上标着六个节点——灵光一现（The Lightbulb Moment）、产品测试（The Product Test）、成人礼（The Bar Mitzvah）、规模化测试（The Scaling up Test）、中年危机（The Midlife Crisis）、终局（The End Game）；下方表格按六个阶段列出收入特征与利润形态。这张图在论证：读利润表之前得先判断公司在生命周期的哪一段——初创公司的巨亏和成熟公司的低增长，用的是同一张报表模板，含义却完全相反。</figcaption></figure>
+</div>
+<div class="slide" id="s3">
+<h3><span class="slide-no">幻灯 3</span>一家年轻公司：Peloton 招股书里的利润表（2019）<span class="en">A Young Company: Peloton's Income Statement (2019) in its Prospectus</span></h3>
+<div class="zh"><p>Peloton（Connected Fitness，居家健身器材加订阅）的招股说明书利润表，单位<strong>百万美元</strong>，三个财年分别截至 6 月 30 日（2017 / 2018 / 2019）。</p>
+<p>收入（Total revenue）：218.6 → 435.0 → <strong>915.0</strong>。拆开看：Connected Fitness Products（硬件）183.5 → 348.6 → 719.2；Subscription（订阅）32.5 → 80.3 → 181.1；Other 2.6 → 6.2 → 14.7。</p>
+<p>毛利（gross profit）：73.9 → 189.6 → <strong>383.6</strong>（毛利率 33.8% → 43.6% → 41.9%）。营业成本（total cost of revenue）144.7 → 245.4 → 531.4。</p>
+<p>营业费用（total operating expenses）：144.7 → 237.1 → <strong>585.8</strong>。其中 Sales and marketing 86.0 → 151.4 → <strong>324.0</strong>，General and administrative 45.6 → 62.4 → <strong>207.0</strong>（2019 财年突然跳升），Research and development 13.0 → 23.4 → 54.8。</p>
+<p><strong>营业亏损（loss from operations）：(70.7) → (47.5) → (202.3)</strong>；税前亏损 (71.1) → (47.8) → (195.6)；<strong>净亏损 (71.1) → (47.9) → (195.6)</strong>；基本与稀释每股普通股净亏损 $(5.97) → $(2.18) → <strong>$(10.72)</strong>。</p>
+<p>这张表要说明的是<strong>年轻公司长什么样</strong>：收入三年翻了四倍多，毛利率也在改善，可营业亏损反而扩大——因为销售与市场费用、G&A 的增速快过收入。亏损在这里不是经营失败，是<strong>花钱买增长</strong>在报表上留下的痕迹。</p></div>
+<div class="en-block"><span class="en-label">English original</span>A Young Company: Peloton’s Income Statement
+(2019) in its Prospectus</div>
+<figure class="figure"><img src="../img/accounting101/session2A-p03.jpg" alt="Peloton 2017–2019 财年合并经营与全面亏损表（百万美元）" loading="lazy"><figcaption class="cap">Peloton 招股说明书利润表（截至 6 月 30 日的 2017/2018/2019 财年，单位百万美元）。这张表在论证：一家年轻成长公司的利润表长什么样——收入三年从 218.6 涨到 915.0，gross profit 从 73.9 涨到 383.6，可 operating loss 却是 (70.7) → (47.5) → (202.3) 越来越大，因为 sales and marketing 与 G&amp;A 涨得比收入快。判断这家公司该看的是增长曲线，不是净亏损的绝对值。</figcaption></figure>
+</div>
+<div class="slide" id="s4">
+<h3><span class="slide-no">幻灯 4</span>一家成长公司：Netflix 的利润表（2020）<span class="en">A Growth Company: Netflix's Income Statement (2020)</span></h3>
+<div class="zh"><p>Netflix（NETFLIX, INC.）的 Consolidated Statements of Operations，单位<strong>千美元</strong>，截至 12 月 31 日的 2017 / 2018 / 2019 三个财年。</p>
+<p>收入（Revenues）：11,692,713 → 15,794,341 → <strong>20,156,447</strong>（即 2019 年约 201.6 亿美元）。Cost of revenues：8,033,000 → 9,967,538 → <strong>12,440,213</strong>。</p>
+<p>三项营业费用：Marketing 1,436,281 → 2,369,469 → <strong>2,652,462</strong>；Technology and development 953,710 → 1,221,814 → <strong>1,545,149</strong>；General and administrative 431,043 → 630,294 → <strong>914,369</strong>。</p>
+<p><strong>营业利润（operating income）：838,679 → 1,605,226 → 2,604,254</strong>；Interest expense (238,204) → (420,493) → (626,023)；税前利润 485,321 → 1,226,458 → <strong>2,062,231</strong>；所得税 (73,608) → 15,216 → 195,315；<strong>净利润 558,929 → 1,211,242 → 1,866,916</strong>；基本每股收益 $1.29 → $2.78 → <strong>$4.26</strong>，稀释 $1.25 → $2.68 → $4.13。</p>
+<p>这张表和 Peloton 的差别一眼能看出来：<strong>成长到一定阶段的成长公司，收入与利润同向扩张</strong>——三年里收入涨了 72%，营业利润涨了 211%。另外注意两点：Netflix 的报表里<strong>没有单独列 gross profit</strong>，Cost of revenues 之后直接接三项营业费用；2019 年的实际税率只有约 9.5%（195,315 ÷ 2,062,231），跨公司比 net income 时得先把这件事算进去。</p>
+<p>（幻灯标题写的是 2020，但表内数据是 2017–2019 三个财年。）</p></div>
+<div class="en-block"><span class="en-label">English original</span>A Growth Company: Netflix’s Income
+    Statement (2020)</div>
+<figure class="figure"><img src="../img/accounting101/session2A-p04.jpg" alt="Netflix 2017–2019 财年合并经营报表（千美元）" loading="lazy"><figcaption class="cap">Netflix 合并经营报表（截至 12 月 31 日的 2017/2018/2019 财年，单位千美元）。这张表在论证成长型公司的利润表形态：revenues 从 11,692,713 涨到 20,156,447，operating income 从 838,679 涨到 2,604,254，收入与利润同向扩张；同时它也提醒你报表格式本身有差异——Netflix 在 cost of revenues 之后直接接三项营业费用、不列 gross profit 小计，且 2019 年实际税率低到约 9.5%，拿 net income 跟别家比之前得先处理这件事。</figcaption></figure>
+</div>
+<div class="slide" id="s5">
+<h3><span class="slide-no">幻灯 5</span>一家成熟公司：可口可乐（2019）<span class="en">A Mature Company: Coca Cola (2019)</span></h3>
+<div class="zh"><p>The Coca-Cola Company 的利润表，单位<strong>百万美元</strong>，截至 12 月 31 日的 2017 / 2018 / 2019 三个财年。</p>
+<p>2019 年：Net operating revenues <strong>37,266</strong>（2018: 34,300；2017: 36,212）；Cost of goods sold 14,619；<strong>Gross profit 22,647</strong>（毛利率 60.8%）；Selling, general and administrative expenses 12,103；Other operating charges 458；<strong>Operating income 10,086</strong>（2018: 9,152；2017: 7,755）。</p>
+<p>往下：Interest income 563、Interest expense 946、Equity income (loss) — net 1,049、Other income (loss) — net 34 → <strong>Income before income taxes 10,786</strong>；Income taxes 1,801 → <strong>Consolidated net income 8,985</strong>；减去归属于非控制性权益的 65 → <strong>归属于股东净利润 8,920</strong>；基本每股收益 $2.09，稀释 $2.07。</p>
+<p>成熟公司在利润表上的样子：<strong>高毛利、低波动</strong>。毛利率 60.8% 远高于 Peloton 的 41.9%，收入三年几乎没动（36,212 → 34,300 → 37,266），营业利润却从 7,755 稳步爬到 10,086。而 2017 年净利润只有 1,283，原因是当年有 1,902 的 other operating charges 与 5,607 的所得税——<strong>利润表的年度起伏主要来自表下的项目，而不是主业本身</strong>。</p></div>
+<div class="en-block"><span class="en-label">English original</span>A Mature Company: Coca Cola (2019)</div>
+<figure class="figure"><img src="../img/accounting101/session2A-p05.jpg" alt="可口可乐 2017–2019 财年合并利润表（百万美元）" loading="lazy"><figcaption class="cap">可口可乐合并利润表（2017–2019，单位百万美元）。这张表在论证成熟公司的利润表长什么样：net operating revenues 三年几乎没动（36,212 → 34,300 → 37,266），毛利率却高达 60.8%（gross profit 22,647），可 operating income 只有 10,086——SG&amp;A 一项就吃掉 12,103；净利润的年度起伏（2017 年仅 1,283）来自 1,902 的 other operating charges 与 5,607 的所得税，而不是主业。</figcaption></figure>
+</div>
+<div class="slide" id="s6">
+<h3><span class="slide-no">幻灯 6</span>可口可乐的收入拆分：按地区<span class="en">Revenue Breakdown for Coca Cola: By Geography</span></h3>
+<div class="zh"><p>2019 年的分部数据表，单位<strong>百万美元</strong>，列为 Europe Middle East & Africa / Latin America / North America / Asia Pacific / Global Ventures / Bottling Investments / Corporate / Eliminations / Consolidated。</p>
+<p>Net operating revenues 拆成第三方收入（Third party）与分部间收入（Intersegment）：第三方收入 North America 11,906、EMEA 6,434、Asia Pacific 4,723、Latin America 4,118、Bottling Investments 7,431、Global Ventures 2,560、Corporate 94；分部间收入 EMEA 624、Asia Pacific 604、Bottling Investments 9、North America 9、Global Ventures 2，Eliminations 为 (1,248)；合计 <strong>Consolidated 37,266</strong>。</p>
+<p>营业利润（Operating income (loss)）：EMEA 3,551、North America 2,594、Latin America 2,375、Asia Pacific 2,282、Bottling Investments 358、Global Ventures 334、Corporate (1,408) → 合计 10,086。</p>
+<p>其余各行：Interest income 合计 563（其中 Corporate 486）；Interest expense 946（全在 Corporate）；Depreciation and amortization 1,365（North America 439、Bottling Investments 446）；Equity income (loss) — net 1,049（Bottling Investments 836）；Income (loss) before income taxes 10,786；Identifiable operating assets 66,502（Corporate 18,376、North America 17,687）；Investments 19,879（Bottling Investments 14,093）；Capital expenditures 2,054。</p>
+<p>这张表要说明的是：<strong>合并数字会把完全不同质地的业务混在一起</strong>。最大的收入分部 North America（11,906）贡献的营业利润（2,594）居然不如 EMEA（收入 6,434、营业利润 3,551）；收入排第二的 Bottling Investments（7,431）只赚 358，因为它做的是装瓶业务——毛利薄、资产重（identifiable operating assets 11,170、investments 14,093）。</p></div>
+<div class="en-block"><span class="en-label">English original</span>Revenue Breakdown for Coca Cola: By
+Geography
+
+                 1        2</div>
+<figure class="figure"><img src="../img/accounting101/session2A-p06.jpg" alt="可口可乐 2019 年按地区分部的收入与利润数据表（百万美元）" loading="lazy"><figcaption class="cap">可口可乐 2019 年分部数据表（单位百万美元）。这张表在论证：合并收入 37,266 拆到分部后，利润来源和收入来源完全不是一回事——EMEA 分部收入只有 6,434，营业利润却有 3,551，超过收入 11,906 的 North America（2,594）；收入第二的 Bottling Investments（7,431）只赚 358，因为它资产重（identifiable operating assets 11,170、investments 14,093）、毛利薄。</figcaption></figure>
+</div>
+<div class="slide" id="s7">
+<h3><span class="slide-no">幻灯 7</span>一家老化公司：丰田<span class="en">An Aging Company: Toyota</span></h3>
+<div class="zh"><p>丰田的 Consolidated Statements of Income，单位<strong>百万日元</strong>，对比 FY2019（截至 2019 年 3 月 31 日）与 FY2020（截至 2020 年 3 月 31 日），并给出增减额。</p>
+<p>净收入：Sales of products 28,105,338 → 27,759,749（减 345,589）；Financing operations 2,120,343 → 2,170,243（加 49,900）；<strong>Total net revenues 30,225,681 → 29,929,992（减 295,689）</strong>。</p>
+<p>成本：Cost of products sold 23,389,495 → 23,142,744；Cost of financing operations 1,392,290 → 1,379,620；Selling, general and administrative 2,976,351 → 2,964,759；<strong>Total costs and expenses 27,758,136 → 27,487,123（减 271,013）</strong>。</p>
+<p><strong>营业利润 2,467,545 → 2,442,869（减 24,676）</strong>。表下：Foreign exchange gain (loss), net 12,400 → (79,020)；Unrealized gains (losses) on equity securities (341,054) → (24,600)；Other income (loss), net (50,843) → 14,705；Total other income (expense) (182,080) → 111,738；Income before income taxes and equity in earnings of affiliated companies 2,285,465 → 2,554,607；Provision for income taxes 659,944 → 683,430；Equity in earnings of affiliated companies 360,066 → 271,152；<strong>Net income 1,985,587 → 2,142,329</strong>；Net income attributable to Toyota Motor Corporation 1,882,873 → 2,076,183。</p>
+<p>两处值得停下来看：第一，<strong>收入下滑约 1%（295,689），营业利润几乎同步下滑（24,676，也不到 1%）</strong>——因为成本跟着收入一起降，这是成熟制造业规模效应的体现；第二，丰田自己也有 <strong>Financing operations（金融业务）</strong>，净收入 2,170,243、相关成本 1,379,620——汽车公司兼做金融放贷，横向比较时得先知道这一点。至于表下那一堆汇兑损益与权益证券浮盈浮亏，才是它营业利润之外的主要波动来源。</p></div>
+<div class="en-block"><span class="en-label">English original</span>An Aging Company: Toyota
+
+
+                           1a
+
+
+                           1b</div>
+<figure class="figure"><img src="../img/accounting101/session2A-p07.jpg" alt="丰田 FY2019 与 FY2020 合并利润表对比（百万日元）" loading="lazy"><figcaption class="cap">丰田合并利润表（FY2019 与 FY2020 对比，单位百万日元）。这张表在论证老化公司在利润表上的样子：净收入从 30,225,681 降到 29,929,992（减 295,689），但成本也跟着降（total costs and expenses 减 271,013），营业利润几乎没动（2,467,545 → 2,442,869）；反倒是表下的汇兑损益与权益证券浮盈浮亏把税前利润和净利润推了上去（net income 1,985,587 → 2,142,329）。</figcaption></figure>
+</div>
+<div class="slide" id="s8">
+<h3><span class="slide-no">幻灯 8</span>行业与产业差异<span class="en">Sector and Industry Differences</span></h3>
+<div class="zh"><p>分节页，讲行业差异。讲师的判断是：<strong>规范公司如何计量收入与利润的会计准则，在公司之间大体相同，但确实存在一些行业特有的差异</strong>。</p>
+<p>对商品型公司（commodity companies），差异通常来自<strong>勘探储量的支出，以及把商品从储量里采出来的成本</strong>——这两块开销在制造业公司那里根本不存在。</p>
+<p>对金融服务公司（financial service companies），难点通常在于<strong>如何定义收入和债务</strong>：对银行来说，债务与其说是资本的来源，不如说是<strong>原材料</strong>——它得先借进来，才能贷出去。</p>
+<p>这一页是后面 Total 与 HSBC 两张表的铺垫：翻开它们的利润表，你会发现「营业成本」不知在哪、「债务」在损益表上扮演的又是什么角色。</p></div>
+<div class="en-block"><span class="en-label">English original</span>Sector and Industry Differences
+
+¨   The accounting standards that govern how
+    companies measure revenues and earnings may be
+    the same across companies, but there are some
+    sector-specific differences.
+    ¤ For commodity companies, the differences often arise
+      from costs expended exploring for commodity reserves
+      and extracting the commodity from reserves.
+    ¤ For financial service companies, the challenge often lies in
+      defining revenues and debt, since the latter is less a source
+      of capital and more raw material.</div>
+</div>
+<div class="slide" id="s9">
+<h3><span class="slide-no">幻灯 9</span>一家商品型公司：道达尔（法国），2019<span class="en">A Commodity Company: Total (France) in 2019</span></h3>
+<div class="zh"><p>Total（道达尔能源）的合并利润表，单位<strong>百万美元</strong>，截至 12 月 31 日的 2017 / 2018 / 2019 三个财年。</p>
+<p>Sales 171,493 → 209,363 → <strong>200,316</strong>；扣掉消费税（Excise taxes）(22,394) / (25,257) / (24,067) 之后，<strong>Revenues from sales 149,099 → 184,106 → 176,249</strong>。</p>
+<p>成本项：Purchases, net of inventory variation (99,411) / (125,816) / <strong>(116,221)</strong>；Other operating expenses (24,966) / (27,484) / <strong>(27,255)</strong>；Exploration costs (864) / (797) / <strong>(785)</strong>；Depreciation, depletion and impairment of tangible assets and mineral interests (16,103) / (13,992) / <strong>(15,731)</strong>。</p>
+<p>往下：Other income 3,811 / 1,838 / 1,163，Other expense (1,034) / (1,273) / (1,192)；<strong>Cost of net debt (1,534) / (2,121) / (2,352)</strong>；Other financial income 957 / 1,120 / 792，Other financial expense (642) / (685) / (764)；<strong>Net income (loss) from equity affiliates 2,015 / 3,170 / 3,406</strong>；Income taxes (3,029) / (6,516) / (5,872)；<strong>CONSOLIDATED NET INCOME 8,299 / 11,550 / 11,438</strong>；其中 Group share 8,631 / 11,446 / <strong>11,267</strong>，Non-controlling interests (332) / 104 / 171；每股收益 $3.36 / $4.27 / <strong>$4.20</strong>，完全稀释 $3.34 / $4.24 / $4.17。</p>
+<p>这张表的形状和前面几家完全不一样：<strong>没有 revenue − COGS = gross profit 这一行</strong>。成本是按「买来的货（purchases）」「自己勘探（exploration costs）」「折耗与减值（depletion and impairment）」这种实物口径列出来的——这就是商品型公司的利润表：赚的是把地下资源挖出来卖掉的差价，而勘探与开采的开销直接进了损益表。</p></div>
+<div class="en-block"><span class="en-label">English original</span>A Commodity Company: Total (France) in
+2019</div>
+<figure class="figure"><img src="../img/accounting101/session2A-p09.jpg" alt="道达尔 2017–2019 财年合并利润表（百万美元）" loading="lazy"><figcaption class="cap">道达尔（法国）2019 年合并利润表（单位百万美元）。这张表在论证商品型公司利润表的不同形态：没有 gross profit 小计，成本按实物口径列示——2019 年 purchases net of inventory variation (116,221)、exploration costs (785)、depreciation depletion and impairment (15,731)，销售 200,316 扣掉消费税 24,067 之后才是 revenues from sales 176,249；而净利润 11,438 里有 3,406 来自权益法联营公司。</figcaption></figure>
+</div>
+<div class="slide" id="s10">
+<h3><span class="slide-no">幻灯 10</span>道达尔的业务拆分<span class="en">A Business Breakdown for Total</span></h3>
+<div class="zh"><p>同一年的分部表，单位<strong>百万美元</strong>，列为 Exploration & Production（勘探与生产）/ Integrated Gas, Renewables & Power / Refining & Chemicals（炼化与化学品）/ Marketing & Services（营销与服务）/ Corporate / Intercompany（内部交易抵消）/ Total。</p>
+<p>Non-group sales（对外部客户的销售）：7,261 / 18,167 / 87,598 / 87,280 / 10 → <strong>200,316</strong>；Intersegment sales（分部间销售）：31,329 / 2,825 / 32,390 / 659 / 125 → Intercompany (67,328)。</p>
+<p>扣掉消费税（Refining & Chemicals (3,015)、Marketing & Services (21,052)）后，<strong>REVENUES FROM SALES 38,590 / 20,992 / 116,973 / 66,887 / 135 → 176,249</strong>。</p>
+<p><strong>OPERATING INCOME 10,542 / 1,184 / 3,342 / 2,052 / (863) → 16,257</strong>；来自权益法联营企业及其他项目的净收益 610 / 2,330 / 322 / 101 / 42 → 3,405；Tax on net operating income (4,572) / (741) / (470) / (598) / 155 → <strong>NET OPERATING INCOME 6,580 / 2,773 / 3,194 / 1,555 / (666) → 13,436</strong>；再减 Net cost of net debt (1,998) 与 Non-controlling interests (171)，得到 <strong>NET INCOME – GROUP SHARE 11,267</strong>。</p>
+<p>这张表是本讲最好的一个例子：<strong>卖得最多的分部不是最赚钱的分部</strong>。Refining & Chemicals 的对外销售 87,598（占合并销售 200,316 的近一半），营业利润只有 3,342；Exploration & Production 的对外销售只有 7,261，营业利润却有 10,542——道达尔的利润几乎全部来自上游的油气勘探与生产。</p></div>
+<div class="en-block"><span class="en-label">English original</span>A Business Breakdown for Total</div>
+<figure class="figure"><img src="../img/accounting101/session2A-p10.jpg" alt="道达尔 2019 年分部收入、营业利润与净利润表（百万美元）" loading="lazy"><figcaption class="cap">道达尔 2019 年业务分部表（单位百万美元）。这张表在论证「卖得多 ≠ 赚得多」：Refining &amp; Chemicals（炼化与化学品）对外销售 87,598，占合并销售 200,316 的近一半，营业利润却只有 3,342；而 Exploration &amp; Production（勘探与生产）对外销售仅 7,261，营业利润却有 10,542——集团 16,257 的分部营业利润大半来自上游。</figcaption></figure>
+</div>
+<div class="slide" id="s11">
+<h3><span class="slide-no">幻灯 11</span>一家金融服务公司：汇丰（HSBC），2019<span class="en">A Financial Service Company: HSBC in 2019</span></h3>
+<div class="zh"><p>HSBC 的 Consolidated income statement，财务数字单位<strong>百万美元</strong>（每股数据为美元），截至 12 月 31 日的 2017 / 2018 / 2019 三个财年。</p>
+<p>收入端的结构对制造业公司来说完全陌生：<strong>Net interest income 30,462</strong>（interest income 54,695，interest expense (24,233)）、<strong>Net fee income 12,023</strong>（fee income 15,439，fee expense (3,416)）、交易类金融工具净收益 10,231、保险业务相关资产与负债的公允价值损益 3,478、指定债务及衍生品公允价值变动 90、金融投资损益 335、<strong>Net insurance premium income 10,636</strong>、Other operating income 2,957 → <strong>Total operating income 71,024</strong>（2018: 63,587；2017: 63,776）。</p>
+<p>往下先扣保险赔付：Net insurance claims and benefits paid (14,926)；再扣预期信用损失变动 (2,756)（2017 年的口径是 loan impairment charges (1,769)）→ <strong>Net operating income 53,342</strong>。</p>
+<p>营业费用合计 <strong>(42,349)</strong>：员工薪酬与福利 (18,002)、General and administrative expenses (13,828)、不动产与使用权资产折旧及减值 (2,100)、无形资产摊销及减值 (1,070)、<strong>商誉减值 (7,349)</strong>（2018、2017 年均为零）→ <strong>Operating profit 10,993</strong>（2018: 17,354；2017: 14,792）。</p>
+<p><strong>Profit before tax 13,347</strong>（加上 associates 与 joint ventures 的利润份额 2,354）；Tax expense (4,639) → <strong>Profit for the year 8,708</strong>。这笔利润还要往下分：普通股股东 5,969、优先股股东 90、其他权益持有人 1,324、非控制性权益 1,325；基本与稀释每股普通股盈利均为 <strong>$0.30</strong>。</p>
+<p>这张表说明的是：<strong>银行的利润表里，「收入」是赚来的钱，「成本」里坐着付给储户和债务的利息</strong>——interest expense 24,233 直接站在收入端的对立面。再留意 <strong>goodwill impairment 7,349</strong> 这一笔：它比当年 10,993 的营业利润的三分之二还多，直接把营业利润从 2018 年的 17,354 压到 10,993。</p></div>
+<div class="en-block"><span class="en-label">English original</span>A Financial Service Company: HSBC in
+    2019</div>
+<figure class="figure"><img src="../img/accounting101/session2A-p11.jpg" alt="汇丰 2017–2019 财年合并利润表（百万美元）" loading="lazy"><figcaption class="cap">汇丰 2019 年合并利润表（单位百万美元）。这张表在论证金融服务公司的利润表为什么不能按制造业的读法看：收入端是净利息收入 30,462 加净手续费 12,023 再加交易、保险等共 71,024，而 interest expense 24,233 是付给储户和债务的代价；营业费用 (42,349) 里还藏着 7,349 的商誉减值，一笔就把营业利润从 2018 年的 17,354 压到 10,993；最后 8,708 的利润要分给普通股股东 5,969、优先股股东 90、其他权益持有人 1,324 与非控制性权益 1,325。</figcaption></figure>
+</div>
+<div class="slide" id="s12">
+<h3><span class="slide-no">幻灯 12</span>一家制药公司：Dr. Reddy's，2019<span class="en">A Pharmaceutical Firm: Dr. Reddy's in 2019</span></h3>
+<div class="zh"><p>Dr. Reddy's Laboratories 的利润表，单位<strong>百万印度卢比</strong>，对比截至 2020 年 3 月 31 日与 2019 年 3 月 31 日的两个年度。（幻灯标题写 2019，表内最新一栏是截至 2020 年 3 月 31 日的财年。）</p>
+<p>收入：Sales 104,667 → <strong>109,925</strong>；<strong>Service income and License fees 1,062 → 8,105</strong>（授权费收入一年涨到原来的 7.6 倍）；Other operating income 526 → 474；<strong>Total revenue from operations 106,255 → 118,504</strong>；加上 Other income 2,384 → 7,432，<strong>Total income 108,639 → 125,936</strong>。</p>
+<p>费用：Cost of materials consumed 21,032 → 25,565；Purchase of stock-in-trade 8,686 → 11,172；finished goods 与在制品、存货的变动 660 → (999)；Employee benefits expense 19,319 → <strong>20,302</strong>；Depreciation and amortisation 7,806 → 7,892；Finance costs 568 → 478；Selling and other expenses 33,561 → <strong>33,768</strong>；<strong>Total expenses 91,632 → 98,178</strong>。</p>
+<p><strong>Profit before tax 17,007 → 27,758</strong>；税项 Current tax 2,818 → 4,839、Deferred tax 1,416 → <strong>(6,458)</strong>，所以 <strong>Profit for the year 12,773 → 29,377</strong>；Total other comprehensive income/(loss) 138 → (436)；<strong>Total comprehensive income 12,911 → 28,941</strong>；基本每股收益 ₹76.98 → <strong>₹177.23</strong>，稀释 ₹76.85 → ₹176.88。</p>
+<p>这张表有两处值得记：一是<strong>净利润高于税前利润</strong>——因为 deferred tax 是负数 (6,458)，也就是确认了递延所得税资产，税后利润被往上推了一把；二是制药公司的收入里除了卖药，还有 <strong>license fees（8,105）</strong> 这种授权收入，它在 2020 财年成了利润增长的重要来源——而这类收入并不代表可重复的经营能力。</p></div>
+<div class="en-block"><span class="en-label">English original</span>A Pharmaceutical Firm: Dr. Reddy’s in 2019</div>
+<figure class="figure"><img src="../img/accounting101/session2A-p12.jpg" alt="Dr. Reddy's 截至 2020 年 3 月 31 日财年利润表（百万印度卢比）" loading="lazy"><figcaption class="cap">Dr. Reddy's 利润表（截至 2020 年 3 月 31 日与 2019 年 3 月 31 日两个年度，单位百万印度卢比）。这张表在论证制药公司利润表的两处特殊：一是 revenue 里混进了 service income and license fees 8,105（上年仅 1,062），一次性授权收入把利润拉了起来；二是 profit before tax 27,758 到 profit for the year 29,377，净利润高于税前利润，因为 deferred tax 是 (6,458) 的递延所得税资产。</figcaption></figure>
+</div>
+<div class="slide" id="s13">
+<h3><span class="slide-no">幻灯 13</span>结论<span class="en">Bottom Line</span></h3>
+<div class="zh"><p>讲师的收尾，三条。</p>
+<p>第一条：全球各地、各行各业在会计准则上的差异被反复渲染，但事实是<strong>会计准则正在走向趋同，而不是分化</strong>。</p>
+<p>第二条：不同公司的收入形态不同、营业费用的形态也不同，<strong>但落到 gross profit、operating income 与 net income 这一层，最终目标是一样的——把不同层级的利润量出来</strong>。</p>
+<p>第三条：理论上你<strong>应该</strong>能够把这些数字跨公司比较；但在实践中，<strong>费用如何计量、如何归类的口径不一致会造成麻烦</strong>。</p>
+<p>这一讲的姿态就是：把七张表并排放给你看，剩下的判断留给你自己。</p></div>
+<div class="en-block"><span class="en-label">English original</span>Bottom Line
+
+¨ Much is made of the differences in accounting standards
+  around the world and across businesses, but the reality
+  is that accounting standards are converging across the
+  world, rather than diverging.
+¨ While revenues come in different forms for different
+  companies and operating expenses take varied forms,
+  the end game with gross profit, operating and net
+  income remains the same, i.e., to measure profits are
+  different levels.
+¨ In theory, you should be therefore able to compare these
+  numbers across companies, but in practice, accounting
+  inconsistencies in how the expenses get measured and
+  categorized can create problems.</div>
+</div>
+<h2>课后测试与答案<span class="en">Post-class test &amp; solutions</span></h2>
+<p class="meta">题目与选项为中英对照；答案与解析附在每题下方。</p>
+<figure class="figure"><img src="../img/accounting101/session2A-test-p01.jpg" alt="Navistar / Nordstrom / Google 三家公司利润表数据表（百万美元）" loading="lazy"><figcaption class="cap">课后题数据表：Navistar（卡车制造）、Nordstrom（零售）、Google（科技）三家公司同一口径的利润表拆解（单位：百万美元）。自上而下依次是 Revenue（含 Finance Div. Revenue）、Total Revenue；Cost Of Goods Sold（含 Finance Div. Operating Exp. 与 Interest Expense - Finance Division）与 Gross Profit；Selling General &amp; Admin Exp.、R &amp; D Exp.、Other Operating Exp. Total；Operating Income；Interest Expense、Interest and Invest. Income、Net Interest Exp.；Currency Exchange Gains (Loss)、EBT Excl. Unusual Items；EBT Incl. Unusual Items；Income Tax Expense；Net Income to Company 与 Net Income。括号表示负数。</figcaption></figure>
+<div class="q">
+<p class="qno">第 1 题</p>
+<p class="qzh">用 Navistar、Nordstrom 和 Google 三家公司的利润表，估算 COGS 占收入（revenues）的百分比。你会怎么解释这些差异？这些差异为什么重要？（数据见上方数据表）</p>
+<p class="meta">1. Using the income statements for Navistar, Nordstrom and Google, estimate
+   COGS as a percent of revenues. How would you explain the differences and
+   why do they matter?</p>
+<div class="ans"><strong>答案：Navistar 82.46% / Nordstrom 63.98% / Google 44.42%</strong> COGS 占收入比例：Navistar 82.46%、Nordstrom 63.98%、Google 44.42%。
+<p>Navistar 的 COGS 占收入比重最高，Google 最低。原因有两层：（a）商业模式的差异——Navistar 自己制造它卖出去的设备，Nordstrom 是把别人做好的货加价卖掉，而 Google 的服务几乎不花钱就能生产出来；（b）会计上的差异——Navistar 的制造业务带来高得多的折旧费用，而这部分折旧被计入了 COGS。数据（单位：百万美元）：Total Revenue 9,585.00 / 15,524.00 / 161,857.0；Cost of Goods Sold 7,904.00 / 9,932.00 / 71,896.0；COGS as % of Revenues 82.46% / 63.98% / 44.42%。</p>
+<div class="en-block"><span class="en-label">English original</span>1. Navistar has the highest COGS, relative to revenue, and Google has the
+   lowest. They reflect
+   (a) Differences in business models. Navistar manufactures the equipment
+       that it sells, Nordstrom marks up goods that its gets from others and
+       Google’s services cost little to produce.
+   (b) Differences in accounting: Navistar’s manufacturing business generates
+       much higher depreciation charges which are part of COGS.
+
+                                 Navistar       Nordstrom      Google
+       Total Revenue             $9,585.00     $ 15,524.00    161,857.0
+       Cost of Goods Sold        $7,904.00     $ 9,932.00      71,896.0
+       COGS as % of Revenues      82.46%         63.98%        44.42%</div>
+</div>
+</div>
+<div class="q">
+<p class="qno">第 2 题</p>
+<p class="qzh">用 Navistar、Nordstrom 和 Google 三家公司的利润表，估算 SG&amp;A 费用占营业费用总额的百分比。你会怎么解释这些差异？这些差异意味着什么？（数据见上方数据表）</p>
+<p class="meta">2. Using the income statements for Navistar, Nordstrom and Google, estimate
+   SG&amp;A expenses as a percent of total operating expenses. How would you
+   explain the differences and what are the implications?</p>
+<div class="ans"><strong>答案：Navistar 8.58% / Nordstrom 32.47% / Google 27.64%</strong> SG&amp;A 占营业费用比例：Navistar 8.58%、Nordstrom 32.47%、Google 27.64%。
+<p>Navistar 的营业费用绝大部分来自 COGS，而 Nordstrom 与 Google 的营业费用里有更高比例来自 SG&amp;A。如果你假设 COGS 更可能是变动成本、SG&amp;A 更可能是固定成本，那么 SG&amp;A 占比就相当于规模经济（economies of scale）的一个粗糙代理变量：规模放大时，Nordstrom 与 Google 受益更多。数据（单位：百万美元）：Cost of Goods Sold 7,904.00 / 9,932.00 / 71,896.0；Selling General &amp; Admin Exp. 742.00 / 4,776.00 / 27,461.0；Total Operating Expenses 8,646.00 / 14,708.00 / 99,357.00；SG&amp;A as % of Operating Exp 8.58% / 32.47% / 27.64%。</p>
+<div class="en-block"><span class="en-label">English original</span>2. Most of the operating expenses at Navistar are from COGS, whereas
+   Nordstrom and Google have a higher percent from SG&amp;A expenses. If you
+   assume that COGS are more likely to be variable and SG&amp;A to be fixed, this
+   becomes a rough proxy for economies of scale, with Nordstrom and Google
+   benefiting more from scaling up.
+
+                                   Navistar       Nordstrom         Google
+  Cost Of Goods Sold              $ 7,904.00    $    9,932.00        71,896.0
+  Selling General &amp; Admin Exp.    $ 742.00      $    4,776.00        27,461.0
+  Total Operating Expenses        $ 8,646.00    $   14,708.00     $ 99,357.00
+  SG&amp;A as % of Operating Exp           8.58%          32.47%          27.64%</div>
+</div>
+</div>
+<div class="q">
+<p class="qno">第 3 题</p>
+<p class="qzh">Navistar 在利润表上列出了融资收入与融资费用。你怎么理解这两项，它们为什么存在？</p>
+<p class="meta">3. Navistar reports a financing revenue and expense. What is your reading of
+   what these items are and why they exist?</p>
+<div class="ans"><strong>答案：Navistar 设有 captive 融资部门</strong> Navistar 的融资收入与融资费用，反映的是公司自有的融资（captive financing）部门——它为 Navistar 设备的销售提供融资。
+<p>Navistar 的融资收入与融资费用，反映的是公司内部存在一个 captive financing 部门（自有融资部门），这个部门为 Navistar 设备的销售提供融资。所以报表上的融资收入与融资费用并不是「存款」或「债券」意义上的利息，而是这家子公司的经营结果被并进了合并利润表。</p>
+<div class="en-block"><span class="en-label">English original</span>3. Navistar’s financing revenues and expenses reflect the presence of a captive
+   financing division of the company, which finances the sales of Navistar
+   equipment.</div>
+</div>
+</div>
+<div class="q">
+<p class="qno">第 4 题</p>
+<p class="qzh">三家公司都在利润表上列了所得税费用（tax expense）。以下哪一项最能说明这些税到底代表什么？</p>
+<p class="meta">4. Each of the companies reports a tax expense on its income statement. Which
+   of the following best describes what these taxes represent?</p>
+<ul class="opts">
+<li><strong>a.</strong> 公司在该财年实际支付的现金税（cash taxes paid） <span class="en">Cash taxes paid by the company during the fiscal year</span></li>
+<li><strong>b.</strong> 按税法（tax code）对利润表上的应税所得计算的税 <span class="en">Taxes on taxable income in income statement, based upon the tax code</span></li>
+<li><strong>c.</strong> 对营业利润征收的税，不考虑利息费用 <span class="en">Taxes on operating income, ignoring interest expenses</span></li>
+<li><strong>d.</strong> 按税法对税务账簿（tax books）上的应税所得计算的税 <span class="en">Taxes on taxable income in tax books, based upon the tax code</span></li>
+<li><strong>e.</strong> 以上都不对 <span class="en">None of the above</span></li>
+</ul>
+<div class="ans"><strong>答案：d</strong> d. 按税法对税务账簿（tax books）上的应税所得计算的税。
+<p>答案是 d：按税法对税务账簿上的应税所得计算的税。理由是：如果按利润表上的应税所得算税，算出来的税额会更贴近法定税率，但事实并非如此——报表上的税是按税务账簿口径的应税所得算的，两者之间的差异（递延税）会单独体现。</p>
+<div class="en-block"><span class="en-label">English original</span>4. d. Taxes on taxable income in tax books, based upon tax code. If taxes
+   were computed on the taxable income in the income statement, the taxes
+   would be more reflective of the statutory tax rates, but they are not.</div>
+</div>
+</div>
+<div class="q">
+<p class="qno">第 5 题</p>
+<p class="qzh">Navistar 报告了汇兑损失（currency exchange loss），而 Google 在同一年报告了汇兑收益（currency exchange gain）。你怎么解释这个差异？</p>
+<p class="meta">5. Navistar reports a currency exchange loss and Google reports a currency
+   exchange gain, in the same year. How would you explain the difference?</p>
+<div class="ans"><strong>答案：汇兑损益随美元对其他货币的走势变动，且同时影响收入与成本</strong> 汇兑损益反映美元对其他货币汇率变动的影响；它之所以对一些公司是利润、对另一些是损失，是因为它同时影响收入与成本。
+<p>汇兑损益反映的是美元对其他货币汇率变动所造成的影响。它之所以在某些公司身上表现为利润、在另一些公司身上表现为损失，是因为它同时作用于收入与费用两端：对于收入来自美国以外、成本以美元计的公司，美元走强会造成损失——调整后外币收入被折低；而对于成本在别国货币、收入以美元计的公司，美元走强会造成利润——调整后外币成本被压低。同一年的同一件事，方向相反。</p>
+<div class="en-block"><span class="en-label">English original</span>5. Currency gains and losses reflect the effect of movements in the US dollar
+   against other currencies. The reason it can play out as a profit for some
+   companies and a loss for others comes from the fact that it can affect both
+   revenues and expenses. For companies that derive their revenues from
+   outside the US, while their costs are in US dollars, a stronger dollar will cause
+   losses, since foreign currency revenues will be devalued, after the currency
+   adjustment. For companies that have costs in other currencies but revenues
+   in US dollars, a stronger dollar will cause profits, since foreign currency costs
+   will be lowered, after the currency adjustment.</div>
+</div>
+</div>
+<div class="note"><strong>译者注</strong><br>本讲原课件几乎只有标题与报表截图，因此每页的中文正文是译者根据表中数字重写的「读表笔记」，数字与单位均照原表抄录，未做换算或补算；括号表示负数或亏损。各表单位不同（Peloton 为百万美元、Netflix 为千美元、Coca-Cola 为百万美元、Toyota 为百万日元、Total 为百万美元、HSBC 为百万美元、Dr. Reddy's 为百万印度卢比），已在各页标明。幻灯标题的年份与表内最新财年有两处不一致（Netflix 标题写 2020、表内为 2017–2019 财年；Dr. Reddy's 标题写 2019、表内最新一栏为截至 2020 年 3 月 31 日的财年），译者按表内数据叙述并在正文注明。</div>
+<p class="sessnav"><a href="session2.html">← 第 2 讲</a> <a href="index.html">目录</a> <a href="session3.html">第 3 讲 →</a></p>
+<p class="footer">课程来源：<a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/webcastacctg.htm">Damodaran · Corporate Finance Online Class（Accounting 101）</a><br>幻灯与课后题版权归 Aswath Damodaran / NYU Stern 所有，本站仅作教学与中文对照阅读使用。<br><a href="../index.html">← 返回站主随笔</a></p>
+</body>
+</html>

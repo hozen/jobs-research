@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="这一讲把绝对数换算成比率。逻辑很简单：报表给的是美元、卢比、雷亚尔，跨公司没法比——大公司天然利润更高、负债更多。比率把绝对值互相标定，于是可以跨公司、跨时间、跨基准比较。Damodaran 依次讲四类比率：盈利能力（contribution / gross / operating / EBITDA / net margin，以及随生命周期变化的「该看哪个 margin」）、会计回报（ROE 与 ROIC）、效率（各类 turnover）、财务杠杆与流动性/信用风险，最后给出课后测试。">
+<title>第 6 讲 · 财务比率：盈利能力、效率、杠杆与流动性 · 会计101 中英对照 — 乔布斯研究</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600&family=Charter:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #ffffff; --text: #1a1a1a; --meta: #888888; --rule: #e0e0e0; --max-w: 720px; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: var(--bg); color: var(--text); font-family: 'Noto Serif SC','Charter',serif; font-size: 17px; line-height: 1.7; max-width: var(--max-w); margin: 0 auto; padding: 0 24px 80px; overflow-wrap: anywhere; }
+a { color: var(--text); text-decoration: underline; text-decoration-color: var(--rule); }
+a:hover { text-decoration-color: var(--text); }
+h1 { font-size: 22px; font-weight: 600; margin: 48px 0 8px; letter-spacing: -0.3px; }
+h2 { font-size: 15px; font-weight: 600; color: var(--meta); text-transform: uppercase; letter-spacing: 1px; margin: 40px 0 16px; padding-top: 24px; border-top: 1px solid var(--rule); }
+h2 .en { display: block; font-size: 14px; color: var(--meta); text-transform: none; letter-spacing: 0; font-weight: 400; font-style: italic; margin-top: 4px; }
+h3 { font-size: 17px; font-weight: 600; margin: 32px 0 12px; }
+h3 .en { display: block; font-size: 14px; color: var(--meta); font-weight: 400; font-style: italic; margin-top: 2px; }
+.back { font-size: 14px; color: var(--meta); margin-bottom: 24px; }
+.meta { font-size: 13px; color: var(--meta); margin-left: 8px; }
+p { margin: 16px 0; }
+strong { font-weight: 600; }
+em.en-source { display: block; font-family: 'Charter', serif; font-size: 14px; font-style: italic; color: var(--meta); margin: 8px 0 24px; padding-left: 12px; border-left: 2px solid var(--rule); }
+blockquote { border-left: 3px solid var(--rule); padding: 4px 0 4px 20px; margin: 24px 0; color: #555; font-style: italic; }
+.source { font-size: 13px; color: var(--meta); margin-top: 12px; }
+.byline { font-size: 14px; color: var(--meta); margin: 8px 0 32px; }
+.tag-row { margin: 16px 0 32px; }
+.tag { display: inline-block; font-size: 12px; padding: 2px 10px; background: var(--rule); border-radius: 12px; color: var(--meta); margin-right: 6px; }
+.hero { background: #f9f9f9; border-radius: 8px; padding: 24px; margin: 0 0 32px; }
+.hero h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; }
+.hero p { font-size: 15px; color: #555; line-height: 1.7; margin: 8px 0; }
+.footer { margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--rule); font-size: 13px; color: var(--meta); }
+.footer a { color: var(--meta); }
+table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+.table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 16px 0; }
+.table-wrap table { margin: 0; min-width: 420px; }
+th, td { padding: 6px 10px; border: 1px solid var(--rule); text-align: left; vertical-align: top; }
+th { background: #f5f5f5; font-weight: 600; }
+.figure { margin: 32px 0; }
+.figure img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 4px; }
+.figure .cap { font-size: 13px; color: var(--meta); margin-top: 8px; line-height: 1.5; padding-left: 12px; border-left: 2px solid var(--rule); }
+.note { background: #f9f9f9; border-left: 3px solid #d4503a; border-radius: 4px; padding: 14px 18px; margin: 24px 0; font-size: 15px; color: #555; }
+.note strong { color: var(--text); }
+ol, ul { padding-left: 24px; margin: 16px 0; }
+li { margin: 8px 0; }
+@media (max-width: 600px) {
+  body { font-size: 16px; padding: 0 18px 60px; }
+  h1 { font-size: 20px; }
+  h2 { font-size: 14px; }
+  table { font-size: 12px; }
+  th, td { padding: 4px 6px; }
+}
+</style>
+<style>
+.kicker { font-size: 13px; color: var(--meta); letter-spacing: .5px; margin: 0 0 6px; }
+h1 .en { display: block; font-size: 15px; font-weight: 400; font-style: italic; color: var(--meta); margin-top: 6px; letter-spacing: 0; }
+.video-wrap { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 6px; margin: 24px 0 8px; background: #000; }
+.video-wrap iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+.video-cap { font-size: 13px; color: var(--meta); margin: 0 0 32px; }
+.slide { margin: 0 0 8px; padding: 20px 0 4px; border-top: 1px solid var(--rule); }
+.slide:first-of-type { border-top: none; }
+.slide h3 { margin: 0 0 12px; font-size: 16px; }
+.slide h3 .slide-no { display: inline-block; font-size: 12px; font-weight: 400; color: var(--meta); border: 1px solid var(--rule); border-radius: 10px; padding: 1px 8px; margin-right: 8px; vertical-align: 2px; }
+.slide h3 .en { display: block; font-size: 13px; color: var(--meta); font-style: italic; font-weight: 400; margin-top: 4px; }
+.slide .zh { margin: 0 0 10px; }
+.slide .zh p { margin: 10px 0; }
+.slide .zh ul, .slide .zh ol { margin: 8px 0; padding-left: 22px; }
+.slide .zh li { margin: 6px 0; }
+.en-block { font-family: 'Charter', serif; font-size: 14px; line-height: 1.6; color: var(--meta); background: #fbfbfb; border-left: 2px solid var(--rule); border-radius: 0 4px 4px 0; padding: 10px 14px; margin: 10px 0 0; white-space: pre-wrap; overflow-wrap: anywhere; }
+.en-block .en-label { display: block; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: #aaa; margin-bottom: 6px; }
+.q { margin: 24px 0; padding: 0 0 4px; border-bottom: 1px solid var(--rule); }
+.q .qno { font-size: 13px; color: var(--meta); }
+.q .qzh { font-weight: 600; }
+.q ol { margin: 8px 0; padding-left: 22px; }
+.q .opts { list-style: none; padding-left: 0; margin: 10px 0; }
+.q .opts li { margin: 7px 0; font-size: 15px; line-height: 1.55; }
+.q .opts .en { color: var(--meta); font-size: 13px; font-family: 'Charter', serif; }
+.ans { background: #f9f9f9; border-left: 3px solid #3a7d5c; border-radius: 4px; padding: 12px 16px; margin: 12px 0 24px; font-size: 15px; color: #555; }
+.ans strong { color: var(--text); }
+.toc-list { list-style: none; padding: 0; margin: 24px 0 0; }
+.toc-list li { margin: 0; padding: 16px 0; border-bottom: 1px solid var(--rule); }
+.toc-list a { font-size: 17px; font-weight: 600; text-decoration: none; }
+.toc-list a:hover { text-decoration: underline; }
+.toc-list .en { display: block; font-size: 13px; font-style: italic; color: var(--meta); font-weight: 400; margin-top: 4px; }
+.toc-list .sub { display: block; font-size: 14px; color: #555; margin-top: 6px; line-height: 1.6; }
+.toc-list .badge { font-size: 12px; color: var(--meta); }
+.sessnav { margin: 48px 0 0; padding-top: 20px; border-top: 1px solid var(--rule); display: flex; gap: 16px; flex-wrap: wrap; justify-content: space-between; font-size: 14px; }
+.sessnav a { color: var(--meta); text-decoration: none; }
+.sessnav a:hover { color: var(--text); text-decoration: underline; }
+.glossary td:first-child { white-space: nowrap; font-family: 'Charter', serif; }
+.glossary td:nth-child(2) { color: #555; }
+</style>
+</head>
+<body><p class="back">← <a href="index.html">会计101 · 分讲阅读</a> · <a href="../index.html">站主随笔</a></p>
+<p class="kicker">NYU Stern · Damodaran《Accounting 101》· 第 6 讲</p>
+<h1>第 6 讲 · 财务比率：盈利能力、效率、杠杆与流动性<span class="en">Financial Ratios: Of comps and peer groups</span></h1>
+<p class="byline">讲课视频 · 幻灯 15 张 · 课后题 5 道 · 讲师：Aswath Damodaran（NYU Stern）· 译者：站主（Mr. Buffett 委托）</p>
+<div class="video-wrap"><iframe src="https://www.youtube.com/embed/ZXXF-rSaE9E" title="Financial Ratios: Of comps and peer groups" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<p class="video-cap">本讲视频：<a href="https://youtu.be/ZXXF-rSaE9E">Financial Ratios: Of comps and peer groups</a>（YouTube，约 12–20 分钟）· 原始幻灯：<a href="https://www.stern.nyu.edu/~adamodar/pdfiles/Accounting101/slides/session6.pdf">session6.pdf</a></p>
+<div class="hero"><h3>一句话核心</h3>
+<p>比率是<strong>标尺</strong>，不是结论。同一个 ROE，可能是高利润率低周转，也可能是低利润率高周转——第 8 页那张「生命周期 × 该看哪个 margin」的图，是这一讲最值得抄下来的一张。</p>
+<div class="tag-row"><span class="tag">财务比率</span><span class="tag">利润率</span><span class="tag">ROE 与 ROIC</span><span class="tag">周转率</span><span class="tag">杠杆</span><span class="tag">流动性</span></div>
+</div>
+<h2>本讲导读<span class="en">Session guide</span></h2><p>这一讲把绝对数换算成比率。逻辑很简单：报表给的是美元、卢比、雷亚尔，跨公司没法比——大公司天然利润更高、负债更多。比率把绝对值互相标定，于是可以跨公司、跨时间、跨基准比较。Damodaran 依次讲四类比率：盈利能力（contribution / gross / operating / EBITDA / net margin，以及随生命周期变化的「该看哪个 margin」）、会计回报（ROE 与 ROIC）、效率（各类 turnover）、财务杠杆与流动性/信用风险，最后给出课后测试。</p>
+<h2>逐页幻灯（中文在上，英文原文在下）<span class="en">Slide by slide</span></h2>
+<div class="slide" id="s1">
+<h3><span class="slide-no">幻灯 1</span>第六讲：财务比率——盈利能力口径<span class="en">SESSION 6: ACCOUNTING FINANCIAL RATIOS – PROFITABILITY MEASURES</span></h3>
+<div class="zh"><p>课程封面。本讲标题是「财务比率——盈利能力口径」，讲完利润类比率后还会延伸到回报、效率、杠杆与流动性。</p></div>
+<div class="en-block"><span class="en-label">English original</span>SESSION 6: ACCOUNTING
+FINANCIAL RATIOS –
+PROFITABILITY MEASURES
+Accounting for Finance</div>
+</div>
+<div class="slide" id="s2">
+<h3><span class="slide-no">幻灯 2</span>从绝对数到比率<span class="en">From Absolutes to Ratios</span></h3>
+<div class="zh"><p>财务报表用绝对数计量经营成果——以美元、卢比或雷亚尔计，取决于记账币种。</p>
+<p>绝对数很难、甚至不可能跨公司比较：在其他条件不变时，大公司本来就该有更高的利润、更多的负债。</p>
+<p>比率把绝对值互相标定，于是可以：</p>
+<ul><li>跨公司比较</li><li>跨时间比较</li><li>与基准比较</li></ul></div>
+<div class="en-block"><span class="en-label">English original</span>From Absolutes to Ratios
+
+q Financial statements measure operations in absolute
+  terms, i.e., in dollars, rupees or reais, depending upon
+  the currency of denomination.
+q Absolute measures are difficult, if not impossible, to
+  compare across companies, since bigger companies, all
+  else held constant, should have higher dollar profits and
+  carry more debt.
+q Ratios scale absolute values to each other, and allow for:
+    q Comparisons across companies
+    q Comparisons across time
+    q Comparison to benchmarks</div>
+</div>
+<div class="slide" id="s3">
+<h3><span class="slide-no">幻灯 3</span>1. 利润率<span class="en">1. Profit Margins</span></h3>
+<div class="zh"><p>利润率有七八种口径，它们不是并列的，而是<strong>从利润表上一层层剥出来</strong>的：变动成本先退出得到贡献毛利，再退出全部营业成本得到毛利，再退出 SG&A 得到营业利润，往下才是利息、税与净利润。选哪个口径，取决于你要回答什么问题。</p></div>
+<div class="en-block"><span class="en-label">English original</span>1. Profit Margins</div>
+<figure class="figure"><img src="../img/accounting101/session6-p03.jpg" alt="利润率口径推导图：利润表逐层推导与各类 margin 公式" loading="lazy"><figcaption class="cap">各类利润率的来路：中间一列是利润表的逐层推导（收入 → 减变动成本 = 贡献利润 → 减营业成本 = 毛利 → 减 SG&amp;A 等 = 营业利润 → 减利息 = 应税所得 → 减税 = 净利润），左右两侧列出由各行派生的比率：contribution margin、gross margin、operating margin、net margin，以及加回折旧、研发、股权激励等非 GAAP 调整后的 EBITDA / EBITDAR&amp;D / adjusted EBITDA margin 与税后营业利润率。</figcaption></figure>
+</div>
+<div class="slide" id="s4">
+<h3><span class="slide-no">幻灯 4</span>贡献毛利率与毛利率：生产成本的口径<span class="en">Contribution &amp; Gross Margins: The Costs of Production</span></h3>
+<div class="zh"><p><strong>贡献毛利率（contribution margin）</strong>衡量你每多卖一个单位赚到的「纯利润」——它只扣掉生产这个单位所对应的变动成本，因此很多软件公司的贡献毛利率接近 100%。</p>
+<p><strong>毛利率（gross margin）</strong>是它的近亲，既直接衡量边际盈利能力，也间接反映收入增长有多少能流进利润。作为例子：Zoom 是危机期间少数股价上涨的股票之一，它 2019 年的毛利率是 92%。</p>
+<p>在其它条件不变时，贡献毛利率与毛利率都高的公司，利润潜力远大于毛利率低的公司。</p></div>
+<div class="en-block"><span class="en-label">English original</span>Contribution &amp; Gross Margins: The Costs
+of Production
+•   Contribution margin measures the pure profits that you
+    generate with every marginal unit you sell, since it nets out
+    only the variable cost associated with producing that unit,
+    giving many software companies close to 100% contribution
+    margins.
+•   Gross margins are a close relative, providing a direct measure
+    of marginal profitability and an indirect measure of how
+    revenue increases flow into profits. To illustrate, Zoom, one of
+    the few stocks that has seen its value increase during the
+    crisis, reported a gross margin of 92% in 2019.
+•   Companies with high contribution and high gross margins
+    have much more profit potential, other things remaining
+    equal, than companies with low margins.</div>
+</div>
+<div class="slide" id="s5">
+<h3><span class="slide-no">幻灯 5</span>营业利润率：度量与含义<span class="en">Operating Margins: Measures and Implications</span></h3>
+<div class="zh"><p><strong>营业利润率</strong>衡量的是扣除其他营业费用之后还剩多少。这些费用无法直接对应到单个产品单位，但经营又离不开它们。</p>
+<p>如果这些其他营业成本（比如 SG&A）相对生产成本是固定的（或更固定），那么<strong>毛利率与营业利润率之差</strong>就成了潜在规模经济（economies of scale）的一个简单代理指标。</p>
+<p>毛利率高而营业利润率低的公司，在规模放大时，其营业利润（与利润率）的改善速度，应当远快于毛利率与营业利润率相近的公司。</p></div>
+<div class="en-block"><span class="en-label">English original</span>Operating Margins: Measures and
+Implications
+•   Operating margins measure what is left after the other
+    operating expenses of the company, which cannot be
+    directly traced to individual unit sales, but are
+    nevertheless necessary for its operations.
+•   To the extent that these other operating costs (like
+    SG&amp;A) are fixed (or more fixed) than the costs of
+    production, the difference between gross and operating
+    margins becomes a simple proxy for potential economies
+    of scale.
+•   Companies with high gross margins and low operating
+    margins should see operating profits (and margins)
+    improve much faster as they scale up than companies
+    where operating and gross margins are similar.</div>
+</div>
+<div class="slide" id="s6">
+<h3><span class="slide-no">幻灯 6</span>EBITDA 利润率：度量与含义<span class="en">EBITDA Margin: Measures and Implications</span></h3>
+<div class="zh"><p>EBITDA 是经营现金流的<strong>粗略</strong>度量——粗略在于它还没扣税，也没扣资本开支。</p>
+<p>尽管如此，它仍然是衡量公司现金创造能力的指标（在管理层自主决定再投资多少、借多少之前），并且被这样使用：</p>
+<ul><li>&lt;strong&gt;贷款人&lt;/strong&gt;用它判断公司还借不借得起钱——因为债务是要在资本开支之前先还的；</li><li>&lt;strong&gt;股权投资者&lt;/strong&gt;用它判断整个业务的估值是否合理（在它试图扩张资产基础之前）。</li></ul>
+<p>EBITDA 利润率高的公司，每一美元收入产生的现金流更多，因而应当比 EBITDA 利润率低的公司更能借到钱。</p></div>
+<div class="en-block"><span class="en-label">English original</span>EBITDA Margin: Measures and
+Implications
+¨ The EBITDA is a rough measure of operating cash flows, rough
+  because it is before taxes and capital expenditures.
+¨ Notwithstanding that, it remains a measure of the cash
+  generating capacity of a company, prior to discretionary
+  choices (on how much to reinvest and borrow) and is used by
+    ¤ Lenders to determine whether the company can afford to borrow
+      money, since debt has to be paid before capital expenditures are
+      made.
+    ¤ Equity investors to decide whether the entire business is fairly valued,
+      before it tries to expand its asset base.
+¨   Companies with high EBITDA margins generate higher cash
+    flows per dollar of revenues and should be able to borrow
+    more than companies with lower EBITDA margins.</div>
+</div>
+<div class="slide" id="s7">
+<h3><span class="slide-no">幻灯 7</span>净利率：度量与含义<span class="en">Net Margins: Measures and Implications</span></h3>
+<div class="zh"><p>扣掉税与利息费用，再把现金与交叉持股的收入加回来，得到<strong>净利率</strong>——它衡量的是每一美元收入里，有多少最终留给股权投资者。</p>
+<p>这是一个混杂而嘈杂的指标：它同时反映公司的经营模式、税务负担、财务杠杆（债务带来利息费用，也影响税），以及非经营性资产。</p>
+<p>净利率高的公司，总体能给股权投资者更多利润——但<strong>未必每股更多</strong>（如果净利率低于营业利润率的原因正是债务）。</p></div>
+<div class="en-block"><span class="en-label">English original</span>Net Margins: Measures and Implications
+
+¨ Netting out taxes and interest expenses, and adding back
+  income from cash and cross holdings, yields net margin,
+  a measure of what equity investors get to keep out of
+  every dollar of revenues.
+¨ It is a mixed and noisy measure, reflecting a company's
+  operating model, its tax liabilities and its financial
+  leverage (since debt creates interest expenses and
+  affects taxes), as well as non-operating assets.
+¨ Companies with high net margins deliver more profits
+  for equity investors, in the aggregate, but perhaps not a
+  per share basis (if debt is the reason why net margins
+  are lower than operating margins).</div>
+</div>
+<div class="slide" id="s8">
+<h3><span class="slide-no">幻灯 8</span>利润率的生命周期视角<span class="en">A Life Cycle View of Margins</span></h3>
+<div class="zh"><p>同一比率在不同发展阶段含义完全不同。Damodaran 给出的对照表：初创期看毛利率（还在亏钱，SG&A 多是固定成本）；年轻成长期看毛利率或 EBITDA 利润率（基础设施与折旧是现金流变量）；高速成长期看营业利润率（规模效应会体现在更高的营业利润率上）；成熟成长期看税后营业利润率（NOL 用完之后税要真交）；成熟稳定期看净利率（债务结构稳定，为股权投资者创造回报）；衰退期看 EBITDA 利润率（用 EBITDA 还债、把现金还给股东）。</p></div>
+<div class="en-block"><span class="en-label">English original</span>A Life Cycle View of Margins</div>
+<figure class="figure"><img src="../img/accounting101/session6-p08.jpg" alt="利润率生命周期图：收入与盈利曲线 + 各阶段最该看的利润率对照表" loading="lazy"><figcaption class="cap">利润的生命周期曲线与「该看哪个 margin」对照表：上方两条曲线是收入与盈利随六个阶段（初创 / 年轻成长 / 高速成长 / 成熟成长 / 成熟稳定 / 衰退）的起落；下方表格逐阶段列出最该看的盈利能力指标及原因——初创看 gross margin，年轻成长看 gross 或 EBITDA margin，高速成长看 operating margin，成熟成长看 after-tax operating margin，成熟稳定看 net margin，衰退看 EBITDA margin。</figcaption></figure>
+</div>
+<div class="slide" id="s9">
+<h3><span class="slide-no">幻灯 9</span>2. 会计回报<span class="en">2. Accounting Returns</span></h3>
+<div class="zh"><p>会计回报，是把利润按项目或业务的投入规模标定后得到的比率。</p>
+<p>大体上，会计回报的度量方式有三处差异来源：</p>
+<ul><li>&lt;strong&gt;利润怎么算&lt;/strong&gt;：只算给股权投资者的部分（净利润），还是算给债权人与股权投资者两方的部分；以及税前还是税后。多数情况下，会计回报以权责发生制利润为基础。</li><li>&lt;strong&gt;投入怎么算&lt;/strong&gt;：只算股权投资者的投入，还是债权与股权投资者的总投入。多数情况下，会计回报用账面价值作为投入的度量基础。</li><li>任何会计回报指标，因为&lt;strong&gt;时点&lt;/strong&gt;不同（期初、期末或平均投入资本）都会得出不同的数值。</li></ul>
+<p><strong>一致性规则：</strong>一个口径一致的会计回报指标，必须把利润和投入同时归到同一群人（股东或全部资本）身上。</p></div>
+<div class="en-block"><span class="en-label">English original</span>2. Accounting Returns
+
+¨ With accounting returns, profits are scaled to measures of
+  investment in a project or business.
+¨ Broadly speaking, there can be differences in how accounting
+  returns are measured based upon
+    ¤ How profits are measured, i.e., to just equity investors (net income) or to
+      both debt and equity investors and whether profits are before or after
+      taxes. In most cases, it is accrual income that is the basis for returns.
+    ¤ How investment is measured, i.e., investment made just by equity
+      investors or by debt and equity investors. In most cases, accounting
+      returns use the book value as the basis of investment measurement.
+    ¤ With any measure of accounting return, you can get different values
+      depending upon timing, i.e., start of the period, end of the period or
+      average for invested capital.
+¨   Consistency rule: A consistent measure of accounting return will
+    measure both profits and investment to the same group (equity or
+    capital).</div>
+</div>
+<div class="slide" id="s10">
+<h3><span class="slide-no">幻灯 10</span>净资产收益率（ROE）<span class="en">Return on Equity</span></h3>
+<div class="zh"><p>ROE 的分子有三种取法，分母有三种取法——组合起来就是九种 ROE。选哪一栏，取决于你在问什么问题。</p></div>
+<div class="en-block"><span class="en-label">English original</span>Return on Equity</div>
+<figure class="figure"><img src="../img/accounting101/session6-p10.jpg" alt="ROE 度量选择图：分子三种、分母三种" loading="lazy"><figcaption class="cap">ROE 的分子分母选项：分子（Measuring Income）可用当年净利润、剔除非常项后的净利润、或正常化净利润（normalised net income），三者都归入 equity income；分母（Equity Capital Invested）按时间口径分为财年初的账面权益、财年内的平均账面权益、财年末的账面权益。</figcaption></figure>
+</div>
+<div class="slide" id="s11">
+<h3><span class="slide-no">幻灯 11</span>投入资本回报率（ROIC）<span class="en">Return on Invested Capital</span></h3>
+<div class="zh"><p>ROIC 与 ROE 的差别在于：分子用经营利润（且要按前面几讲的做法做租赁与研发调整），分母用全部投入资本（账面权益 + 账面债务 − 现金及有价证券）。Damodaran 在这页把调整步骤全部写了出来。</p></div>
+<div class="en-block"><span class="en-label">English original</span>Return on Invested Capital</div>
+<figure class="figure"><img src="../img/accounting101/session6-p11.jpg" alt="ROIC 计算结构图：分子与分母的各项调整" loading="lazy"><figcaption class="cap">投入资本回报（Return on Capital）的完整算法：分子 = 税后经营利润（EBIT × (1 − 实际税率)），并做两处调整——把租赁资本化（Adjusted EBIT = EBIT + 租赁费用 − 租赁资产折旧）、把研发资本化（Adjusted EBIT = EBIT + 研发费用 − 过往研发摊销）；分母 = 账面权益 + 账面债务 − 现金及有价证券，其中债务加回租赁承诺现值、权益加回已资本化的过往研发，并扣除商誉。</figcaption></figure>
+</div>
+<div class="slide" id="s12">
+<h3><span class="slide-no">幻灯 12</span>3. 效率比率<span class="en">3. Efficiency Ratios</span></h3>
+<div class="zh"><p>效率比率衡量的是：公司把钱再投回自己的生意里，能换回多少收入。</p>
+<p>其中<strong>周转率</strong>（以收入为分子）是用得最广的效率指标，但分母可以不同：</p>
+<ul><li>营运资本周转率 = 销售额 / 非现金营运资本（或营运资本中的单项，如存货、应收款）</li><li>资产周转率 = 销售额 / 总资产</li><li>资本周转率 = 销售额 / 投入资本</li></ul></div>
+<div class="en-block"><span class="en-label">English original</span>3. Efficiency Ratios
+
+¨ Efficiency ratios measure the revenue payoff that
+  companies get from reinvesting back in their
+  businesses.
+¨ Turnover ratios, with revenues in the numerator are
+  the most widely used measured of efficiency, though
+  the denominator can vary:
+    ¤ Working Capital Turnover = Sales/ Non-cash Working
+      capital (or individual items of working capital, like
+      inventory or receivables)
+    ¤ Asset Turnover = Sales/ Total Assets
+    ¤ Capital Turnover = Sales/ Invested Capital</div>
+</div>
+<div class="slide" id="s13">
+<h3><span class="slide-no">幻灯 13</span>4. 度量财务杠杆<span class="en">4. Measuring Financial Leverage</span></h3>
+<div class="zh"><p><strong>债务比率</strong>衡量一家公司借了多少钱——相对于总资本，或相对于盈利/现金流。</p>
+<p>债务既可以相对总资本，也可以只相对权益：</p>
+<ul><li>债务资本比（Debt to Capital）= 债务 / (债务 + 权益)：衡量公司资本中有多少来自债务。</li><li>产权比率（Debt to Equity）= 债务 / 权益：债务资本比的近亲，把债务表述为权益的百分比。</li></ul>
+<p>债务也可以相对盈利/现金流来衡量：</p>
+<ul><li>Debt to EBITDA = 债务 / EBITDA：衡量公司相对于其经营产生的现金（税前、资本开支前）背了多少债。</li></ul></div>
+<div class="en-block"><span class="en-label">English original</span>4. Measuring Financial Leverage
+
+¨ Debt Ratios measure how much a company has
+  borrowed, relative to overall capital or to
+  earnings/cashflows.
+¨ Debt can be scaled to overall capital or just to equity
+    ¤ Debt to Capital = Debt/ (Debt + Equity): This is a measure of how
+      much of the capital in a company comes from debt.
+    ¤ Debt to Equity = Debt/Equity: This is a close variant of debt to
+      capital, with debt stated as a percent of equity.
+¨   Debt can also be measured relative to
+    earnings/cashflows:
+    ¤ Debt to EBITDA = Debt/EBITDA: This measures how much debt a
+      company has relative to the cash it generates from operations,
+      before taxes and capital expenditures.</div>
+</div>
+<div class="slide" id="s14">
+<h3><span class="slide-no">幻灯 14</span>算法上的变体<span class="en">Variants on calculation</span></h3>
+<div class="zh"><p><strong>债务算哪些：</strong>只有长期债务 / 全部计息债务 / 含承诺（如租赁）的债务。</p>
+<p><strong>账面还是市场：</strong>债务与权益用账面价值（取自资产负债表）；或用市场价值——上市公司权益用市值，债务市值若能取得也用市值。</p>
+<p><strong>总额还是净额：</strong>总债务（gross debt）是全部债务；净债务（net debt）是全部债务减去现金及有价证券。</p></div>
+<div class="en-block"><span class="en-label">English original</span>Variants on calculation
+
+¨   What to include in debt
+    ¤ Only long term debt
+    ¤ All interest bearing debt
+    ¤ Debt inclusive of commitments (like leases)
+
+¨   Book or Market
+    ¤ Book values for debt and equity (from balance sheet)
+    ¤ Market values, measured as market cap for equity in a publicly
+      traded firm, and if doable, market value of debt
+¨   Gross or Net
+    ¤ Gross debt is all debt
+    ¤ Net debt is all debt minus cash &amp; marketable securities</div>
+</div>
+<div class="slide" id="s15">
+<h3><span class="slide-no">幻灯 15</span>5. 度量流动性与信用风险<span class="en">5. Measuring Liquidity/ Credit Risk</span></h3>
+<div class="zh"><p><strong>保障倍数（coverage ratios）</strong>：衡量公司履行承诺时有多少缓冲。</p>
+<ul><li>利息保障倍数：承诺是利息费用，对标的是营业利润。</li><li>固定费用保障倍数：承诺扩大到含债务本息，对标的是营业利润 + 固定费用。</li></ul>
+<p><strong>流动性比率</strong>：衡量公司有多少流动资产可以应付近期需要与支出。</p>
+<ul><li>流动比率（current ratio）：流动资产相对流动负债。</li><li>速动比率（quick ratio）：只看流动性强的流动资产相对流动负债（存货通常剔除）。</li></ul></div>
+<div class="en-block"><span class="en-label">English original</span>5. Measuring Liquidity/ Credit Risk
+
+¨   Coverage Ratios: These ratios measure how much buffer
+    or coverage a company has in meeting commitments.
+    ¤ With interest coverage ratio, the commitment is interest
+      expenses, and it is scaled to operating income.
+    ¤ With a fixed charge coverage ratio, the commitment is expanded
+      to include debt payments, and it is scaled to operating income +
+      fixed charges.
+¨   Liquidity Ratios: These ratios measure how much
+    liquidity companies have, to cover near-term needs or
+    expenses:
+    ¤ Current ratio, measure current assets relative to current
+      liabilities.
+    ¤ Quick ratio, looks at only liquid current assets relative to current
+      liabilities. (Inventory is usually excluded.)</div>
+</div>
+<h2>课后测试与答案<span class="en">Post-class test &amp; solutions</span></h2>
+<p class="meta">题目与选项为中英对照；答案与解析附在每题下方。</p>
+<div class="q">
+<p class="qno">第 1 题</p>
+<p class="qzh">如果你想衡量一家企业在规模扩大时提升利润的能力，应该看下列哪一个盈利能力指标？</p>
+<p class="meta">If you wanted to measure the capacity of a business to increase profits as it scales up, which of the following measures of profitability would you look at?</p>
+<ul class="opts">
+<li><strong>a.</strong> 毛利率 <span class="en">Gross margins</span></li>
+<li><strong>b.</strong> 营业利润率 <span class="en">Operating margins</span></li>
+<li><strong>c.</strong> 净利率 <span class="en">Net margins</span></li>
+<li><strong>d.</strong> 毛利率与营业利润率之差 <span class="en">Difference between gross and operating margins</span></li>
+<li><strong>e.</strong> 营业利润率与净利率之差 <span class="en">Difference between operating and net margins</span></li>
+<li><strong>f.</strong> 毛利率与净利率之差 <span class="en">Difference between gross and net margins</span></li>
+</ul>
+<div class="ans"><strong>答案：d</strong> 毛利率与营业利润率之差
+<p>在营业成本代表变动成本、其他营业费用相对固定的前提下，毛利率高而营业利润率低的公司，更能从规模经济中受益。</p>
+<div class="en-block"><span class="en-label">English original</span>d. Difference between gross and operating margin. To the extent that COGS represents variable costs and other operating expenses are fixed, companies which have high gross margins and low operating margins should benefit more from economies of scale.</div>
+</div>
+</div>
+<div class="q">
+<p class="qno">第 2 题</p>
+<p class="qzh">净资产收益率与投入资本回报率都是用来衡量公司投资质量的，两者计算时分母都用账面价值（权益与投入资本的账面值）。为什么用账面价值而不是市场价值？</p>
+<p class="meta">The return on equity and the return on invested capital are designed to measure the quality of investments made by a company and both are computed using book value measures for equity and invested capital in the denominator. Why do we use book values (rather than market values) in this computation?</p>
+<ul class="opts">
+<li><strong>a.</strong> 因为账面价值比市场价值波动小 <span class="en">Because book values are less volatile than market values</span></li>
+<li><strong>b.</strong> 因为账面价值比市场价值更准确地反映资产的价值 <span class="en">Because book values more accurately reflect the values of assets than market values</span></li>
+<li><strong>c.</strong> 因为账面价值更可能反映已投入现有资产与项目的资本 <span class="en">Because book values are more likely to reflect the capital invested in existing assets and projects</span></li>
+<li><strong>d.</strong> 因为对多数公司来说，你可能拿不到权益的市场价值和/或债务的市场价值 <span class="en">Because you may not be able to get the market value of equity and/or the market value of debt for most companies</span></li>
+<li><strong>e.</strong> 以上都不对 <span class="en">None of the above</span></li>
+</ul>
+<div class="ans"><strong>答案：c</strong> 因为账面价值更可能反映已投入现有资产与项目的资本
+<p>市场价值可能比账面价值更好地反映资产当前的价值，但会计回报要衡量的是「在既有投入上赚了多少」，而不是「它们今天值多少」。</p>
+<div class="en-block"><span class="en-label">English original</span>c. Because book values are more likely to reflect the capital invested in existing assets and projects. Market values may reflect current values for assets better than book values, but the objective in accounting return is to measure how much you make on existing investments, given how much you invested in them (not how much they are worth today).</div>
+</div>
+</div>
+<div class="q">
+<p class="qno">第 3 题</p>
+<p class="qzh">如果你想要一个能作为公司违约风险指标的债务比率，会用下列哪一个？请说明理由。</p>
+<p class="meta">If you wanted a debt ratio that would be an indicator of default risk in a company, which of the following would you use? Explain why.</p>
+<ul class="opts">
+<li><strong>a.</strong> 总债务 / (总债务 + 权益) <span class="en">Total Debt/ (Total Debt + Equity)</span></li>
+<li><strong>b.</strong> 长期债务 / (长期债务 + 权益) <span class="en">Long Term Debt/ (Long Term Debt + Equity)</span></li>
+<li><strong>c.</strong> 短期债务 / (短期债务 + 权益) <span class="en">Short Term Debt/ (Short Term Debt + Equity)</span></li>
+<li><strong>d.</strong> 总债务 / EBITDA <span class="en">Total Debt/ EBITDA</span></li>
+<li><strong>e.</strong> 长期债务 / EBITDA <span class="en">Long Term Debt/ EBITDA</span></li>
+<li><strong>f.</strong> 短期债务 / EBITDA <span class="en">Short Term Debt/ EBITDA</span></li>
+</ul>
+<div class="ans"><strong>答案：d</strong> 总债务 / EBITDA
+<p>困境风险来自还不出债，而 EBITDA 就是可以用来还债的现金。债务相对于 EBITDA 很高（即便债务资本比很低）的公司，困境风险更大；而且总债务比长期债务更全面地反映欠款规模。</p>
+<div class="en-block"><span class="en-label">English original</span>d. Total Debt/ EBITDA. Distress risk comes from the inability to make debt payments and EBITDA is the cash available to make these debt payments. A company that has a lot of debt relative to its EBITDA has more distress risk, even if it has low debt to capital ratios. And total debt is a more comprehensive measure of what is owed than long term debt.</div>
+</div>
+</div>
+<div class="q">
+<p class="qno">第 4 题</p>
+<p class="qzh">如果要为一家盈利波动、债务上升的公司计算利息保障倍数，意图衡量它对抗违约的缓冲，你会用下列哪一个？</p>
+<p class="meta">If you are computing an interest coverage ratio for a company with volatile earnings and rising debt, with the intent to measure its buffer against default, which of the following would you use?</p>
+<ul class="opts">
+<li><strong>a.</strong> 当年 EBIT / 当年利息费用 <span class="en">Current year’s EBIT/ Current year’s interest expense</span></li>
+<li><strong>b.</strong> 历史平均 EBIT / 当年利息费用 <span class="en">Average EBIT over time/ Current year’s interest expense</span></li>
+<li><strong>c.</strong> 历史平均 EBIT / 历史平均利息费用 <span class="en">Average EBIT over time/ Average interest expense over time</span></li>
+<li><strong>d.</strong> 当年 EBIT / 历史平均利息费用 <span class="en">Current year’s EBIT/ Average interest expense over time</span></li>
+</ul>
+<div class="ans"><strong>答案：b</strong> 历史平均 EBIT / 当年利息费用
+<p>既然公司盈利波动，我会用平均 EBIT；但由于其债务负担一直在上升，我应当看当年的利息费用（它会高于过去的利息费用），这更能指示公司实际欠了多少。</p>
+<div class="en-block"><span class="en-label">English original</span>b. Average EBIT over time/ Current year’s interest expense. Since the company’s income is volatile, I would use the average EBIT. However, since its debt load has been increasing, I should be looking at the current year’s interest expense (since it will be higher than the interest expenses in the past) and is more indicative of what the company owes.</div>
+</div>
+</div>
+<div class="q">
+<p class="qno">第 5 题</p>
+<p class="qzh">周转率衡量的是投资效率，但通常要结合营业利润率一起读。请把下列四家公司按投资效率从高到低排序：</p>
+<p class="meta">Turnover ratios are measures of investment efficiency, but often have to be read in conjunction with operating margins. Rank the following from most efficient to least investment-efficient companies:</p>
+<ul class="opts">
+<li><strong>a.</strong> 销售额/资本高，营业利润率低 <span class="en">High sales to capital and low operating margins</span></li>
+<li><strong>b.</strong> 销售额/资本低，营业利润率低 <span class="en">Low sales to capital and low operating margins</span></li>
+<li><strong>c.</strong> 销售额/资本高，营业利润率高 <span class="en">High sales to capital and high operating margins</span></li>
+<li><strong>d.</strong> 销售额/资本低，营业利润率高 <span class="en">Low sales to capital and high operating margins</span></li>
+</ul>
+<div class="ans"><strong>答案：c</strong> 最高效：销售额/资本高且营业利润率高；最低效：销售额/资本低且营业利润率低；其余两种居中
+<p>事实上，销售额/资本与营业利润率的乘积就是投入资本回报率，资本回报越高，意味着投资效率越高。</p>
+<div class="en-block"><span class="en-label">English original</span>Ranking from most to least efficient: Most efficient: High sales to capital and high operating margins; Least efficient: Low sales to capital and low operating margins; The other two will fall in the middle. In fact, the product of sales to capital and operating margin is the return on invested capital, with higher returns on capital going with more efficient investing. Pre-tax ROIC = Sales/Invested Capital * EBIT/Sales</div>
+</div>
+</div>
+<p class="sessnav"><a href="session5A.html">← 第 5A 讲</a> <a href="index.html">目录</a> <a href="session6A.html">第 6A 讲 →</a></p>
+<p class="footer">课程来源：<a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/webcastacctg.htm">Damodaran · Corporate Finance Online Class（Accounting 101）</a><br>幻灯与课后题版权归 Aswath Damodaran / NYU Stern 所有，本站仅作教学与中文对照阅读使用。<br><a href="../index.html">← 返回站主随笔</a></p>
+</body>
+</html>

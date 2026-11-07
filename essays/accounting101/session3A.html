@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="这一讲没有讲道理，全是报表。Damodaran 挑了七家形态截然不同的公司，把它们的资产负债表并排放在一起看：Peloton（招股书里的年轻公司）、Netflix（高速成长）、Coca-Cola（成熟）、Toyota（老化）、Total（资源型）、HSBC（金融服务）、Dr. Reddy's（制药）。
+他给的框架是「企业生命周期」——同一张资产负债表，在初创、成长、成熟、衰退四个阶段会长出完全不同的样子；而行业不同，资产端和负债端出现的东西也不同（油企大量资产藏在联营公司里，银行最大的资产是贷款而不是现金）。
+最后的结论很不客气：今天的资产负债表是一团乱麻，既不衡量投入资本，也不反映公允价值；真正还能用的只有两行——Cash &amp; marketable securities 与 Debt。">
+<title>第 3A 讲 · 资产负债表的比较 · 会计101 中英对照 — 乔布斯研究</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600&family=Charter:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #ffffff; --text: #1a1a1a; --meta: #888888; --rule: #e0e0e0; --max-w: 720px; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: var(--bg); color: var(--text); font-family: 'Noto Serif SC','Charter',serif; font-size: 17px; line-height: 1.7; max-width: var(--max-w); margin: 0 auto; padding: 0 24px 80px; overflow-wrap: anywhere; }
+a { color: var(--text); text-decoration: underline; text-decoration-color: var(--rule); }
+a:hover { text-decoration-color: var(--text); }
+h1 { font-size: 22px; font-weight: 600; margin: 48px 0 8px; letter-spacing: -0.3px; }
+h2 { font-size: 15px; font-weight: 600; color: var(--meta); text-transform: uppercase; letter-spacing: 1px; margin: 40px 0 16px; padding-top: 24px; border-top: 1px solid var(--rule); }
+h2 .en { display: block; font-size: 14px; color: var(--meta); text-transform: none; letter-spacing: 0; font-weight: 400; font-style: italic; margin-top: 4px; }
+h3 { font-size: 17px; font-weight: 600; margin: 32px 0 12px; }
+h3 .en { display: block; font-size: 14px; color: var(--meta); font-weight: 400; font-style: italic; margin-top: 2px; }
+.back { font-size: 14px; color: var(--meta); margin-bottom: 24px; }
+.meta { font-size: 13px; color: var(--meta); margin-left: 8px; }
+p { margin: 16px 0; }
+strong { font-weight: 600; }
+em.en-source { display: block; font-family: 'Charter', serif; font-size: 14px; font-style: italic; color: var(--meta); margin: 8px 0 24px; padding-left: 12px; border-left: 2px solid var(--rule); }
+blockquote { border-left: 3px solid var(--rule); padding: 4px 0 4px 20px; margin: 24px 0; color: #555; font-style: italic; }
+.source { font-size: 13px; color: var(--meta); margin-top: 12px; }
+.byline { font-size: 14px; color: var(--meta); margin: 8px 0 32px; }
+.tag-row { margin: 16px 0 32px; }
+.tag { display: inline-block; font-size: 12px; padding: 2px 10px; background: var(--rule); border-radius: 12px; color: var(--meta); margin-right: 6px; }
+.hero { background: #f9f9f9; border-radius: 8px; padding: 24px; margin: 0 0 32px; }
+.hero h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; }
+.hero p { font-size: 15px; color: #555; line-height: 1.7; margin: 8px 0; }
+.footer { margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--rule); font-size: 13px; color: var(--meta); }
+.footer a { color: var(--meta); }
+table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+.table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 16px 0; }
+.table-wrap table { margin: 0; min-width: 420px; }
+th, td { padding: 6px 10px; border: 1px solid var(--rule); text-align: left; vertical-align: top; }
+th { background: #f5f5f5; font-weight: 600; }
+.figure { margin: 32px 0; }
+.figure img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 4px; }
+.figure .cap { font-size: 13px; color: var(--meta); margin-top: 8px; line-height: 1.5; padding-left: 12px; border-left: 2px solid var(--rule); }
+.note { background: #f9f9f9; border-left: 3px solid #d4503a; border-radius: 4px; padding: 14px 18px; margin: 24px 0; font-size: 15px; color: #555; }
+.note strong { color: var(--text); }
+ol, ul { padding-left: 24px; margin: 16px 0; }
+li { margin: 8px 0; }
+@media (max-width: 600px) {
+  body { font-size: 16px; padding: 0 18px 60px; }
+  h1 { font-size: 20px; }
+  h2 { font-size: 14px; }
+  table { font-size: 12px; }
+  th, td { padding: 4px 6px; }
+}
+</style>
+<style>
+.kicker { font-size: 13px; color: var(--meta); letter-spacing: .5px; margin: 0 0 6px; }
+h1 .en { display: block; font-size: 15px; font-weight: 400; font-style: italic; color: var(--meta); margin-top: 6px; letter-spacing: 0; }
+.video-wrap { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 6px; margin: 24px 0 8px; background: #000; }
+.video-wrap iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+.video-cap { font-size: 13px; color: var(--meta); margin: 0 0 32px; }
+.slide { margin: 0 0 8px; padding: 20px 0 4px; border-top: 1px solid var(--rule); }
+.slide:first-of-type { border-top: none; }
+.slide h3 { margin: 0 0 12px; font-size: 16px; }
+.slide h3 .slide-no { display: inline-block; font-size: 12px; font-weight: 400; color: var(--meta); border: 1px solid var(--rule); border-radius: 10px; padding: 1px 8px; margin-right: 8px; vertical-align: 2px; }
+.slide h3 .en { display: block; font-size: 13px; color: var(--meta); font-style: italic; font-weight: 400; margin-top: 4px; }
+.slide .zh { margin: 0 0 10px; }
+.slide .zh p { margin: 10px 0; }
+.slide .zh ul, .slide .zh ol { margin: 8px 0; padding-left: 22px; }
+.slide .zh li { margin: 6px 0; }
+.en-block { font-family: 'Charter', serif; font-size: 14px; line-height: 1.6; color: var(--meta); background: #fbfbfb; border-left: 2px solid var(--rule); border-radius: 0 4px 4px 0; padding: 10px 14px; margin: 10px 0 0; white-space: pre-wrap; overflow-wrap: anywhere; }
+.en-block .en-label { display: block; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: #aaa; margin-bottom: 6px; }
+.q { margin: 24px 0; padding: 0 0 4px; border-bottom: 1px solid var(--rule); }
+.q .qno { font-size: 13px; color: var(--meta); }
+.q .qzh { font-weight: 600; }
+.q ol { margin: 8px 0; padding-left: 22px; }
+.q .opts { list-style: none; padding-left: 0; margin: 10px 0; }
+.q .opts li { margin: 7px 0; font-size: 15px; line-height: 1.55; }
+.q .opts .en { color: var(--meta); font-size: 13px; font-family: 'Charter', serif; }
+.ans { background: #f9f9f9; border-left: 3px solid #3a7d5c; border-radius: 4px; padding: 12px 16px; margin: 12px 0 24px; font-size: 15px; color: #555; }
+.ans strong { color: var(--text); }
+.toc-list { list-style: none; padding: 0; margin: 24px 0 0; }
+.toc-list li { margin: 0; padding: 16px 0; border-bottom: 1px solid var(--rule); }
+.toc-list a { font-size: 17px; font-weight: 600; text-decoration: none; }
+.toc-list a:hover { text-decoration: underline; }
+.toc-list .en { display: block; font-size: 13px; font-style: italic; color: var(--meta); font-weight: 400; margin-top: 4px; }
+.toc-list .sub { display: block; font-size: 14px; color: #555; margin-top: 6px; line-height: 1.6; }
+.toc-list .badge { font-size: 12px; color: var(--meta); }
+.sessnav { margin: 48px 0 0; padding-top: 20px; border-top: 1px solid var(--rule); display: flex; gap: 16px; flex-wrap: wrap; justify-content: space-between; font-size: 14px; }
+.sessnav a { color: var(--meta); text-decoration: none; }
+.sessnav a:hover { color: var(--text); text-decoration: underline; }
+.glossary td:first-child { white-space: nowrap; font-family: 'Charter', serif; }
+.glossary td:nth-child(2) { color: #555; }
+</style>
+</head>
+<body><p class="back">← <a href="index.html">会计101 · 分讲阅读</a> · <a href="../index.html">站主随笔</a></p>
+<p class="kicker">NYU Stern · Damodaran《Accounting 101》· 第 3A 讲</p>
+<h1>第 3A 讲 · 资产负债表的比较<span class="en">Balance Sheets: Illustrations</span></h1>
+<p class="byline">讲课视频 · 幻灯 15 张 · 课后题 5 道 · 讲师：Aswath Damodaran（NYU Stern）· 译者：站主（Mr. Buffett 委托）</p>
+<div class="video-wrap"><iframe src="https://www.youtube.com/embed/Gr4JwDB1iRM" title="Balance Sheets: Illustrations" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<p class="video-cap">本讲视频：<a href="https://youtu.be/Gr4JwDB1iRM">Balance Sheets: Illustrations</a>（YouTube，约 12–20 分钟）· 原始幻灯：<a href="https://www.stern.nyu.edu/~adamodar/pdfiles/Accounting101/slides/session3A.pdf">session3A.pdf</a></p>
+<div class="hero"><h3>一句话核心</h3>
+<p>资产负债表是一家公司全部历史的累积结果——但历史该按<strong>投入成本</strong>记还是按<strong>公允价值</strong>记，会计人自己都吵了几十年。结果是今天这张表两头不沾：既不是投入资本，也不是公允价值。真正还能拿来用的，只剩 <strong>Cash &amp; marketable securities</strong> 和 <strong>Debt</strong> 两行。</p>
+<div class="tag-row"><span class="tag">资产负债表</span><span class="tag">企业生命周期</span><span class="tag">行业差异</span><span class="tag">商誉与无形资产</span><span class="tag">金融机构</span></div>
+</div>
+<h2>本讲导读<span class="en">Session guide</span></h2><p>这一讲没有讲道理，全是报表。Damodaran 挑了七家形态截然不同的公司，把它们的资产负债表并排放在一起看：Peloton（招股书里的年轻公司）、Netflix（高速成长）、Coca-Cola（成熟）、Toyota（老化）、Total（资源型）、HSBC（金融服务）、Dr. Reddy's（制药）。
+他给的框架是「企业生命周期」——同一张资产负债表，在初创、成长、成熟、衰退四个阶段会长出完全不同的样子；而行业不同，资产端和负债端出现的东西也不同（油企大量资产藏在联营公司里，银行最大的资产是贷款而不是现金）。
+最后的结论很不客气：今天的资产负债表是一团乱麻，既不衡量投入资本，也不反映公允价值；真正还能用的只有两行——Cash & marketable securities 与 Debt。</p>
+<h2>逐页幻灯（中文在上，英文原文在下）<span class="en">Slide by slide</span></h2>
+<div class="slide" id="s1">
+<h3><span class="slide-no">幻灯 1</span>第 3A 讲：资产负债表的比较<span class="en">SESSION 3A: BALANCE SHEET COMPARISONS</span></h3>
+<div class="zh"><p>课程封面。本讲副题仍是「Accounting for Finance」——这一回我们把资产负债表摊开来看：不同年龄段、不同行业的公司，账面上长出来的样子完全不一样。</p></div>
+<div class="en-block"><span class="en-label">English original</span>SESSION 3A: BALANCE SHEET
+COMPARISONS
+Accounting for Finance</div>
+</div>
+<div class="slide" id="s2">
+<h3><span class="slide-no">幻灯 2</span>资产负债表：一个生命周期视角<span class="en">Balance Sheet: A Life Cycle Perspective</span></h3>
+<div class="zh"><p>Damodaran 用的框架是<strong>企业生命周期</strong>（the corporate life cycle）：从「灵光一现」到「产品测试」「成人礼」「规模化测试」「中年危机」「终局」，每个阶段的资产、债务、股东权益形态都不一样。</p>
+<p>上方两条曲线是收入（Revenues）与收益（Earnings）随时间的走势：收入通常先于盈利见顶，而盈利在后期下滑得更陡。</p>
+<p>下方表格按六个阶段列出了资产、债务、股东权益的典型形态：</p>
+<ul><li>初创期（Start-up）：资产基数很小，甚至没有；债务只作为最后手段；股东权益通常为负，反映持续的亏损。</li><li>早期成长期（Young Growth）：资产基数快速膨胀；债务低或者没有；股东权益转为正值，但更多来自资本注入，而不是 retained earnings。</li><li>高速成长期（High Growth）：资产继续增长，只是增速放缓；债务维持在低位；随着 retained earnings 开始积累，股东权益得到巩固并开始增长。</li><li>成熟成长期（Mature Growth）：资产规模企稳，并随盈利一起增长；债务开始增加；权益随盈利积累快速增长，但现金回报仍然很低。</li><li>成熟稳定期（Mature Stable）：资产规模稳定；债务规模大，而且往往结构复杂；权益高低取决于公司愿意把多少现金还给股东。</li><li>衰退期（Decline）：资产规模萎缩；债务减少，或者公司已经陷入困境；权益被亏损与资产剥离蚕食。</li></ul>
+<p>一句话：资产负债表的形态是公司<strong>年龄</strong>与<strong>融资方式</strong>的函数，而不是「公司好不好」的指标。</p></div>
+<div class="en-block"><span class="en-label">English original</span>Balance Sheet: A Life Cycle Perspective</div>
+<figure class="figure"><img src="../img/accounting101/session3A-p02.jpg" alt="企业生命周期示意图：收入与收益曲线，加六阶段的资产、债务、股东权益特征表" loading="lazy"><figcaption class="cap">企业生命周期图：上方是收入（Revenues）与收益（Earnings）随时间的曲线，下方是六个阶段（初创 / 早期成长 / 高速成长 / 成熟成长 / 成熟稳定 / 衰退）各自的资产、债务与股东权益特征。整张图在论证：看资产负债表之前，得先知道这家公司处在生命周期的哪一段——同一个「负债高」，在成长公司和衰退公司身上是两回事。</figcaption></figure>
+</div>
+<div class="slide" id="s3">
+<h3><span class="slide-no">幻灯 3</span>一家年轻公司：Peloton 招股书里的资产负债表（2019）<span class="en">A Young Company: Peloton's Balance Sheet (2019) in its Prospectus</span></h3>
+<div class="zh"><p>Peloton 是典型的「年轻成长」公司：一年之内资产从 2.712 亿美元膨胀到 8.645 亿美元。表里三列分别是截至 2018 年 6 月 30 日、截至 2019 年 6 月 30 日，以及 2019 年 6 月 30 日的备考（pro forma，未经审计）数据，单位均为百万美元。</p>
+<p>资产端（百万美元）：现金及现金等价物 150.6 → 162.1；2019 年新增有价证券 216.0；应收账款净额 9.4 → 18.5；存货 25.3 → 136.6；预付费用及其他流动资产 18.4 → 48.4；流动资产合计 203.8 → 581.7；固定资产净额 36.2 → 249.7；无形资产净额 24.5 → 19.5；商誉 4.2 → 4.3；受限制现金 1.0 → 0.8；其他资产 1.6 → 8.5；资产总计 271.2 → 864.5。</p>
+<p>负债端：应付账款 28.1 → 92.2；应计费用 51.4 → 104.5；客户押金及递延收入（deferred revenue）88.5 → 90.8；其他流动负债 2.2 → 3.3；流动负债合计 170.2 → 290.8；递延租金 9.4 → 23.7；2019 年新增 build-to-suit 负债 147.1；其他非流动负债 1.0 → 0.4；负债总计 180.5 → 462.0。</p>
+<p>权益端最能说明问题：可赎回可转换优先股从 406.3 涨到 941.1，累积亏损从 (336.1) 扩大到 (629.5)，于是股东权益是<strong>负数</strong>——(315.6) → (538.6)。第三列的备考数据假设优先股转成普通股：优先股清零，资本公积变成 1,031.8，股东权益这才转正到 402.5。</p>
+<p>这就是生命周期表里「早期成长期」那一栏的具体样子：钱主要来自优先股和亏损，账面权益还是负的；换成现金融资（普通 IPO）之后，同一家公司的账面才转正。资产负债表长什么样，很大程度上取决于公司用什么工具融资。</p></div>
+<div class="en-block"><span class="en-label">English original</span>A Young Company: Peloton’s Balance Sheet
+(2019) in its Prospectus</div>
+<figure class="figure"><img src="../img/accounting101/session3A-p03.jpg" alt="Peloton 2019 年招股书资产负债表：资产、负债、可赎回可转换优先股与股东赤字" loading="lazy"><figcaption class="cap">Peloton 招股书里的资产负债表（百万美元，三列：2018/6/30、2019/6/30、2019/6/30 备考）。这张表在论证：年轻公司的资产端还没有历史——存货、固定资产都是刚起步的起步价；钱主要来自可赎回可转换优先股（406.3 涨到 941.1）和不断扩大的累积亏损 (336.1)→(629.5)，所以股东权益是负的 (315.6)→(538.6)；备考转成普通股之后，同一笔账立刻变成正的 402.5。</figcaption></figure>
+</div>
+<div class="slide" id="s4">
+<h3><span class="slide-no">幻灯 4</span>一家成长型公司：Netflix 的资产负债表（2019）<span class="en">A Growth Company: Netflix's Balance Sheet (2019)</span></h3>
+<div class="zh"><p>成长型公司（growth company）的资产负债表有个明显特征：内容资产（content assets）比现金和实物资产大得多。这张表按 2019 年 12 月 31 日与 2018 年 12 月 31 日两列排列，单位是千美元。</p>
+<p>资产端（千美元）：现金及现金等价物 5,018,437（2018 年 3,794,483）；其他流动资产 1,160,067（748,466）；流动资产合计 6,178,504（9,694,135）——2018 年这一栏里还有 5,151,186 的当期内容资产，2019 年已经挪进了非流动；非流动内容资产净额 24,504,567（14,951,141）；物业厂房及设备净额 565,221（418,281）；其他非流动资产 2,727,420（910,843）；资产总计 33,975,712（25,974,400）。</p>
+<p>负债端：当期内容负债 4,413,561（4,681,562）；应付账款 674,347（562,985）；应计费用及其他负债 843,043（481,874）；递延收入 924,745（760,899）；流动负债合计 6,855,696（6,487,320）；非流动内容负债 3,334,323（3,759,026）；长期债务 14,759,260（10,360,058）；其他非流动负债 1,444,276（129,231）；负债合计 26,393,555（20,735,635）。</p>
+<p>权益端：普通股 2,793,929（2,315,988）；累积其他综合亏损 (23,521)（(19,582)）；留存收益（retained earnings）4,811,749（2,942,359）；股东权益合计 7,582,157（5,238,765）。</p>
+<p>两个要点：内容资产是非流动的（要摊销），所以 2019 年「流动资产」这一行反而比 2018 年小——单看 current assets 会低估这家公司；同时，成长是用杠杆换来的，长期债务一年从 10,360,058 涨到 14,759,260。</p></div>
+<div class="en-block"><span class="en-label">English original</span>A Growth Company: Netflix’s Balance
+Sheet (2019)</div>
+<figure class="figure"><img src="../img/accounting101/session3A-p04.jpg" alt="Netflix 2019 年资产负债表：内容资产、长期债务与股东权益" loading="lazy"><figcaption class="cap">Netflix 2019 年资产负债表（千美元，2019 与 2018 两列）。这张表在论证：成长型公司的资产大头是内容资产——非流动内容资产净额 24,504,567，占资产总计 33,975,712 的七成以上，厂房设备只有 565,221；而支撑这份资产的是长期债务 14,759,260 和留存收益，股东权益 7,582,157 不到负债 26,393,555 的三分之一。</figcaption></figure>
+</div>
+<div class="slide" id="s5">
+<h3><span class="slide-no">幻灯 5</span>一家成熟公司：可口可乐的资产负债表（2019）<span class="en">A Mature Company: Coca Cola's Balance Sheet (2019)</span></h3>
+<div class="zh"><p>成熟公司的资产负债表长什么样？可口可乐 2019 年 12 月 31 日这页（单位：百万美元，括号内为 2018 年）：</p>
+<p>资产端：现金及现金等价物 6,480（9,077）；短期投资 1,467（2,025）；两者合计 7,947（11,102）；有价证券 3,228（5,013）；应收账款 3,971（3,685）；存货 3,379（3,071）；预付费用及其他资产 1,886（2,059）；流动资产合计 20,411（24,930）；权益法投资 19,025（19,412）；其他投资 854（867）；其他资产 6,075（4,148）；递延所得税资产 2,412（2,674）；固定资产净额 10,838（9,598）；无限期商标 9,266（6,682）；无限期装瓶商特许经营权 109（51）；商誉 16,764（14,109）；其他无形资产 627（745）；资产总计 86,381（83,216）。</p>
+<p>负债端：应付账款及预提费用 11,312（9,533）；借款及应付票据 10,994（13,835）；一年内到期的长期负债 4,253（5,003）；应交所得税 414（411）；流动负债合计 26,973（28,782）；长期负债 27,516（25,376）；其他负债 8,510（7,646）；递延所得税负债 2,284（2,354）。</p>
+<p>权益端：普通股（面值 0.25 美元，发行 7,040 百万股）1,760（1,760）；资本公积 17,154（16,520）；留存收益 65,855（63,234）；累计其他综合亏损 (13,544)（(12,814)）；库存股 (52,244)（(51,719)）；归属公司股东权益合计 18,981（16,981）；非控制性权益 2,117（2,077）；股东权益合计 21,098（19,058）。</p>
+<p>有三处值得停下来：其一，现金与有价证券加起来只有 7,947，撑不起 26,973 的流动负债；其二，商誉 16,764 加无限期商标 9,266，资产端有四分之一是收购来的、而且不摊销；其三，库存股 (52,244) 的绝对额甚至超过了归属公司股东的权益合计 18,981——公司这些年花掉的钱，很大一块是回购自己的股票。</p></div>
+<div class="en-block"><span class="en-label">English original</span>A Mature Company: Coca Cola’s Balance
+Sheet (2019)</div>
+<figure class="figure"><img src="../img/accounting101/session3A-p05.jpg" alt="可口可乐 2019 年合并资产负债表：商誉、商标、长期负债与巨额库存股" loading="lazy"><figcaption class="cap">可口可乐 2019 年合并资产负债表（百万美元，2019/2018 两列）。这张表在论证成熟公司的三件事：资产端有四分之一是商誉（16,764）加无限期商标（9,266）这类收购来的、不摊销的东西；负债端由长期负债 27,516 与流动负债 26,973 主导；权益端被巨额回购（库存股 (52,244)）压到只剩 21,098——账面净资产比商誉加商标还小。</figcaption></figure>
+</div>
+<div class="slide" id="s6">
+<h3><span class="slide-no">幻灯 6</span>可口可乐 2019 年的债务<span class="en">Coca Cola's Debt in 2019</span></h3>
+<div class="zh"><p>债务明细表（单位：百万美元），左半边是 2019 年 12 月 31 日、右半边是 2018 年 12 月 31 日，每一行给出金额与平均利率（average rate）。</p>
+<p>2019 年：2020–2093 年到期的美元票据 14,621，平均利率 2.4%；2022–2098 年到期的美元公司债 1,366，4.9%；2020 年到期的美元零息票据 168，8.4%；2020–2024 年到期的澳元票据 677，2.4%；2021–2036 年到期的欧元票据 12,807，0.5%；2022–2028 年到期的瑞士法郎票据 1,129，3.7%；其他（到期至 2098 年）548，6.2%；公允价值调整 453。债务合计 31,769，平均利率 1.9%。</p>
+<p>减：一年内到期的流动部分 4,253，长期债务 27,516。（2018 年：合计 30,379、平均利率 1.9%，一年内到期 5,003，长期 25,376。）</p>
+<p>这页要说的是：一笔 31,769 的总债务，散在至少五种货币里，到期日从 2020 年排到 2098 年，账面平均利率只有 1.9%。只看资产负债表上「长期负债 27,516」这一行，你完全看不出它的期限结构、币种结构和实际成本——这一行的信息量，比它看上去少得多。</p></div>
+<div class="en-block"><span class="en-label">English original</span>Coca Cola’s Debt in 2019</div>
+<figure class="figure"><img src="../img/accounting101/session3A-p06.jpg" alt="可口可乐 2019 年债务明细表：各币种、各到期区间的债务金额与平均利率" loading="lazy"><figcaption class="cap">可口可乐 2019 年债务明细（百万美元，含各币种、各到期区间的金额与平均利率）。这张表在论证：总债务 31,769 中最大的一笔是 2020–2093 年到期的美元票据 14,621（平均利率 2.4%），欧元票据 12,807 的平均利率只有 0.5%，加权后合计平均利率 1.9%——期限跨到 2098 年、币种横跨美元/欧元/澳元/瑞郎，所以「负债」这一行不告诉你的东西，比它告诉你的多。</figcaption></figure>
+</div>
+<div class="slide" id="s7">
+<h3><span class="slide-no">幻灯 7</span>可口可乐的会计无形资产：小意思？<span class="en">Coca Cola's Accounting Intangibles: Small-bore?</span></h3>
+<div class="zh"><p>有限寿命无形资产（definite-lived intangible assets）明细表，单位百万美元，每一行给出账面总值、累计摊销（accumulated amortization）与账面净值。</p>
+<p>2019 年 12 月 31 日：客户关系 344 / (177) / 167；装瓶商特许经营权 341 / (94) / 247；商标 177 / (99) / 78；其他 55 / (30) / 25；合计 917 / (400) / 517。</p>
+<p>2018 年 12 月 31 日：客户关系 290 / (151) / 139；装瓶商特许经营权 396 / (18) / 378；商标 186 / (91) / 95；其他 88 / (61) / 27；合计 960 / (321) / 639。</p>
+<p>一年之内净值从 639 摊到 517。其中装瓶商特许经营权从 378 掉到 247——而它上一年几乎没摊销过，累计摊销当时只有 18。</p>
+<p>标题那个问号的答案：把全部会计可辨认的无形资产算进来，可口可乐 2019 年的账面净值 517 只占总资产 86,381 的 0.6%，确实是「小意思」。真正的大头是无限期商标 9,266 和商誉 16,764——它们不摊销，也就永远不会被摊销这把尺子量到。</p></div>
+<div class="en-block"><span class="en-label">English original</span>Coca Cola’s Accounting Intangibles: Small-
+    bore?</div>
+<figure class="figure"><img src="../img/accounting101/session3A-p07.jpg" alt="可口可乐有限寿命无形资产明细表：账面总值、累计摊销与账面净值" loading="lazy"><figcaption class="cap">可口可乐有限寿命无形资产明细（百万美元，2019 与 2018）。这张表在论证：会计上「认得出」的无形资产其实很小——净值合计只有 517，占资产总计 86,381 不到 1%；真正撑起资产端的是不摊销的无限期商标 9,266 与商誉 16,764，所以摊销这张网根本网不住这家公司的资产。</figcaption></figure>
+</div>
+<div class="slide" id="s8">
+<h3><span class="slide-no">幻灯 8</span>一家正在老化的公司：丰田的资产（2020）<span class="en">An Aging Company: Toyota's Assets in 2020</span></h3>
+<div class="zh"><p>丰田是「正在老化的公司」：资产基数巨大，而且表里能看出金融业务的分量。单位是百万日元，三列分别是 FY2019（2019 年 3 月 31 日）、FY2020（2020 年 3 月 31 日）与增减额。</p>
+<p>流动资产：现金及现金等价物 3,574,704 → 4,190,518（+615,814）；定期存款 1,126,352 → 828,220；有价证券 1,127,160 → 678,731；应收票据及账款（已扣除坏账准备，2019 年 16,370、2020 年 23,944）2,372,734 → 2,094,894；金融应收款净额 6,647,771 → 6,614,171；其他应收款 568,156 → 564,854；存货 2,656,396 → 2,434,918；预付费用及其他流动资产 805,964 → 1,236,225；流动资产合计 18,879,237 → 18,642,531。</p>
+<p>非流动部分：非流动金融应收款净额 10,281,118 → 10,423,858；投资及其他资产合计 12,091,100 → 13,012,522（其中权益法联营公司 3,313,723 → 4,123,453，可交易证券及其他证券投资 7,479,926 → 7,348,651）；固定资产原值 24,836,784 → 24,457,088（土地 1,386,308 → 1,346,988，建筑物 4,802,175 → 4,730,783，机器设备 11,857,425 → 11,939,121，经营租赁用车辆及设备 6,139,163 → 5,929,233，在建工程 651,713 → 510,963），减累计折旧 (14,151,290) → (13,855,563)，固定资产净额 10,685,494 → 10,601,525；资产总计 51,936,949 → 52,680,436。</p>
+<p>三个值得注意的数：一是固定资产净额只占总资产的约两成（10,601,525 / 52,680,436），因为丰田把大量资产放在「金融应收款」和「经营租赁车辆」这类金融资产里；二是金融应收款合计 6,614,171 + 10,423,858 = 17,038,029，占总资产约三分之一——这不是一家纯制造业公司的资产负债表；三是累计折旧 13,855,563 已经吃掉固定资产原值的 57%，老化公司的账面上，机器设备早就折旧掉了大半。</p></div>
+<div class="en-block"><span class="en-label">English original</span>An Aging Company: Toyota’s Assets in
+    2020</div>
+<figure class="figure"><img src="../img/accounting101/session3A-p08.jpg" alt="丰田 FY2020 资产端明细：流动资产、金融应收款、投资与固定资产" loading="lazy"><figcaption class="cap">丰田 FY2020 资产端（百万日元，FY2019 / FY2020 / 增减）。这张表在论证：一家正在老化的公司，资产并不主要躺在固定资产里——固定资产净额 10,601,525 只占总资产 52,680,436 的约两成，金融应收款（17,038,029）加经营租赁车辆（5,929,233）才是大头；累计折旧 13,855,563 已相当于固定资产原值的 57%。</figcaption></figure>
+</div>
+<div class="slide" id="s9">
+<h3><span class="slide-no">幻灯 9</span>一家正在老化的公司：丰田的负债（2020）<span class="en">An Aging Company: Toyota's Liabilities in 2020</span></h3>
+<div class="zh"><p>同一张表的右半边，单位百万日元，列头同上（FY2019 / FY2020 / 增减额）。</p>
+<p>流动负债：短期借款 5,344,973 → 5,286,026；一年内到期的长期负债 4,254,260 → 4,574,045；应付账款 2,645,984 → 2,434,180；其他应付款 1,102,802 → 1,020,270；预提费用 3,222,446 → 2,926,052；应交所得税 320,998 → 218,117；其他流动负债 1,335,475 → 1,443,687；流动负债合计 18,226,938 → 17,902,377。</p>
+<p>长期负债：长期借款 10,550,945 → 10,692,898；应付养老金及遣散费 963,406 → 978,626；递延所得税负债 1,014,851 → 1,043,169；其他长期负债 615,599 → 821,515；长期负债合计 13,144,801 → 13,536,208；负债总计 31,371,739 → 31,438,585。</p>
+<p>中间层（mezzanine equity）有一行 AA 型股票（无面值，授权 150,000,000 股、已发行 47,100,000 股）498,073 → 504,169——这是夹在普通股与债务之间的一层，通常带转换或赎回条款。</p>
+<p>权益端：普通股（授权 10,000,000,000 股、已发行 3,262,997,492 股）397,050 → 397,050；资本公积 487,162 → 489,334；留存收益 21,987,515 → 23,427,613；累计其他综合亏损 (916,650) → (1,166,273)；库存股（FY2019 为 430,558,325 股、FY2020 为 496,844,960 股）(2,606,925) → (3,087,106)；归属丰田股东权益合计 19,348,152 → 20,060,618；非控制性权益 718,985 → 677,064；股东权益合计 20,067,137 → 20,737,682；负债、中间层权益与股东权益总计 51,936,949 → 52,680,436。</p>
+<p>两处值得一看：短期借款 5,286,026 加一年内到期的长期负债 4,574,045，合计 9,860,071，接近总资产的五分之一，一年内就要还；库存股一年增加 480,181，回购的股份数 496,844,960 已占已发行股数的约 15%。</p></div>
+<div class="en-block"><span class="en-label">English original</span>An Aging Company: Toyota’s Liabilities in
+    2020</div>
+<figure class="figure"><img src="../img/accounting101/session3A-p09.jpg" alt="丰田 FY2020 负债与股东权益明细：流动负债、长期负债、夹层 AA 型股票与库存股" loading="lazy"><figcaption class="cap">丰田 FY2020 负债与权益端（百万日元，FY2019 / FY2020 / 增减）。这张表在论证：负债总计 31,438,585 对应总资产 52,680,436，其中短期借款加一年内到期长期负债 9,860,071 一年内就要还；权益端靠留存收益 23,427,613 撑住，同时库存股一年增加 480,181——老化公司在还债，也在回购。</figcaption></figure>
+</div>
+<div class="slide" id="s10">
+<h3><span class="slide-no">幻灯 10</span>行业与板块的差异<span class="en">Sector and Industry Differences</span></h3>
+<div class="zh"><p>和利润表一样，不同行业出现在资产负债表上的东西也不一样，尽管管着所有公司的会计准则可能是同一套。</p>
+<p>具体说，这种差别在资产负债表的<strong>两侧</strong>都会出现：</p>
+<ul><li>资产端：差别体现在价值里有多少来自有形资产、多少来自无形资产。</li><li>对靠收购扩张的公司：差别还会表现为 goodwill（商誉）这种特有的会计科目。</li></ul></div>
+<div class="en-block"><span class="en-label">English original</span>Sector and Industry Differences
+
+¨ As with income statements, there are differences in
+  what shows up on balance sheets in different
+  sectors, though the accounting standards governing
+  all companies may be the same.
+¨ In particular, the divergences play out on both sides
+
+  of the balance sheet:
+    ¤ On the asset side, it can show up in how much of the value
+      comes from tangible as opposed to intangible assets.
+    ¤ For acquisitive companies, it can also show up as uniquely
+      accounting items like goodwill.</div>
+</div>
+<div class="slide" id="s11">
+<h3><span class="slide-no">幻灯 11</span>一家资源型公司：道达尔（Total）的资产（2020）<span class="en">A Commodity Company: Total's Assets in 2020</span></h3>
+<div class="zh"><p>道达尔是典型的资源型公司。课件标题写的是 2020，图中给出的却是 2019 / 2018 / 2017 三个年末的合并资产负债表，单位是百万美元（$M）。</p>
+<p>非流动资产（2019 / 2018 / 2017）：无形资产净额 33,178 / 28,922 / 14,587；物业厂房及设备净额 116,408 / 113,324 / 109,397；权益法附属公司的投资与贷款 27,122 / 23,444 / 22,103；其他投资 1,778 / 1,421 / 1,727；非流动金融资产 912 / 680 / 679；递延所得税 6,216 / 6,663 / 5,206；其他非流动资产 2,415 / 2,509 / 3,984；非流动资产合计 188,029 / 176,963 / 157,683。</p>
+<p>流动资产：存货净额 17,132 / 14,880 / 16,520；应收账款净额 18,488 / 17,270 / 14,893；其他流动资产 17,013 / 14,724 / 14,210；流动金融资产 3,992 / 3,654 / 3,393；现金及现金等价物 27,352 / 27,907 / 33,185；划分为持有待售的资产 1,288 / 1,364 / 2,747；流动资产合计 85,265 / 79,799 / 84,948；资产总计 273,294 / 256,762 / 242,631。</p>
+<p>两个行业特征：其一，固定资产净额 116,408 占总资产的 42.6%，是典型的重资产；其二，权益法附属公司 27,122——石油业大量用合资（joint venture）方式与东道国政府合作开发，油田常常不在自己的账上，而在联营公司的账上。</p></div>
+<div class="en-block"><span class="en-label">English original</span>A Commodity Company: Total’s Assets in
+2020</div>
+<figure class="figure"><img src="../img/accounting101/session3A-p11.jpg" alt="道达尔合并资产负债表资产端：固定资产、权益法附属公司、存货与现金" loading="lazy"><figcaption class="cap">道达尔合并资产负债表资产端（百万美元，2019/2018/2017）。这张表在论证资源型公司的资产形态：固定资产净额 116,408 一家独大（占总资产 42.6%），同时权益法附属公司 27,122 说明大量油田是记在联营公司的账上、而不是自己的账上——只看合并报表会漏掉这一块。</figcaption></figure>
+</div>
+<div class="slide" id="s12">
+<h3><span class="slide-no">幻灯 12</span>一家资源型公司：道达尔的负债（2020）<span class="en">A Commodity Company: Total's Liabilities in 2020</span></h3>
+<div class="zh"><p>同一张表的右半边（单位：百万美元，2019 / 2018 / 2017）。</p>
+<p>股东权益：普通股 8,123 / 8,227 / 7,882；资本公积及留存收益 121,170 / 120,569 / 112,040；外币报表折算差额 (11,503) / (11,313) / (7,908)；库存股 (1,012) / (1,843) / (458)；归属集团股东权益合计 116,778 / 115,640 / 111,556；非控制性权益 2,527 / 2,474 / 2,481；股东权益合计 119,305 / 118,114 / 114,037。</p>
+<p>非流动负债：递延所得税负债 11,858 / 11,490 / 10,828；员工福利 3,501 / 3,363 / 3,735；预计负债及其他非流动负债 20,613 / 21,432 / 15,986；非流动金融负债 47,773 / 40,129 / 41,340；非流动负债合计 83,745 / 76,414 / 71,889。</p>
+<p>流动负债：应付账款 28,394 / 26,134 / 26,479；其他债权人及应计负债 25,749 / 22,246 / 17,779；短期借款 14,819 / 13,306 / 11,096；其他流动金融负债 487 / 478 / 245；与划分为持有待售资产直接相关的负债 795 / 70 / 1,106；流动负债合计 70,244 / 62,234 / 56,705；负债及股东权益总计 273,294 / 256,762 / 242,631。</p>
+<p>接着上一页的资源型特征：非流动金融负债 47,773 加短期借款 14,819，合计 62,592，占总资产的 22.9%——油企的杠杆主要来自银行融资，而且 2018 到 2019 一年，光长期金融负债就增加了 7,644（40,129 → 47,773）。</p></div>
+<div class="en-block"><span class="en-label">English original</span>A Commodity Company: Total’s Liabilities
+    in 2020</div>
+<figure class="figure"><img src="../img/accounting101/session3A-p12.jpg" alt="道达尔合并资产负债表负债与权益端：金融负债、应付账款、留存收益" loading="lazy"><figcaption class="cap">道达尔合并资产负债表负债与权益端（百万美元，2019/2018/2017）。这张表在论证资源型公司的钱从哪来：非流动金融负债 47,773 加短期借款 14,819，合计占总资产 22.9%，是典型的杠杆型融资结构；而权益 119,305 里绝大部分是留存收益（资本公积及留存收益 121,170）。</figcaption></figure>
+</div>
+<div class="slide" id="s13">
+<h3><span class="slide-no">幻灯 13</span>一家金融服务公司：汇丰（HSBC）2019 年<span class="en">A Financial Service Company: HSBC in 2019</span></h3>
+<div class="zh"><p>银行这类金融服务公司的资产负债表根本不像工业公司：资产端和负债端全是金融资产与金融负债，而且规模大得离谱。汇丰 2019 年 12 月 31 日（单位：百万美元，括号内为 2018 年）：</p>
+<p>资产端：现金及央行结余 154,099（162,843）；在收款项 4,956（5,787）；香港政府债券投资 38,380（35,859）；交易性资产 254,271（238,130）；指定或强制以公允价值计量且变动计入损益的金融资产 43,627（41,111）；衍生工具 242,995（207,825）；对银行的贷款及垫款 69,203（72,167）；对客户的贷款及垫款 1,036,743（981,696）；非交易性逆回购协议 240,862（242,804）；金融投资 443,312（407,433）；预付款、应计收入及其他资产 136,680（110,571）；当期税务资产 755（684）；联营与合营企业权益 24,474（22,407）；商誉及无形资产 20,163（24,357）；递延税项资产 4,632（4,450）；资产总计 2,715,152（2,558,124）。</p>
+<p>负债端：客户存款 1,439,115（1,362,643）；非交易性回购协议 140,344（165,884）；待转付其他银行款项 4,817（5,641）；交易性负债 83,170（84,431）；指定为以公允价值计量的金融负债 164,466（148,505）；衍生工具 239,497（205,835）；已发行债务证券 104,555（85,342）；应计费用、递延收入及其他负债 118,156（97,380）；当期税务负债 2,150（718）；保险合约负债 97,439（87,330）；准备金 3,398（2,920）；递延税项负债 3,375（2,619）；次级负债 24,600（22,437）；负债总计 2,522,484（2,363,875）。</p>
+<p>权益端：已缴股本 10,319（10,180）；股份溢价 13,959（13,609）；其他权益工具 20,871（22,367）；其他储备 2,127（1,906）；留存收益 136,679（138,191）；股东权益合计 183,955（186,253）；非控制性权益 8,713（7,996）；权益总额 192,668（194,249）；负债及权益总计 2,715,152（2,558,124）。</p>
+<p>看这张表得换一副眼睛：最大的两行既不是现金也不是固定资产，而是「对客户的贷款及垫款」1,036,743 和「客户存款」1,439,115——银行就是拿储户的钱放贷，资产负债表中间那一大块全是杠杆；股东权益 192,668 只占总资产的 7.1%。</p></div>
+<div class="en-block"><span class="en-label">English original</span>A Financial Service Company: HSBC in
+    2019</div>
+<figure class="figure"><img src="../img/accounting101/session3A-p13.jpg" alt="汇丰 2019 年资产负债表：对客户贷款、客户存款、衍生工具与股东权益" loading="lazy"><figcaption class="cap">汇丰 2019 年资产负债表（百万美元，2019/2018 两列）。这张表在论证金融公司的资产负债表形态完全不同：资产端最大的是对客户的贷款及垫款 1,036,743，负债端最大的是客户存款 1,439,115——经营性负债撑起经营性资产，而股东权益只占 7.1%；拿工业公司那套「现金 / 存货 / 固定资产」的尺子去量银行，是量不出来的。</figcaption></figure>
+</div>
+<div class="slide" id="s14">
+<h3><span class="slide-no">幻灯 14</span>一家制药公司：Dr. Reddy's<span class="en">A Pharmaceutical Company: Dr. Reddy's</span></h3>
+<div class="zh"><p>制药公司的资产负债表长什么样？Dr. Reddy's Laboratories（印度）截至 2020 年 3 月 31 日的资产负债表，单位是百万印度卢比，括号内为 2019 年 3 月 31 日。</p>
+<p>非流动资产：物业厂房及设备 37,698（39,504）；在建工程 3,841（4,001）；商誉 323（323）；其他无形资产 6,318（7,000）；开发中无形资产 277（–）；金融资产中的投资 33,671（18,191）、应收账款 1,737（113）、贷款 12（332）、其他金融资产 474（447）；递延所得税资产净额 6,129（–）；税项资产净额 3,073（3,106）；其他非流动资产 138（126）；非流动资产合计 93,691（73,143）。</p>
+<p>流动资产：存货 21,904（20,156）；金融资产中的投资 21,184（21,144）、应收账款 46,387（37,177）、衍生工具 783（335）、现金及现金等价物 392（1,132）、其他金融资产 1,888（692）；其他流动资产 8,529（8,698）；流动资产合计 101,067（89,332）；资产总计 194,758（162,475）。</p>
+<p>权益与负债：股本 831（830）；其他权益 151,088（126,011）；权益小计 151,919（126,841）。非流动负债：借款 193（3,454）、准备金 545（547）、递延所得税负债净额 –（555）、其他非流动负债 296（285），小计 1,034（4,841）。流动负债：借款 10,436（5,463）、应付账款（其中对微型企业与小企业的应付 55、对其他债权人的应付 10,629）、衍生工具 1,524（45）、其他金融负债 13,928（10,160）、准备金 2,073（1,847）、其他流动负债 3,160（2,962），小计 41,805（30,793）；权益与负债总计 194,758（162,475）。</p>
+<p>两点最值得记：其一，长期借款只剩 193，非流动负债几乎清空，短期压力却一点不轻——压在头上的是其他金融负债 13,928 和应付账款 10,684，医药生意的现金压力来自经营而不是银行；其二，把投资、应收账款、现金这些金融资产加总约 106,528，占总资产一半以上，公司把钱放在投资里而不是工厂里。</p></div>
+<div class="en-block"><span class="en-label">English original</span>A Pharmaceutical Company: Dr. Reddy’s</div>
+<figure class="figure"><img src="../img/accounting101/session3A-p14.jpg" alt="Dr. Reddy's 2020 年 3 月 31 日资产负债表：金融资产、存货、权益与负债" loading="lazy"><figcaption class="cap">Dr. Reddy's 截至 2020 年 3 月 31 日的资产负债表（百万印度卢比，2020/2019 两列）。这张表在论证制药公司的资产形态：金融资产（投资、应收账款、现金等）合计约 106,528，占总资产 194,758 的一半以上，真正的「产能」只有物业厂房及设备 37,698；而短期压力来自应付账款 10,684 与其他金融负债 13,928，而不是银行借款（长期借款只有 193）。</figcaption></figure>
+</div>
+<div class="slide" id="s15">
+<h3><span class="slide-no">幻灯 15</span>小结<span class="en">Bottom Line</span></h3>
+<div class="zh"><p>资产负债表是最能反映一家公司历史的财务报表——因为只要编制正确，它就是公司存在期间全部经营活动的累积结果。</p>
+<p>话虽如此，就连会计人自己都吵不清「历史到底应该揭示什么」：老派会计（historical cost）认为它应该反映公司在现有资产上<strong>投入</strong>了多少，而不是这些资产今天值多少钱；公允价值会计（fair-value accounting）则认为它应该反映当前价值。</p>
+<p>结果是：今天的资产负债表是一团乱麻（a mess），既不衡量投入资本，也不衡量公允价值。资产负债表上现在最有用的项目只有：</p>
+<ul><li>Cash &amp;amp; marketable securities（现金与有价证券）——因为它不受这些讲究的影响。</li><li>Debt（债务）——因为它至少在计息负债上，比较准确地反映了欠了多少。</li></ul></div>
+<div class="en-block"><span class="en-label">English original</span>Bottom Line
+
+¨ A balance sheet is the financial statement that most reflects the
+  history of a company, since constructed correctly it is the
+  cumulated result of all of the company’s activities during its
+  existence.
+¨ That said, there is disagreement even among accountants as to
+  what the history should reveal, with old-time accounting arguing
+  that it should reflect what the company has invested in its existing
+  assets, not what they are worth today, and fair-value accounting
+  arguing that it should reflect its current value.
+¨ The end result is that balance sheets today are a mess, measuring
+  neither invested capital nor fair value. The most useful items on a
+  balance sheet now are
+    ¤ Cash &amp; marketable securities, since it is not subject to nuance
+    ¤ Debt, since it measures closely what is owed (at least on interest bearing
+      liabilities)</div>
+</div>
+<h2>课后测试与答案<span class="en">Post-class test &amp; solutions</span></h2>
+<p class="meta">题目与选项为中英对照；答案与解析附在每题下方。</p>
+<figure class="figure"><img src="../img/accounting101/session3A-test-p01.jpg" alt="Navistar / Nordstrom / Google 三家公司资产负债表数据表（百万美元）" loading="lazy"><figcaption class="cap">课后题数据表：Navistar（卡车制造）、Nordstrom（零售）、Google（科技）三家公司同一口径的资产负债表拆解，单位百万美元。资产端列到 cash and equivalents、short-term investments、应收账款、存货、总流动资产、Gross PP&amp;E、累计折旧、Net PP&amp;E、商誉等；负债与权益端列到应付账款、应计费用、一年内到期长期债务、总流动负债、长期债务、租赁负债、养老金及其他退休后福利、可转换优先股、留存收益、库存股与总权益。</figcaption></figure>
+<div class="q">
+<p class="qno">第 1 题</p>
+<p class="qzh">这三家公司的 net property, plant and equipment（Net PP&amp;E）是用 gross property, plant and equipment（Gross PP&amp;E）减掉 accumulated depreciation 算出来的。请分别估算每家公司的 Net PP&amp;E 占 Gross PP&amp;E 的百分比，并解释为什么三者不同。</p>
+<p class="meta">Net property, plant and equipment (Net P,P&amp;E) at each of these companies is computed by netting out accumulated depreciation from gross property, plant and equipment (Gross P,P&amp;E). Estimate Net PP&amp;E as a percent of Gross PP&amp;E at each company and explain why they are different.</p>
+<div class="ans"><strong>答案：Navistar 36.26% / Nordstrom 45.34% / Google 73.46%</strong> Net PP&amp;E 占 Gross PP&amp;E 的比例：Navistar 36.26%、Nordstrom 45.34%、Google 73.46%。
+<p>Navistar 的 Net PP&amp;E 占 Gross PP&amp;E 比例最低，这既反映了它的年纪（老公司通常比年轻公司核销掉更多资产基础），也反映了它的资产类型（实体验证设备折旧得更快也更彻底）。数据（百万美元）：Gross Property, Plant &amp; Equipment 分别为 3,660.00 / 13,131.00 / 115,148.00；Accumulated Depreciation (2,333.00) / (7,178.00) / (30,561.00)；Net Property, Plant &amp; Equipment 1,327.00 / 5,953.00 / 84,587.00；Net PP&amp;E as % of Gross PP&amp;E 36.26% / 45.34% / 73.46%。</p>
+<div class="en-block"><span class="en-label">English original</span>Navistar has the lowest percent for Net PP&amp;E as a percent of Gross PP&amp;E, reflecting both its age (older companies tend to have written off more of their asset base than younger ones) and its asset types (physical equipment gets depreciated more quickly and completely).
+
+Navistar / Nordstrom / Google:
+Gross Property, Plant &amp; Equipment   $ 3,660.00   $ 13,131.00   $ 115,148.00
+Accumulated Depreciation            $ (2,333.00) $ (7,178.00)  $ (30,561.00)
+Net Property, Plant &amp; Equipment    $ 1,327.00   $ 5,953.00    $ 84,587.00
+Net PP&amp;E as % of Gross PP&amp;E        36.26%       45.34%        73.46%</div>
+</div>
+</div>
+<div class="q">
+<p class="qno">第 2 题</p>
+<p class="qzh">估算这三家公司的营运资金（working capital，流动资产减流动负债），并分析三者之间的差异。在财务分析中，你要怎样修改营运资金的定义，才能让它更有意义？</p>
+<p class="meta">Estimate working capital (current assets minus current liabilities) at each of these companies and analyze the differences across them. How would you modify the definition of working capital to make it more meaningful in financial analysis?</p>
+<div class="ans"><strong>答案：常规口径：1,842 / (290) / 107,357；剔现金剔债务口径：441 / (899) / (11,119)</strong> 营运资金（百万美元）：常规口径 Navistar 1,842、Nordstrom (290)、Google 107,357；改用「非现金流动资产 − 非债务流动负债」后，变成 441 / (899) / (11,119)。
+<p>营运资金的常规定义表明 Google 的营运资金需求最大，而 Nordstrom 的营运资金为负。但现金与有价证券在 Google 的流动资产里占了大头，而且三家的流动负债里都有一部分是短期债务。一个更有意义的口径是：用非现金的流动资产减去非债务的流动负债。这一调整对 Google 影响巨大。数据（百万美元）：Current Assets 4,525.00 / 3,230.00 / 152,578.00；Current Liabilities 2,683.00 / 3,520.00 / 45,221.00；Working Capital 1,842.00 / (290.00) / 107,357.00；Non-cash Current Assets 3,028.00 / 2,377.00 / 32,903.00；Non-debt Current Liabilities 2,587.00 / 3,276.00 / 44,022.00；Non-cash &amp; non-debt working capital 441.00 / (899.00) / (11,119.00)。</p>
+<div class="en-block"><span class="en-label">English original</span>The conventional definition of working capital indicates that Google has the largest working capital needs, and that Nordstrom has negative working capital. However, cash &amp; marketable securities are a large part of Google’s current assets, and short-term debt comprises some part of working capital for each company. A more meaningful measure of working capital can be computed by netting out non-debt current liabilities from non-cash current assets. That adjustment makes a huge difference for Google.
+
+Navistar / Nordstrom / Google:
+Current Assets                      $ 4,525.00  $   3,230.00  $ 152,578.00
+Current Liabilities                 $ 2,683.00  $   3,520.00  $  45,221.00
+Working Capital                     $ 1,842.00  $    (290.00) $ 107,357.00
+
+Non-cash Current Assets             $ 3,028.00  $   2,377.00  $  32,903.00
+Non-debt Current Liabilities        $ 2,587.00  $   3,276.00  $  44,022.00
+Non-cash &amp; non-debt working capital $   441.00  $    (899.00) $ (11,119.00)</div>
+</div>
+</div>
+<div class="q">
+<p class="qno">第 3 题</p>
+<p class="qzh">Navistar 的股东权益是负数。你会怎么解释？</p>
+<p class="meta">Navistar has a negative value for shareholders’ equity. How would you explain this?</p>
+<ul class="opts">
+<li><strong>a.</strong> 公司在过去几年可能经历过重大重组，并有巨额非经常性费用冲减了利润。 <span class="en">The company may have had major restructuring and extraordinary charges against income in prior years.</span></li>
+<li><strong>b.</strong> 公司在过去几年报告过亏损。 <span class="en">The company may have reported losses in prior years</span></li>
+<li><strong>c.</strong> 公司过去几年支付的股息远超过它报告的净利润。 <span class="en">The company may have paid far more in dividends than it reported in net income in prior years</span></li>
+<li><strong>d.</strong> 公司过去几年大量回购了股票。 <span class="en">The company may have bought back stock in large quantities in prior years</span></li>
+<li><strong>e.</strong> 以上都是。 <span class="en">All of the above</span></li>
+</ul>
+<div class="ans"><strong>答案：e</strong> 以上都是（All of the above）。
+<p>e. 以上都是。大额重组费用、经营亏损、支付超过盈利的股息、以及大举回购股票，这四件事都会消耗股东权益。</p>
+<div class="en-block"><span class="en-label">English original</span>e. All of the above. Taking big restructuring charges, losing money, paying dividends that exceed earnings and buying back stock all drain shareholders’ equity.</div>
+</div>
+</div>
+<div class="q">
+<p class="qno">第 4 题</p>
+<p class="qzh">Google 在资产负债表上报告了 206 亿美元的商誉（goodwill）。这个项目给你提供了关于这家公司的哪些信息？</p>
+<p class="meta">Google reports goodwill of $20.6 billion on its balance sheet. Which of the following information does this item give you about the company?</p>
+<ul class="opts">
+<li><strong>a.</strong> Google 做了一笔大额收购，而目标公司拥有大量无形资产。 <span class="en">Google has made a substantial acquisition and the target company has significant intangible assets.</span></li>
+<li><strong>b.</strong> Google 做了一笔大额收购，付出的价格超过了它本该付出的。 <span class="en">Google has made a substantial acquisition and paid more than it should have on the acquisition</span></li>
+<li><strong>c.</strong> Google 做了一笔大额收购，为目标公司支付的价格显著高于其账面价值。 <span class="en">Google has made a substantial acquisition and paid significantly more than book value for the target firm</span></li>
+<li><strong>d.</strong> Google 做了一笔大额收购，而且捡了个便宜（支付价格远低于价值）。 <span class="en">Google has made a substantial acquisition and got itself a bargain (price paid was well below value)</span></li>
+<li><strong>e.</strong> 以上都不是。 <span class="en">None of the above.</span></li>
+</ul>
+<div class="ans"><strong>答案：c</strong> Google 做了一笔大额收购，为目标公司支付的价格显著高于其账面价值。
+<p>c. Google 做了一笔大额收购，为目标公司支付的价格显著高于其账面价值。目标公司可能确实拥有大量无形资产，也可能是 Google 出价过高，但单看 goodwill 这一个项目，你得不到这些信息。</p>
+<div class="en-block"><span class="en-label">English original</span>c. Google has made a substantial acquisition and paid significantly more than book value for the target firm. It is possible that the target company has significant intangible assets or that Google overpaid, but goodwill by itself does not give you that information.</div>
+</div>
+</div>
+<div class="q">
+<p class="qno">第 5 题</p>
+<p class="qzh">Navistar 在负债端列示了金额可观的养老金及退休后福利义务。这项金额衡量的是什么？</p>
+<p class="meta">Navistar has a significant pension and post-retirement obligation shown as a liability. Which of the following does this measure?</p>
+<ul class="opts">
+<li><strong>a.</strong> 养老金基金与退休后福利义务的总额。 <span class="en">Total pension fund and post-retirement obligations</span></li>
+<li><strong>b.</strong> 资金不足的养老金基金与退休后福利义务（用养老金基金资产抵减后的义务净额）。 <span class="en">Underfunded pension fund and post-retirement obligations (total obligations netted out against pension fund assets)</span></li>
+<li><strong>c.</strong> 资金过剩的养老金基金与退休后福利义务。 <span class="en">Overfunded pension fund and post-retirement obligations</span></li>
+<li><strong>d.</strong> 以上都不是。 <span class="en">None of the above</span></li>
+</ul>
+<div class="ans"><strong>答案：b</strong> 资金不足的养老金基金与退休后福利义务（用养老金基金资产抵减后的义务净额）。
+<p>b. 资金不足的养老金基金与退休后福利义务（用养老金基金资产抵减后的义务净额）。在有些国家，公司把养老金基金资产放在资产端、把养老金基金负债放在负债端分别列示；但 Navistar 这一项只出现在负债端，就说明它是资金不足的养老金义务。</p>
+<div class="en-block"><span class="en-label">English original</span>b. Underfunded pension fund and post-retirement obligations (total obligations netted out against pension fund assets). In some countries, companies show pension fund assets on the asset side of the balance sheet and pension fund liabilities on the liability side, but the fact that Navistar has this item only on the liability side indicates that it is underfunded pension obligations.</div>
+</div>
+</div>
+<div class="note"><strong>译者注</strong><br>本讲原课件几乎只有标题与表格截图，因此每页的中文正文是译者根据表中数字重写的「读表笔记」，数字与单位均照原表抄录，未做换算或补算。幻灯 7 的标题原文写作 "Small-bore?"，按上下文（会计无形资产合计净额仅占总资产 0.6%）译作「小意思？」。</div>
+<p class="sessnav"><a href="session3.html">← 第 3 讲</a> <a href="index.html">目录</a> <a href="session4.html">第 4 讲 →</a></p>
+<p class="footer">课程来源：<a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/webcastacctg.htm">Damodaran · Corporate Finance Online Class（Accounting 101）</a><br>幻灯与课后题版权归 Aswath Damodaran / NYU Stern 所有，本站仅作教学与中文对照阅读使用。<br><a href="../index.html">← 返回站主随笔</a></p>
+</body>
+</html>

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Damodaran 给这门课开的第一刀就切在会计本身：会计人不预测未来，也不给资产估值，他是记录已经发生的事的历史学家。理解这一点，才能理解他后面为什么敢把准则、折旧、研发资本化这些事「按自己的视角重写一遍」。这一讲先建立三张报表的骨架：资产负债回答「你有什么、你欠什么」，利润表回答「你赚了多少」，现金流量表回答「现金进出了多少」，以及三者之间如何勾稽。">
+<title>第 1 讲 · 财务三张报表总览 · 会计101 中英对照 — 乔布斯研究</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600&family=Charter:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #ffffff; --text: #1a1a1a; --meta: #888888; --rule: #e0e0e0; --max-w: 720px; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: var(--bg); color: var(--text); font-family: 'Noto Serif SC','Charter',serif; font-size: 17px; line-height: 1.7; max-width: var(--max-w); margin: 0 auto; padding: 0 24px 80px; overflow-wrap: anywhere; }
+a { color: var(--text); text-decoration: underline; text-decoration-color: var(--rule); }
+a:hover { text-decoration-color: var(--text); }
+h1 { font-size: 22px; font-weight: 600; margin: 48px 0 8px; letter-spacing: -0.3px; }
+h2 { font-size: 15px; font-weight: 600; color: var(--meta); text-transform: uppercase; letter-spacing: 1px; margin: 40px 0 16px; padding-top: 24px; border-top: 1px solid var(--rule); }
+h2 .en { display: block; font-size: 14px; color: var(--meta); text-transform: none; letter-spacing: 0; font-weight: 400; font-style: italic; margin-top: 4px; }
+h3 { font-size: 17px; font-weight: 600; margin: 32px 0 12px; }
+h3 .en { display: block; font-size: 14px; color: var(--meta); font-weight: 400; font-style: italic; margin-top: 2px; }
+.back { font-size: 14px; color: var(--meta); margin-bottom: 24px; }
+.meta { font-size: 13px; color: var(--meta); margin-left: 8px; }
+p { margin: 16px 0; }
+strong { font-weight: 600; }
+em.en-source { display: block; font-family: 'Charter', serif; font-size: 14px; font-style: italic; color: var(--meta); margin: 8px 0 24px; padding-left: 12px; border-left: 2px solid var(--rule); }
+blockquote { border-left: 3px solid var(--rule); padding: 4px 0 4px 20px; margin: 24px 0; color: #555; font-style: italic; }
+.source { font-size: 13px; color: var(--meta); margin-top: 12px; }
+.byline { font-size: 14px; color: var(--meta); margin: 8px 0 32px; }
+.tag-row { margin: 16px 0 32px; }
+.tag { display: inline-block; font-size: 12px; padding: 2px 10px; background: var(--rule); border-radius: 12px; color: var(--meta); margin-right: 6px; }
+.hero { background: #f9f9f9; border-radius: 8px; padding: 24px; margin: 0 0 32px; }
+.hero h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; }
+.hero p { font-size: 15px; color: #555; line-height: 1.7; margin: 8px 0; }
+.footer { margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--rule); font-size: 13px; color: var(--meta); }
+.footer a { color: var(--meta); }
+table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+.table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 16px 0; }
+.table-wrap table { margin: 0; min-width: 420px; }
+th, td { padding: 6px 10px; border: 1px solid var(--rule); text-align: left; vertical-align: top; }
+th { background: #f5f5f5; font-weight: 600; }
+.figure { margin: 32px 0; }
+.figure img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 4px; }
+.figure .cap { font-size: 13px; color: var(--meta); margin-top: 8px; line-height: 1.5; padding-left: 12px; border-left: 2px solid var(--rule); }
+.note { background: #f9f9f9; border-left: 3px solid #d4503a; border-radius: 4px; padding: 14px 18px; margin: 24px 0; font-size: 15px; color: #555; }
+.note strong { color: var(--text); }
+ol, ul { padding-left: 24px; margin: 16px 0; }
+li { margin: 8px 0; }
+@media (max-width: 600px) {
+  body { font-size: 16px; padding: 0 18px 60px; }
+  h1 { font-size: 20px; }
+  h2 { font-size: 14px; }
+  table { font-size: 12px; }
+  th, td { padding: 4px 6px; }
+}
+</style>
+<style>
+.kicker { font-size: 13px; color: var(--meta); letter-spacing: .5px; margin: 0 0 6px; }
+h1 .en { display: block; font-size: 15px; font-weight: 400; font-style: italic; color: var(--meta); margin-top: 6px; letter-spacing: 0; }
+.video-wrap { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 6px; margin: 24px 0 8px; background: #000; }
+.video-wrap iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+.video-cap { font-size: 13px; color: var(--meta); margin: 0 0 32px; }
+.slide { margin: 0 0 8px; padding: 20px 0 4px; border-top: 1px solid var(--rule); }
+.slide:first-of-type { border-top: none; }
+.slide h3 { margin: 0 0 12px; font-size: 16px; }
+.slide h3 .slide-no { display: inline-block; font-size: 12px; font-weight: 400; color: var(--meta); border: 1px solid var(--rule); border-radius: 10px; padding: 1px 8px; margin-right: 8px; vertical-align: 2px; }
+.slide h3 .en { display: block; font-size: 13px; color: var(--meta); font-style: italic; font-weight: 400; margin-top: 4px; }
+.slide .zh { margin: 0 0 10px; }
+.slide .zh p { margin: 10px 0; }
+.slide .zh ul, .slide .zh ol { margin: 8px 0; padding-left: 22px; }
+.slide .zh li { margin: 6px 0; }
+.en-block { font-family: 'Charter', serif; font-size: 14px; line-height: 1.6; color: var(--meta); background: #fbfbfb; border-left: 2px solid var(--rule); border-radius: 0 4px 4px 0; padding: 10px 14px; margin: 10px 0 0; white-space: pre-wrap; overflow-wrap: anywhere; }
+.en-block .en-label { display: block; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: #aaa; margin-bottom: 6px; }
+.q { margin: 24px 0; padding: 0 0 4px; border-bottom: 1px solid var(--rule); }
+.q .qno { font-size: 13px; color: var(--meta); }
+.q .qzh { font-weight: 600; }
+.q ol { margin: 8px 0; padding-left: 22px; }
+.q .opts { list-style: none; padding-left: 0; margin: 10px 0; }
+.q .opts li { margin: 7px 0; font-size: 15px; line-height: 1.55; }
+.q .opts .en { color: var(--meta); font-size: 13px; font-family: 'Charter', serif; }
+.ans { background: #f9f9f9; border-left: 3px solid #3a7d5c; border-radius: 4px; padding: 12px 16px; margin: 12px 0 24px; font-size: 15px; color: #555; }
+.ans strong { color: var(--text); }
+.toc-list { list-style: none; padding: 0; margin: 24px 0 0; }
+.toc-list li { margin: 0; padding: 16px 0; border-bottom: 1px solid var(--rule); }
+.toc-list a { font-size: 17px; font-weight: 600; text-decoration: none; }
+.toc-list a:hover { text-decoration: underline; }
+.toc-list .en { display: block; font-size: 13px; font-style: italic; color: var(--meta); font-weight: 400; margin-top: 4px; }
+.toc-list .sub { display: block; font-size: 14px; color: #555; margin-top: 6px; line-height: 1.6; }
+.toc-list .badge { font-size: 12px; color: var(--meta); }
+.sessnav { margin: 48px 0 0; padding-top: 20px; border-top: 1px solid var(--rule); display: flex; gap: 16px; flex-wrap: wrap; justify-content: space-between; font-size: 14px; }
+.sessnav a { color: var(--meta); text-decoration: none; }
+.sessnav a:hover { color: var(--text); text-decoration: underline; }
+.glossary td:first-child { white-space: nowrap; font-family: 'Charter', serif; }
+.glossary td:nth-child(2) { color: #555; }
+</style>
+</head>
+<body><p class="back">← <a href="index.html">会计101 · 分讲阅读</a> · <a href="../index.html">站主随笔</a></p>
+<p class="kicker">NYU Stern · Damodaran《Accounting 101》· 第 1 讲</p>
+<h1>第 1 讲 · 财务三张报表总览<span class="en">Session 1: Financial Statements: An Overview</span></h1>
+<p class="byline">讲课视频 · 幻灯 11 张 · 讲师：Aswath Damodaran（NYU Stern）· 译者：站主（Mr. Buffett 委托）</p>
+<div class="video-wrap"><iframe src="https://www.youtube.com/embed/7rW7lpQZpqY" title="Session 1: Financial Statements: An Overview" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<p class="video-cap">本讲视频：<a href="https://youtu.be/7rW7lpQZpqY">Session 1: Financial Statements: An Overview</a>（YouTube，约 12–20 分钟）· 原始幻灯：<a href="https://www.stern.nyu.edu/~adamodar/pdfiles/Accounting101/slides/session1.pdf">session1.pdf</a></p>
+<div class="hero"><h3>一句话核心</h3>
+<p>会计不是预测未来的工具，也不是估值工具——它是一本已经发生的事的账本。想做估值的人不必懂准则细节，但必须知道<strong>报表是怎么被拼出来的</strong>，否则你读到的数字就只是数字。</p>
+<div class="tag-row"><span class="tag">三张报表</span><span class="tag">会计的角色</span><span class="tag">GAAP 与 IFRS</span><span class="tag">报表勾稽</span></div>
+</div>
+<h2>本讲导读<span class="en">Session guide</span></h2><p>Damodaran 给这门课开的第一刀就切在会计本身：会计人不预测未来，也不给资产估值，他是记录已经发生的事的历史学家。理解这一点，才能理解他后面为什么敢把准则、折旧、研发资本化这些事「按自己的视角重写一遍」。这一讲先建立三张报表的骨架：资产负债回答「你有什么、你欠什么」，利润表回答「你赚了多少」，现金流量表回答「现金进出了多少」，以及三者之间如何勾稽。</p>
+<h2>逐页幻灯（中文在上，英文原文在下）<span class="en">Slide by slide</span></h2>
+<div class="slide" id="s1">
+<h3><span class="slide-no">幻灯 1</span>第一讲：先讲会计<span class="en">SESSION 1: ACCOUNTING FIRST</span></h3>
+<div class="zh"><p>课程封面。副题是「Accounting for Finance」——这是一门讲给<strong>用财务报表的人</strong>的会计课，不是讲给制定会计准则的人听的。</p></div>
+<div class="en-block"><span class="en-label">English original</span>SESSION 1: ACCOUNTING FIRST
+STEPS
+Accounting for Finance</div>
+</div>
+<div class="slide" id="s2">
+<h3><span class="slide-no">幻灯 2</span>会计人的角色<span class="en">The Accountant's Role</span></h3>
+<div class="zh"><p>在我看来（很多会计专业人士会不同意），会计的职责是：</p>
+<ul><li>核查已经发生的交易与经营行为</li><li>以一致的方式把它们记录下来</li><li>以标准化的形式报告结果</li></ul>
+<p>会计当然想让自己对企业更相关、更居核心，但下面这些<strong>不是</strong>会计的职责：</p>
+<ul><li>预测未来——不管那有多诱人</li><li>给资产或经营业务估值</li></ul>
+<p>说得直白些：会计人是一位历史学家，负责编撰已经发生的事件，而不是预测未来。</p></div>
+<div class="en-block"><span class="en-label">English original</span>The Accountant’s Role
+
+o   In my view (and many accountants will disagree), it is the
+    role of accounting
+    o To check transactions and operations, as they occur
+    o To record them in a consistent manner
+    o To report the results in standardized form
+o   Much as accounting wants to makes itself more relevant
+    and central to businesses, it is not the role of accounting:
+    o Forecast the future, no matter how tempted.
+    o Value assets or operations.
+
+o   Bluntly put, an accountant is a historian, chronicling
+    events that have already occurred, not predicting the
+    future.</div>
+</div>
+<div class="slide" id="s3">
+<h3><span class="slide-no">幻灯 3</span>会计要回答的三个问题<span class="en">The Accounting Questions..</span></h3>
+<div class="zh"><ul><li>&lt;strong&gt;你拥有什么？&lt;/strong&gt;列出企业投入的资产、为此花了多少钱，以及这些资产今天可能值多少。</li><li>&lt;strong&gt;你欠着什么？&lt;/strong&gt;列明企业为了维持经营必须履约的合同承诺——简单说应当包括所有借款，但并不限于借款。</li><li>&lt;strong&gt;你赚了多少钱？&lt;/strong&gt;衡量企业的盈利能力：既要看会计对费用的判断，也要看现金的流入与流出。</li></ul></div>
+<div class="en-block"><span class="en-label">English original</span>The Accounting Questions..
+
+¨ What do you own? List out the assets that a business has
+  invested in, and how much it spent on those investments
+  and perhaps what these assets are worth today.
+¨ What do you owe? Specify the contractual commitments
+  that a business has to meet, to stay in business. Simply
+  put, this should include all borrowings, but is not
+  restricted to those.
+¨ How much money did you make? Measure the
+  profitability of the business, both with accounting
+  judgments on expenses, and based upon cash in and
+  cash out.</div>
+</div>
+<div class="slide" id="s4">
+<h3><span class="slide-no">幻灯 4</span>三张报表<span class="en">The Accounting Statements</span></h3>
+<div class="zh"><p><strong>资产负债表（balance sheet）</strong>：汇总企业在某一时点拥有什么、欠着什么，并给出（用会计的眼光看）股东权益价值的估计。</p>
+<p><strong>利润表（income statement）</strong>：报告企业在分析期内赚了多少，同时提供收入与费用的明细。</p>
+<p><strong>现金流量表（statement of cash flows）</strong>：报告分析期内企业的现金流入与流出，并据此衡量现金收益（cash earnings，区别于会计利润）与现金流。</p></div>
+<div class="en-block"><span class="en-label">English original</span>The Accounting Statements
+
+! The balance sheet, which summarizes what a firm
+  owns and owes at a point in time, as well as an
+  estimate of what equity is worth (through
+  accounting eyes).
+! The income statement, which reports on how much
+  a business earned in the period of analysis, while
+  providing detail on revenues and expenses.
+! The statement of cash flows, which reports on cash
+  inflows and outflows to the firm during the period of
+  analysis and allows for a measure of cash earnings
+  (as opposed to accounting earnings) and cash flows.</div>
+</div>
+<div class="slide" id="s5">
+<h3><span class="slide-no">幻灯 5</span>1. 资产负债表<span class="en">1. Balance Sheet</span></h3>
+<div class="zh"><p>资产负债表把「资产」放在左边，把「负债与股东权益」放在右边。左边分四类：固定资产（长期有形资产）、流动资产（短期资产）、金融资产（证券投资等其他业务）、无形资产（非实物资产）；右边分四类：流动负债（短期义务）、长期债务、其他长期义务、股东权益。</p></div>
+<div class="en-block"><span class="en-label">English original</span>1. Balance Sheet</div>
+<figure class="figure"><img src="../img/accounting101/session1-p05.jpg" alt="资产负债表结构示意图：左列资产四类，右列负债与股东权益四类" loading="lazy"><figcaption class="cap">资产负债表结构：左边是资产的四类，右边是负债与股东权益的四类。灰字是每一类的性质说明——长期有形 / 短期 / 证券投资等 / 非实物；短期义务 / 长期债务 / 其他长期义务 / 股东权益。</figcaption></figure>
+</div>
+<div class="slide" id="s6">
+<h3><span class="slide-no">幻灯 6</span>2. 利润表<span class="en">2. Income Statement</span></h3>
+<div class="zh"><p>利润表是自上而下「做减法」做出来的：先有收入，每减掉一层费用，就得到一个口径不同的利润。所以「毛利高」与「净利高」讲的是完全不同的两件事——这正是分析师最常读错的地方。</p></div>
+<div class="table-wrap"><table><thead><tr><th>步骤 Step</th><th>项目 Item</th><th>说明 Explanation</th></tr></thead><tbody><tr><td>Start with&lt;br&gt;起点</td><td>Revenues&lt;br&gt;营业收入</td><td>会计对本期内企业交易产生的收入/销售的估计。&lt;br&gt;Accountant's estimate of the revenues/sales generated by any transactions made the business during the period.</td></tr><tr><td>Net out&lt;br&gt;减去</td><td>Cost of Goods Sold&lt;br&gt;营业成本</td><td>与生产产品或服务相关的费用，对应收入表的 top line sales。&lt;br&gt;Expenses associated with producing products or services that represent top line sales.</td></tr><tr><td>To get&lt;br&gt;得到</td><td>Gross Profit&lt;br&gt;毛利</td><td>生产环节的盈利能力。&lt;br&gt;Production profitability.</td></tr><tr><td>Net out&lt;br&gt;减去</td><td>Other Operating Expenses&lt;br&gt;其他营业费用</td><td>包括销售、一般及行政费用，以及与经营相关但不直接对应产品与服务生产的其他费用。&lt;br&gt;Includes selling, general and administrative and other expenses associated with operations, but not directly tied to producing goods and services.</td></tr><tr><td>To get&lt;br&gt;得到</td><td>Operating Profit&lt;br&gt;营业利润</td><td>企业整体的盈利能力。&lt;br&gt;Profitability of business.</td></tr><tr><td>Net out&lt;br&gt;减去</td><td>Financial Expenses&lt;br&gt;财务费用</td><td>与非权益资本（尤其是债务）使用相关的费用。&lt;br&gt;Expenses associated with the use of non-equity capital, especially debt.</td></tr><tr><td>To get&lt;br&gt;得到</td><td>Taxable Income&lt;br&gt;应税所得</td><td>税前归属于股权投资者的收入。&lt;br&gt;Income for equity investors, prior to taxes.</td></tr><tr><td>Net out&lt;br&gt;减去</td><td>Taxes&lt;br&gt;所得税</td><td>应税所得上应付的税款。&lt;br&gt;Taxes due on taxable income.</td></tr><tr><td>To get&lt;br&gt;得到</td><td>Net Income&lt;br&gt;净利润</td><td>税后归属于股权投资者的收入。&lt;br&gt;Income for equity investors, after taxes.</td></tr></tbody></table></div>
+<div class="en-block"><span class="en-label">English original</span>2. Income Statement
+
+                              Item                                 Explanation
+
+Start with   Revenues                   Accountant's estimate of the revenues/sales generated by
+                                        any transactions made the business during the period.
+
+Net out      Cost of Goods Sold         Expenses associated with producing products or services that
+                                        represent top line sales
+To get       Gross Profit               Production profitability
+
+                                        Includes selling, general and administrative and other
+Net out      Other Operating Expenses
+                                        expenses associated with operations, but not directly tied to
+                                        producing goods and services
+To get       Operating Profit           Profitability of business
+
+Net out      Financial Expenses         Expenses associated with the use of non-equity capital,
+                                        especially debt.
+To get       Taxable Income             Income for equity investors, prior to taxes
+Net out      Taxes                      Taxes due on taxable income
+To get       Net Income                 Income for equity investors, after taxes</div>
+</div>
+<div class="slide" id="s7">
+<h3><span class="slide-no">幻灯 7</span>3. 现金流量表<span class="en">3. Statement of Cash Flows</span></h3>
+<div class="zh"><p>现金流量表把企业的现金变动拆成三段：经营、投资、筹资，三段相加等于现金余额的净变动。</p></div>
+<div class="en-block"><span class="en-label">English original</span>3. Statement of Cash Flows</div>
+<figure class="figure"><img src="../img/accounting101/session1-p07.jpg" alt="现金流量表结构图：经营、投资、筹资三段与现金余额净变动" loading="lazy"><figcaption class="cap">现金流量表的三段结构：经营活动净现金流 ＋ 投资活动净现金流 ＋ 筹资活动净现金流 ＝ 现金余额净变动。左栏是每一段的定义。</figcaption></figure>
+</div>
+<div class="slide" id="s8">
+<h3><span class="slide-no">幻灯 8</span>三张表如何勾稽<span class="en">The Interconnections</span></h3>
+<div class="zh"><p>三张表不是三份互不相干的记录，而是彼此咬合：利润表上的<strong>净利润</strong>会同时进入资产负债表（变成留存收益）和现金流量表（期初现金走到期末现金）；<strong>固定资产折旧</strong>既是利润表上的费用，也是资产负债表上资产账面价值的减少；经营、投资、筹资三类活动把资产负债表与现金流量表连起来。</p></div>
+<div class="en-block"><span class="en-label">English original</span>The Interconnections</div>
+<figure class="figure"><img src="../img/accounting101/session1-p08.jpg" alt="三张财务报表相互连接示意图" loading="lazy"><figcaption class="cap">三张表的勾稽关系：净利润从利润表流向资产负债表与现金流量表；折旧连着利润表与资产负债表；经营/投资/筹资的效果把资产负债表与现金流量表连起来。</figcaption></figure>
+</div>
+<div class="slide" id="s9">
+<h3><span class="slide-no">幻灯 9</span>会计准则<span class="en">The Accounting Standards</span></h3>
+<div class="zh"><p>会计是一套规则驱动的过程。随着时间推移，这些规则被逐步形式化——尤其针对上市公司。形式化有两个动因：</p>
+<ul><li>&lt;strong&gt;标准化&lt;/strong&gt;：让公司之间可以比较。</li><li>&lt;strong&gt;第一性原理&lt;/strong&gt;：确保利润、资产价值与现金流测的确实是它们该测的东西。</li></ul>
+<p>全球各地的准则仍不尽相同，但大体收敛到两套：</p>
+<ul><li>&lt;strong&gt;GAAP&lt;/strong&gt;（Generally Accepted Accounting Principles，美国公认会计原则）：由 FASB（财务会计标准委员会）制定，用于美国财务报告。</li><li>&lt;strong&gt;IFRS&lt;/strong&gt;（International Financial Reporting Standards，国际财务报告准则）：由 IASB（国际会计准则理事会）制定，供全球上市公司采用，截至 2020 年约有 90 个国家采用。</li></ul></div>
+<div class="en-block"><span class="en-label">English original</span>The Accounting Standards
+
+q   Accounting is a rule-driven process, and over time, those rules
+    have been formalized, especially for publicly traded companies.
+    This formalization is driven by two considerations:
+    q Standardization, to allow for comparisons across companies
+    q First principles, to ensure that earnings, asset value and cash flows
+      measure what they are supposed to measure.
+q   While accounting standards around the world remain different,
+    they have converged (for the most part) around two standards:
+    q GAAP (Generally Accepted Accounting Principles), representing rules
+      developed by FASB (Financial Accounting Standards Board) to cover US
+      financial reporting.
+    q IFRS (International Financial Reporting Standards), representing rules
+      developed by IASB (International Accounting Standards Board) for
+      companies listed globally, followed by about 90 countries as of 2020.</div>
+</div>
+<div class="slide" id="s10">
+<h3><span class="slide-no">幻灯 10</span>IFRS 在全球的采用情况<span class="en">IFRS adoption around the world</span></h3>
+<div class="zh"><p>Damodaran 自制的交互式世界地图，可以切换查看各国对 IFRS 的采用状态：本土上市公司是强制采用还是允许采用、外国发行人上市时是否必须采用，以及 IFRS for SMEs（中小企业国际财务报告准则）的适用情况。</p></div>
+<figure class="figure"><img src="../img/accounting101/session1-p10.jpg" alt="IFRS 全球采用情况交互地图截图" loading="lazy"><figcaption class="cap">IFRS 全球采用情况（讲师自制交互图，截图）：蓝色为「本土上市公司强制采用 IFRS」的国家；美国、中国、印度不在其中。</figcaption></figure>
+</div>
+<div class="slide" id="s11">
+<h3><span class="slide-no">幻灯 11</span>小结<span class="en">The Bottom Line</span></h3>
+<div class="zh"><p>我们做财务分析与估值的原材料，几乎总是以财务报表的形式出现。</p>
+<p>因此，我们最好都理解会计人是怎么思考的（哪怕我们并不认同他们），才能看懂这些报表是怎么被拼起来的。</p>
+<p>难点在于：随着时间推移，会计思维一直在变。我们必须理解这些变化——既包括变了什么，也包括为什么变——才能跟得上。</p></div>
+<div class="en-block"><span class="en-label">English original</span>The Bottom Line
+
+¨ The raw material that we use to do financial analysis
+  and valuation almost always takes the form of
+  accounting statements.
+¨ Consequently, it behooves us all to understand how
+  accountants think (even if we disagree with them) in
+  putting these statements together.
+¨ The challenge is that accounting thinking keeps
+  changing, as we move through time, and we have to
+  understand those changes (both the what and the
+  why), to keep up with them.</div>
+</div>
+
+<div class="note"><strong>译者注</strong><br>本课讲师 Aswath Damodaran 是 NYU Stern 金融学教授。他自称这是「给财务报表的使用者看的会计课」，并毫不客气地说过「我有什么不能说的，我对会计准则制定者没什么客气的」。本系列按原课件翻译，不替准则辩护；遇到他「按自己的估值视角重写准则」的地方，译者会在页内注明那是讲师观点，不是准则原文。</div>
+<p class="sessnav"><a href="index.html">目录</a> <a href="session2.html">第 2 讲 →</a></p>
+<p class="footer">课程来源：<a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/webcastacctg.htm">Damodaran · Corporate Finance Online Class（Accounting 101）</a><br>幻灯与课后题版权归 Aswath Damodaran / NYU Stern 所有，本站仅作教学与中文对照阅读使用。<br><a href="../index.html">← 返回站主随笔</a></p>
+</body>
+</html>

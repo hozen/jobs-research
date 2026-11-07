@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="这一讲拆资产负债表。先摆出三种互相打架的立场：资产负债表究竟该记录企业往在用资产上投了多少资本、该反映企业今天的市场价值、还是该反映今天把资产变卖能收回多少——Damodaran 自己站在第一派。
+接着逐栏过资产：固定资产与流动资产在「原始成本减折旧」和「盯市公允价值」两种口径下会差多少；金融资产在公开交易证券上几乎已经全面盯市，而股权投资的记账规则要看是控股还是参股、是交易还是长期持有；无形资产他泼了冷水——会计人其实更擅长给许可证、客户名单这类现金流看得见的小件估值；商誉则是「最危险的无形资产」，因为它本质上只是让报表配平的塞子。
+负债一侧：流动负债的三种分类，以及非现金营运资本（net working capital）的算法；债务的三种来源（公司债、银行贷款、租赁债务，2019 年起经营租赁承诺也算债务）；债务的细节只写在附注里。最后落到股东权益（equity）：账面权益不过是企业历史留下的记账残骸，无论新老口径都不可能量出内在价值——这是他最直白、也最悲观的一段。">
+<title>第 3 讲 · 资产负债表：拥有的资产与欠下的钱 · 会计101 中英对照 — 乔布斯研究</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600&family=Charter:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #ffffff; --text: #1a1a1a; --meta: #888888; --rule: #e0e0e0; --max-w: 720px; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: var(--bg); color: var(--text); font-family: 'Noto Serif SC','Charter',serif; font-size: 17px; line-height: 1.7; max-width: var(--max-w); margin: 0 auto; padding: 0 24px 80px; overflow-wrap: anywhere; }
+a { color: var(--text); text-decoration: underline; text-decoration-color: var(--rule); }
+a:hover { text-decoration-color: var(--text); }
+h1 { font-size: 22px; font-weight: 600; margin: 48px 0 8px; letter-spacing: -0.3px; }
+h2 { font-size: 15px; font-weight: 600; color: var(--meta); text-transform: uppercase; letter-spacing: 1px; margin: 40px 0 16px; padding-top: 24px; border-top: 1px solid var(--rule); }
+h2 .en { display: block; font-size: 14px; color: var(--meta); text-transform: none; letter-spacing: 0; font-weight: 400; font-style: italic; margin-top: 4px; }
+h3 { font-size: 17px; font-weight: 600; margin: 32px 0 12px; }
+h3 .en { display: block; font-size: 14px; color: var(--meta); font-weight: 400; font-style: italic; margin-top: 2px; }
+.back { font-size: 14px; color: var(--meta); margin-bottom: 24px; }
+.meta { font-size: 13px; color: var(--meta); margin-left: 8px; }
+p { margin: 16px 0; }
+strong { font-weight: 600; }
+em.en-source { display: block; font-family: 'Charter', serif; font-size: 14px; font-style: italic; color: var(--meta); margin: 8px 0 24px; padding-left: 12px; border-left: 2px solid var(--rule); }
+blockquote { border-left: 3px solid var(--rule); padding: 4px 0 4px 20px; margin: 24px 0; color: #555; font-style: italic; }
+.source { font-size: 13px; color: var(--meta); margin-top: 12px; }
+.byline { font-size: 14px; color: var(--meta); margin: 8px 0 32px; }
+.tag-row { margin: 16px 0 32px; }
+.tag { display: inline-block; font-size: 12px; padding: 2px 10px; background: var(--rule); border-radius: 12px; color: var(--meta); margin-right: 6px; }
+.hero { background: #f9f9f9; border-radius: 8px; padding: 24px; margin: 0 0 32px; }
+.hero h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; }
+.hero p { font-size: 15px; color: #555; line-height: 1.7; margin: 8px 0; }
+.footer { margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--rule); font-size: 13px; color: var(--meta); }
+.footer a { color: var(--meta); }
+table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+.table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 16px 0; }
+.table-wrap table { margin: 0; min-width: 420px; }
+th, td { padding: 6px 10px; border: 1px solid var(--rule); text-align: left; vertical-align: top; }
+th { background: #f5f5f5; font-weight: 600; }
+.figure { margin: 32px 0; }
+.figure img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 4px; }
+.figure .cap { font-size: 13px; color: var(--meta); margin-top: 8px; line-height: 1.5; padding-left: 12px; border-left: 2px solid var(--rule); }
+.note { background: #f9f9f9; border-left: 3px solid #d4503a; border-radius: 4px; padding: 14px 18px; margin: 24px 0; font-size: 15px; color: #555; }
+.note strong { color: var(--text); }
+ol, ul { padding-left: 24px; margin: 16px 0; }
+li { margin: 8px 0; }
+@media (max-width: 600px) {
+  body { font-size: 16px; padding: 0 18px 60px; }
+  h1 { font-size: 20px; }
+  h2 { font-size: 14px; }
+  table { font-size: 12px; }
+  th, td { padding: 4px 6px; }
+}
+</style>
+<style>
+.kicker { font-size: 13px; color: var(--meta); letter-spacing: .5px; margin: 0 0 6px; }
+h1 .en { display: block; font-size: 15px; font-weight: 400; font-style: italic; color: var(--meta); margin-top: 6px; letter-spacing: 0; }
+.video-wrap { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 6px; margin: 24px 0 8px; background: #000; }
+.video-wrap iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+.video-cap { font-size: 13px; color: var(--meta); margin: 0 0 32px; }
+.slide { margin: 0 0 8px; padding: 20px 0 4px; border-top: 1px solid var(--rule); }
+.slide:first-of-type { border-top: none; }
+.slide h3 { margin: 0 0 12px; font-size: 16px; }
+.slide h3 .slide-no { display: inline-block; font-size: 12px; font-weight: 400; color: var(--meta); border: 1px solid var(--rule); border-radius: 10px; padding: 1px 8px; margin-right: 8px; vertical-align: 2px; }
+.slide h3 .en { display: block; font-size: 13px; color: var(--meta); font-style: italic; font-weight: 400; margin-top: 4px; }
+.slide .zh { margin: 0 0 10px; }
+.slide .zh p { margin: 10px 0; }
+.slide .zh ul, .slide .zh ol { margin: 8px 0; padding-left: 22px; }
+.slide .zh li { margin: 6px 0; }
+.en-block { font-family: 'Charter', serif; font-size: 14px; line-height: 1.6; color: var(--meta); background: #fbfbfb; border-left: 2px solid var(--rule); border-radius: 0 4px 4px 0; padding: 10px 14px; margin: 10px 0 0; white-space: pre-wrap; overflow-wrap: anywhere; }
+.en-block .en-label { display: block; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: #aaa; margin-bottom: 6px; }
+.q { margin: 24px 0; padding: 0 0 4px; border-bottom: 1px solid var(--rule); }
+.q .qno { font-size: 13px; color: var(--meta); }
+.q .qzh { font-weight: 600; }
+.q ol { margin: 8px 0; padding-left: 22px; }
+.q .opts { list-style: none; padding-left: 0; margin: 10px 0; }
+.q .opts li { margin: 7px 0; font-size: 15px; line-height: 1.55; }
+.q .opts .en { color: var(--meta); font-size: 13px; font-family: 'Charter', serif; }
+.ans { background: #f9f9f9; border-left: 3px solid #3a7d5c; border-radius: 4px; padding: 12px 16px; margin: 12px 0 24px; font-size: 15px; color: #555; }
+.ans strong { color: var(--text); }
+.toc-list { list-style: none; padding: 0; margin: 24px 0 0; }
+.toc-list li { margin: 0; padding: 16px 0; border-bottom: 1px solid var(--rule); }
+.toc-list a { font-size: 17px; font-weight: 600; text-decoration: none; }
+.toc-list a:hover { text-decoration: underline; }
+.toc-list .en { display: block; font-size: 13px; font-style: italic; color: var(--meta); font-weight: 400; margin-top: 4px; }
+.toc-list .sub { display: block; font-size: 14px; color: #555; margin-top: 6px; line-height: 1.6; }
+.toc-list .badge { font-size: 12px; color: var(--meta); }
+.sessnav { margin: 48px 0 0; padding-top: 20px; border-top: 1px solid var(--rule); display: flex; gap: 16px; flex-wrap: wrap; justify-content: space-between; font-size: 14px; }
+.sessnav a { color: var(--meta); text-decoration: none; }
+.sessnav a:hover { color: var(--text); text-decoration: underline; }
+.glossary td:first-child { white-space: nowrap; font-family: 'Charter', serif; }
+.glossary td:nth-child(2) { color: #555; }
+</style>
+</head>
+<body><p class="back">← <a href="index.html">会计101 · 分讲阅读</a> · <a href="../index.html">站主随笔</a></p>
+<p class="kicker">NYU Stern · Damodaran《Accounting 101》· 第 3 讲</p>
+<h1>第 3 讲 · 资产负债表：拥有的资产与欠下的钱<span class="en">Session 3: Balance Sheets — Asset Base and Debt Due</span></h1>
+<p class="byline">讲课视频 · 幻灯 13 张 · 课后题 5 道 · 讲师：Aswath Damodaran（NYU Stern）· 译者：站主（Mr. Buffett 委托）</p>
+<div class="video-wrap"><iframe src="https://www.youtube.com/embed/cSuc2HHQpxc" title="Session 3: Balance Sheets — Asset Base and Debt Due" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<p class="video-cap">本讲视频：<a href="https://youtu.be/cSuc2HHQpxc">Session 3: Balance Sheets — Asset Base and Debt Due</a>（YouTube，约 12–20 分钟）· 原始幻灯：<a href="https://www.stern.nyu.edu/~adamodar/pdfiles/Accounting101/slides/session3.pdf">session3.pdf</a></p>
+<div class="hero"><h3>一句话核心</h3>
+<p>资产端盯市（mark-to-market）改来改去，负债端基本不动；商誉是凑平报表的塞子；股东权益（book equity）则是企业历史的记账残骸——<strong>Damodaran 的结论很直白：账面上的权益从来不是内在价值</strong>。</p>
+<div class="tag-row"><span class="tag">资产负债表</span><span class="tag">公允价值与盯市</span><span class="tag">商誉与减值</span><span class="tag">负债与租赁</span><span class="tag">股东权益</span></div>
+</div>
+<h2>本讲导读<span class="en">Session guide</span></h2><p>这一讲拆资产负债表。先摆出三种互相打架的立场：资产负债表究竟该记录企业往在用资产上投了多少资本、该反映企业今天的市场价值、还是该反映今天把资产变卖能收回多少——Damodaran 自己站在第一派。
+接着逐栏过资产：固定资产与流动资产在「原始成本减折旧」和「盯市公允价值」两种口径下会差多少；金融资产在公开交易证券上几乎已经全面盯市，而股权投资的记账规则要看是控股还是参股、是交易还是长期持有；无形资产他泼了冷水——会计人其实更擅长给许可证、客户名单这类现金流看得见的小件估值；商誉则是「最危险的无形资产」，因为它本质上只是让报表配平的塞子。
+负债一侧：流动负债的三种分类，以及非现金营运资本（net working capital）的算法；债务的三种来源（公司债、银行贷款、租赁债务，2019 年起经营租赁承诺也算债务）；债务的细节只写在附注里。最后落到股东权益（equity）：账面权益不过是企业历史留下的记账残骸，无论新老口径都不可能量出内在价值——这是他最直白、也最悲观的一段。</p>
+<h2>逐页幻灯（中文在上，英文原文在下）<span class="en">Slide by slide</span></h2>
+<div class="slide" id="s1">
+<h3><span class="slide-no">幻灯 1</span>第三讲：资产负债表——你拥有的资产与你欠下的钱<span class="en">SESSION 3: BALANCE SHEETS - ASSETS OWNED &amp; MONEY OWED</span></h3>
+<div class="zh"><p>课程封面。副题是「Accounting for Finance」——这一讲要拆的是资产负债表：资产是怎么记上去的，欠的钱又是怎么记的，以及这些记法反过来会怎么影响你看到的股东权益（equity）。</p></div>
+<div class="en-block"><span class="en-label">English original</span>SESSION 3: BALANCE SHEETS -
+ASSETS OWNED &amp; MONEY OWED
+Accounting for Finance</div>
+</div>
+<div class="slide" id="s2">
+<h3><span class="slide-no">幻灯 2</span>资产负债表：三种对立的看法<span class="en">The Balance Sheet: Dueling Views</span></h3>
+<div class="zh"><p>关于资产负债表究竟该记录什么，有三派说法在打架：</p>
+<ul><li>&lt;strong&gt;已投入资本的记录&lt;/strong&gt;：有些人（包括我）认为，资产负债表的主要功能是记录一家企业往它「在用的资产」（in-place assets，即支撑当下经营运转的那些资产）上投了多少钱。</li><li>&lt;strong&gt;当前价值的度量&lt;/strong&gt;：在会计师、或者至少在会计准则制定者当中，有一个规模庞大、也许占了主导地位的派别，主张资产负债表应当反映企业&lt;strong&gt;今天&lt;/strong&gt;的价值。</li><li>&lt;strong&gt;清算价值&lt;/strong&gt;：第三派的主要成员是企业的贷款方，他们认为资产负债表应当反映的是：如果今天就把企业的资产变卖掉，能拿回多少。</li></ul></div>
+<div class="en-block"><span class="en-label">English original</span>The Balance Sheet: Dueling Views
+
+q Record of capital invested: There are some (including
+  me) who believe that the main function of a balance
+  sheet is to record how much a business has invested in
+  its assets-in-place, i.e., the assets that allow for its
+  current operations to occur.
+q Measure of current value: There is a large and perhaps
+  dominant school of thought among accountants, or at
+  least accounting rule writers, that a balance sheet should
+  reflect the value of the business today.
+q Liquidation value: There is a third school, with lenders to
+  the firm among its primary members, who feel that a
+  balance should reflect what you would get for the assets
+  of the firm, if you liquidated them today.</div>
+</div>
+<div class="slide" id="s3">
+<h3><span class="slide-no">幻灯 3</span>回头再看资产负债表<span class="en">Revisiting the Balance Sheet</span></h3>
+<div class="zh"><p>这一页把资产负债表的骨架重新摊开：左边是资产，分固定资产、流动资产、金融资产、无形资产四类；右边是负债与股东权益，分流动负债、债务、其他负债、股东权益四类。接下来几页就沿这张图从左往右、从上往下，一栏一栏讲清楚每一栏到底记的是个数、该怎么读。</p></div>
+<div class="en-block"><span class="en-label">English original</span>Revisiting the Balance Sheet</div>
+<figure class="figure"><img src="../img/accounting101/session3-p03.jpg" alt="资产负债表结构图：左侧资产四类，右侧负债与股东权益四类" loading="lazy"><figcaption class="cap">这张结构图是本讲的地图：左侧资产分四类（长期有形资产＝固定资产、短期资产＝流动资产、证券及其他业务投资＝金融资产、非实物资产＝无形资产），右侧负债与权益分四类（短期义务＝流动负债、长期债务＝债务、其他长期义务＝其他负债、股东权益＝equity）。本讲后面几页就是沿着这张图逐栏往下讲。</figcaption></figure>
+</div>
+<div class="slide" id="s4">
+<h3><span class="slide-no">幻灯 4</span>固定资产与流动资产<span class="en">Fixed and Current Assets</span></h3>
+<div class="zh"><p>这一栏有两种记法，两种口径算出来的数差得很远：</p>
+<ul><li>&lt;strong&gt;老办法（The Old Way）&lt;/strong&gt;：如果你学的会计还是两三年前那一套，当年教你的做法是把固定资产和流动资产按原始成本入账，只扣掉会计折旧（accounting depreciation）。</li><li>&lt;strong&gt;新办法（The New Way）&lt;/strong&gt;：随着会计越来越多地采用公允价值（fair value）标准，资产开始转向按当前市场价值（current market value）盯市。</li></ul>
+<p>两种做法算出来的资产价值差距并不固定：</p>
+<ul><li>差距在&lt;strong&gt;老资产&lt;/strong&gt;上大于新资产；</li><li>差距在&lt;strong&gt;固定资产&lt;/strong&gt;上大于流动资产。</li></ul></div>
+<div class="en-block"><span class="en-label">English original</span>Fixed and Current Assets
+
+q The Old Way: If you are old enough to learned your
+  accounting two or three decades ago, the way you were
+  taught to value fixed and current assets was to show
+  them at original cost, net of accounting depreciation.
+q The New Way: As accounting has increasingly adopted
+  the fair value standard, there has been a move to mark
+  assets to current market value.
+q Divergent Effects: The difference in values that you get
+  for assets, using the two approaches, varies. It is
+    q Greater on older assets than on newer ones
+    q Greater on fixed assets than current assets</div>
+</div>
+<div class="slide" id="s5">
+<h3><span class="slide-no">幻灯 5</span>金融资产<span class="en">Financial Assets</span></h3>
+<div class="zh"><p>金融资产（financial assets）可以表现为持有证券，也可以是对其他公司的部分所有权——上市或非上市都行。</p>
+<p>对于<strong>公开交易证券</strong>的持有，改用当前市价来盯市这件事，几乎已经全面完成。</p>
+<p>对于<strong>对其他公司的股权投资</strong>，规则则要分情况：</p>
+<ul><li>看这项持股被视为&lt;strong&gt;多数控股&lt;/strong&gt;（&gt;50%）还是&lt;strong&gt;少数股权&lt;/strong&gt;。前者要&lt;strong&gt;全面合并&lt;/strong&gt;（full consolidation）——把子公司 100% 的收入与营业利润并进母公司的财务报表，其中不属于母公司的部分在负债一侧列为少数股东权益（minority interest）/非控制性权益（non-controlling interest）；后者则把这笔实际持股直接作为一项资产列示。</li><li>对少数股权而言，还要看它是&lt;strong&gt;为交易而持有&lt;/strong&gt;还是&lt;strong&gt;作为长期投资&lt;/strong&gt;持有。前者按市价盯市；后者按账面价值（book value）列示。</li></ul></div>
+<div class="en-block"><span class="en-label">English original</span>Financial Assets
+
+¨ Financial assets can take the form of holdings of securities or part
+  ownership of other companies, private or public.
+¨ With holdings of publicly traded securities, the movement to using
+  current market prices to mark up their values is almost complete.
+¨ With equity ownership in other companies, the rules can vary
+  depending on
+    ¤ Whether the stake is viewed as a majority stake (&gt;50%) or a minority stake.
+      The former will lead to full consolidation (where 100% of the subsidiaries
+      revenues and operating income will be included in the parent company’s
+      financials, with the portion that is not owned shown as minority or non-
+      controlling interest on the liability side) and with the latter, the actual
+      stake will be shown as an asset.
+    ¤ With a minority stake, whether it is held for trading or as a long-term
+      investment. With the former, the holding will be marked to market. With
+      the latter, it will be shown at book value terms.</div>
+</div>
+<div class="slide" id="s6">
+<h3><span class="slide-no">幻灯 6</span>无形资产<span class="en">Intangible Assets</span></h3>
+<div class="zh"><p>会计人谈到无形资产（intangible assets）时是在<strong>说大话</strong>的。听他们那番说法，你会以为他们已经搞清楚了怎么给大件无形资产（品牌名、管理层质量之类）估值。</p>
+<p>但现实是另一回事：<strong>现实恰恰相反</strong>——会计人给<strong>小件</strong>无形资产（许可证、客户名单之类）估值的能力要强得多，因为这类无形资产带来的收益和现金流是看得见、也预测得了的；给大件无形资产估值则完全不是那么回事。</p></div>
+<div class="en-block"><span class="en-label">English original</span>Intangible Assets
+
+¨ Big game: Accountants talk a big game when it
+  comes to intangible assets, and from that talk, you
+  would think that they have figured out how to value
+  the big intangibles (brand name, management
+  quality etc.).
+¨ But different reality: In reality, accountants are
+  much better at valuing small-bore intangibles like
+  licenses and customer lists, where the earnings and
+  cash flows from the intangible are observable and
+  forecastable than they are at valuing the big
+  intangibles.</div>
+</div>
+<div class="slide" id="s7">
+<h3><span class="slide-no">幻灯 7</span>商誉：最危险的无形资产<span class="en">Goodwill: The Most Dangerous Intangible</span></h3>
+<div class="zh"><p>会计里关于无形资产说了这么多，有一点很说明问题：全世界各家公司的资产负债表中，无形资产的主体部分都是同一个科目——<strong>商誉（goodwill）</strong>。</p>
+<p>商誉这名字听起来很美，但它其实是一个<strong>用来配平的塞子（plug variable）</strong>，含义并不多：</p>
+<ul><li>商誉要能在资产负债表上显形，公司必须&lt;strong&gt;做一笔收购&lt;/strong&gt;。</li><li>收购发生时，商誉的计量方式＝收购支付的价格 − 目标公司的资产价值（经过包装的账面价值）。</li><li>它之所以作为资产出现，是因为&lt;strong&gt;没有它，资产负债表就不平&lt;/strong&gt;。</li></ul></div>
+<div class="en-block"><span class="en-label">English original</span>Goodwill: The Most Dangerous Intangible
+
+¨ After all the talk of intangibles in accounting, it is telling
+  that the bulk of intangible assets on accounting balance
+  sheets across the world take the form of one item:
+  goodwill.
+¨ Goodwill may sound good, but it is a plug variable that
+  signifies little.
+    ¤ For goodwill to manifest itself on a balance sheet, a company
+      has to do an acquisition.
+    ¤ When that acquisition occurs, goodwill is measured as the
+      difference between the price paid on the acquisition and the
+      target company’s asset value (dressed up book value).
+    ¤ It shows up as an asset because without it in place, balance
+      sheets would not balance.</div>
+</div>
+<div class="slide" id="s8">
+<h3><span class="slide-no">幻灯 8</span>商誉减值：有价值的信息，还是给会计师找事做？<span class="en">Goodwill Impairment: Valuable information or Make-work-for-accountants?</span></h3>
+<div class="zh"><ul><li>&lt;strong&gt;旧规则&lt;/strong&gt;：上世纪很长一段时期里，收购中形成的商誉一上手就自动核销，往往在很长期间内分期等额摊完。</li><li>&lt;strong&gt;新规则&lt;/strong&gt;：1990 年代后期，GAAP 与 IFRS 都重写了规则，要求会计师&lt;strong&gt;每年重新检视&lt;/strong&gt;商誉估值，并判断商誉是否发生了减值（impairment）。要做出这个判断，会计师得回头重估目标公司的价值，看价值是升了（那就商誉保持不变）还是降了（那就得计提减值）。</li><li>&lt;strong&gt;它到底算不算有价值的信息？&lt;/strong&gt;改规则的理由是想给市场提供信息，但商誉减值往往依据的是市场（该行业）定价的变动，而且&lt;strong&gt;滞后几个月、有时甚至几年&lt;/strong&gt;——所以商誉减值对股价的影响&lt;strong&gt;微乎其微&lt;/strong&gt;（negligible）。</li></ul></div>
+<div class="en-block"><span class="en-label">English original</span>Goodwill Impairment: Valuable information or
+Make-work-for-accountants?
+¨ Old rules: For much of the last century, goodwill once created in an
+  acquisition, was written off on autopilot, often amortized over long
+  periods in equal installments.
+¨ New Rules: In the late 1990s, both GAAP and IFRS rewrote the
+  rules, requiring accountants to revisit goodwill estimates each year,
+  and make judgments on whether the goodwill had been impaired
+  or not. To make that judgment, accountants would have to revisit
+  the target company valuations and decide whether the value had
+  increased (in which case goodwill would be left unchanged) or
+  decreased (and goodwill would be impaired).
+¨ Is it informational? The rationale for this rule change was to
+  provide information to markets, but since goodwill impairments
+  are often based upon market pricing movements (in the sector)
+  and lag them by months and sometimes years, the effect of
+  goodwill impairments on stock prices has been negligible.</div>
+</div>
+<div class="slide" id="s9">
+<h3><span class="slide-no">幻灯 9</span>流动负债<span class="en">Current Liabilities</span></h3>
+<div class="zh"><p>流动负债（current liabilities）大致可以分成三组：</p>
+<ul><li>&lt;strong&gt;无息负债&lt;/strong&gt;（non-interest-bearing liabilities），如应付账款、供应商赊账，属于正常经营的一部分。</li><li>&lt;strong&gt;有息的短期借款&lt;/strong&gt;（interest-bearing short-term borrowings），如商业票据（commercial paper）、短期债务，以及长期债务中期限在 1 年以内的部分（&amp;lt;1 year）。</li><li>&lt;strong&gt;递延的薪酬、税款&lt;/strong&gt;以及其他短期应付的款项。</li></ul>
+<p>计算<strong>非现金营运资本（net working capital）</strong>时，我们<strong>不把</strong>有息的短期债务算进去，而是把它挪到债务那一栏。</p></div>
+<div class="en-block"><span class="en-label">English original</span>Current Liabilities
+
+q   Current liabilities can be broadly broken into three
+    groups:
+    q Non-interest-bearing liabilities, such as accounts payable and
+      supplier credit, which represent part of normal operations.
+    q Interest-bearing short-term borrowings such as commercial
+      paper, short term debt and the short term portion (&lt;1 year) of
+      long term debt.
+    q Deferred salaries, taxes and other amounts due in the short
+      term.
+q   When computing non-cash working capital, we do not
+    include interest-bearing short term debt in the
+    calculation, moving it instead into the debt column.</div>
+</div>
+<div class="slide" id="s10">
+<h3><span class="slide-no">幻灯 10</span>欠下的债<span class="en">Debt Due</span></h3>
+<div class="zh"><p>公司借钱有三种形式：</p>
+<ul><li>&lt;strong&gt;公司债券（corporate bonds）&lt;/strong&gt;：从公开市场募集来的债务。</li><li>&lt;strong&gt;银行贷款（bank loans）&lt;/strong&gt;：向银行及其他贷款机构借的钱。</li><li>&lt;strong&gt;租赁债务（lease debt）&lt;/strong&gt;：来自租赁合同，即未来年度需要支付租金的承诺。在 2019 年之前，只有被归类为&lt;strong&gt;资本租赁（capital lease）&lt;/strong&gt;的租赁才算数；但自 2019 年起，&lt;strong&gt;经营租赁（operating lease）&lt;/strong&gt;的承诺同样算债务。</li></ul>
+<p>资产一侧的盯市（mark-to-market）动作是热热闹闹的，负债一侧则基本没动：银行债务绝大多数<strong>按当初借入的金额</strong>记账，公司债券中到期需要偿付的部分，也<strong>大多不盯市</strong>。</p></div>
+<div class="en-block"><span class="en-label">English original</span>Debt Due
+
+¨   When companies borrow money, it can take three forms:
+    ¤ Corporate bonds, represent debt raised from public markets
+    ¤ Bank loans, debt raised from banks and other lending institiutions
+    ¤ Lease debt, arising out of lease contracts requiring lease payments
+      in future years. Until 2019, only leases classified as capital leases
+      qualified, but since 2019, operating lease commitments are also
+      debt.
+¨   The mark-to-market movement on the asset side of the
+    balance sheet has been muted on the liability side of the
+    balance sheet. Bank debt, for the most part, is recorded as
+    originally borrowed, and corporate bonds due, are for the
+    most part not marked to market.</div>
+</div>
+<div class="slide" id="s11">
+<h3><span class="slide-no">幻灯 11</span>债务的细节<span class="en">Debt details</span></h3>
+<div class="zh"><p>资产负债表是全部到期债务的存放处，分为流动与长期两块；但对多数公司来说，<strong>附注（footnotes）</strong>里还有更多关于债务的信息。</p>
+<p>这些额外信息大致来自两个方面：</p>
+<ul><li>&lt;strong&gt;单笔债务&lt;/strong&gt;：列明约定利率（stated interest rates）与到期日（maturities）。</li><li>&lt;strong&gt;债务的其他特征&lt;/strong&gt;：包括浮动/固定（floating/fixed），以及非可转换（straight）/可转换（convertible）条款。</li><li>&lt;strong&gt;一张合并的到期表&lt;/strong&gt;：按年份列示债务偿还的到期分布。</li></ul></div>
+<div class="en-block"><span class="en-label">English original</span>Debt details
+
+¨ While balance sheets are the repositories for total
+  debt due, broken down into current and long term,
+  there is additional information on debt in the
+  footnotes, for most companies.
+¨ This additional information can be on two fronts:
+
+    ¤ Individual debt due, with stated interest rates and
+      maturities.
+    ¤ Additional features on the debt, including floating/fixed
+      and straight/convertible provisions.
+    ¤ A consolidated table of when debt repayments come due,
+      by year.</div>
+</div>
+<div class="slide" id="s12">
+<h3><span class="slide-no">幻灯 12</span>股东权益<span class="en">Shareholder's Equity</span></h3>
+<div class="zh"><ul><li>&lt;strong&gt;老办法&lt;/strong&gt;：企业的股东权益是它&lt;strong&gt;全部历史&lt;/strong&gt;的映射：开业时投入的权益，加上此后历年的权益增资，再加上累积下来的留存收益（retained earnings）。</li><li>&lt;strong&gt;新办法&lt;/strong&gt;：企业的股东权益反映的是盯市会计（mark-to-market accounting）留下的&lt;strong&gt;一团乱麻&lt;/strong&gt;，以及它全部的矛盾。</li><li>&lt;strong&gt;我的怀疑看法&lt;/strong&gt;：无论新老办法，股东权益（也就是账面权益 book equity）都几乎不可能成为企业内在价值的度量。会计在这件事上的这场&lt;strong&gt;空想式追求（quixotic quest）&lt;/strong&gt;，带来的损害大于好处。</li></ul></div>
+<div class="en-block"><span class="en-label">English original</span>Shareholder’s Equity
+
+q Old ways: The shareholders’ equity in a business was a
+  reflection of its entire history, since it started with the
+  equity brought in to start the business, adds on equity
+  augmentations over time as well as the cumulation of
+  retained earnings.
+q New ways: The shareholders’ equity in a business
+  reflects the jumbled mess of mark-to-market accounting,
+  with all of its contradictions.
+q My cynical view: Old or new ways, shareholders’ equity
+  (or book equity) has little hope of ever being a measure
+  of the intrinsic value of equity in a business. This quixotic
+  quest on the part of accounting will do more damage
+  than good.</div>
+</div>
+<div class="slide" id="s13">
+<h3><span class="slide-no">幻灯 13</span>再谈股东权益<span class="en">More on shareholders' equity</span></h3>
+<div class="zh"><ul><li>&lt;strong&gt;面值（par value）&lt;/strong&gt;：这是历史遗留，应该直接忽略。</li><li>&lt;strong&gt;公司年龄&lt;/strong&gt;：既然股东权益反映的是公司历次股权融资与留存收益的累积历史，那么&lt;strong&gt;年轻公司&lt;/strong&gt;的股东权益往往远低于那些&lt;strong&gt;市场价值相当&lt;/strong&gt;的老公司。</li><li>&lt;strong&gt;资本化效应&lt;/strong&gt;：只有被&lt;strong&gt;资本化&lt;/strong&gt;的费用才进入资产，因此「什么该资本化、什么该费用化」的会计规则与公司行为，会把股东权益&lt;strong&gt;拧弯&lt;/strong&gt;。</li><li>&lt;strong&gt;回购效应&lt;/strong&gt;：分红和回购都会减少股东权益；但回购的量级让它对权益的冲击&lt;strong&gt;更剧烈&lt;/strong&gt;。</li><li>&lt;strong&gt;负权益？&lt;/strong&gt;：从数学上讲，股东权益&lt;strong&gt;没有理由不能变成负数&lt;/strong&gt;——无论是因为公司长期亏损，还是因为大额回购/核销。</li></ul></div>
+<div class="en-block"><span class="en-label">English original</span>More on shareholders’ equity
+
+¨ Par value: This is a throwback in time and should be ignored.
+¨ Company Age: Since shareholders’ equity reflects a company’s
+  cumulated history of equity raises and retained earnings, young
+  companies will tend to have far less shareholders’ equity than older
+  companies, of equivalent market value.
+¨ Capitalization effects: Since only capitalized expenses become part
+  of assets, shareholders’ equity can be skewed by accounting rules
+  and corporate actions on what is capitalized and what is expensed.
+¨ Buyback effects: Both dividends and buybacks reduce shareholders’
+  equity, by reducing it, but the magnitude of buybacks makes their
+  effect more dramatic.
+¨ Negative equity? There is no mathematical reason why
+  shareholders’ equity cannot become negative, either because a
+  company has lost money for an extended period or because of
+  large buyback/write off.</div>
+</div>
+<h2>课后测试与答案<span class="en">Post-class test &amp; solutions</span></h2>
+<p class="meta">题目与选项为中英对照；答案与解析附在每题下方。</p>
+<div class="q">
+<p class="qno">第 1 题</p>
+<p class="qzh">在传统会计（相对于公允价值会计）中，下列哪一项最准确地描述了固定资产是如何入账的？</p>
+<p class="meta">In conventional (as opposed to fair value) accounting, which of the following best describes how fixed assets are recorded?</p>
+<ul class="opts">
+<li><strong>a.</strong> 按原始成本入账 <span class="en">At original cost</span></li>
+<li><strong>b.</strong> 按当前市场价值入账 <span class="en">At current market value</span></li>
+<li><strong>c.</strong> 按原始成本入账，并扣减资产老化造成的价值损失（用折旧估算） <span class="en">At original cost, adjusted for loss is value from aging of the asset (estimated with depreciation)</span></li>
+<li><strong>d.</strong> 按原始成本入账，并扣减资产老化造成的价值损失（用折旧估算），同时还要做通胀调整。 <span class="en">At original cost, adjusted for loss is value from aging of the asset (estimated with depreciation), as well as for inflation.</span></li>
+<li><strong>e.</strong> 以上都不对 <span class="en">None of the above</span></li>
+</ul>
+<div class="ans"><strong>答案：c</strong> c. 按原始成本入账，并扣减资产老化造成的价值损失（用折旧估算）
+<p>传统会计下的账面价值，反映的是当初那笔投资扣除折旧之后的余额，并没有做通胀调整。</p>
+<div class="en-block"><span class="en-label">English original</span>Book value in conventional accounting is a reflection of original investment, net of depreciation. There is no inflation adjustment.</div>
+</div>
+</div>
+<div class="q">
+<p class="qno">第 2 题</p>
+<p class="qzh">当一家公司出于战略/业务原因持有另一家公司 10% 的股权时，这笔投资在资产负债表上如何入账？
+如果这项投资是出于交易目的而持有，你的答案会怎么变？</p>
+<p class="meta">When a company owns 10% of another company for a strategic/business reason, how is that investment recorded on the balance sheet?
+How would your answer change if the investment is held for trading reasons?</p>
+<ul class="opts">
+<li><strong>a.</strong> 按这 10% 持股的原始成本入账 <span class="en">At original cost for the 10% holding</span></li>
+<li><strong>b.</strong> 按这 10% 持股的账面价值（book value）入账 <span class="en">At book value for the 10% holding</span></li>
+<li><strong>c.</strong> 按这 10% 持股的市场价值入账 <span class="en">At market value for the 10% holding</span></li>
+<li><strong>d.</strong> 按这 10% 持股的清算价值入账 <span class="en">At liquidation value for the 10% holding</span></li>
+<li><strong>e.</strong> 资产按 100% 持股的账面价值入账，另就公司并不拥有的那 90% 部分列示一项负债（少数股东权益）。 <span class="en">At book value for a 100% holding on assets, with a liability (minority interests) shown for the 90% that does not belong to the company.</span></li>
+</ul>
+<div class="ans"><strong>答案：b</strong> b. 按这 10% 持股的账面价值（book value）入账
+<p>这笔投资在取得时按原始成本记录，此后加上被投企业累积的留存收益（retained earnings），于是形成的是当前的账面价值。</p>
+<div class="en-block"><span class="en-label">English original</span>The investment is recorded at original cost at the time it is made, but augmented by retained earnings since the investment, making it a current book value.</div>
+</div>
+</div>
+<div class="q">
+<p class="qno">第 3 题</p>
+<p class="qzh">当一家公司出于战略/业务原因持有另一家公司 60% 的股权时，这笔投资在资产负债表上如何入账？</p>
+<p class="meta">When a company owns 60% of another company for a strategic/business reason, how is that investment recorded on the balance sheet?</p>
+<ul class="opts">
+<li><strong>a.</strong> 按这 60% 持股的原始成本入账 <span class="en">At original cost for the 60% holding</span></li>
+<li><strong>b.</strong> 按这 60% 持股的账面价值（book value）入账 <span class="en">At book value for the 60% holding</span></li>
+<li><strong>c.</strong> 按这 60% 持股的市场价值入账 <span class="en">At market value for the 60% holding</span></li>
+<li><strong>d.</strong> 按这 60% 持股的清算价值入账 <span class="en">At liquidation value for the 60% holding</span></li>
+<li><strong>e.</strong> 资产按 100% 持股的账面价值入账，另就公司并不拥有的那 40% 部分列示一项负债（少数股东权益）。 <span class="en">At book value for a 100% holding on assets, with a liability (minority interests) shown for the 40% that does not belong to the company.</span></li>
+</ul>
+<div class="ans"><strong>答案：e</strong> e. 资产按 100% 持股的账面价值入账，另就公司并不拥有的那 40% 部分列示一项负债（少数股东权益）
+<p>持有多数股权的公司必须做全面合并，因此资产一侧要把子公司整体列示出来，再用一项少数股东权益（minority interest）抵掉未拥有的那部分。</p>
+<div class="en-block"><span class="en-label">English original</span>Companies that have majority stakes have to consolidate, thus showing the entire subsidiary company on the asset side and offsetting it with a minority interest reflecting the portion not owned.</div>
+</div>
+</div>
+<div class="q">
+<p class="qno">第 4 题</p>
+<p class="qzh">商誉往往是资产负债表上最大的无形资产。下列哪一项是对商誉最准确的描述？</p>
+<p class="meta">Goodwill often is the biggest intangible asset on a balance sheet. Which of the following is the best description of goodwill?</p>
+<ul class="opts">
+<li><strong>a.</strong> 它衡量的是被收购公司无形资产的价值 <span class="en">It measures value of intangible assets in an acquired company</span></li>
+<li><strong>b.</strong> 它衡量的是被收购公司成长性的价值 <span class="en">It measures the value of growth in an acquired company</span></li>
+<li><strong>c.</strong> 它衡量的是收购一家公司时、在账面价值之上额外支付的溢价。 <span class="en">It measures the premium paid over and above the book value to acquire a company.</span></li>
+<li><strong>d.</strong> 它衡量的是收购时多付的钱（overpayment） <span class="en">It measures overpayment on an acquisition</span></li>
+<li><strong>e.</strong> 以上都不对 <span class="en">None of the above</span></li>
+</ul>
+<div class="ans"><strong>答案：c</strong> c. 它衡量的是收购一家公司时、在账面价值之上额外支付的溢价。
+<p>这是对商誉最贴切的描述；不过会计人被允许对目标公司资产的账面价值作调整。</p>
+<div class="en-block"><span class="en-label">English original</span>This is the closest description of goodwill, though accountants are allowed to adjust the book value of assets of the target company.</div>
+</div>
+</div>
+<div class="q">
+<p class="qno">第 5 题</p>
+<p class="qzh">公司的股东权益反映的是公司股权的会计价值，也就是账面价值（book value）。下列哪一类公司的账面价值最有可能接近其市场价值或内在价值？</p>
+<p class="meta">The shareholders' equity in a company reflects the accounting value for the equity in the company, or book value. For which of the following companies is book value likely to be closest to market or intrinsic value?</p>
+<ul class="opts">
+<li><strong>a.</strong> 无形资产占比大的成长型公司 <span class="en">For growth companies, with significant intangible assets</span></li>
+<li><strong>b.</strong> 无形资产占比大的成熟型公司 <span class="en">For mature companies, with significant intangible assets</span></li>
+<li><strong>c.</strong> 有形实物资产占比大的成长型公司 <span class="en">For growth companies, with significant physical and tangible assets</span></li>
+<li><strong>d.</strong> 有形实物资产占比大的成熟型公司 <span class="en">For mature companies, with significant physical and tangible assets</span></li>
+<li><strong>e.</strong> 以上都不对 <span class="en">None of the above</span></li>
+</ul>
+<div class="ans"><strong>答案：d</strong> d. 有形实物资产占比大的成熟型公司
+<p>成长型公司的内在价值通常高于账面价值，因为成长的价值很难在会计资产负债表上体现出来；而有形资产比无形资产更有可能在资产负债表上以有意义的金额被记录下来。</p>
+<div class="en-block"><span class="en-label">English original</span>Growth companies will usually have intrinsic values that exceed book value, because the value of growth cannot be easily captured on an accounting balance sheet. Tangible assets are also more likely to be recorded on accounting balance sheets at meaningful values than intangible assets.</div>
+</div>
+</div>
+<div class="note"><strong>译者注</strong><br>本讲涉及具体的准则年份与规则：1990 年代末 GAAP 与 IFRS 同时改写商誉减值规则、2019 年起经营租赁承诺计入债务。译者保留原文年份，便于读者查证最新规定。讲师对股东权益的判断在原文中明确标注为个人看法（“My cynical view”），不代表会计准则制定者的立场，本译文如实呈现，不作辩护。</div>
+<p class="sessnav"><a href="session2A.html">← 第 2A 讲</a> <a href="index.html">目录</a> <a href="session3A.html">第 3A 讲 →</a></p>
+<p class="footer">课程来源：<a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/webcastacctg.htm">Damodaran · Corporate Finance Online Class（Accounting 101）</a><br>幻灯与课后题版权归 Aswath Damodaran / NYU Stern 所有，本站仅作教学与中文对照阅读使用。<br><a href="../index.html">← 返回站主随笔</a></p>
+</body>
+</html>

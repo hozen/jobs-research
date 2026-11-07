@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="这一讲是全课程的转折点：Damodaran 列出四类「会计准则当年没跟上、后来又没改干净」的地方——税（三个税率互相打架）、股权激励、租赁、研发——然后逐个说清楚：会计怎么记的、报表会长什么样、以及他为什么认为记错了。租赁那一段他把话说得最重：「把租赁当成债，道理上完全站得住；不需要任何理由，历史上也从来没人这么主张过。」研发那一段更直接：会计准则用来要求费用化的两条理由，「一条都不成立」。">
+<title>第 5 讲 · 会计口径不一致，以及它带来的后果 · 会计101 中英对照 — 乔布斯研究</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600&family=Charter:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #ffffff; --text: #1a1a1a; --meta: #888888; --rule: #e0e0e0; --max-w: 720px; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: var(--bg); color: var(--text); font-family: 'Noto Serif SC','Charter',serif; font-size: 17px; line-height: 1.7; max-width: var(--max-w); margin: 0 auto; padding: 0 24px 80px; overflow-wrap: anywhere; }
+a { color: var(--text); text-decoration: underline; text-decoration-color: var(--rule); }
+a:hover { text-decoration-color: var(--text); }
+h1 { font-size: 22px; font-weight: 600; margin: 48px 0 8px; letter-spacing: -0.3px; }
+h2 { font-size: 15px; font-weight: 600; color: var(--meta); text-transform: uppercase; letter-spacing: 1px; margin: 40px 0 16px; padding-top: 24px; border-top: 1px solid var(--rule); }
+h2 .en { display: block; font-size: 14px; color: var(--meta); text-transform: none; letter-spacing: 0; font-weight: 400; font-style: italic; margin-top: 4px; }
+h3 { font-size: 17px; font-weight: 600; margin: 32px 0 12px; }
+h3 .en { display: block; font-size: 14px; color: var(--meta); font-weight: 400; font-style: italic; margin-top: 2px; }
+.back { font-size: 14px; color: var(--meta); margin-bottom: 24px; }
+.meta { font-size: 13px; color: var(--meta); margin-left: 8px; }
+p { margin: 16px 0; }
+strong { font-weight: 600; }
+em.en-source { display: block; font-family: 'Charter', serif; font-size: 14px; font-style: italic; color: var(--meta); margin: 8px 0 24px; padding-left: 12px; border-left: 2px solid var(--rule); }
+blockquote { border-left: 3px solid var(--rule); padding: 4px 0 4px 20px; margin: 24px 0; color: #555; font-style: italic; }
+.source { font-size: 13px; color: var(--meta); margin-top: 12px; }
+.byline { font-size: 14px; color: var(--meta); margin: 8px 0 32px; }
+.tag-row { margin: 16px 0 32px; }
+.tag { display: inline-block; font-size: 12px; padding: 2px 10px; background: var(--rule); border-radius: 12px; color: var(--meta); margin-right: 6px; }
+.hero { background: #f9f9f9; border-radius: 8px; padding: 24px; margin: 0 0 32px; }
+.hero h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; }
+.hero p { font-size: 15px; color: #555; line-height: 1.7; margin: 8px 0; }
+.footer { margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--rule); font-size: 13px; color: var(--meta); }
+.footer a { color: var(--meta); }
+table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+.table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 16px 0; }
+.table-wrap table { margin: 0; min-width: 420px; }
+th, td { padding: 6px 10px; border: 1px solid var(--rule); text-align: left; vertical-align: top; }
+th { background: #f5f5f5; font-weight: 600; }
+.figure { margin: 32px 0; }
+.figure img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 4px; }
+.figure .cap { font-size: 13px; color: var(--meta); margin-top: 8px; line-height: 1.5; padding-left: 12px; border-left: 2px solid var(--rule); }
+.note { background: #f9f9f9; border-left: 3px solid #d4503a; border-radius: 4px; padding: 14px 18px; margin: 24px 0; font-size: 15px; color: #555; }
+.note strong { color: var(--text); }
+ol, ul { padding-left: 24px; margin: 16px 0; }
+li { margin: 8px 0; }
+@media (max-width: 600px) {
+  body { font-size: 16px; padding: 0 18px 60px; }
+  h1 { font-size: 20px; }
+  h2 { font-size: 14px; }
+  table { font-size: 12px; }
+  th, td { padding: 4px 6px; }
+}
+</style>
+<style>
+.kicker { font-size: 13px; color: var(--meta); letter-spacing: .5px; margin: 0 0 6px; }
+h1 .en { display: block; font-size: 15px; font-weight: 400; font-style: italic; color: var(--meta); margin-top: 6px; letter-spacing: 0; }
+.video-wrap { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 6px; margin: 24px 0 8px; background: #000; }
+.video-wrap iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+.video-cap { font-size: 13px; color: var(--meta); margin: 0 0 32px; }
+.slide { margin: 0 0 8px; padding: 20px 0 4px; border-top: 1px solid var(--rule); }
+.slide:first-of-type { border-top: none; }
+.slide h3 { margin: 0 0 12px; font-size: 16px; }
+.slide h3 .slide-no { display: inline-block; font-size: 12px; font-weight: 400; color: var(--meta); border: 1px solid var(--rule); border-radius: 10px; padding: 1px 8px; margin-right: 8px; vertical-align: 2px; }
+.slide h3 .en { display: block; font-size: 13px; color: var(--meta); font-style: italic; font-weight: 400; margin-top: 4px; }
+.slide .zh { margin: 0 0 10px; }
+.slide .zh p { margin: 10px 0; }
+.slide .zh ul, .slide .zh ol { margin: 8px 0; padding-left: 22px; }
+.slide .zh li { margin: 6px 0; }
+.en-block { font-family: 'Charter', serif; font-size: 14px; line-height: 1.6; color: var(--meta); background: #fbfbfb; border-left: 2px solid var(--rule); border-radius: 0 4px 4px 0; padding: 10px 14px; margin: 10px 0 0; white-space: pre-wrap; overflow-wrap: anywhere; }
+.en-block .en-label { display: block; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: #aaa; margin-bottom: 6px; }
+.q { margin: 24px 0; padding: 0 0 4px; border-bottom: 1px solid var(--rule); }
+.q .qno { font-size: 13px; color: var(--meta); }
+.q .qzh { font-weight: 600; }
+.q ol { margin: 8px 0; padding-left: 22px; }
+.q .opts { list-style: none; padding-left: 0; margin: 10px 0; }
+.q .opts li { margin: 7px 0; font-size: 15px; line-height: 1.55; }
+.q .opts .en { color: var(--meta); font-size: 13px; font-family: 'Charter', serif; }
+.ans { background: #f9f9f9; border-left: 3px solid #3a7d5c; border-radius: 4px; padding: 12px 16px; margin: 12px 0 24px; font-size: 15px; color: #555; }
+.ans strong { color: var(--text); }
+.toc-list { list-style: none; padding: 0; margin: 24px 0 0; }
+.toc-list li { margin: 0; padding: 16px 0; border-bottom: 1px solid var(--rule); }
+.toc-list a { font-size: 17px; font-weight: 600; text-decoration: none; }
+.toc-list a:hover { text-decoration: underline; }
+.toc-list .en { display: block; font-size: 13px; font-style: italic; color: var(--meta); font-weight: 400; margin-top: 4px; }
+.toc-list .sub { display: block; font-size: 14px; color: #555; margin-top: 6px; line-height: 1.6; }
+.toc-list .badge { font-size: 12px; color: var(--meta); }
+.sessnav { margin: 48px 0 0; padding-top: 20px; border-top: 1px solid var(--rule); display: flex; gap: 16px; flex-wrap: wrap; justify-content: space-between; font-size: 14px; }
+.sessnav a { color: var(--meta); text-decoration: none; }
+.sessnav a:hover { color: var(--text); text-decoration: underline; }
+.glossary td:first-child { white-space: nowrap; font-family: 'Charter', serif; }
+.glossary td:nth-child(2) { color: #555; }
+</style>
+</head>
+<body><p class="back">← <a href="index.html">会计101 · 分讲阅读</a> · <a href="../index.html">站主随笔</a></p>
+<p class="kicker">NYU Stern · Damodaran《Accounting 101》· 第 5 讲</p>
+<h1>第 5 讲 · 会计口径不一致，以及它带来的后果<span class="en">Accounting Inconsistencies &amp; Consequences</span></h1>
+<p class="byline">讲课视频 · 幻灯 15 张 · 讲师：Aswath Damodaran（NYU Stern）· 译者：站主（Mr. Buffett 委托）</p>
+<div class="video-wrap"><iframe src="https://www.youtube.com/embed/un6-H_wOizM" title="Accounting Inconsistencies &amp; Consequences" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<p class="video-cap">本讲视频：<a href="https://youtu.be/un6-H_wOizM">Accounting Inconsistencies &amp; Consequences</a>（YouTube，约 12–20 分钟）· 原始幻灯：<a href="https://www.stern.nyu.edu/~adamodar/pdfiles/Accounting101/slides/session5.pdf">session5.pdf</a></p>
+<div class="hero"><h3>一句话核心</h3>
+<p>当代会计规则在很大程度上是 20 世纪为制造业写的，而经济重心早已从制造转向科技与服务。Damodaran 挑出四处<strong>口径不一致</strong>：税、股权激励、租赁、研发——每一处都既影响利润表数字，也影响你该怎么读这些数字。</p>
+<div class="tag-row"><span class="tag">会计口径</span><span class="tag">递延税</span><span class="tag">股权激励</span><span class="tag">租赁资本化</span><span class="tag">研发资本化</span></div>
+</div>
+<h2>本讲导读<span class="en">Session guide</span></h2><p>这一讲是全课程的转折点：Damodaran 列出四类「会计准则当年没跟上、后来又没改干净」的地方——税（三个税率互相打架）、股权激励、租赁、研发——然后逐个说清楚：会计怎么记的、报表会长什么样、以及他为什么认为记错了。租赁那一段他把话说得最重：「把租赁当成债，道理上完全站得住；不需要任何理由，历史上也从来没人这么主张过。」研发那一段更直接：会计准则用来要求费用化的两条理由，「一条都不成立」。</p>
+<h2>逐页幻灯（中文在上，英文原文在下）<span class="en">Slide by slide</span></h2>
+<div class="slide" id="s1">
+<h3><span class="slide-no">幻灯 1</span>第五讲：给会计做做大扫除<span class="en">SESSION 5: CLEANING UP ACCOUNTING</span></h3>
+<div class="zh"><p>课程封面。本讲的副题是「Cleaning Up Accounting」——把当年没处理干净的地方重新算一遍。</p></div>
+<div class="en-block"><span class="en-label">English original</span>SESSION 5: CLEANING UP
+ACCOUNTING
+Accounting for Finance</div>
+</div>
+<div class="slide" id="s2">
+<h3><span class="slide-no">幻灯 2</span>会计人的角色（再回看一次）<span class="en">The Accountant’s Role</span></h3>
+<div class="zh"><p>会计人喜欢秩序与一致——从他们热衷于写规则这件事就看得出来。</p>
+<p>话虽如此，今天实践中的会计，绝大部分是 20 世纪为那个世纪占主导地位的<strong>制造业公司</strong>详细发展起来的。</p>
+<p>随着经济重心从制造业转向科技与服务业、企业的财务行为随时间改变，会计人在四个关键问题上一直很挣扎：</p>
+<ul><li>&lt;strong&gt;税&lt;/strong&gt;，以及企业为避税或推迟缴税采取的动作；</li><li>以股权（stock）形式发放的&lt;strong&gt;管理层薪酬&lt;/strong&gt;；</li><li>具有合同性质、但&lt;strong&gt;并不算债务&lt;/strong&gt;的承诺；</li><li>&lt;strong&gt;不是为了实物资产&lt;/strong&gt;、而是为了长期收益做的投入。</li></ul></div>
+<div class="en-block"><span class="en-label">English original</span>The Accountant’s Role
+
+q Accountants like order and consistency, as can be seen in
+  their propensity to write rules.
+q That said, much of accounting as practiced today was
+  developed in detail in the 20th century for the manufacturing
+  firms that dominated that century.
+q As the center of economic gravity has shifted from
+  manufacturing to technology &amp; service companies, and
+  corporate financial behavior has changed over time,
+  accountants have struggled with four key issues:
+    q Taxes, and the actions that companies take to avoid or delay paying
+      them.
+    q Managerial compensation in the form of equity (stock)
+    q Commitments that are contractual but are not debt
+    q Investments for long term benefits that are not in physical assets</div>
+</div>
+<div class="slide" id="s3">
+<h3><span class="slide-no">幻灯 3</span>1. 税：三个税率在打架<span class="en">1. Taxes: Dueling Tax Rates</span></h3>
+<div class="zh"><p><strong>① 边际税率（marginal tax rate）</strong>：法定税法条文里的税率。所以 2020 年一家美国公司就该按应税所得的 21% 在美国缴纳联邦税。由于美国公司现在按<strong>地区</strong>纳税的模式运作，跨国公司的边际税率会反映出它在哪里赚（或申报赚）应税所得。</p>
+<p><strong>② 实际税率（effective tax rate）</strong>：反映公司利润表上报告的税额与应税所得，而这套口径基于权责发生制：</p>
+<ul><li>实际税率 = 税额 / 应税所得</li></ul>
+<p><strong>③ 现金税率（cash tax rate）</strong>：反映公司就其应税所得实际付出的税款。</p></div>
+<div class="en-block"><span class="en-label">English original</span>1. Taxes: Dueling Tax Rates
+
+1.       Marginal tax rate: The marginal tax rate is the tax rate in the
+         statutory tax codes. Thus, in 2020, a US company should be
+         paying 21% of its taxable income in the US as federal taxes.
+         Since US companies now operate on a regional tax model,
+         the marginal tax rate for multinationals will reflect where
+         they make (or report to make) their taxable income.
+2.       Effective Tax Rate: The effective tax rate for a company
+         reflects the taxes and taxable income it reports in its income
+         statement, which is based on accrual accounting:
+     ¤     Effective tax rate = Taxes/ Taxable Income
+3.       Cash Tax Rate: The cash tax rate for a company reflects the
+         taxes it actually pays on its taxable income.</div>
+</div>
+<div class="slide" id="s4">
+<h3><span class="slide-no">幻灯 4</span>递延所得税资产与负债<span class="en">Deferred Tax Assets &amp; Liabilities</span></h3>
+<div class="zh"><p>对大多数公司来说，实际税率会<strong>低于</strong>边际税率，原因在于：</p>
+<ul><li>在低税率国家有经营；</li><li>（合法的）税务递延与避税安排。</li></ul>
+<p>当账面（报告口径）与税务口径在「费用化了多少」与「申报了多少应税所得」之间出现差异时，由此产生的税款差异，在公司税簿上实缴税款<strong>少于</strong>（多于）财务报表所报告金额的情况下，列为<strong>递延所得税负债（资产）</strong>。</p>
+<p>这么做的逻辑很简单：导致本期少缴（多缴）税的项目，将来会反转回来，届时就会多缴（少缴）税。</p></div>
+<div class="en-block"><span class="en-label">English original</span>Deferred Tax Assets &amp; Liabilities
+
+q   For most companies, the effective tax rate will be lower than
+    the marginal tax rate, reflecting:
+    q Operations in countries with lower tax rates
+    q (Legal) Tax deferral and avoidance strategies
+
+q When there are differences between what is expensed and
+  what is reported as taxable income between the reporting
+  and tax books, the resulting difference in taxes is reported as
+  a deferred tax liability (asset) if the company pays less (more)
+  in taxes on its tax books than it reports in its financial
+  statements.
+q The logic for doing so is simple. The items that give rise to less
+  (more) taxes paid in the current period will reverse and result
+  in more (less) taxes paid in future periods.</div>
+</div>
+<div class="slide" id="s5">
+<h3><span class="slide-no">幻灯 5</span>净经营亏损与结转<span class="en">Net Operating Losses &amp; Carryforwards</span></h3>
+<div class="zh"><p>美国公司亏损时，可以把这些亏损<strong>向后结转</strong>，用来抵减未来年份的应纳税额。</p>
+<ul><li>在 2017 年税改法案（Tax Reform Act）之前，NOL 可以&lt;strong&gt;回溯两年&lt;/strong&gt;，用来抵减过去年度已缴税款（相当于退税），并可向后结转 20 年。</li><li>2017 年税改法案取消了回溯条款，允许亏损&lt;strong&gt;无限期向后结转&lt;/strong&gt;。</li></ul>
+<p>当一家公司的亏损跨越多年，这些亏损会随时间累积成<strong>净经营亏损（Net Operating Loss, NOL）</strong>，并应在公司财报中披露。</p></div>
+<div class="en-block"><span class="en-label">English original</span>Net Operating Losses &amp; Carryforwards
+
+¨   When a US company loses money, it is allowed to carry
+    those losses forward and use them to reduce taxes paid
+    in future years.
+    ¤ Until the Tax Reform Act of 2017, the NOL could be carried back
+      two years and used to reduce taxes paid in prior years (as a tax
+      credit) and forward 20 years.
+    ¤ The Tax Reform Act of 2017 removed the carry back provision
+      and allows losses to be carried forward indefinitely.
+¨   When a company has losses that are over multiple years,
+    these losses are cumulated over time as a Net Operating
+    Loss (NOL) and should be disclosed in a company’s
+    financials.</div>
+</div>
+<div class="slide" id="s6">
+<h3><span class="slide-no">幻灯 6</span>2. 股权激励是一项经营费用……<span class="en">2. Stock Based Compensation is an Operating Expense…</span></h3>
+<div class="zh"><p>几十年来，公司用股权激励奖励员工，主要出于两个原因：</p>
+<ul><li>让员工与管理层的利益与股东利益保持一致；</li><li>弥补现金的缺失（凑出有竞争力的薪酬方案）。</li></ul>
+<p>股权激励主要有两种形式：</p>
+<ul><li>以固定价格、在特定期限内购买公司股票（或投资其股权）的&lt;strong&gt;期权&lt;/strong&gt;；</li><li>公司的&lt;strong&gt;股份&lt;/strong&gt;，有时附带交易限制（restricted shares，受限股）。</li></ul></div>
+<div class="en-block"><span class="en-label">English original</span>2. Stock Based Compensation is an
+Operating Expense…
+q   Companies have used stock-based compensation to
+    reward employees for decades for two reasons:
+    q To align the interests of employees &amp; managers with those of
+      the shareholders
+    q To make up for the absence of cash (to provide compensation
+      packages that are competitive)
+q   Stock-based compensation primarily takes two forms:
+    q Options to buy the company’s stock (or invest in its equity) at a
+      fixed price for a specified period.
+    q Shares in the company, sometimes with restrictions on trading
+      on those shares (restricted shares)</div>
+</div>
+<div class="slide" id="s7">
+<h3><span class="slide-no">幻灯 7</span>它到底算哪一类费用？<span class="en">What type of expense is it?</span></h3>
+<div class="zh"><p>不管发放股权激励的动机是什么（利益一致，还是缺现金），它显然是一项<strong>薪酬费用</strong>。</p>
+<ul><li>如果授予的规模大、偶发，而且主要是为了利益一致，那么有理由把它&lt;strong&gt;分摊到各年&lt;/strong&gt;。</li><li>如果公司持续使用股权激励，而且更多是为了弥补现金紧张而不是为了利益一致，那就是一项&lt;strong&gt;年度费用&lt;/strong&gt;。</li></ul>
+<p>要把股权激励费用化，就必须在授予当时对给员工的期权或股票进行估值。</p>
+<ul><li>2004 年之前，公司可以有一定裁量权，用授予时的行权价值来估算期权授予的价值。</li><li>2004 年之后，FAS 123 要求公司用期权定价模型按&lt;strong&gt;时间价值&lt;/strong&gt;给期权估值，并在授予当年确认这项费用。</li></ul></div>
+<div class="en-block"><span class="en-label">English original</span>What type of expense is it?
+
+¨   No matter what the motive for providing stock-based
+    compensation (to align interests or to make up for lack of cash),
+    it is clearly a compensation expense.
+    ¤ If a grant is large and occasional, and primarily driven by the desire to align
+      interests, there is an argument that it should be spread out over time.
+    ¤ If a company uses stock-based compensation consistently, and more to
+      make up for its cash poor status than to align interests, it is an annual
+      expense.
+¨   To expense stock-based compensation, you have to value of the
+    options or stock given to employees, at the time they are
+    granted.
+    ¤ Until 2004, companies were allowed leeway to estimate the value of
+      option grants based upon exercise value at the time of the grant.
+    ¤ After 2004, FAS 123 requires companies to value options based upon their
+      time premium (using option pricing models) and show that expense in the
+      year the options are granted.</div>
+</div>
+<div class="slide" id="s8">
+<h3><span class="slide-no">幻灯 8</span>那它算不算现金流？<span class="en">Is it a cash flow?</span></h3>
+<div class="zh"><p>既然期权和受限股现在被（正确地）当作薪酬，并在授予当年费用化，争论就转移到了另一个问题：它们是不是<strong>非现金费用</strong>（像折旧那样），因而应该在算现金流时加回来。</p>
+<p>大多数公司和分析师似乎都认定答案是「是」——很多公司在算 adjusted earnings 时把股权激励加回来。</p>
+<p><strong>我强烈不同意。</strong>像折旧这种非现金费用（你一分钱没付）和「用股权（期权或股份）替代现金」之间，存在根本性的差别。</p></div>
+<div class="en-block"><span class="en-label">English original</span>Is it a cash flow?
+
+q Now that options and restricted stock are treated
+  (correctly) as compensation, and expensed in the years
+  they are granted, the debate has shifted to the question
+  of whether they are non-cash expenses (like
+  depreciation), deserving of being added back to get to
+  cash flows.
+q Most companies and analysts seem to have come down
+  on yes as the answer, and many companies add back
+  stock-based compensation to get to adjusted earnings.
+q I disagree strongly. There is a fundamental difference
+  between a non-cash expense like depreciation, where
+  you pay nothing, and giving a share of equity (options or
+  shares) in lieu of cash.</div>
+</div>
+<div class="slide" id="s9">
+<h3><span class="slide-no">幻灯 9</span>3. 租赁就是债<span class="en">3. Leases are debt</span></h3>
+<div class="zh"><p><strong>债的本质：</strong>当你借钱，你制造的是对未来的合同义务，履行不了，你的持续经营（going concern）就会受威胁。</p>
+<p><strong>租赁合同：</strong>当你签下租赁合同，你同样制造了对未来的承诺，履行不了，你的生存同样受威胁。道理很简单，<strong>没有任何理由（而且从来就没有过理由）把租赁区别对待</strong>。</p>
+<p><strong>租赁的会计处理：</strong>2019 年之前，会计界存在分歧，把租赁分成两类：</p>
+<ul><li>&lt;strong&gt;资本租赁（capital leases）&lt;/strong&gt;：承租方对资产拥有实质所有权，按债务处理，同时确认一项对应资产；</li><li>&lt;strong&gt;经营租赁（operating leases）&lt;/strong&gt;：承租方在一段时间内（临时）使用该资产，按经营费用处理，资产负债表上既不列负债也不列对应资产。</li></ul>
+<p>从 2019 年起，GAAP 与 IFRS 都要求公司把所有租赁承诺一律按债务处理，无论交易如何设计。</p></div>
+<div class="en-block"><span class="en-label">English original</span>3. Leases are debt
+
+¨   The Essence of Debt: When you borrow money, you create contractual
+    obligations for the future, and a failure to meet them can put your
+    survival as a going concern at risk.
+¨   Lease contracts: When you sign a lease contract, you create commitments
+    for the future, and a failure to meet these commitments will put your
+    survival at risk. Put simply, there is no reason (and there never has been)
+    to treat leases as debt.
+¨   Accounting for leases: Until 2019, accountants disagreed and broke leases
+    down into two groups:
+    ¤   Capital leases, where the lessee has effective ownership of the asset, is treated as
+        debt, with a counter asset.
+     ¤ Operating leases, where the lessee has (temporary) use of the asset for a period,
+        were treated as operating expenses, with no debt or counter assets on the balance
+        sheet.
+    Starting in 2019, both GAAP and IFRS are requiring companies to treat all lease
+    commitments as debt, no matter how structured.</div>
+</div>
+<div class="slide" id="s10">
+<h3><span class="slide-no">幻灯 10</span>把租赁资本化<span class="en">Capitalizing Leases</span></h3>
+<div class="zh"><p>把租赁承诺转成债务的过程，与给任何银行债务或公司债定价的逻辑类似，步骤并不复杂：</p>
+<ul><li>从未来各年的&lt;strong&gt;合同租赁承诺&lt;/strong&gt;开始，按年份列明；</li><li>根据公司的&lt;strong&gt;违约风险&lt;/strong&gt;，估算它当前的&lt;strong&gt;税前借款成本&lt;/strong&gt;；</li><li>用税前债务成本作为折现率，计算租赁承诺的&lt;strong&gt;现值&lt;/strong&gt;。</li></ul>
+<p>租赁承诺的现值按债务处理，并以相同金额列示为一项对应资产。</p>
+<p>要把闭环合上，还需要对租赁债务计算利息费用、对对应资产计算折旧，并把它们放进利润表：</p>
+<ul><li>租赁债务的利息费用 = 租赁承诺现值 × 税前债务成本</li><li>租赁资产的折旧，按租赁期（视同资产寿命）与所选折旧方法计算。</li></ul></div>
+<div class="en-block"><span class="en-label">English original</span>Capitalizing Leases
+
+¨   The process of converting lease commitments to debt follows a simple
+    process, akin to how any bank debt or corporate bond can be valued.
+¨   Here are the steps:
+    ¤ Start with the contractual lease commitments for future years, by year.
+    ¤ Compute the pre-tax cost of borrowing for the firm today, based upon its default
+      risk.
+    ¤ Take the present value of lease commitments, using the pre-tax cost of debt as your
+      discount rate.
+¨   The present value of lease commitments is treated as debt, with the same
+    value shown as a counter-asset.
+¨   To complete the cycle, you compute interest expenses on the lease debt
+    and depreciation on the counter asset and bring them into your income
+    statement.
+    ¤ Interest expense on lease debt = PV of lease commitments * Pre-tax cost of debt
+    ¤ Depreciation on lease asset is computed using the life of the lease (as the life of the
+      asset) and the depreciation method chosen.</div>
+</div>
+<div class="slide" id="s11">
+<h3><span class="slide-no">幻灯 11</span>其他合同承诺<span class="en">Other Contractual Commitments</span></h3>
+<div class="zh"><p>会计（终于）接受把租赁当债务这件事了，但还有一大批合同承诺具备与租赁完全相同的特征，需要同样的处理。举几个例子：</p>
+<ul><li>许多制造企业的&lt;strong&gt;采购承诺&lt;/strong&gt;；</li><li>流媒体公司（如 Netflix）的&lt;strong&gt;内容承诺&lt;/strong&gt;；</li><li>职业体育球队的&lt;strong&gt;球员合同&lt;/strong&gt;。</li></ul></div>
+<div class="en-block"><span class="en-label">English original</span>Other Contractual Commitments
+
+¨ While accounting has (finally) come to terms with
+  treating leases as debt, there are a whole host of
+  contractual commitments that share the same
+  characteristics as leases, and require the same
+  treatment.
+¨ Here are some examples:
+
+    1.   Purchase commitments for many manufacturing firms
+    2.   Content commitments at a streaming company (like
+         Netflix)
+    3.   Player contracts for a sports team</div>
+</div>
+<div class="slide" id="s12">
+<h3><span class="slide-no">幻灯 12</span>4. 研发就是资本开支<span class="en">4. R&amp;D is a cap ex</span></h3>
+<div class="zh"><p>如果资本开支的本质是「这项费用的预期收益不只体现在本期，也体现在未来各期」，那么研发（R&D）费用显然完全符合。</p>
+<p>话虽如此，全世界的会计准则大体上要求公司把研发费用化，用的是两条理由之一：</p>
+<ul><li>研发的收益太不确定，所以在研发更接近商业化之前应当费用化；</li><li>估算利润时保守一点总没错。</li></ul>
+<p><strong>两条理由都站不住脚。</strong></p>
+<ul><li>不确定这根棍子，从来没有用在其他类型的资本开支上（比如建一家工厂去生产全新且未经验证的产品）。</li><li>会计要给出的是&lt;strong&gt;最贴近现实&lt;/strong&gt;的利润估计，不是最保守的估计。</li></ul></div>
+<div class="en-block"><span class="en-label">English original</span>4. R&amp;D is a cap ex
+
+¨ If the essence of a capital expenditure is that it is an expense
+  whose expected benefits are not just in the current period, but in
+  future periods, research and development (R&amp;D) expenses clearly
+  fit the bill.
+¨ That said, accounting rules around the world, for the most part,
+  require companies to expense R&amp;D, using one of two rationale:
+    ¤ The benefits of R&amp;D are too uncertain. Consequently, they should be
+      expensed until the R&amp;D is closer to commercial development.
+    ¤ It is better to be conservative in estimating earnings.
+
+¨   Neither justification makes sense.
+    ¤ Uncertainty is never used with other types of capital expenditure (building
+      a factory to make a new and untested product) as the divining rod for
+      capital vs operating expenses.
+    ¤ Accounting should deliver the most realistic estimate of earnings, not the
+      most conservative.</div>
+</div>
+<div class="slide" id="s13">
+<h3><span class="slide-no">幻灯 13</span>把研发资本化<span class="en">Capitalizing R&amp;D</span></h3>
+<div class="zh"><p>要把研发资本化，分三步：</p>
+<ul><li>&lt;strong&gt;第一步：&lt;/strong&gt;为研发估计一个可摊销年限——凭你的最佳判断，研发平均需要多久才能回本（以商业化为标准）。</li><li>&lt;strong&gt;第二步：&lt;/strong&gt;收集过去若干年的研发费用（往前回溯到可摊销年限的起点）。如果公司成立时间没这么久，就尽量多收几年。</li><li>&lt;strong&gt;第三步：&lt;/strong&gt;对过去每一年研发，估计：① 今年要摊销掉多少；② 研发费用中还剩多少未摊销。</li></ul>
+<p>要把闭环合上，最后两步是：</p>
+<ul><li>调整利润：把当期的研发费用加回来，再减去过去年份研发的摊销；</li><li>把未摊销的研发作为资产列示，并以相同金额增加账面权益。</li></ul></div>
+<div class="en-block"><span class="en-label">English original</span>Capitalizing R&amp;D
+
+¨   To capitalize R&amp;D, there are three steps:
+    ¤ Step 1: Estimate an amortizable life for R&amp;D by making your best
+      judgment on how long it takes, on average, for R&amp;D to pay off (as
+      commercial success).
+    ¤ Step 2: Collect R&amp;D expenses from past years (going back as long as
+      the amortizable life). If your company has not been in existence for
+      that long, collect as many years as you can.
+    ¤ Step 3: For each of the past years of R&amp;D, estimate
+       n How much you will be amortizing this year
+       n How much of the R&amp;D expense remains unamortized
+¨   To complete the cycle, here are the last steps:
+    ¤ Adjust earnings by adding back the current year’s R&amp;D expense and
+      subtracting out the amortization of past years R&amp;D
+    ¤ Show the unamortized R&amp;D as an asset, and show the same amount as
+      an increase in book equity.</div>
+</div>
+<div class="slide" id="s14">
+<h3><span class="slide-no">幻灯 14</span>其他类资本开支<span class="en">Other Capital Investments</span></h3>
+<div class="zh"><p>还有一些费用符合研发的特征——都是为了让收益在很多年里持续产生——但因为这些投入不是实物资产，就被当作经营费用处理。举几个例子：</p>
+<ul><li>消费品公司为&lt;strong&gt;打造品牌&lt;/strong&gt;而发生的广告费用；</li><li>咨询公司为&lt;strong&gt;建立咨询业务&lt;/strong&gt;而发生的招聘与培训费用；</li><li>石油公司的&lt;strong&gt;勘探成本&lt;/strong&gt;；</li><li>订阅制或用户制公司的&lt;strong&gt;获客成本&lt;/strong&gt;。</li></ul></div>
+<div class="en-block"><span class="en-label">English original</span>Other Capital Investments
+
+¨ There are other expenses that fit the R&amp;D profile, i.e.,
+  expenses designed to create benefits over many years,
+  but since these investments are not in physical assets,
+  they are treated as operating expenses.
+¨ Here are some examples:
+    ¤ Advertising expenses by a consumer product company to build
+      up brand name
+    ¤ Recruiting and training expenses by a consulting firm to build its
+      consulting practice
+    ¤ Exploration costs for an oil company
+    ¤ Customer acquisition costs for a subscriber or user based
+      company.</div>
+</div>
+<div class="slide" id="s15">
+<h3><span class="slide-no">幻灯 15</span>小结：可以信，但得自己核<span class="en">The Bottom Line: Trust, but verify…</span></h3>
+<div class="zh"><p>财务报表反映的不仅是企业对自身的「会计视角」，还背着<strong>会计史与历史遗留规则</strong>的包袱。</p>
+<p>分析一家公司时，你应当<strong>从财务报表开始</strong>，但你完全不必忌讳对这些报表做改动、修正或重做——以便它们真正服务于你想用这些数据回答的问题。</p></div>
+<div class="en-block"><span class="en-label">English original</span>The Bottom Line: Trust, but verify…
+
+¨ Accounting statements reflect not only an
+  “accounting” view of the company, but the burden
+  of accounting history and legacy rules.
+¨ When analyzing a company, you should start with
+
+  accounting statements, but you should have no
+  qualms about changing, modifying or redoing them
+  to reflect what you are trying to do with the data in
+  those statements.</div>
+</div>
+
+<div class="note"><strong>译者注</strong><br>本讲涉及具体的美国税法与准则（2017 年税改法案、FAS 123、2019 年起 GAAP 与 IFRS 的租赁新规），讲师讲的是当时的规则状态。译者在涉及具体条款处保留原文的年份与机构名，方便读者查证最新规定。</div>
+<p class="sessnav"><a href="session4A.html">← 第 4A 讲</a> <a href="index.html">目录</a> <a href="session5A.html">第 5A 讲 →</a></p>
+<p class="footer">课程来源：<a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/webcastacctg.htm">Damodaran · Corporate Finance Online Class（Accounting 101）</a><br>幻灯与课后题版权归 Aswath Damodaran / NYU Stern 所有，本站仅作教学与中文对照阅读使用。<br><a href="../index.html">← 返回站主随笔</a></p>
+</body>
+</html>

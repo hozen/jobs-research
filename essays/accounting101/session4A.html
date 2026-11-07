@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="这一讲是 Damodaran《Accounting 101》的第 4A 讲。和第 3A 讲一样，原课件几乎没有文字，全部内容是八家公司的现金流量表截图：Peloton（招股书里的年轻公司）、Netflix（高速成长）、Coca-Cola（成熟）、Toyota（老化）、Total（资源型）、HSBC（金融服务）、Dr. Reddy's（制药）。
+
+读法与第 3A 讲一致：先看表，再看这张表说明了什么。Damodaran 的框架还是「企业生命周期」——同一张现金流量表，在初创、成长、成熟、衰退四个阶段会长出完全不同的样子；而行业不同，同样的科目会装进完全不同的东西：银行的存款与贷款都算在经营活动里，制药公司的现金大半压在金融资产上，资源型公司的经营现金流是净利润的两倍多。
+
+这一讲末尾的两句话是全讲的落点：现金流量表是站在「股权投资者」（equity investors）的视角编的；你要算的是给股东的现金流（cash flows to equity），所以利息费用必须从净利润里剥出来再加回去。">
+<title>第 4A 讲 · 现金流量表的比较 · 会计101 中英对照 — 乔布斯研究</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600&family=Charter:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #ffffff; --text: #1a1a1a; --meta: #888888; --rule: #e0e0e0; --max-w: 720px; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: var(--bg); color: var(--text); font-family: 'Noto Serif SC','Charter',serif; font-size: 17px; line-height: 1.7; max-width: var(--max-w); margin: 0 auto; padding: 0 24px 80px; overflow-wrap: anywhere; }
+a { color: var(--text); text-decoration: underline; text-decoration-color: var(--rule); }
+a:hover { text-decoration-color: var(--text); }
+h1 { font-size: 22px; font-weight: 600; margin: 48px 0 8px; letter-spacing: -0.3px; }
+h2 { font-size: 15px; font-weight: 600; color: var(--meta); text-transform: uppercase; letter-spacing: 1px; margin: 40px 0 16px; padding-top: 24px; border-top: 1px solid var(--rule); }
+h2 .en { display: block; font-size: 14px; color: var(--meta); text-transform: none; letter-spacing: 0; font-weight: 400; font-style: italic; margin-top: 4px; }
+h3 { font-size: 17px; font-weight: 600; margin: 32px 0 12px; }
+h3 .en { display: block; font-size: 14px; color: var(--meta); font-weight: 400; font-style: italic; margin-top: 2px; }
+.back { font-size: 14px; color: var(--meta); margin-bottom: 24px; }
+.meta { font-size: 13px; color: var(--meta); margin-left: 8px; }
+p { margin: 16px 0; }
+strong { font-weight: 600; }
+em.en-source { display: block; font-family: 'Charter', serif; font-size: 14px; font-style: italic; color: var(--meta); margin: 8px 0 24px; padding-left: 12px; border-left: 2px solid var(--rule); }
+blockquote { border-left: 3px solid var(--rule); padding: 4px 0 4px 20px; margin: 24px 0; color: #555; font-style: italic; }
+.source { font-size: 13px; color: var(--meta); margin-top: 12px; }
+.byline { font-size: 14px; color: var(--meta); margin: 8px 0 32px; }
+.tag-row { margin: 16px 0 32px; }
+.tag { display: inline-block; font-size: 12px; padding: 2px 10px; background: var(--rule); border-radius: 12px; color: var(--meta); margin-right: 6px; }
+.hero { background: #f9f9f9; border-radius: 8px; padding: 24px; margin: 0 0 32px; }
+.hero h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; }
+.hero p { font-size: 15px; color: #555; line-height: 1.7; margin: 8px 0; }
+.footer { margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--rule); font-size: 13px; color: var(--meta); }
+.footer a { color: var(--meta); }
+table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+.table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 16px 0; }
+.table-wrap table { margin: 0; min-width: 420px; }
+th, td { padding: 6px 10px; border: 1px solid var(--rule); text-align: left; vertical-align: top; }
+th { background: #f5f5f5; font-weight: 600; }
+.figure { margin: 32px 0; }
+.figure img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 4px; }
+.figure .cap { font-size: 13px; color: var(--meta); margin-top: 8px; line-height: 1.5; padding-left: 12px; border-left: 2px solid var(--rule); }
+.note { background: #f9f9f9; border-left: 3px solid #d4503a; border-radius: 4px; padding: 14px 18px; margin: 24px 0; font-size: 15px; color: #555; }
+.note strong { color: var(--text); }
+ol, ul { padding-left: 24px; margin: 16px 0; }
+li { margin: 8px 0; }
+@media (max-width: 600px) {
+  body { font-size: 16px; padding: 0 18px 60px; }
+  h1 { font-size: 20px; }
+  h2 { font-size: 14px; }
+  table { font-size: 12px; }
+  th, td { padding: 4px 6px; }
+}
+</style>
+<style>
+.kicker { font-size: 13px; color: var(--meta); letter-spacing: .5px; margin: 0 0 6px; }
+h1 .en { display: block; font-size: 15px; font-weight: 400; font-style: italic; color: var(--meta); margin-top: 6px; letter-spacing: 0; }
+.video-wrap { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 6px; margin: 24px 0 8px; background: #000; }
+.video-wrap iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+.video-cap { font-size: 13px; color: var(--meta); margin: 0 0 32px; }
+.slide { margin: 0 0 8px; padding: 20px 0 4px; border-top: 1px solid var(--rule); }
+.slide:first-of-type { border-top: none; }
+.slide h3 { margin: 0 0 12px; font-size: 16px; }
+.slide h3 .slide-no { display: inline-block; font-size: 12px; font-weight: 400; color: var(--meta); border: 1px solid var(--rule); border-radius: 10px; padding: 1px 8px; margin-right: 8px; vertical-align: 2px; }
+.slide h3 .en { display: block; font-size: 13px; color: var(--meta); font-style: italic; font-weight: 400; margin-top: 4px; }
+.slide .zh { margin: 0 0 10px; }
+.slide .zh p { margin: 10px 0; }
+.slide .zh ul, .slide .zh ol { margin: 8px 0; padding-left: 22px; }
+.slide .zh li { margin: 6px 0; }
+.en-block { font-family: 'Charter', serif; font-size: 14px; line-height: 1.6; color: var(--meta); background: #fbfbfb; border-left: 2px solid var(--rule); border-radius: 0 4px 4px 0; padding: 10px 14px; margin: 10px 0 0; white-space: pre-wrap; overflow-wrap: anywhere; }
+.en-block .en-label { display: block; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: #aaa; margin-bottom: 6px; }
+.q { margin: 24px 0; padding: 0 0 4px; border-bottom: 1px solid var(--rule); }
+.q .qno { font-size: 13px; color: var(--meta); }
+.q .qzh { font-weight: 600; }
+.q ol { margin: 8px 0; padding-left: 22px; }
+.q .opts { list-style: none; padding-left: 0; margin: 10px 0; }
+.q .opts li { margin: 7px 0; font-size: 15px; line-height: 1.55; }
+.q .opts .en { color: var(--meta); font-size: 13px; font-family: 'Charter', serif; }
+.ans { background: #f9f9f9; border-left: 3px solid #3a7d5c; border-radius: 4px; padding: 12px 16px; margin: 12px 0 24px; font-size: 15px; color: #555; }
+.ans strong { color: var(--text); }
+.toc-list { list-style: none; padding: 0; margin: 24px 0 0; }
+.toc-list li { margin: 0; padding: 16px 0; border-bottom: 1px solid var(--rule); }
+.toc-list a { font-size: 17px; font-weight: 600; text-decoration: none; }
+.toc-list a:hover { text-decoration: underline; }
+.toc-list .en { display: block; font-size: 13px; font-style: italic; color: var(--meta); font-weight: 400; margin-top: 4px; }
+.toc-list .sub { display: block; font-size: 14px; color: #555; margin-top: 6px; line-height: 1.6; }
+.toc-list .badge { font-size: 12px; color: var(--meta); }
+.sessnav { margin: 48px 0 0; padding-top: 20px; border-top: 1px solid var(--rule); display: flex; gap: 16px; flex-wrap: wrap; justify-content: space-between; font-size: 14px; }
+.sessnav a { color: var(--meta); text-decoration: none; }
+.sessnav a:hover { color: var(--text); text-decoration: underline; }
+.glossary td:first-child { white-space: nowrap; font-family: 'Charter', serif; }
+.glossary td:nth-child(2) { color: #555; }
+</style>
+</head>
+<body><p class="back">← <a href="index.html">会计101 · 分讲阅读</a> · <a href="../index.html">站主随笔</a></p>
+<p class="kicker">NYU Stern · Damodaran《Accounting 101》· 第 4A 讲</p>
+<h1>第 4A 讲 · 现金流量表的比较<span class="en">Cash Flow Statement Comparisons</span></h1>
+<p class="byline">讲课视频 · 幻灯 11 张 · 课后题 5 道 · 讲师：Aswath Damodaran（NYU Stern）· 译者：站主（Mr. Buffett 委托）</p>
+<div class="video-wrap"><iframe src="https://www.youtube.com/embed/U954oEU7_0w" title="Cash Flow Statement Comparisons" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<p class="video-cap">本讲视频：<a href="https://youtu.be/U954oEU7_0w">Cash Flow Statement Comparisons</a>（YouTube，约 12–20 分钟）· 原始幻灯：<a href="https://www.stern.nyu.edu/~adamodar/pdfiles/Accounting101/slides/session4A.pdf">session4A.pdf</a></p>
+<div class="hero"><h3>一句话核心</h3>
+<p>现金流量表也许是四张报表里<strong>最不容易被会计手法影响</strong>的一张——因为它讲的是真金白银的进出。但同一张表，在不同生命周期的公司身上会说完全不同的话：年轻公司的经营现金流为负是正常的，成熟公司的经营现金流为负就是警报；银行的经营现金流里装的是客户存款，Netflix 的经营现金流里装的是内容支出。<strong>先判断这家公司处在哪一段，再看它的现金流表。</strong></p>
+<div class="tag-row"><span class="tag">现金流量表</span><span class="tag">企业生命周期</span><span class="tag">行业差异</span><span class="tag">营运资金</span><span class="tag">股权投资者现金流</span></div>
+</div>
+<h2>本讲导读<span class="en">Session guide</span></h2><p>这一讲是 Damodaran《Accounting 101》的第 4A 讲。和第 3A 讲一样，原课件几乎没有文字，全部内容是八家公司的现金流量表截图：Peloton（招股书里的年轻公司）、Netflix（高速成长）、Coca-Cola（成熟）、Toyota（老化）、Total（资源型）、HSBC（金融服务）、Dr. Reddy's（制药）。
+
+读法与第 3A 讲一致：先看表，再看这张表说明了什么。Damodaran 的框架还是「企业生命周期」——同一张现金流量表，在初创、成长、成熟、衰退四个阶段会长出完全不同的样子；而行业不同，同样的科目会装进完全不同的东西：银行的存款与贷款都算在经营活动里，制药公司的现金大半压在金融资产上，资源型公司的经营现金流是净利润的两倍多。
+
+这一讲末尾的两句话是全讲的落点：现金流量表是站在「股权投资者」（equity investors）的视角编的；你要算的是给股东的现金流（cash flows to equity），所以利息费用必须从净利润里剥出来再加回去。</p>
+<h2>逐页幻灯（中文在上，英文原文在下）<span class="en">Slide by slide</span></h2>
+<div class="slide" id="s1">
+<h3><span class="slide-no">幻灯 1</span>第 4A 讲：现金流量表的比较<span class="en">SESSION 4A: CASH FLOW STATEMENT COMPARISONS</span></h3>
+<div class="zh"><p>课程封面。本讲是「Accounting for Finance」（给财务报表使用者开的会计课）的第 4A 讲，副题是「Cash Flow Statement Comparisons」——把八家形态迥异的公司的现金流量表并排摆在一起看。</p></div>
+<div class="en-block"><span class="en-label">English original</span>SESSION 4A: CASH FLOW
+STATEMENT COMPARISONS
+Accounting for Finance</div>
+</div>
+<div class="slide" id="s2">
+<h3><span class="slide-no">幻灯 2</span>现金流量表：一个生命周期视角<span class="en">Cash Flows: A Life Cycle Perspective</span></h3>
+<div class="zh"><p>Damodaran 用的还是「企业生命周期」（the corporate life cycle）这个框架，但这次看的是现金流量表。上方是两条曲线：<strong>Revenues（收入）</strong>与<strong>Earnings（盈利）</strong>随时间的走势——收入通常先见顶，盈利在后期下滑得更陡；横轴是 Time，六个分界点依次是 The Lightbulb (Idea) Moment、The Product Test、The Bar Mitzvah、The Scaling up Test、The Midlife Crisis、The End Game。</p>
+<p>下方表格把六个阶段（Start-up、Young Growth、High Growth、Mature Growth、Mature Stable、Decline）各自的经营、投资、筹资三类现金流写清楚了：</p>
+<ul><li>经营现金流：初创期「为负，因为一开始就是亏」；早期成长期「持续为负，营运资金（working capital）继续放大亏损」；高速成长期「开始转正，公司开始赚钱」；成熟成长期「越来越正，由净利润增长驱动」；成熟稳定期「为正且稳定」；衰退期「随利润下滑而下滑」。</li><li>投资现金流：初创期「巨大的投资需求」；早期成长期「投资活动继续」；高速成长期「投资增长开始放缓」；成熟成长期「投资趋于稳定」；成熟稳定期「维持性投资」；衰退期「资产出售与剥离」。</li><li>筹资现金流：初创期与早期成长期是「新股发行带来的现金流入」；高速成长期「没什么动静」；成熟成长期「开始有债务融资流入，也第一次向股东付钱」；成熟稳定期「定期发债还债，并向股东大额返还现金」；衰退期「还债，并向股东返还现金」。</li></ul>
+<p>这张图要说的是：三类现金流的<strong>符号组合</strong>，比任何单个数字都更能说明这家公司处在哪一段。一个年轻公司的经营现金流为负是正常的（亏损加上营运资金占用），一个成熟公司的经营现金流为负就是警报；反过来，成熟稳定期公司的经营现金流为正、投资趋稳、筹资持续净流出，那才是「现金牛」的标准长相。</p></div>
+<div class="en-block"><span class="en-label">English original</span>Cash Flows: A Life Cycle Perspective</div>
+<figure class="figure"><img src="../img/accounting101/session4A-p02.jpg" alt="企业生命周期图：收入与盈利曲线，加六个阶段的经营、投资、筹资现金流特征表" loading="lazy"><figcaption class="cap">这张生命周期图在论证：同一张现金流量表，在公司不同年龄段里说的是完全不同的话。上半部分是收入与盈利的曲线和六个阶段分界（灵光一现 / 产品测试 / 成人礼 / 规模化测试 / 中年危机 / 终局），下半部分把每个阶段的经营、投资、筹资三类现金流逐一写明。落点是符号组合——初创期「经营负、投资负、筹资正」，高速成长期「经营刚转正、投资仍大、筹资无动静」，成熟稳定期「经营正且稳、投资维持、筹资持续净流出」。</figcaption></figure>
+</div>
+<div class="slide" id="s3">
+<h3><span class="slide-no">幻灯 3</span>一家年轻公司：Peloton 招股书里的现金流量表（2019）<span class="en">A Young Company: Peloton's Cash Flow Statement (2019) in its Prospectus</span></h3>
+<div class="zh"><p>Peloton 是典型的「年轻公司」，它把招股书里的现金流量表直接贴了出来。截至 6 月 30 日的三个财年（2017 / 2018 / 2019），单位<strong>百万美元</strong>。</p>
+<p>经营活动：净亏损 (71.1) / (47.9) / (195.6)。加回的非现金项目里，最大的一笔是股权激励（SBC）10.3 / 8.5 / 89.5，其次是折旧与摊销 3.7 / 6.6 / 21.7、长期资产减值 0.2 / 0.7 / 0.5、债务发行成本摊销 0.1 / 0.3 / 0.3、有价证券折价摊销 无 / 无 / (2.2)。营运资本（working capital）的变动：应收账款 (3.6) / (4.1) / (9.1)，存货 (5.0) / (9.6) / (111.3)，预付费用及其他流动资产 (1.0) / (12.1) / (30.3)，其他资产 (1.1) / 1.4 / (5.5)；反过来，应付账款及应计费用 22.1 / 41.0 / 117.3，客户押金及递延收入 19.0 / 63.0 / 2.2，其他负债 7.8 / 1.9 / 13.8。<strong>经营现金流净额 (18.6) / 49.7 / (108.6)</strong>——三年加起来仍然是负的。</p>
+<p>投资活动：购置厂房设备 (10.2) / (28.0) / (83.0)；2019 年另外买进有价证券 (249.8)、到期收回 36.0、权益法投资的现金支出 (0.6)；2018 年还收购了一家企业 (28.7)。<strong>投资活动净现金流 (10.2) / (56.7) / (297.5)</strong>。</p>
+<p>筹资活动：发行可赎回可转换优先股净额 315.6 / 无 / 539.1；回购普通股及可赎回可转换优先股 (170.0) / 无 / (130.3)；信用额度借款所得 10.5 / 无 / 无；偿还债务 (13.0) / (3.1) / 无；债务发行成本 (0.2) / (1.2) / (0.9)；行使股票期权所得 0.7 / 7.4 / 9.3。<strong>筹资活动净现金流入 143.6 / 3.1 / 417.2</strong>。</p>
+<p>汇率变动的影响 无 / 无 / 0.2；现金净变动 114.8 / (3.9) / 11.3；期初现金、现金等价物及受限制现金 40.7 / 155.5 / 151.6；<strong>期末现金 155.5 / 151.6 / 163.0</strong>。补充披露里还有：支付的利息 0.2 / 0.3 / 1.1；已计提未付的厂房设备 0.4 / 4.3 / 12.6；2019 年的 build-to-suit 厂房资产 147.1；资本化为软件开发成本的股权激励 无 / 0.3 / 0.8。</p>
+<p>这张表把「年轻公司」的现金流讲得干干净净：<strong>经营现金流是负的（亏损加上营运资本被增长吃掉），投资现金流更负（要建厂、要囤货），现金缺口全部靠发行优先股来填</strong>——2019 年单是优先股就带来 539.1。期末现金 163.0 不多不少，但那 147.1 的 build-to-suit 厂房背后还挂着一整套未来的租金义务；第 5A 讲讨论经营租赁资本化时，Peloton 那张 Adjusted EBITDA 对账表里的「与定制建设义务相关的土地租赁费」，讲的就是同一件事。</p></div>
+<div class="en-block"><span class="en-label">English original</span>A Young Company: Peloton’s Cash Flow
+Statement (2019) in its Prospectus</div>
+<figure class="figure"><img src="../img/accounting101/session4A-p03.jpg" alt="Peloton 招股书现金流量表：经营、投资、筹资三类现金流与期末现金 163.0" loading="lazy"><figcaption class="cap">Peloton 招股书里的现金流量表（百万美元，2017/2018/2019 三个财年，截至 6 月 30 日）。这张表在论证年轻公司的现金流三件套：经营现金流 (18.6) / 49.7 / (108.6) 全是负的（净亏损加上营运资本占用，2019 年光存货一项就吃掉 111.3）；投资现金流 (10.2) / (56.7) / (297.5) 缺口更大（购置设备 83.0、买进有价证券 249.8）；而缺口全靠发行可赎回可转换优先股来填——2019 年 539.1，筹资净流入 417.2，期末现金 163.0。</figcaption></figure>
+</div>
+<div class="slide" id="s4">
+<h3><span class="slide-no">幻灯 4</span>一家成长型公司：Netflix 的现金流量表（2020）<span class="en">A Growth Company: Netflix's Cash Flow Statement (2020)</span></h3>
+<div class="zh"><p>Netflix 是「成长型公司」的例子，但它这张现金流量表有个反直觉的地方：<strong>净利润是正的，经营现金流却是负的</strong>。</p>
+<p>截至 12 月 31 日的三个年度（2019 / 2018 / 2017），单位<strong>千美元</strong>。经营部分：净利润 $1,866,916 / $1,211,242 / $558,929；加回项里最大的一行是「流媒体内容资产的增加」(13,916,683) / (13,043,437) / (9,805,763)，其次是「流媒体内容资产的摊销」9,216,247 / 7,532,088 / 6,197,817 和「流媒体内容负债的变动」(694,011) / 999,880 / 900,006；折旧与摊销 103,579 / 83,157 / 71,911，股权激励 405,376 / 320,657 / 182,209，其他非现金项目 228,230 / 81,640 / 117,864，长期债务汇兑重估损失（收益）(45,576) / (73,953) / 140,790，递延所得税 (94,443) / (85,520) / (208,688)。经营性资产与负债的变动：其他流动资产 (252,113) / (200,192) / (234,090)，应付账款 96,063 / 199,198 / 74,559，应计费用及其他负债 157,778 / 150,422 / 114,337，递延收入 163,846 / 142,277 / 177,974，其他非流动资产与负债 (122,531) / 2,062 / (73,803)。<strong>经营现金流净额 (2,887,322) / (2,680,479) / (1,785,948)</strong>。</p>
+<p>投资部分：购置厂房设备 (253,035) / (173,946) / (173,302)；其他资产变动 (134,029) / (165,174) / (60,409)；2017 年另有短期投资的买入 (74,819)、卖出 320,154、到期 22,705。<strong>投资活动净现金流 (387,064) / (339,120) / 34,329</strong>。</p>
+<p>筹资部分：发行债务所得 4,469,306 / 3,961,852 / 3,020,510；债务发行成本 (36,134) / (35,871) / (32,153)；发行普通股所得 72,490 / 124,502 / 88,378；其他筹资活动 无 / (1,956) / 255。<strong>筹资活动净现金流入 4,505,662 / 4,048,527 / 3,076,990</strong>。</p>
+<p>汇率变动的影响 469 / (39,682) / 29,848；现金净增加 1,231,745 / 989,246 / 1,355,219；期初现金 3,812,041 / 2,822,795 / 1,467,576；<strong>期末现金 5,043,786 / 3,812,041 / 2,822,795</strong>。补充披露：支付的所得税 400,658 / 131,069 / 113,591，支付的利息 599,132 / 375,831 / 213,313。</p>
+<p>为什么一家赚钱的公司经营现金流是负的？因为 Netflix 把内容支出<strong>记在了经营活动里</strong>：内容资产的采购是真金白银的现金流出，可内容本身被记成资产，于是利润表上并没有当期对应的费用（它通过摊销慢慢进利润表）。结果就是：净利润为正、经营现金流为负、<strong>缺口靠发债来填</strong>——三年发行债务所得分别是 30.2 亿、39.6 亿、44.7 亿美元，支付的利息也从 2.13 亿美元涨到 5.99 亿美元。这就是成长公司的现金流长相：股东权益在长，债也在长，账上的现金有一部分是借来的。</p></div>
+<div class="en-block"><span class="en-label">English original</span>A Growth Company: Netflix’s Cash Flow
+Statement (2020)</div>
+<figure class="figure"><img src="../img/accounting101/session4A-p04.jpg" alt="Netflix 现金流量表：内容资产增加导致经营现金流为负，靠发债补缺口" loading="lazy"><figcaption class="cap">Netflix 现金流量表（千美元，2019/2018/2017 三个年度，截至 12 月 31 日）。这张表在论证成长公司的现金流长什么样：净利润 $1,866,916 是正的，&lt;strong&gt;经营现金流却是 (2,887,322)&lt;/strong&gt;——因为流媒体内容资产的采购 (13,916,683) 被记进了经营活动；投资活动只有 (387,064)，缺口全靠每年 30 到 45 亿美元的债务发行（2019 年 4,469,306）来补，期末现金才从 3,812,041 涨到 5,043,786。</figcaption></figure>
+</div>
+<div class="slide" id="s5">
+<h3><span class="slide-no">幻灯 5</span>一家成熟公司：可口可乐的现金流量表<span class="en">A Mature Company: Coca Cola's Cash Flow Statement</span></h3>
+<div class="zh"><p>成熟公司的现金流长什么样？可口可乐这张表（2019 / 2018 / 2017 三列，单位<strong>百万美元</strong>）给出了一个标准答案。</p>
+<p>经营部分：合并净利润 $8,985 / $6,476 / $1,283；折旧与摊销 1,365 / 1,086 / 1,260；股权激励 201 / 225 / 219；递延所得税 (280) / (413) / (1,252)；权益法投资收益（扣除收到的股息）(421) / (457) / (628)；汇兑调整 91 / (50) / 292；重大利得与损失净额 (467) / 743 / 1,459；其他营业费用 127 / 558 / 1,218；其他项目 504 / 699 / (252)；经营性资产与负债净变动 366 / (1,240) / 3,442。<strong>经营现金流净额 $10,471 / $7,627 / $7,041</strong>——稳定、为正、还在增长。</p>
+<p>投资部分：购买投资 (4,704) / (7,789) / (17,296)，处置投资所得 6,973 / 14,977 / 16,694；收购业务、权益法投资及非上市证券 (5,542) / (1,263) / (3,809)，处置上述资产所得 429 / 1,362 / 3,821；购置厂房设备 (2,054) / (1,548) / (1,750)，处置厂房设备所得 978 / 248 / 108；其他投资活动 (56) / (60) / (80)。<strong>投资活动净额 (3,976) / 5,927 / (2,312)</strong>。</p>
+<p>筹资部分：发行债务 23,009 / 27,605 / 29,926，偿还债务 (24,850) / (30,600) / (28,871)；发行股票 1,012 / 1,476 / 1,595，回购库存股 (1,103) / (1,912) / (3,682)；<strong>股息 (6,845) / (6,644) / (6,320)</strong>；其他筹资活动 (227) / (272) / (95)。<strong>筹资活动净额 (9,004) / (10,347) / (7,447)</strong>。</p>
+<p>汇率变动的影响 (72) / (262) / 241；现金净变动 (2,581) / 2,945 / (2,477)；期初现金 9,318 / 6,373 / 8,850；期末（现金、现金等价物及受限制现金）6,737 / 9,318 / 6,373；减去期末受限制现金 257 / 241 / 271；<strong>期末现金及现金等价物 $6,480 / $9,077 / $6,102</strong>。</p>
+<p>成熟公司的三件事在这张表里一目了然：其一，<strong>经营现金流稳定在 70 亿到 105 亿美元之间</strong>，三年合计 25,139 百万美元；其二，钱主要不是还给股东就是拿去还债——三年股息合计 19,809、回购合计 6,697，两项加起来 26,506 百万美元，<strong>比三年经营现金流还多</strong>，于是账上的现金从 8,850 一路降到 6,480；其三，2019 年发债 23,009、还债 24,850，净还款 1,841——成熟公司在缓慢去杠杆。</p></div>
+<div class="en-block"><span class="en-label">English original</span>A Mature Company: Coca Cola’s Cash Flow
+Statement</div>
+<figure class="figure"><img src="../img/accounting101/session4A-p05.jpg" alt="可口可乐现金流量表：稳定的经营现金流、大额股息与回购、现金余额下降" loading="lazy"><figcaption class="cap">可口可乐现金流量表（百万美元，2019/2018/2017）。这张表在论证成熟公司的现金流三件套：经营现金流稳定在 $10,471 / $7,627 / $7,041；三年股息 19,809 加回购 6,697，合计 26,506 百万美元，&lt;strong&gt;超过了三年经营现金流 25,139&lt;/strong&gt;；于是期末现金从期初的 9,318 降到 6,737（扣除受限制现金后为 6,480）。</figcaption></figure>
+</div>
+<div class="slide" id="s6">
+<h3><span class="slide-no">幻灯 6</span>一家正在老化的公司：丰田<span class="en">An Aging Company: Toyota</span></h3>
+<div class="zh"><p>丰田是「正在老化的公司」。这张表的单位是<strong>百万日元</strong>（Yen in millions），两列分别是 FY2019（截至 2019 年 3 月 31 日）与 FY2020（截至 2020 年 3 月 31 日）。</p>
+<p>经营部分：净利润 1,985,587 / 2,142,329；折旧 1,792,375 / 1,605,383；坏账与信用损失准备 80,065 / 142,982；养老金与遣散费净额 31,645 / 15,699；固定资产处置损失 35,902 / 56,913；证券未实现损失（收益）339,472 / 20,082；递延所得税 (86,594) / 192,147；权益法核算的被投资单位收益 (360,066) / (271,152)；经营性资产与负债及其他变动 (51,789) / (313,740)。<strong>经营现金流净额 3,766,597 / 3,590,643</strong>。</p>
+<p>投资部分——这一栏最值得看：<strong>新增金融应收款 (15,884,610) / (16,896,588)</strong>，收回及处置金融应收款所得 14,859,103 / 15,667,462；新增自有固定资产（不含出租设备）(1,452,725) / (1,407,832)；新增出租给他人的设备 (2,286,162) / (2,187,299)；处置固定资产所得 65,437 / 48,751，处置出租设备所得 1,385,074 / 1,391,215；买入有价证券及证券投资 (1,840,355) / (2,413,087)，卖出及到期所得 2,698,798 / 2,370,406；对联营公司的追加投资（扣除取得现金）5,010 / (14,763)；投资及其他资产变动 (246,811) / 290,874。<strong>投资活动净现金流 (2,697,241) / (3,150,861)</strong>。</p>
+<p>筹资部分：发行长期债务 5,000,921 / 5,691,499，偿还长期债务 (4,442,232) / (4,424,923)；短期借款增加 164,282 / 291,623；支付给丰田汽车公司类别股东（class shareholders）的股息 (8,690) / (11,186)，支付给普通股股东的股息 (636,116) / (618,801)，支付给非控制性权益的股息 (69,367) / (54,945)；库存股再发行（回购）(549,637) / (476,129)。<strong>筹资活动净额 (540,839) / 397,138</strong>。</p>
+<p>汇率变动的影响 (41,641) / (131,245)；现金净增加 486,876 / 705,675；期初现金 3,219,639 / 3,706,515；<strong>期末现金 3,706,515 / 4,412,190</strong>。</p>
+<p>老化公司的两张面孔在这张表里同时出现：<strong>制造业务的现金流是稳的</strong>——经营现金流 3,590,643 连续两年在 3.6 万亿日元上下；<strong>金融业务的现金流是巨大的</strong>——光是新增金融应收款就有 16,896,588，收回 15,667,462，一进一出几乎抵平，投资活动看上去像个巨大的坑。同时公司在还债（FY2020 发债 5,691,499、还债 4,424,923，净增 1,266,576），也在给股东分钱（普通股股息 618,801 加库存股回购 476,129，合计约 1.09 万亿日元）。</p></div>
+<div class="en-block"><span class="en-label">English original</span>An Aging Company: Toyota</div>
+<figure class="figure"><img src="../img/accounting101/session4A-p06.jpg" alt="丰田 FY2020 现金流量表：金融应收款的大额进出、稳定的经营现金流与股东回报" loading="lazy"><figcaption class="cap">丰田现金流量表（百万日元，FY2019 / FY2020 两个财年，截至 3 月 31 日）。这张表在论证「老化公司」的两副面孔：制造主业稳定——经营现金流 3,766,597 与 3,590,643；但金融业务把整张表撑大——&lt;strong&gt;新增金融应收款 16,896,588 对收回及处置所得 15,667,462&lt;/strong&gt;，投资活动净流出 3,150,861。公司一边净增债务 1,266,576，一边付股息与回购约 1.09 万亿日元，期末现金从 3,706,515 增至 4,412,190。</figcaption></figure>
+</div>
+<div class="slide" id="s7">
+<h3><span class="slide-no">幻灯 7</span>行业与板块的差异<span class="en">Sector and Industry Differences</span></h3>
+<div class="zh"><p>这一页是本讲的「行业差异」小结，一共三句：</p>
+<ul><li>现金流量表也许是四张财务报表中最直接的一张，因为它建立在现金流入与现金流出之上；因此它也是&lt;strong&gt;最不容易被会计游戏（accounting game playing）影响&lt;/strong&gt;的一张。</li><li>这张表的目标也许是解释现金余额为什么会变动，但它同时也是&lt;strong&gt;估算现金流所需的全部信息的存放处&lt;/strong&gt;。</li><li>利润表与现金流量表对公司财务状况给出相互矛盾的信息并不罕见，但两者之间&lt;strong&gt;持续存在的一致差异&lt;/strong&gt;，可能就是会计出问题的信号。</li></ul>
+<p>译者补一句：前面这几张表已经把这三句话演了一遍——可口可乐 2019 年净利润 8,985 对应经营现金流 10,471（差在折旧摊销与营运资本变动），Netflix 净利润 1,866,916 却对应经营现金流 (2,887,322)（差在内容支出被记进了经营活动）。当利润和现金长期背离时，你该怀疑的是口径，不是生意。</p></div>
+<div class="en-block"><span class="en-label">English original</span>Sector and Industry Differences
+
+¨ The statement of cash flows is perhaps the most direct
+  of financial statements, since it is based upon cash flows
+  in and cash flows out. It is thus the one statement that
+  accounting game playing affects the least.
+¨ While the objective of the statement might be explaining
+  why the cash balance changes, it is the repository for all
+  of the items needed to estimate cash flows.
+¨ While it is not uncommon for income statements and
+  cash flows to send divergent messages about a firm’s
+  financial well being, consistent differences between the
+  two can be a indicator of accounting problems.</div>
+</div>
+<div class="slide" id="s8">
+<h3><span class="slide-no">幻灯 8</span>一家资源型公司：道达尔（Total，2019）<span class="en">A Commodity Company: Total in 2019</span></h3>
+<div class="zh"><p>资源型公司道达尔（Total）的现金流量表。表中单位是 <strong>$M（百万美元）</strong>，三列是 2019 / 2018 / 2017。</p>
+<p>经营部分：合并净利润 11,438 / 11,550 / 8,299；折旧、折耗、摊销与减值 16,401 / 14,584 / 16,611；非流动负债、估值备抵与递延税项 (58) / (887) / (384)；资产处置利得损失 (614) / (930) / (2,598)；未分配的联营公司权益收益 (1,083) / (826) / 42；营运资本变动 (1,718) / 769 / 827；其他变动净额 319 / 443 / (478)。<strong>经营现金流 24,685 / 24,703 / 22,319</strong>。</p>
+<p>投资部分：无形资产与固定资产的添置 (11,810) / (17,080) / (13,767)；收购子公司（扣除取得的现金）(4,748) / (3,379) / (800)；对权益法公司及其他证券的投资 (1,618) / (1,108) / (1,368)；非流动贷款增加 (1,061) / (618) / (961)；<strong>总支出 (19,237) / (22,185) / (16,896)</strong>；处置无形资产与固定资产所得 527 / 3,716 / 1,036，处置子公司所得 158 / 12 / 2,909，处置非流动投资所得 349 / 1,444 / 294，偿还非流动贷款 1,026 / 2,067 / 1,025；<strong>总处置收入 2,060 / 7,239 / 5,264</strong>。<strong>投资活动净现金流 (17,177) / (14,946) / (11,632)</strong>。</p>
+<p>筹资部分：股份的发行（回购）——母公司股东 452 / 498 / 519，库存股 (2,810) / (4,328) / 无；股息——母公司股东 (6,641) / (4,913) / (2,643)，非控制性权益 (115) / (97) / (141)；永续次级票据的支付 (371) / (325) / (276)；与非控制性权益的其他交易 10 / (622) / (4)；非流动债务净发行（偿还）8,131 / 649 / 2,277；流动借款增加（减少）(5,829) / (3,990) / (7,175)；流动金融资产与负债变动 (536) / (797) / 1,903。<strong>筹资活动净现金流 (7,709) / (13,925) / (5,540)</strong>。</p>
+<p>现金净变动 (201) / (4,168) / 5,147；汇率影响 (354) / (1,110) / 3,441；期初现金 27,907 / 33,185 / 24,597；<strong>期末现金 27,352 / 27,907 / 33,185</strong>。</p>
+<p>资源型公司的三个特征都在这张表里：其一，<strong>经营现金流是净利润的两倍多</strong>（2019 年 24,685 对 11,438），差额主要来自折旧、折耗、摊销与减值 16,401——油井与油气资产的折旧规模巨大，这笔非现金加回才是资源型公司现金牛的真正来源；其二，资本开支常年维持在百亿美元量级（2018 年高达 17,080）；其三，股东回报排在最后：股息 6,641、回购 2,810，同期还净偿还了流动借款 5,829。</p></div>
+<div class="en-block"><span class="en-label">English original</span>A Commodity Company: Total in 2019</div>
+<figure class="figure"><img src="../img/accounting101/session4A-p08.jpg" alt="道达尔现金流量表：经营现金流约为净利润两倍、巨额资本开支与股东回报" loading="lazy"><figcaption class="cap">道达尔合并现金流量表（百万美元，2019/2018/2017）。这张表在论证资源型公司的现金流形态：&lt;strong&gt;经营现金流 24,685 是净利润 11,438 的两倍多&lt;/strong&gt;，差额主要来自折旧、折耗、摊销与减值 16,401；而资本开支 11,810 常年维持在百亿美元量级，股东回报（股息 6,641、回购 2,810）排在最后——现金优先去投油田和还债。</figcaption></figure>
+</div>
+<div class="slide" id="s9">
+<h3><span class="slide-no">幻灯 9</span>一家金融服务公司：汇丰（HSBC，2019）<span class="en">A Financial Service Company: HSBC in 2019</span></h3>
+<div class="zh"><p>银行这类金融服务公司的现金流量表，结构和工业公司完全不是一回事。表中单位是 <strong>$m（百万美元）</strong>，三列是 2019 / 2018 / 2017。</p>
+<p>经营部分从<strong>税前利润</strong> 13,347 / 19,890 / 17,167 起算，加减项一大串：折旧、摊销与减值 10,519 / 1,933 / 1,862（2019 年含大额减值），投资活动净收益 (399) / (126) / (1,152)，应占联营与合营企业利润 (2,354) / (2,536) / (2,375)，处置附属公司、业务、联营与合营的利得 (929) / 无 / (79)，预期信用损失变动（未扣除收回部分）3,012 / 2,280 / 无，贷款减值损失（未扣除收回部分）无 / 无 / 2,603，计提准备（含养老金）2,423 / 1,944 / 917，股权激励费用 478 / 450 / 500，计入税前利润的其他非现金项目 (2,297) / (1,303) / (381)，汇兑差额抵销 (3,742) / 4,930 / (20,757)。</p>
+<p>真正决定银行经营现金流的是下面这组「经营性资产与负债的变动」：净交易性证券与衍生品变动 (18,910) / 20,855 / (13,615)；<strong>对银行与客户的贷款及垫款变动 (53,760) / (44,071) / (108,984)</strong>；非交易性逆回购协议变动 (7,390) / (25,399) / (37,281)；指定或强制以公允价值计量的金融资产变动 (2,308) / (1,515) / (5,303)；其他资产变动 (21,863) / 6,766 / (6,570)；<strong>银行存款与客户账户变动 79,163 / (5,745) / 102,457</strong>；非交易性回购协议变动 (25,540) / 35,882 / 41,044；已发行债务证券变动 19,268 / 18,806 / (1,369)；指定以公允价值计量的金融负债变动 20,068 / 4,500 / 8,508；其他负债变动 23,124 / (2,187) / 13,514；收到联营企业股息 633 / 910 / 740；设定受益计划缴款 (533) / (332) / (685)；已付税款 (2,267) / (3,417) / (3,175)。<strong>经营现金流净额 29,743 / 32,515 / (12,414)</strong>。</p>
+<p>投资部分：购买金融资产 (445,907) / (399,458) / (357,264)，出售与到期收回 413,186 / 386,056 / 418,352；厂房设备的净现金流 (1,343) / (1,196) / (1,167)；客户与贷款组合的购买（处置）净额 1,118 / (204) / 6,756；无形资产的净投资 (2,289) / (1,848) / (1,285)；处置附属公司、业务、联营与合营的净现金流 (83) / 4 / 165。<strong>投资活动净额 (35,318) / (16,646) / 65,557</strong>。</p>
+<p>筹资部分：发行普通股股本及其他权益工具 无 / 6,001 / 5,196；注销股份 (1,000) / (1,998) / (3,000)；为做市与投资目的买卖自家股票净额 141 / 133 / (67)；赎回优先股及其他权益工具 无 / (6,078) / 无；偿还次级贷款资本 (4,210) / (4,077) / (3,574)；支付母公司股东与非控制性权益的股息 (9,773) / (10,762) / (9,005)。<strong>筹资活动净额 (14,842) / (16,781) / (10,450)</strong>。</p>
+<p>现金净变动 (20,417) / (912) / 42,693；期初现金 312,911 / 323,718 / 263,324；汇兑差额 1,248 / (9,895) / 17,701；<strong>期末现金及现金等价物 293,742 / 312,911 / 323,718</strong>。表末还列了期末现金的构成：央行现金及结余 154,099 / 162,843 / 180,624，在收款项 4,956 / 5,787 / 6,628，一个月以内的对银行贷款及垫款 41,626 / 39,460 / 61,973，一个月以内的对银行逆回购协议 65,370 / 74,702 / 58,850，三个月的国库券、其他票据与存款证 20,132 / 21,685 / 11,593，现金抵押品与净额结算账户 12,376 / 14,075 / 10,900，减：在途划转款项 (4,817) / (5,641) / (6,850)。</p>
+<p>看银行这张表，<strong>「经营」两个字得重新理解</strong>：银行把客户存款的增减（2019 年 +79,163）和对客户的贷款发放 (-53,760) 都算进了经营活动，于是 2019 年 29,743 的经营现金流看着很健康，其实背后是存款增长撑起来的；同期投资活动里「买入金融资产 (445,907) 对卖出与到期收回 413,186」这四千多亿美元级别的买进卖出，才是这家银行真正的资金运作规模。拿工业公司那套「经营现金流 = 生意挣来的钱」去读银行，会读错。</p></div>
+<div class="en-block"><span class="en-label">English original</span>A Financial Service Company: HSBC in
+    2019</div>
+<figure class="figure"><img src="../img/accounting101/session4A-p09.jpg" alt="汇丰 2019 年合并现金流量表：客户存款与贷款变动主导经营现金流，投资活动规模巨大" loading="lazy"><figcaption class="cap">汇丰合并现金流量表（百万美元，2019/2018/2017）。这张表在论证金融公司的现金流结构完全不同：客户存款变动 +79,163 与对客户贷款及垫款变动 -53,760 都被塞进经营活动，于是经营现金流 29,743 主要由「吸收存款、放出贷款」的规模撑起，而不是由利润撑起；投资活动里买入金融资产 (445,907) 对卖出及到期收回 413,186 的往返，才是银行真正的资金运作量级。</figcaption></figure>
+</div>
+<div class="slide" id="s10">
+<h3><span class="slide-no">幻灯 10</span>一家制药公司：Dr. Reddy's Lab（2019）<span class="en">A Pharmaceutical Firm: Dr. Reddy's Lab in 2019</span></h3>
+<div class="zh"><p>制药公司 Dr. Reddy's Lab 的现金流量表。表头写明单位为<strong>百万印度卢比</strong>（All amounts in Indian Rupees millions），两列是截至 2020 年 3 月 31 日止年度与截至 2019 年 3 月 31 日止年度。</p>
+<p>经营部分从税前利润 27,758 / 17,007 起算：折旧与摊销 7,892 / 7,806；其他无形资产减值损失 无 / 24；权益结算的股权激励费用 521 / 389；以公允价值计量且变动计入损益的金融工具公允价值收益 (821) / (669)；汇兑损失（收益）净额 (229) / 2,455；处置固定资产与无形等的（利润）损失 135 / (400)；利息收入 (856) / (812)；财务费用 478 / 568；信用损失准备净额 93 / 212；可疑预付款准备净额 2 / (351)；来自子公司、合营企业及其他实体的股息 (397) / 无；与非流动投资相关的准备计提（转回）无 / 359。经营性资产与负债的变动：应收账款 (10,927) / 4,547；存货 (1,748) / (1,588)；应付账款 368 / (201)；其他资产与其他负债净额 892 / 663。<strong>经营活动产生的现金 23,161 / 30,009</strong>；减去已付所得税净额 (4,769) / (2,388)，<strong>经营现金流净额 18,392 / 27,621</strong>。</p>
+<p>投资部分：处置固定资产所得 58 / 879；购置固定资产 (4,262) / (5,775)；购置其他无形资产 (476) / (753)；<strong>购买投资 (122,726) / (77,267)</strong>，出售投资所得 109,186 / 74,786；子公司偿还的贷款与垫款 343 / 1,800；收到的股息收入 397 / 无；收到的利息收入 588 / 821。<strong>投资活动净现金流 (16,892) / (5,509)</strong>。</p>
+<p>筹资部分：发行权益股份（含库存股）所得 4 / 无；短期贷款与借款净增加（偿还）4,630 / (17,049)；长期贷款与借款净偿还 (1,805) / 无；支付租赁负债的本金部分 (155) / 无；支付股息（含公司股息税）(3,914) / (4,002)；回购库存股 (474) / (535)；已付利息 (527) / (645)。<strong>筹资活动净现金流 (2,241) / (22,231)</strong>。</p>
+<p>现金净变动 (741) / (119)；汇率变动的影响 无 / 44；期初现金 1,132 / 1,207；<strong>期末现金 391 / 1,132</strong>。</p>
+<p>这张表最值得看的是投资部分：<strong>「购买投资 (122,726) 对卖出投资所得 109,186」</strong>——这一进一出就吃掉 13,540 百万卢比，是公司现金活动的主角，远大于资本开支 4,262 与 476。翻译成大白话：这家公司赚的钱没有躺在账上，而是变成了金融资产；同时应收账款增加 10,927、存货增加 1,748，又把 12,675 百万卢比锁进了营运资本，所以 2020 财年账上只剩 391 百万卢比现金（2019 财年 1,132）。这就是第 3A 讲讲过的「资产端形态」的现金版本：制药公司的钱在投资科目里，不在工厂里。</p></div>
+<div class="en-block"><span class="en-label">English original</span>A Pharmaceutical Firm: Dr. Reddy’s Lab in
+2019</div>
+<figure class="figure"><img src="../img/accounting101/session4A-p10.jpg" alt="Dr. Reddy's Lab 现金流量表：巨额投资买卖、营运资本占用与极低的期末现金" loading="lazy"><figcaption class="cap">Dr. Reddy's Lab 现金流量表（百万印度卢比，截至 2020 年 3 月 31 日与 2019 年 3 月 31 日两个年度）。这张表在论证制药公司的钱去了哪里：经营现金流 18,392 看着不错，投资活动里真正的却是&lt;strong&gt;购买投资 (122,726) 对卖出投资所得 109,186&lt;/strong&gt;，资本开支只有 4,262；再加上应收账款增加 10,927、存货增加 1,748 占住了营运资本，2020 财年末现金只剩 391 百万卢比。</figcaption></figure>
+</div>
+<div class="slide" id="s11">
+<h3><span class="slide-no">幻灯 11</span>小结（Bottom Line）<span class="en">Bottom Line</span></h3>
+<div class="zh"><p>最后两段是全讲的落点：</p>
+<ul><li>&lt;strong&gt;① 现金流量表是站在股权投资者（equity investors）的角度看现金的。&lt;/strong&gt;因此，如果你要计算给股权投资者的现金流（cash flows to equity investors），你需要的全部信息都应该在这张表上；你也应该能看出股权投资者到底拿走了多少现金。</li><li>&lt;strong&gt;② 如果你要估算付息之前的现金流&lt;/strong&gt;（prior to debt payments），可以从现金流量表出发——但你必须把利息费用追溯出来（净利润里已经把它净额扣掉了），然后加回去。</li></ul>
+<p>翻回前面八张表，这两句话正是读表的钥匙：可口可乐的经营现金流 10,471 是<strong>已经扣过利息</strong>的数；Netflix 的经营现金流 (2,887,322) 里扣掉的是巨额内容支出（当年内容资产增加 13,916,683），而不是利息（利息另计 599,132）；丰田则把金融应收款的新增与回收整块塞在投资活动里（新增 16,896,588、回收 15,667,462）。<strong>同一句「给股东的现金流」，在八家公司身上的算法完全不同</strong>——Damodaran 让你自己动手把每张表改成股东视角，而不是照抄报表上的数字。</p></div>
+<div class="en-block"><span class="en-label">English original</span>Bottom Line
+
+¨   The statement of cash flows looks at cash flows through
+    the eyes of the equity investors in a business.
+    ¤ Thus, if you are trying to compute cash flows to equity investors,
+      all of the information you will need should be on the statement.
+    ¤ You should also be able to see what equity investors received as
+      cash flows.
+¨   If your objective is to estimate cash flows, prior to debt
+    payments, you can start with the statement of cash flows
+    but you have to trace interest expenses (netted out to
+    get to net income) and add them back.</div>
+</div>
+<h2>课后测试与答案<span class="en">Post-class test &amp; solutions</span></h2>
+<p class="meta">题目与选项为中英对照；答案与解析附在每题下方。</p>
+<figure class="figure"><img src="../img/accounting101/session4A-test-p01.jpg" alt="Navistar / Nordstrom / Google 三家公司的现金流量表数据表" loading="lazy"><figcaption class="cap">课后题数据表：Navistar（卡车制造）、Nordstrom（零售）、Google（科技）三家公司同一口径的现金流量表拆解（金额保留两位小数）。分四块：Cash from Ops.（净利润 184.00 / 496.00 / 31,534.00；折旧摊销合计 136.00 / 844.00 / 12,678.00；股权激励 22.00 / 69.00 / 11,842.00；应收账款、存货、应付账款、预收收入、所得税与其他经营性资产净变动各一行；合计 Cash from Ops. 522.00 / 1,236.00 / 55,337.00）；Cash from Investing.（资本支出 (250.00) / (935.00) / (24,180.00)、处置厂房设备 16.00、现金收购 (2,623.00)、可交易与权益证券投资 38.00 / 1,829.00、其他投资活动 2.00 / 26.00 / 1,031.00；合计 Cash from Investing. (194.00) / (909.00) / (23,943.00)）；Cash from Financing.（Total Debt Issued 1,310.00 / 507.00 / 1,898.00，Total Debt Repaid (1,122.00) / (500.00) / (2,174.00)，发行普通股 5.00 / 29.00 / 无，回购普通股 无 / (227.00) / (27,142.00)，Total Dividends Paid 无 / (229.00) / 无，其他筹资活动 (40.00) / (11.00) / (2,546.00)；合计 Cash from Financing. 153.00 / (431.00) / (29,964.00)）；以及汇率调整 Foreign Exchange Rate Adj. (11.00) / 无 / (275.00) 与 Net Change in Cash 470.00 / (104.00) / 1,155.00。</figcaption></figure>
+<div class="q">
+<p class="qno">第 1 题</p>
+<p class="qzh">对这三家公司分别估算：非现金营运资金（non-cash working capital）的变动对经营现金流产生了什么影响（是在加还是在减）？这意味着什么？</p>
+<p class="meta">For each of the three companies, estimate the effect that changes in non-cash working capital are having (or taking away) on operating cash flows. What are the implications?</p>
+<div class="ans"><strong>答案：Navistar (6.00) / Nordstrom 210.00 / Google (1,662.00)</strong> 营运资金变动对经营现金流的影响：Navistar (6.00)、Nordstrom 210.00、Google (1,662.00)（百万美元）。
+<p>Navistar 与 Google 的非现金营运资金增加，合计造成负的现金流；Nordstrom 则压低了非现金营运资金，创造了正的现金流。（Google 现金流量表里的税款增加没有计入营运资金。）含义很简单：如果 Nordstrom 能继续控制住营运资金、甚至让它下降，它的现金流就会受益。数据（百万美元，Navistar / Nordstrom / Google）：应收账款变动 141.00 / 82.00 / (1,844.00)；存货变动 103.00 / 30.00 / 无；应付账款变动 (250.00) / 98.00 / 182.00；预收收入变动 无 / 无 / 275.00；营运资金变动对现金流的影响 (6.00) / 210.00 / (1,662.00)。</p>
+<div class="en-block"><span class="en-label">English original</span>1. Navistar and Google saw increases in non-cash working capital, leading to
+     negative cash flows in the aggregate, but Nordstrom decreased non-cash
+     working capital, creating a positive cash flow. (I did not include the tax
+     increase in Google's CF statement in working capital). The implications are
+     simple. If Nordstrom can continue to keep working capital in check or
+     decrease it, its cash flows will benefit.
+
+                                  Navistar    Nordstrom Google
+        Change in Acc. Receivable $ 141.00 $       82.00 $ (1,844.00)
+        Change In Inventories     $ 103.00 $       30.00 -
+        Change in Acc. Payable    $ (250.00) $     98.00 $ 182.00
+        Change in Unearned Rev.                          $ 275.00
+        CF effect of Changein WC $     (6.00) $ 210.00 $ (1,662.00)</div>
+</div>
+</div>
+<div class="q">
+<p class="qno">第 2 题</p>
+<p class="qzh">在三家的经营现金流里，都把股权激励（stock-based compensation）加了回来。这样做的理由是什么？</p>
+<p class="meta">Under operating cash flows, each company is adding back stock-based compensation. What is the rationale for doing so?</p>
+<ul class="opts">
+<li><strong>a.</strong> 股权激励不是一项费用。 <span class="en">Stock based compensation is not an expense</span></li>
+<li><strong>b.</strong> 股权激励不是会计费用，但它是一项现金费用。 <span class="en">Stock based compensation is not an accounting expense, but it is a cash expense</span></li>
+<li><strong>c.</strong> 股权激励是一项会计费用，但它不是现金费用。 <span class="en">Stock based compensation is an accounting expense, but it is not a cash expense</span></li>
+<li><strong>d.</strong> 股权激励属于筹资现金流，而不是经营现金流。 <span class="en">Stock based compensation is a financing cash flow, not an operating cash flow</span></li>
+<li><strong>e.</strong> 以上都不是。 <span class="en">None of the above</span></li>
+</ul>
+<div class="ans"><strong>答案：c</strong> 股权激励是一项会计费用，但它不是现金费用。
+<p>c. 股权激励是一项会计费用，但它不是现金费用。股权激励确实是一项费用，但既然它是用股份或期权来支付的，就不会影响现金流。（话虽如此，就对投资者的影响而言，它与折旧和摊销是很不一样的。）</p>
+<div class="en-block"><span class="en-label">English original</span>2. c. Stock based compensation is an accounting expense, but it is not a
+     cash expense. Stock based compensation is an expense, but since it uses
+     shares or options, it does not affect the cash flows. (That said, it is very
+     different from depreciation and amortization in its effects on investors)&gt;</div>
+</div>
+</div>
+<div class="q">
+<p class="qno">第 3 题</p>
+<p class="qzh">对这三家公司分别估算：投资现金流中有多大比重是对经营性资产（operating assets）的投资，有多大比重是对非经营性资产（non-operating assets）的投资。我们为什么要关心这个？</p>
+<p class="meta">For each of the three companies, estimate how much of the investing cash flow represents investment in operating assets and how much in non-operating assets. Why do we care?</p>
+<div class="ans"><strong>答案：Navistar (234.00) / Nordstrom (935.00) / Google (26,803.00) 对经营性资产；40.00 / 26.00 / 2,860.00 对非经营性资产</strong> 对经营性资产的投资：Navistar (234.00)、Nordstrom (935.00)、Google (26,803.00)；对非经营性资产的投资：40.00 / 26.00 / 2,860.00（百万美元）。
+<p>三家公司都在对经营性资产投资，其中 Google 投得最多；三家公司同时都减少了对非经营性资产的持有，这一组带来了正的现金流。前者（经营性资产投资）正是我们用来预测经营性指标增长时要看的东西；后者（非经营性资产投资）产生的收益会出现在营业利润线以下。数据（百万美元，Navistar / Nordstrom / Google）：资本支出 (250.00) / (935.00) / (24,180.00)；处置厂房设备 16.00 / 无 / 无；现金收购 无 / 无 / (2,623.00)；剥离 无 / 无 / 无；无形资产出售（购入）无 / 无 / 无；对经营性资产的投资 (234.00) / (935.00) / (26,803.00)；对可交易与权益证券的投资 38.00 / 无 / 1,829.00；贷款发放与收回的净（增加）减少 无 / 无 / 无；其他投资活动 2.00 / 26.00 / 1,031.00；对非经营性资产的投资 40.00 / 26.00 / 2,860.00。</p>
+<div class="en-block"><span class="en-label">English original</span>3. All three companies invested in operating assets, with Google investing the
+     most. All three companies reduced their holdings of non-operating assets,
+     creating positive cash flows from that grouping. Investments in the former
+     are what we look at in forecasting growth in operating metrics. The income
+     from investments in the latter show up below the operating income line.
+
+                                         Navistar   Nordstrom Google
+Capital Expenditure                      $ (250.00) $ (935.00) $(24,180.00)
+Sale of Property, Plant, and Equipment $      16.00            -
+Cash Acquisitions                         -          -         $ (2,623.00)
+Divestitures                              -          -              -
+Sale (Purchase) of Intangible assets      -                    -
+Investing in operating assets            $ (234.00) $ (935.00) $(26,803.00)
+Invest. in Marketable &amp; Equity Securt.   $    38.00  -         $ 1,829.00
+Net (Inc.) Dec. in Loans Originated/Sold -           -              -
+Other Investing Activities               $     2.00 $    26.00 $ 1,031.00
+Investing in non-operating assets        $    40.00 $    26.00 $ 2,860.00</div>
+</div>
+</div>
+<div class="q">
+<p class="qno">第 4 题</p>
+<p class="qzh">根据筹资现金流，对这三家公司分别估算：这一年里债务总额发生了多少变化。</p>
+<p class="meta">For each of the three companies, estimate how much total debt changed during the course of the year, based upon the financing cash flows.</p>
+<div class="ans"><strong>答案：Navistar +188.00 / Nordstrom +7.00 / Google (276.00)</strong> 债务净变动（债务带来的净现金流）：Navistar +188.00、Nordstrom +7.00、Google (276.00)（百万美元）。
+<p>Navistar 与 Nordstrom 的债务总额增加了，Google 的债务总额则减少了。数据（百万美元，Navistar / Nordstrom / Google）：Total Debt Issued 1,310.00 / 507.00 / 1,898.00；Total Debt Repaid (1,122.00) / (500.00) / (2,174.00)；债务带来的净现金流 188.00 / 7.00 / (276.00)。</p>
+<div class="en-block"><span class="en-label">English original</span>4. Navistar and Nordstrom increased their total debt, whereas Google reduce its
+     total debt.
+
+                            Navistar     Nordstrom Google
+          Total Debt Issued $ 1,310.00   $ 507.00 $ 1,898.00
+          Total Debt Repaid $ (1,122.00) $ (500.00) $ (2,174.00)
+
+Net CF from Debt    $   188.00     $     7.00    $   (276.00)</div>
+</div>
+</div>
+<div class="q">
+<p class="qno">第 5 题</p>
+<p class="qzh">对这三家公司分别估算：有多少现金以股息形式返还给了股东，有多少是以净回购（net stock buybacks）的形式返还的。这意味着什么？</p>
+<p class="meta">For each of the three companies, estimate how much was returned to stockholders in dividends and how much in net stock buybacks. What are the implications?</p>
+<div class="ans"><strong>答案：Navistar 5.00 / Nordstrom (198.00) 回购 + (229.00) 股息 / Google (27,142.00) 回购、零股息</strong> Navistar：净回购 5.00、股息 0；Nordstrom：净回购 (198.00)、股息 (229.00)；Google：净回购 (27,142.00)、股息 0（百万美元）。
+<p>Navistar 没有向股东返还任何现金，反而发行了 500 万美元的股票，这反映出它受到现金流的约束。Nordstrom 既派了股息也做了回购，两者金额大致相当。Google 没有派股息，但做了大额股票回购。股息是有粘性的——如果 Nordstrom 真需要减少分红，它会非常难；回购则不是，Google 明年可以增加回购，也可以不做，代价都很小。数据（百万美元，Navistar / Nordstrom / Google）：发行普通股 5.00 / 29.00 / 无；回购普通股 无 / (227.00) / (27,142.00)；净回购 5.00 / (198.00) / (27,142.00)；已付普通股股息 无 / (229.00) / 无；已付股息合计 无 / (229.00) / 无。</p>
+<div class="en-block"><span class="en-label">English original</span>5. Navistar returned no cash to its stockholders and issued $5 million in stock,
+   reflecting its cash flow constraints. Nordstrom returned cash in both
+   dividends and buybacks, in roughly the same amounts. Google paid no
+   dividends but did a significant stock buyback. Dividends are sticky and
+   Nordstrom will have a difficult time decreasing them, if it needed to.
+   Buybacks are not and Google can increase them or not do them next year,
+   with little consequence.
+
+                              Navistar   Nordstrom Google
+   Issuance of Common Stock   $     5.00 $    29.00 $        -
+   Repurchase of Common Stock $        - $ (227.00) $(27,142.00)
+   Net Buybacks               $     5.00 $ (198.00) $(27,142.00)
+   Common Dividends Paid                 $ (229.00)
+   Total Dividends Paid       -          $ (229.00) -</div>
+</div>
+</div>
+<div class="note"><strong>译者注</strong><br>本讲原课件正文极少，八页公司现金流量表均为截图，因此每页的中文正文是译者根据表内数字重写的「读表笔记」，数字与单位一律照原表抄录，未做换算或补算。各表单位（依表内数字判断，部分原图未标单位）：Peloton 百万美元；Netflix 千美元；Coca-Cola 百万美元（可与第 3A 讲的资产负债表对照：2019 年期末现金 6,480）；Toyota 百万日元（图中标 Yen in millions）；Total 百万美元（图中标 $M）；HSBC 百万美元（图中标 $m）；Dr. Reddy's 百万印度卢比（表头标明 "All amounts in Indian Rupees millions"）。课后题数据表中的金额保留两位小数。课件本身另有两处小出入：第 4 页标题写「Netflix's Cash Flow Statement (2020)」，而图中是 2019/2018/2017 三个年度；第 10 页标题写「Dr. Reddy's Lab in 2019」，而图中是截至 2020 年 3 月 31 日与 2019 年 3 月 31 日两个年度。</div>
+<p class="sessnav"><a href="session4.html">← 第 4 讲</a> <a href="index.html">目录</a> <a href="session5.html">第 5 讲 →</a></p>
+<p class="footer">课程来源：<a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/webcastacctg.htm">Damodaran · Corporate Finance Online Class（Accounting 101）</a><br>幻灯与课后题版权归 Aswath Damodaran / NYU Stern 所有，本站仅作教学与中文对照阅读使用。<br><a href="../index.html">← 返回站主随笔</a></p>
+</body>
+</html>

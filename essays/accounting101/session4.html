@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="这一讲处理现金流量表。Damodaran 先把表的「终极目标」讲清楚：表面上是解释现金余额这一期变了多少、为什么变；里面却还嵌着三层信息——本期到底产生了多少现金收益（cash earnings，对照利润表里的会计收益 accrual earnings）、公司把多少现金再投资到哪里去维持和扩大经营、以及从债务与股权投资者那里筹集与返还了多少现金。整张表保留正负号，并且始终是从股权投资者的视角在看现金流。
+然后按三段拆。经营段：间接法从净利润起步，加回折旧摊销与其他非现金费用，再按营运资本科目的变动加减——同样一个净利润，营运资本占用越多的公司，经营现金流越难看。投资段：投向经营性资产的钱（capex 与收购）是经营增长的引擎，用股票支付的收购不进这一段；投向非经营性资产的钱则形成另一条独立的价值来源，回报落在营业利润线以下。筹资段：还债本金属于这一段（利息才在经营段），发债与还债相抵可以互相抵消；分红与回购都让现金离开公司，也都减少股东权益，但回购对卖股与不卖股的股东效果完全不同。">
+<title>第 4 讲 · 现金流量表：现金怎么进来、怎么出去 · 会计101 中英对照 — 乔布斯研究</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600&family=Charter:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #ffffff; --text: #1a1a1a; --meta: #888888; --rule: #e0e0e0; --max-w: 720px; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: var(--bg); color: var(--text); font-family: 'Noto Serif SC','Charter',serif; font-size: 17px; line-height: 1.7; max-width: var(--max-w); margin: 0 auto; padding: 0 24px 80px; overflow-wrap: anywhere; }
+a { color: var(--text); text-decoration: underline; text-decoration-color: var(--rule); }
+a:hover { text-decoration-color: var(--text); }
+h1 { font-size: 22px; font-weight: 600; margin: 48px 0 8px; letter-spacing: -0.3px; }
+h2 { font-size: 15px; font-weight: 600; color: var(--meta); text-transform: uppercase; letter-spacing: 1px; margin: 40px 0 16px; padding-top: 24px; border-top: 1px solid var(--rule); }
+h2 .en { display: block; font-size: 14px; color: var(--meta); text-transform: none; letter-spacing: 0; font-weight: 400; font-style: italic; margin-top: 4px; }
+h3 { font-size: 17px; font-weight: 600; margin: 32px 0 12px; }
+h3 .en { display: block; font-size: 14px; color: var(--meta); font-weight: 400; font-style: italic; margin-top: 2px; }
+.back { font-size: 14px; color: var(--meta); margin-bottom: 24px; }
+.meta { font-size: 13px; color: var(--meta); margin-left: 8px; }
+p { margin: 16px 0; }
+strong { font-weight: 600; }
+em.en-source { display: block; font-family: 'Charter', serif; font-size: 14px; font-style: italic; color: var(--meta); margin: 8px 0 24px; padding-left: 12px; border-left: 2px solid var(--rule); }
+blockquote { border-left: 3px solid var(--rule); padding: 4px 0 4px 20px; margin: 24px 0; color: #555; font-style: italic; }
+.source { font-size: 13px; color: var(--meta); margin-top: 12px; }
+.byline { font-size: 14px; color: var(--meta); margin: 8px 0 32px; }
+.tag-row { margin: 16px 0 32px; }
+.tag { display: inline-block; font-size: 12px; padding: 2px 10px; background: var(--rule); border-radius: 12px; color: var(--meta); margin-right: 6px; }
+.hero { background: #f9f9f9; border-radius: 8px; padding: 24px; margin: 0 0 32px; }
+.hero h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; }
+.hero p { font-size: 15px; color: #555; line-height: 1.7; margin: 8px 0; }
+.footer { margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--rule); font-size: 13px; color: var(--meta); }
+.footer a { color: var(--meta); }
+table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+.table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 16px 0; }
+.table-wrap table { margin: 0; min-width: 420px; }
+th, td { padding: 6px 10px; border: 1px solid var(--rule); text-align: left; vertical-align: top; }
+th { background: #f5f5f5; font-weight: 600; }
+.figure { margin: 32px 0; }
+.figure img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 4px; }
+.figure .cap { font-size: 13px; color: var(--meta); margin-top: 8px; line-height: 1.5; padding-left: 12px; border-left: 2px solid var(--rule); }
+.note { background: #f9f9f9; border-left: 3px solid #d4503a; border-radius: 4px; padding: 14px 18px; margin: 24px 0; font-size: 15px; color: #555; }
+.note strong { color: var(--text); }
+ol, ul { padding-left: 24px; margin: 16px 0; }
+li { margin: 8px 0; }
+@media (max-width: 600px) {
+  body { font-size: 16px; padding: 0 18px 60px; }
+  h1 { font-size: 20px; }
+  h2 { font-size: 14px; }
+  table { font-size: 12px; }
+  th, td { padding: 4px 6px; }
+}
+</style>
+<style>
+.kicker { font-size: 13px; color: var(--meta); letter-spacing: .5px; margin: 0 0 6px; }
+h1 .en { display: block; font-size: 15px; font-weight: 400; font-style: italic; color: var(--meta); margin-top: 6px; letter-spacing: 0; }
+.video-wrap { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 6px; margin: 24px 0 8px; background: #000; }
+.video-wrap iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+.video-cap { font-size: 13px; color: var(--meta); margin: 0 0 32px; }
+.slide { margin: 0 0 8px; padding: 20px 0 4px; border-top: 1px solid var(--rule); }
+.slide:first-of-type { border-top: none; }
+.slide h3 { margin: 0 0 12px; font-size: 16px; }
+.slide h3 .slide-no { display: inline-block; font-size: 12px; font-weight: 400; color: var(--meta); border: 1px solid var(--rule); border-radius: 10px; padding: 1px 8px; margin-right: 8px; vertical-align: 2px; }
+.slide h3 .en { display: block; font-size: 13px; color: var(--meta); font-style: italic; font-weight: 400; margin-top: 4px; }
+.slide .zh { margin: 0 0 10px; }
+.slide .zh p { margin: 10px 0; }
+.slide .zh ul, .slide .zh ol { margin: 8px 0; padding-left: 22px; }
+.slide .zh li { margin: 6px 0; }
+.en-block { font-family: 'Charter', serif; font-size: 14px; line-height: 1.6; color: var(--meta); background: #fbfbfb; border-left: 2px solid var(--rule); border-radius: 0 4px 4px 0; padding: 10px 14px; margin: 10px 0 0; white-space: pre-wrap; overflow-wrap: anywhere; }
+.en-block .en-label { display: block; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: #aaa; margin-bottom: 6px; }
+.q { margin: 24px 0; padding: 0 0 4px; border-bottom: 1px solid var(--rule); }
+.q .qno { font-size: 13px; color: var(--meta); }
+.q .qzh { font-weight: 600; }
+.q ol { margin: 8px 0; padding-left: 22px; }
+.q .opts { list-style: none; padding-left: 0; margin: 10px 0; }
+.q .opts li { margin: 7px 0; font-size: 15px; line-height: 1.55; }
+.q .opts .en { color: var(--meta); font-size: 13px; font-family: 'Charter', serif; }
+.ans { background: #f9f9f9; border-left: 3px solid #3a7d5c; border-radius: 4px; padding: 12px 16px; margin: 12px 0 24px; font-size: 15px; color: #555; }
+.ans strong { color: var(--text); }
+.toc-list { list-style: none; padding: 0; margin: 24px 0 0; }
+.toc-list li { margin: 0; padding: 16px 0; border-bottom: 1px solid var(--rule); }
+.toc-list a { font-size: 17px; font-weight: 600; text-decoration: none; }
+.toc-list a:hover { text-decoration: underline; }
+.toc-list .en { display: block; font-size: 13px; font-style: italic; color: var(--meta); font-weight: 400; margin-top: 4px; }
+.toc-list .sub { display: block; font-size: 14px; color: #555; margin-top: 6px; line-height: 1.6; }
+.toc-list .badge { font-size: 12px; color: var(--meta); }
+.sessnav { margin: 48px 0 0; padding-top: 20px; border-top: 1px solid var(--rule); display: flex; gap: 16px; flex-wrap: wrap; justify-content: space-between; font-size: 14px; }
+.sessnav a { color: var(--meta); text-decoration: none; }
+.sessnav a:hover { color: var(--text); text-decoration: underline; }
+.glossary td:first-child { white-space: nowrap; font-family: 'Charter', serif; }
+.glossary td:nth-child(2) { color: #555; }
+</style>
+</head>
+<body><p class="back">← <a href="index.html">会计101 · 分讲阅读</a> · <a href="../index.html">站主随笔</a></p>
+<p class="kicker">NYU Stern · Damodaran《Accounting 101》· 第 4 讲</p>
+<h1>第 4 讲 · 现金流量表：现金怎么进来、怎么出去<span class="en">Cashflow Statements: Cash In and Out</span></h1>
+<p class="byline">讲课视频 · 幻灯 11 张 · 课后题 5 道 · 讲师：Aswath Damodaran（NYU Stern）· 译者：站主（Mr. Buffett 委托）</p>
+<div class="video-wrap"><iframe src="https://www.youtube.com/embed/XobT12fvkXc" title="Cashflow Statements: Cash In and Out" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<p class="video-cap">本讲视频：<a href="https://youtu.be/XobT12fvkXc">Cashflow Statements: Cash In and Out</a>（YouTube，约 12–20 分钟）· 原始幻灯：<a href="https://www.stern.nyu.edu/~adamodar/pdfiles/Accounting101/slides/session4.pdf">session4.pdf</a></p>
+<div class="hero"><h3>一句话核心</h3>
+<p>现金流量表不只是「现金变了几多」的流水账：它同时告诉你<strong>公司真正赚了多少钱现金（cash earnings）、把钱投到了哪里、以及从股东和债主那里拿了多少又还了多少</strong>——而且全程站在股权投资者的角度看。</p>
+<div class="tag-row"><span class="tag">现金流量表</span><span class="tag">经营现金流</span><span class="tag">非现金营运资本</span><span class="tag">capex</span><span class="tag">债务与分红回购</span></div>
+</div>
+<h2>本讲导读<span class="en">Session guide</span></h2><p>这一讲处理现金流量表。Damodaran 先把表的「终极目标」讲清楚：表面上是解释现金余额这一期变了多少、为什么变；里面却还嵌着三层信息——本期到底产生了多少现金收益（cash earnings，对照利润表里的会计收益 accrual earnings）、公司把多少现金再投资到哪里去维持和扩大经营、以及从债务与股权投资者那里筹集与返还了多少现金。整张表保留正负号，并且始终是从股权投资者的视角在看现金流。
+然后按三段拆。经营段：间接法从净利润起步，加回折旧摊销与其他非现金费用，再按营运资本科目的变动加减——同样一个净利润，营运资本占用越多的公司，经营现金流越难看。投资段：投向经营性资产的钱（capex 与收购）是经营增长的引擎，用股票支付的收购不进这一段；投向非经营性资产的钱则形成另一条独立的价值来源，回报落在营业利润线以下。筹资段：还债本金属于这一段（利息才在经营段），发债与还债相抵可以互相抵消；分红与回购都让现金离开公司，也都减少股东权益，但回购对卖股与不卖股的股东效果完全不同。</p>
+<h2>逐页幻灯（中文在上，英文原文在下）<span class="en">Slide by slide</span></h2>
+<div class="slide" id="s1">
+<h3><span class="slide-no">幻灯 1</span>第 4 讲：现金流量表——现金怎么进来，怎么出去<span class="en">SESSION 4: CASH FLOW STATEMENTS – CASH IN AND CASH OUT</span></h3>
+<div class="zh"><p>课程封面页。副题仍是「Accounting for Finance」——这一讲的对象是现金流量表：现金从哪儿进来、到哪儿出去，以及为什么。</p></div>
+<div class="en-block"><span class="en-label">English original</span>SESSION 4: CASH FLOW
+STATEMENTS – CASH IN AND
+CASH OUT
+Accounting for Finance</div>
+</div>
+<div class="slide" id="s2">
+<h3><span class="slide-no">幻灯 2</span>现金流量表到底要解决什么问题<span class="en">The End Game with Cash Flows</span></h3>
+<div class="zh"><p>现金流量表（statement of cash flows）在表面层面的目标，是解释一家公司的现金余额在一段期间里<strong>变了多少、以及为什么变</strong>。</p>
+<p>但这张表里还嵌着另外一些信息：</p>
+<ul><li>公司本期产生了多少现金收益（cash earnings），对照利润表里的会计收益（accrual earnings）；</li><li>公司本期把多少现金、再投资到哪里，以维持并扩大经营；</li><li>公司从债务投资者与股权投资者那里筹集了多少现金，又返还了多少现金。</li></ul>
+<p>现金流量表<strong>保留现金流的正负号</strong>：净流出记作减号，净流入记作加号。而且它始终是从<strong>股权投资者</strong>的视角在看这些现金流。</p></div>
+<div class="en-block"><span class="en-label">English original</span>The End Game with Cash Flows
+
+q The surface level objective of a statement of cash flows is to
+  explain how much the cash balance of a business changed during a
+  period and why it changed.
+q Embedded in the statement of cash flows, though, is other
+  information including:
+    q How much cash earnings the company had during the period, as
+      contrasted with accrual earnings (in income statements)
+    q How much and where the company reinvested cash during the period to
+      sustain and grow its business
+    q How much cash it raised from or returned to its debt and equity investors
+
+q   The statement of cash flows preserves the signs on cash flows, with
+    negative cash flows shown as minuses and positive cash flows as
+    pluses. It also looks at cash flows through the eyes of equity
+    investors in the company.</div>
+</div>
+<div class="slide" id="s3">
+<h3><span class="slide-no">幻灯 3</span>重看现金流量表的结构<span class="en">Revisiting the Cash Flow Statement</span></h3>
+<div class="zh"><p>把整张表摊开看：经营活动、投资活动、筹资活动三段净现金流相加，等于现金余额的净变动。三段各自装的东西并不一样——经营段装的是税后、付息后的经营净现金；投资段装的是资产的买与卖（资本开支、资产剥离、金融资产的买卖，以及收购别家公司付掉的现金）；筹资段装的是股权与债务的发行与偿还，以及分红。</p></div>
+<div class="en-block"><span class="en-label">English original</span>Revisiting the Cash Flow Statement</div>
+<figure class="figure"><img src="../img/accounting101/session4-p03.jpg" alt="现金流量表结构图：经营、投资、筹资三段净现金流相加等于现金余额净变动" loading="lazy"><figcaption class="cap">现金流量表的骨架：经营净现金流 ＋ 投资净现金流 ＋ 筹资净现金流 ＝ 现金余额净变动。左栏逐段说明装的是什么——经营段是税后付息后的净现金；投资段含资本开支、剥离、金融资产的买卖与收购付现；筹资段含股权与债务的发行偿还及分红。</figcaption></figure>
+</div>
+<div class="slide" id="s4">
+<h3><span class="slide-no">幻灯 4</span>1. 经营活动现金流<span class="en">1. Cash flows from Operations</span></h3>
+<div class="zh"><p>经营现金流（cash flow from operations）用间接法构建：<strong>从净利润起步</strong>，加回折旧摊销与其他非现金费用，再按营运资本科目的变动（应收账款、存货、应付账款、应交税款等）逐项加减，最后落到经营现金流。</p>
+<p>这张表就是整段经营现金流的「路线图」——起点、每一步加什么减什么、终点是什么。</p></div>
+<div class="en-block"><span class="en-label">English original</span>1. Cash flows from Operations
+
+
+
+
+    Change in non-cash working capital</div>
+<figure class="figure"><img src="../img/accounting101/session4-p04.jpg" alt="经营活动现金流从净利润到经营现金流的调整表" loading="lazy"><figcaption class="cap">这张表在论证间接法的起点与路径：净利润（对应股权收益）是起点；折旧摊销（depreciation and amortization）与其他非现金费用加回；应收账款、存货、其他流动资产、应付账款、应交税款的变动按正负调整；终点是经营现金流。</figcaption></figure>
+</div>
+<div class="slide" id="s5">
+<h3><span class="slide-no">幻灯 5</span>营运资本的影响<span class="en">The Working Capital Effect?</span></h3>
+<div class="zh"><p>经营现金流里嵌着营运资本科目的变动，但要注意把现金本身剔除掉：</p>
+<ul><li>&lt;strong&gt;非现金营运资本（non-cash working capital）＝ 非现金流动资产 － 无息流动负债（non-debt current liabilities）&lt;/strong&gt;</li><li>非现金营运资本增加 → 现金流减少；非现金营运资本减少 → 现金流增加。</li></ul>
+<p>在营运资本占用现金与资本的程度上说：<strong>在同样的净利润水平下</strong>，营运资本需求越高的公司，其经营现金流就越低。烧钱换增长的公司，净利润可以很漂亮，现金流却一路往下走——差别就在这里。</p></div>
+<div class="en-block"><span class="en-label">English original</span>The Working Capital Effect?
+
+¨   Embedded in the cash flow from operations is the
+    change in working capital items, excluding cash
+    ¤ Non-cash Working capital = Non-cash current assets – Non-debt
+      current liabilities
+    ¤ An increase in non-cash working capital will decrease cash flows,
+      whereas a decrease in non-cash working capital will increase
+      cash flows.
+¨   To the extent that non-cash working capital ties up cash
+    and capital, a firm with higher needs for that working
+    capital will have lower cash flows from operations, for
+    any given level of net income, than a firm with lower
+    needs.</div>
+</div>
+<div class="slide" id="s6">
+<h3><span class="slide-no">幻灯 6</span>2. 投资活动现金流<span class="en">2. Cash Flows from Investing</span></h3>
+<div class="zh"><p>分节页：进入第二段——投资活动现金流。这一段讲的是公司把现金投到哪里去，重点是分清<strong>经营性资产</strong>与<strong>非经营性资产</strong>的投资。</p></div>
+<div class="en-block"><span class="en-label">English original</span>2. Cash Flows from Investing</div>
+</div>
+<div class="slide" id="s7">
+<h3><span class="slide-no">幻灯 7</span>经营性资产，还是非经营性资产<span class="en">Operating or Non-operating Assets</span></h3>
+<div class="zh"><p>投资活动一节同时包含对经营性资产和非经营性资产的投资，唯一的例外是对流动性强、几乎无风险的证券的投资——那部分被当作现金与有价证券（cash & marketable securities）处理。</p>
+<p>投向经营性资产的投资，无论是内部的 capex（资本开支，扣除剥离）还是外部的收购其他公司，是驱动经营项目（收入、营业利润等）增长的引擎。注意：<strong>用股票支付的收购理所当然不会出现在这里</strong>。</p>
+<p>投向非经营性资产的投资，则形成另一条独立的价值来源：它的回报不出现在经营项目里，而是落在营业利润线以下——体现为来自交叉持股或证券的收益（income from cross holdings or securities）。</p></div>
+<div class="en-block"><span class="en-label">English original</span>Operating or Non-operating Assets
+
+q The investing activities section includes investments in both
+  operating and non-operating assets, except for investment in
+  liquid, close to riskless securities, which is treated as cash &amp;
+  marketable securities.
+q The investments into operating assets, whether internal (cap
+  ex, net of divestitures) or external (acquisitions of other
+  companies) are the engine that drives growth in the
+  operating line items (revenues, operating income etc.) Note
+  that acquisitions funded with stock will not show up here for
+  obvious reasons.
+q The investments into non-operating assets create a separate
+  source of value, where the payoff will not show up in the
+  operating line items but below the operating income line, as
+  income from cross holdings or securities.</div>
+</div>
+<div class="slide" id="s8">
+<h3><span class="slide-no">幻灯 8</span>3. 筹资活动现金流<span class="en">3. Cash flows from Financing</span></h3>
+<div class="zh"><p>筹资段装的是公司与债务持有人、与股权投资者之间的资金往来：借进来是流入，还出去是流出；增发是流入，分红与回购是流出。两条线各自轧差，再加总就是筹资活动现金流。</p></div>
+<div class="en-block"><span class="en-label">English original</span>3. Cash flows from Financing</div>
+<figure class="figure"><img src="../img/accounting101/session4-p08.jpg" alt="筹资活动现金流构成表：债务一条线、股权一条线" loading="lazy"><figcaption class="cap">筹资活动现金流的构成：向债务持有人借入（加）与偿还（减）轧差，是「与债务之间的净现金」；增发新股（加）与分红、股票回购（减）轧差，是「与股权投资者之间的净现金」；两条线相加等于筹资活动现金流。</figcaption></figure>
+</div>
+<div class="slide" id="s9">
+<h3><span class="slide-no">幻灯 9</span>债务的现金流<span class="en">Debt Cash Flows</span></h3>
+<div class="zh"><p>利息支出出现在经营现金流一节（它压低净利润，并在递延税项里体现出来），但<strong>偿还债务本金属于筹资段</strong>。</p>
+<p>如果这些偿债有一部分或全部由新发债务来覆盖，那么对现金流的净影响可以被抵消，甚至转为正。</p>
+<p>因此：<strong>债务总额在某期上升，就表现为现金流入；债务总额下降，就表现为现金流出</strong>。那些着手在若干年内把债务压下来（或加上去）的公司，应当事先就预期到这些结果。</p></div>
+<div class="en-block"><span class="en-label">English original</span>Debt Cash Flows
+
+¨ While interest expenses show up in the operating cash
+  flow section, by reducing net income and showing up in
+  deferred taxes, debt repayments are part of the
+  financing section.
+¨ To the extent that some or all of these debt repayments
+  are funded with debt issuances, the net effect on cash
+  flows can be neutralized or become positive.
+¨ If total debt increases during a period, it will represent
+  a cash inflow, and if it decreases, it will be a cash
+  outflow. Companies that embark on plans to bring their
+  debt down (up) over time should therefore expect
+  these consequences.</div>
+</div>
+<div class="slide" id="s10">
+<h3><span class="slide-no">幻灯 10</span>分红与回购<span class="en">Dividends and Buybacks</span></h3>
+<div class="zh"><p>直到 1980 年代，上市公司股权投资者收到的现金流只有股利这一种。分红的效果很简单：公司现金余额减少，每一位收到分红的股东口袋里现金增加。</p>
+<p>从 1980 年代开始，美国公司以回购（buybacks）的形式向股东返还越来越多的资金：</p>
+<ul><li>对公司而言，回购股票的效果与支付分红&lt;strong&gt;完全一样&lt;/strong&gt;：现金离开公司。</li><li>但对股东而言，现金流效果不一样：把股票卖回给公司的股东从公司拿到现金；没卖的股东一分钱没拿到，但他在公司里剩下的股权份额变大了。</li><li>分红与回购都会减少资产负债表上的股东权益。</li></ul></div>
+<div class="en-block"><span class="en-label">English original</span>Dividends and Buybacks
+
+q Until the 1980s, the only cash flow that was received by
+  equity investors in publicly traded companies was dividends.
+  The effect of paying dividends is simple: it reduces the cash
+  balance at the company and increases the cash in the pockets
+  of every shareholder who receives dividends.
+q Starting in the 1980s, US companies have returned increasing
+  amounts to their shareholders in the form of buybacks.
+    q The effect of buying back stock is exactly the same as paying dividends,
+      to the company, with cash leaving the company.
+    q For shareholders, though, the cash flow effect is disparate. Those
+      shareholders who sell their shares back get cash from the company,
+      and those that do not get no cash, but get a larger share of the equity
+      left in the company.
+    q Both dividends and buybacks reduce shareholder equity on the
+      balance sheet.</div>
+</div>
+<div class="slide" id="s11">
+<h3><span class="slide-no">幻灯 11</span>可供分红的现金（自由现金流给股权）<span class="en">Potential Dividends (Free CF to Equity)</span></h3>
+<div class="zh"><p>分节页：本页只留了一个标题——「Potential Dividends（Free CF to Equity）」，即公司到底有多少现金可以分给股东，对应自由现金流给股权（free cash flow to equity）。课件在此处未给出正文。</p></div>
+<div class="en-block"><span class="en-label">English original</span>Potential Dividends (Free CF to Equity)</div>
+</div>
+<h2>课后测试与答案<span class="en">Post-class test &amp; solutions</span></h2>
+<p class="meta">题目与选项为中英对照；答案与解析附在每题下方。</p>
+<div class="q">
+<p class="qno">第 1 题</p>
+<p class="qzh">要算出经营现金流（operating cash flows），起步时我们该做下面哪一件事？</p>
+<p class="meta">To get to operating cash flows, which of the following do we do, to start the
+process?</p>
+<ul class="opts">
+<li><strong>a.</strong> 从 EBITDA 起步，减去折旧、摊销和其他非现金费用 <span class="en">Start with EBITDA and subtract out depreciation, amortization and other non-cash charges</span></li>
+<li><strong>b.</strong> 从 EBIT 起步，把折旧、摊销和其他非现金费用加回来 <span class="en">Start with EBIT and add back depreciation, amortization and other non-cash charges</span></li>
+<li><strong>c.</strong> 从净利润（Net Income）起步，把折旧、摊销和其他非现金费用加回来 <span class="en">Start with Net Income and add back depreciation, amortization and other non-cash charges</span></li>
+<li><strong>d.</strong> 从 EBIT 起步，减去折旧、摊销和其他非现金费用 <span class="en">Start with EBIT and subtract out depreciation, amortization and other non-cash charges</span></li>
+<li><strong>e.</strong> 从净利润起步，减去折旧、摊销和其他非现金费用 <span class="en">Start with Net Income and subtract out depreciation, amortization and other non-cash charges</span></li>
+</ul>
+<div class="ans"><strong>答案：c</strong> c. 从净利润起步，把折旧、摊销和其他非现金费用加回来。
+<p>现金流量表是从股权投资者的视角编制的，所以它从净利润起步，而不是从 EBITDA 或营业利润起步。</p>
+<div class="en-block"><span class="en-label">English original</span>c. Start with Net Income and add back depreciation, amortization and
+other non-cash charges. The statement of cashflows is constructed from the
+perspective of equity investors and it starts with net income, not EBITDA or
+operating income.</div>
+</div>
+</div>
+<div class="q">
+<p class="qno">第 2 题</p>
+<p class="qzh">接下来我们把流动资产（如存货）和流动负债（如应付账款）的变动带进来。下列哪一项最好地描述了这些变动的影响？</p>
+<p class="meta">Following up, we then bring in changes in current assets, like inventory, and
+current liabilities, like accounts payable. Which of the following best
+describes the effect of those changes?</p>
+<ul class="opts">
+<li><strong>a.</strong> 存货增加会减少现金流，应付账款增加会增加现金流。 <span class="en">Increases in inventory decrease cash flows and increases in accounts
+payable increase cash flows.</span></li>
+<li><strong>b.</strong> 存货增加会增加现金流，应付账款增加会减少现金流。 <span class="en">Increases in inventory increase cash flows and increases in accounts
+payable decrease cash flows.</span></li>
+<li><strong>c.</strong> 存货增加会减少现金流，应付账款增加也会减少现金流。 <span class="en">Increases in inventory decrease cash flows and increases in accounts
+payable also decrease cash flows.</span></li>
+<li><strong>d.</strong> 存货增加会增加现金流，应付账款增加也会增加现金流。 <span class="en">Increases in inventory increase cash flows and increases in accounts
+payable also increase cash flows.</span></li>
+<li><strong>e.</strong> 存货增加与应付账款增加都不影响现金流。 <span class="en">Increases in inventory and increases in accounts payable do not affect
+cash flows.</span></li>
+</ul>
+<div class="ans"><strong>答案：a</strong> a. 存货增加会减少现金流，应付账款增加会增加现金流。
+<p>存货增加会占用现金；而更多地动用供应商信用（应付账款），则释放现金。</p>
+<div class="en-block"><span class="en-label">English original</span>a. Increases in inventory decrease cash flows and increases in accounts
+payable increase cash flows. An increase in inventory ties up cash flows,
+but an increased use of supplier credit (accounts payable) releases cash
+flows.</div>
+</div>
+</div>
+<div class="q">
+<p class="qno">第 3 题</p>
+<p class="qzh">投资活动现金流里嵌着公司所做的收购。这些收购可以用现金支付、用股票支付，也可以用现金加股票混合支付。下列哪一项会出现在投资活动之下？</p>
+<p class="meta">Embedded in investing cash flows are acquisitions made by the company.
+These acquisitions can be paid for with cash, with stock or with a mix of cash
+and stock. Which of the following will show up under investing activities?</p>
+<ul class="opts">
+<li><strong>a.</strong> 只有以股票支付的收购 <span class="en">Only stock-based acquisitions</span></li>
+<li><strong>b.</strong> 只有以现金支付的收购。 <span class="en">Only cash-based acquisitions.</span></li>
+<li><strong>c.</strong> 以现金支付的收购，以及混合支付收购中的现金部分 <span class="en">Cash-based acquisitions and cash portion of mixed acquisitions</span></li>
+<li><strong>d.</strong> 以现金支付的收购，以及混合支付收购中的股票部分 <span class="en">Cash-based acquisitions and stock portion of mixed acquisitions</span></li>
+<li><strong>e.</strong> 所有收购 <span class="en">All acquisitions</span></li>
+</ul>
+<div class="ans"><strong>答案：c</strong> c. 以现金支付的收购，以及混合支付收购中的现金部分。
+<p>这是现金流量表，所以只有花在收购上的现金——全额或部分——才会出现在投资活动之下。</p>
+<div class="en-block"><span class="en-label">English original</span>c. Cash-based acquisitions and cash portion of mixed acquisitions. It is a
+statement of cash flows. So, only cash spent on acquisitions, in part or in full,
+show up under investing.</div>
+</div>
+</div>
+<div class="q">
+<p class="qno">第 4 题</p>
+<p class="qzh">股利可以是现金股利，也可以是股票股利；股票回购可以是留作库存股（treasury stock），也可以是为了减少股本。下列哪一项会出现在筹资活动一节？</p>
+<p class="meta">Dividends can be cash dividends or stock dividends and share buybacks can
+be either to keep as treasury stock or to reduce share count. Which of the
+following will show up in the financing section?</p>
+<ul class="opts">
+<li><strong>a.</strong> 所有股利，不含股票回购 <span class="en">All dividends, no share buybacks</span></li>
+<li><strong>b.</strong> 所有股利，所有回购 <span class="en">All dividends, all buybacks</span></li>
+<li><strong>c.</strong> 现金股利，不含股票回购 <span class="en">Cash dividends, no share buybacks</span></li>
+<li><strong>d.</strong> 现金股利，所有股票回购 <span class="en">Cash dividends, all share buybacks</span></li>
+<li><strong>e.</strong> 现金股利，仅限减少股本的那部分股票回购 <span class="en">Cash dividends, only share buybacks that reduce share count</span></li>
+<li><strong>f.</strong> 现金股利，仅限于留作库存股的那部分股票回购 <span class="en">Cash dividends, only share buybacks for treasury stock</span></li>
+</ul>
+<div class="ans"><strong>答案：d</strong> d. 现金股利，所有股票回购。
+<p>股票股利没有现金效应；而股票回购，无论动机是什么，都是现金流出。</p>
+<div class="en-block"><span class="en-label">English original</span>d. Cash dividends, all share buybacks. Stock dividends have no cash effect
+and all stock buybacks, no matter what the motive, are going to be cash
+outflows.</div>
+</div>
+</div>
+<div class="q">
+<p class="qno">第 5 题</p>
+<p class="qzh">如果你在看一家非常年轻、高增长公司的现金流量表，下列哪一项是你会预期看到的？</p>
+<p class="meta">If you are looking at the statement of cash flows for a very young, high-growth company, which of the following would you expect to see?</p>
+<ul class="opts">
+<li><strong>a.</strong> 经营活动现金流为正，投资活动现金流为负，筹资活动现金流为负 <span class="en">Positive cash flow from operations, Negative cash flow from investing
+and Negative cash flow from financing</span></li>
+<li><strong>b.</strong> 经营活动现金流为负，投资活动现金流为负，筹资活动现金流为正 <span class="en">Negative cash flow from operations, Negative cash flow from investing
+and Positive cash flow from financing</span></li>
+<li><strong>c.</strong> 经营活动现金流为负，投资活动现金流为正，筹资活动现金流为负 <span class="en">Negative cash flow from operations, Positive cash flow from investing
+and Negative cash flow from financing</span></li>
+<li><strong>d.</strong> 经营活动、投资活动、筹资活动的现金流全为负 <span class="en">Negative cash flow from operations, Negative cash flow from investing
+and Negative cash flow from financing</span></li>
+<li><strong>e.</strong> 经营活动、投资活动、筹资活动的现金流全为正 <span class="en">Positive cash flow from operations, Positive cash flow from investing
+and Positive cash flow from financing</span></li>
+</ul>
+<div class="ans"><strong>答案：b</strong> b. 经营活动现金流为负，投资活动现金流为负，筹资活动现金流为正。
+<p>年轻的公司通常在亏钱，可加回的折旧也很少，同时又有很大的投资需求（为了兑现未来的增长）。这些现金流出都必须靠筹资活动注入的现金来补（主要来自股权融资）。</p>
+<div class="en-block"><span class="en-label">English original</span>b. Negative cash flow from operations, Negative cash flow from
+investing and Positive cash flow from financing. Young companies
+generally lose money and have little depreciation to add back, as well as
+substantial investment needs (to deliver future growth). These cash outflows
+all have to be funded with cash infusions from financing (mostly from
+equity).</div>
+</div>
+</div>
+<div class="note"><strong>译者注</strong><br>本讲保留 operating cash flow / free cash flow / capex / working capital / deferred revenue 等术语的英文，必要处给出中英对照。
+第 3 页的现金流量表结构图与第 1 讲第 7 页是同一张图；第 4 页与第 8 页的两张表（经营段、筹资段的构成）在本讲中是可读的关键页。
+第 11 页「Potential Dividends (Free CF to Equity)」在本讲中只是分节标题页，课件未给出正文；本译文如实留白，不代讲师补写。</div>
+<p class="sessnav"><a href="session3A.html">← 第 3A 讲</a> <a href="index.html">目录</a> <a href="session4A.html">第 4A 讲 →</a></p>
+<p class="footer">课程来源：<a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/webcastacctg.htm">Damodaran · Corporate Finance Online Class（Accounting 101）</a><br>幻灯与课后题版权归 Aswath Damodaran / NYU Stern 所有，本站仅作教学与中文对照阅读使用。<br><a href="../index.html">← 返回站主随笔</a></p>
+</body>
+</html>

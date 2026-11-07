@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="第 5 讲讲清了四类「会计口径不一致」，第 5A 讲把它们逐一落到真实公司的报表上：Nordstrom 的经营租赁如何从表外走进表内、Netflix 的内容付款承诺为什么还是看不见、Amgen 的研发费用被全部费用化之后回报率会怎么变、Netflix 与 Peloton 的股权激励（SBC）又是如何被「加回」掉的。
+
+这一讲的读法是：把每一张表都当成一次「会计口径改写」的现场演示。Damodaran 的落脚点不在于哪张表好看、哪张表难看，而在于——同一笔经济活动，换一个口径，债务、利润、投入资本、回报率会各自变成不同的数字。所以你看报表时看到的永远是「会计意见」，不是事实。
+
+本讲是 Damodaran 全课程中最「干」的一讲：几乎没有推导，全是表格和数字。但也正因为全是数字，它比任何原则性的讨论都更能说明问题——会计口径的每一次摆动，最终都会落到某家公司的某一行上。">
+<title>第 5A 讲 · 会计口径不一致：实例演示 · 会计101 中英对照 — 乔布斯研究</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600&family=Charter:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #ffffff; --text: #1a1a1a; --meta: #888888; --rule: #e0e0e0; --max-w: 720px; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: var(--bg); color: var(--text); font-family: 'Noto Serif SC','Charter',serif; font-size: 17px; line-height: 1.7; max-width: var(--max-w); margin: 0 auto; padding: 0 24px 80px; overflow-wrap: anywhere; }
+a { color: var(--text); text-decoration: underline; text-decoration-color: var(--rule); }
+a:hover { text-decoration-color: var(--text); }
+h1 { font-size: 22px; font-weight: 600; margin: 48px 0 8px; letter-spacing: -0.3px; }
+h2 { font-size: 15px; font-weight: 600; color: var(--meta); text-transform: uppercase; letter-spacing: 1px; margin: 40px 0 16px; padding-top: 24px; border-top: 1px solid var(--rule); }
+h2 .en { display: block; font-size: 14px; color: var(--meta); text-transform: none; letter-spacing: 0; font-weight: 400; font-style: italic; margin-top: 4px; }
+h3 { font-size: 17px; font-weight: 600; margin: 32px 0 12px; }
+h3 .en { display: block; font-size: 14px; color: var(--meta); font-weight: 400; font-style: italic; margin-top: 2px; }
+.back { font-size: 14px; color: var(--meta); margin-bottom: 24px; }
+.meta { font-size: 13px; color: var(--meta); margin-left: 8px; }
+p { margin: 16px 0; }
+strong { font-weight: 600; }
+em.en-source { display: block; font-family: 'Charter', serif; font-size: 14px; font-style: italic; color: var(--meta); margin: 8px 0 24px; padding-left: 12px; border-left: 2px solid var(--rule); }
+blockquote { border-left: 3px solid var(--rule); padding: 4px 0 4px 20px; margin: 24px 0; color: #555; font-style: italic; }
+.source { font-size: 13px; color: var(--meta); margin-top: 12px; }
+.byline { font-size: 14px; color: var(--meta); margin: 8px 0 32px; }
+.tag-row { margin: 16px 0 32px; }
+.tag { display: inline-block; font-size: 12px; padding: 2px 10px; background: var(--rule); border-radius: 12px; color: var(--meta); margin-right: 6px; }
+.hero { background: #f9f9f9; border-radius: 8px; padding: 24px; margin: 0 0 32px; }
+.hero h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; }
+.hero p { font-size: 15px; color: #555; line-height: 1.7; margin: 8px 0; }
+.footer { margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--rule); font-size: 13px; color: var(--meta); }
+.footer a { color: var(--meta); }
+table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+.table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 16px 0; }
+.table-wrap table { margin: 0; min-width: 420px; }
+th, td { padding: 6px 10px; border: 1px solid var(--rule); text-align: left; vertical-align: top; }
+th { background: #f5f5f5; font-weight: 600; }
+.figure { margin: 32px 0; }
+.figure img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 4px; }
+.figure .cap { font-size: 13px; color: var(--meta); margin-top: 8px; line-height: 1.5; padding-left: 12px; border-left: 2px solid var(--rule); }
+.note { background: #f9f9f9; border-left: 3px solid #d4503a; border-radius: 4px; padding: 14px 18px; margin: 24px 0; font-size: 15px; color: #555; }
+.note strong { color: var(--text); }
+ol, ul { padding-left: 24px; margin: 16px 0; }
+li { margin: 8px 0; }
+@media (max-width: 600px) {
+  body { font-size: 16px; padding: 0 18px 60px; }
+  h1 { font-size: 20px; }
+  h2 { font-size: 14px; }
+  table { font-size: 12px; }
+  th, td { padding: 4px 6px; }
+}
+</style>
+<style>
+.kicker { font-size: 13px; color: var(--meta); letter-spacing: .5px; margin: 0 0 6px; }
+h1 .en { display: block; font-size: 15px; font-weight: 400; font-style: italic; color: var(--meta); margin-top: 6px; letter-spacing: 0; }
+.video-wrap { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 6px; margin: 24px 0 8px; background: #000; }
+.video-wrap iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+.video-cap { font-size: 13px; color: var(--meta); margin: 0 0 32px; }
+.slide { margin: 0 0 8px; padding: 20px 0 4px; border-top: 1px solid var(--rule); }
+.slide:first-of-type { border-top: none; }
+.slide h3 { margin: 0 0 12px; font-size: 16px; }
+.slide h3 .slide-no { display: inline-block; font-size: 12px; font-weight: 400; color: var(--meta); border: 1px solid var(--rule); border-radius: 10px; padding: 1px 8px; margin-right: 8px; vertical-align: 2px; }
+.slide h3 .en { display: block; font-size: 13px; color: var(--meta); font-style: italic; font-weight: 400; margin-top: 4px; }
+.slide .zh { margin: 0 0 10px; }
+.slide .zh p { margin: 10px 0; }
+.slide .zh ul, .slide .zh ol { margin: 8px 0; padding-left: 22px; }
+.slide .zh li { margin: 6px 0; }
+.en-block { font-family: 'Charter', serif; font-size: 14px; line-height: 1.6; color: var(--meta); background: #fbfbfb; border-left: 2px solid var(--rule); border-radius: 0 4px 4px 0; padding: 10px 14px; margin: 10px 0 0; white-space: pre-wrap; overflow-wrap: anywhere; }
+.en-block .en-label { display: block; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: #aaa; margin-bottom: 6px; }
+.q { margin: 24px 0; padding: 0 0 4px; border-bottom: 1px solid var(--rule); }
+.q .qno { font-size: 13px; color: var(--meta); }
+.q .qzh { font-weight: 600; }
+.q ol { margin: 8px 0; padding-left: 22px; }
+.q .opts { list-style: none; padding-left: 0; margin: 10px 0; }
+.q .opts li { margin: 7px 0; font-size: 15px; line-height: 1.55; }
+.q .opts .en { color: var(--meta); font-size: 13px; font-family: 'Charter', serif; }
+.ans { background: #f9f9f9; border-left: 3px solid #3a7d5c; border-radius: 4px; padding: 12px 16px; margin: 12px 0 24px; font-size: 15px; color: #555; }
+.ans strong { color: var(--text); }
+.toc-list { list-style: none; padding: 0; margin: 24px 0 0; }
+.toc-list li { margin: 0; padding: 16px 0; border-bottom: 1px solid var(--rule); }
+.toc-list a { font-size: 17px; font-weight: 600; text-decoration: none; }
+.toc-list a:hover { text-decoration: underline; }
+.toc-list .en { display: block; font-size: 13px; font-style: italic; color: var(--meta); font-weight: 400; margin-top: 4px; }
+.toc-list .sub { display: block; font-size: 14px; color: #555; margin-top: 6px; line-height: 1.6; }
+.toc-list .badge { font-size: 12px; color: var(--meta); }
+.sessnav { margin: 48px 0 0; padding-top: 20px; border-top: 1px solid var(--rule); display: flex; gap: 16px; flex-wrap: wrap; justify-content: space-between; font-size: 14px; }
+.sessnav a { color: var(--meta); text-decoration: none; }
+.sessnav a:hover { color: var(--text); text-decoration: underline; }
+.glossary td:first-child { white-space: nowrap; font-family: 'Charter', serif; }
+.glossary td:nth-child(2) { color: #555; }
+</style>
+</head>
+<body><p class="back">← <a href="index.html">会计101 · 分讲阅读</a> · <a href="../index.html">站主随笔</a></p>
+<p class="kicker">NYU Stern · Damodaran《Accounting 101》· 第 5A 讲</p>
+<h1>第 5A 讲 · 会计口径不一致：实例演示<span class="en">Accounting Inconsistency Examples</span></h1>
+<p class="byline">讲课视频 · 幻灯 12 张 · 课后题 5 道 · 讲师：Aswath Damodaran（NYU Stern）· 译者：站主（Mr. Buffett 委托）</p>
+<div class="video-wrap"><iframe src="https://www.youtube.com/embed/o4_GwR_6jR4" title="Accounting Inconsistency Examples" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<p class="video-cap">本讲视频：<a href="https://youtu.be/o4_GwR_6jR4">Accounting Inconsistency Examples</a>（YouTube，约 12–20 分钟）· 原始幻灯：<a href="https://www.stern.nyu.edu/~adamodar/pdfiles/Accounting101/slides/session5A.pdf">session5A.pdf</a></p>
+<div class="hero"><h3>一句话核心</h3>
+<p>报表上的债、利润、回报率，有一部分是<strong>口径选择</strong>的结果，而不是经济现实本身。Damodaran 用 Nordstrom、Netflix、Amgen、Peloton 四家公司演示：换一个口径，同一家公司的债务、营业利润、投入资本和 ROE 会各自变成不同的数字——<strong>你看到的那个公司，永远不等于报表描述的那个公司。</strong></p>
+<div class="tag-row"><span class="tag">会计口径不一致</span><span class="tag">经营租赁资本化</span><span class="tag">非债务承诺</span><span class="tag">研发资本化</span><span class="tag">股权激励 SBC</span></div>
+</div>
+<h2>本讲导读<span class="en">Session guide</span></h2><p>第 5 讲讲清了四类「会计口径不一致」，第 5A 讲把它们逐一落到真实公司的报表上：Nordstrom 的经营租赁如何从表外走进表内、Netflix 的内容付款承诺为什么还是看不见、Amgen 的研发费用被全部费用化之后回报率会怎么变、Netflix 与 Peloton 的股权激励（SBC）又是如何被「加回」掉的。
+
+这一讲的读法是：把每一张表都当成一次「会计口径改写」的现场演示。Damodaran 的落脚点不在于哪张表好看、哪张表难看，而在于——同一笔经济活动，换一个口径，债务、利润、投入资本、回报率会各自变成不同的数字。所以你看报表时看到的永远是「会计意见」，不是事实。
+
+本讲是 Damodaran 全课程中最「干」的一讲：几乎没有推导，全是表格和数字。但也正因为全是数字，它比任何原则性的讨论都更能说明问题——会计口径的每一次摆动，最终都会落到某家公司的某一行上。</p>
+<h2>逐页幻灯（中文在上，英文原文在下）<span class="en">Slide by slide</span></h2>
+<div class="slide" id="s1">
+<h3><span class="slide-no">幻灯 1</span>第 5A 讲：会计口径不一致的实例演示<span class="en">SESSION 5A: ACCOUNTING INCONSISTENCY EXAMPLES</span></h3>
+<div class="zh"><p>课程封面。本讲是「Accounting for Finance」（给财务报表使用者开的会计课）的第 5A 讲，副题是「Accounting Inconsistency Examples」——上一讲（Session 5）把四类口径不一致讲清楚了，这一讲把它们逐个落到Nordstrom、Netflix、Amgen、Peloton 四家公司的真实报表上。</p></div>
+<div class="en-block"><span class="en-label">English original</span>SESSION 5A: ACCOUNTING
+INCONSISTENCY EXAMPLES
+Accounting for Finance</div>
+</div>
+<div class="slide" id="s2">
+<h3><span class="slide-no">幻灯 2</span>1. 税率<span class="en">1. Tax Rates</span></h3>
+<div class="zh"><p>分节页。本讲从第 5 讲讲过的税率问题重新起头——讲师在这一讲不展开税率（三个税率互相打架的部分在第 5 讲里已经讲透），只是把它列在前面，作为「口径不一致」清单的第一项，然后直接进入真正有实例的后面几节。</p></div>
+<div class="en-block"><span class="en-label">English original</span>1. Tax Rates</div>
+</div>
+<div class="slide" id="s3">
+<h3><span class="slide-no">幻灯 3</span>2. 非债务承诺（non-debt commitments）<span class="en">2. Non-debt Commitments</span></h3>
+<div class="zh"><p>一般来说，计息债务（interest-bearing debt）都会出现在资产负债表上：其中一部分可能列在<strong>流动负债</strong>里（一年内到期的部分），其余列为债务。</p>
+<p>但还有另一类<strong>合同承诺</strong>（contractual commitments），它们历史上从来不出现在资产负债表上，却应该被当作债务来对待。</p>
+<p>这类承诺里最常见的就是<strong>经营租赁</strong>（operating lease）。不过 IFRS 和 GAAP 终于做出了「正确的」决定，从 2019 年开始把它们作为债务纳入表内——这一改，直接改写了零售商的资产负债表（下一页就是例子）。</p></div>
+<div class="en-block"><span class="en-label">English original</span>2. Non-debt Commitments
+
+q In general, interest-bearing debt will show up on
+  balance sheets, though some of it may be included
+  in current liabilities (if due in less than a year) and
+  the rest as debt.
+q There are other contractual commitments that have
+  historically not shown up on balance sheets, but
+  should be treated like debt.
+q The most common of these commitments is
+  operating leases, but IFRS and GAAP have finally
+  made the ‘right’ decision and started including them
+  as debt in 2019.</div>
+</div>
+<div class="slide" id="s4">
+<h3><span class="slide-no">幻灯 4</span>零售业案例：Nordstrom<span class="en">A Retail Example: Nordstrom’s</span></h3>
+<div class="zh"><p>零售业的例子：<strong>Nordstrom</strong>。Nordstrom 有大量门店租赁。在 2019 年之前，这些经营租赁承诺根本不进资产负债表；2019 年之后，按新准则，它们必须被资本化。</p>
+<p>图中是 Nordstrom 资产负债表「非流动负债」部分的对照。<strong>「Non-current operating lease liabilities（非流动经营租赁负债）」这一行，2019 年是 1,875 百万美元，2018 年那一栏是空的（—）</strong>——同一家公司，仅仅因为准则改了，账面上的债务就凭空多了将近 19 亿美元。同一张表里，「Long-term debt, net（长期债务净额）」是 2,676 对 2,677，几乎没动；「Deferred property incentives, net（递延物业激励净额）」从 457 降到 4；「Other liabilities（其他负债）」是 683 对 498。</p>
+<p>Damodaran 在图上标注的算法是：把 Nordstrom 第 5 年之后剩余的租赁承诺总额 <strong>1,136 百万美元</strong>，看成从 <strong>2025 年</strong>开始、每年 <strong>227.2 百万美元</strong>（= 1,136 / 5）的 5 年年金，按 <strong>4.7%</strong> 折现，算出这些租赁承诺今天值多少钱，然后把结果记进 2019 年的资产负债表。</p>
+<p>换句话说：这张表在证明一件事——「一家零售商的账上到底欠多少钱」这个问题，答案会在 2019 年被会计规则改写一次，而你如果只盯「长期债务」这一行，完全看不见这件事发生了。</p></div>
+<div class="table-wrap"><table><thead><tr><th>项目 Item（Nordstrom，非流动负债）</th><th>2019</th><th>2018</th></tr></thead><tbody><tr><td>Long-term debt, net&lt;br&gt;长期债务净额</td><td>2,676</td><td>2,677</td></tr><tr><td>Deferred property incentives, net&lt;br&gt;递延物业激励净额</td><td>4</td><td>457</td></tr><tr><td>Non-current operating lease liabilities&lt;br&gt;非流动经营租赁负债</td><td><strong>1,875</strong></td><td>—</td></tr><tr><td>Other liabilities&lt;br&gt;其他负债</td><td>683</td><td>498</td></tr></tbody></table></div>
+<div class="en-block"><span class="en-label">English original</span>A Retail Example: Nordstrom’s
+
+                                                                          Discounted at
+                                                                          4.7%                1
+
+  Treated as 5-year annuity of $227.2 m/year (=1136/5) starting in 2025
+
+
+
+
+                         On the balance sheet in 2019</div>
+<figure class="figure"><img src="../img/accounting101/session5A-p04.jpg" alt="Nordstrom 资产负债表非流动负债部分：2019 年与 2018 年对照，含新增的非流动经营租赁负债 1,875" loading="lazy"><figcaption class="cap">这张 Nordstrom 资产负债表节选在论证：会计口径的改变会当场改写「这家公司欠多少钱」。2019 年新出现的「非流动经营租赁负债」= 1,875 百万美元，而 2018 年同一行是空的（—）；同期「长期债务净额」几乎没动（2,676 对 2,677）。也就是说，19 亿美元的负债不是借来的、不是经营出来的，是准则切换的产物。图上标的算法是：5 年之后剩余的 1,136 百万美元承诺 = 每年 227.2 百万美元（=1,136/5）的年金，从 2025 年起、按 4.7% 折现。</figcaption></figure>
+</div>
+<div class="slide" id="s5">
+<h3><span class="slide-no">幻灯 5</span>对公司报表的后果<span class="en">Consequences for the company</span></h3>
+<div class="zh"><p><strong>① 债务增加</strong>：资产负债表上的债务被<strong>租赁承诺的现值</strong>追加上去。</p>
+<p><strong>② 同时产生一个对应的资产</strong>（counter asset）：金额与租赁债务相等——这就是资产负债表恒等式，记了负债就必须记资产。</p>
+<p><strong>③ 营业利润（operating income）会变</strong>：做法是把当年的租赁费用<strong>加回来</strong>，再把租赁资产的<strong>折旧减掉</strong>。净利润则不变——或者说，<strong>不应该变</strong>。</p>
+<ul><li>利息费用（interest expense）上升，幅度是当年租赁付款中属于利息的那一部分；</li><li>折旧上升，幅度是租赁资产的折旧（用上一年的租赁资产价值来算）。</li></ul>
+<p><strong>④ 税和净利润不变</strong>，因为你把一项可抵税费用（经营租赁）换成了两项金额等价的费用（利息 + 折旧）——可抵税总额没变，所以税不变，净利润也不变。</p>
+<p>Damodaran 这一页想说明的是：资本化不改变企业的经济实质，它改变的是<strong>利润的形状</strong>——营业利润上去了，净利润纹丝不动。所以你在看「营业利润率」的时候，必须先知道这家公司用的是哪套口径。</p></div>
+<div class="en-block"><span class="en-label">English original</span>Consequences for the company
+
+¨ Debt increases: The debt on the balance sheet is
+  augmented by the present value of lease commitments.
+¨ A counter asset is created: Equivalent to the lease debt.
+
+¨ Operating income changes, since you add back the
+  current year’s lease expense and reduce it by
+  depreciation. Net income does not or should not change.
+    ¤ Interest expenses go up by the interest portion of the current
+      year’s lease payment.
+    ¤ Depreciation is increased by the depreciation on the lease asset
+      (using the prior year’s value)
+¨   Taxes and net income do not change, since you replace
+    one tax deductible expense (operating lease) with two
+    (interest and depreciation) of equivalent value.</div>
+</div>
+<div class="slide" id="s6">
+<h3><span class="slide-no">幻灯 6</span>另一个例子：Netflix<span class="en">Another example: Netflix</span></h3>
+<div class="zh"><p>第二个例子：<strong>Netflix</strong>。Netflix 的问题不只是租办公室——它向内容制作方承诺付款，为的是自制剧集和电影。这些「流媒体内容义务」（streaming content obligations）与经营租赁是同一性质的东西：有合同、有金额、但从不进资产负债表。</p>
+<p>图中是 Netflix 的内容义务到期表（截至 12 月 31 日，单位：<strong>千美元</strong>）：一年内到期 2019 年 <strong>8,477,367</strong>、2018 年 8,611,398；1 至 3 年到期 8,352,731 对 8,841,561；3 至 5 年到期 2,041,340 对 1,684,582；5 年以后 618,644 对 148,334；合计（Total streaming content obligations）2019 年 <strong>19,490,082</strong>、2018 年 19,285,875。</p>
+<p>这跟 Nordstrom 的经营租赁是同一个毛病，只是更贵：合计约 <strong>195 亿美元</strong>的合同付款承诺，在资产负债表上一分钱都看不到。租赁在 2019 年被要求资本化了，内容承诺这一类仍然留在表外。</p></div>
+<div class="table-wrap"><table><thead><tr><th>到期时间（As of December 31，in thousands）</th><th>2019</th><th>2018</th></tr></thead><tbody><tr><td>Less than one year&lt;br&gt;一年内</td><td>$ 8,477,367</td><td>$ 8,611,398</td></tr><tr><td>Due after one year and through 3 years&lt;br&gt;1 至 3 年</td><td>8,352,731</td><td>8,841,561</td></tr><tr><td>Due after 3 years and through 5 years&lt;br&gt;3 至 5 年</td><td>2,041,340</td><td>1,684,582</td></tr><tr><td>Due after 5 years&lt;br&gt;5 年以后</td><td>618,644</td><td>148,334</td></tr><tr><td>Total streaming content obligations&lt;br&gt;流媒体内容义务合计</td><td><strong>$ 19,490,082</strong></td><td>$ 19,285,875</td></tr></tbody></table></div>
+<div class="en-block"><span class="en-label">English original</span>Another example: Netflix</div>
+<figure class="figure"><img src="../img/accounting101/session5A-p06.jpg" alt="Netflix 流媒体内容义务到期时间表：2019 与 2018 对照，单位千美元，合计 19,490,082" loading="lazy"><figcaption class="cap">这张 Netflix 内容义务到期表在论证：表外还有一笔近 195 亿美元（19,490,082 千美元）的合同付款义务，和经营租赁性质完全一样，却完全没有体现在资产负债表上。它还提醒你注意「5 年以后」这一档从 148,334 跳到 618,644——义务的久期在变长，这类长期承诺如果按 4.7% 甚至更低的折现率资本化，数值并不小。</figcaption></figure>
+</div>
+<div class="slide" id="s7">
+<h3><span class="slide-no">幻灯 7</span>3. 非实物性资本支出（non-physical capital expenses）<span class="en">3. Non-Physical Capital Expenses</span></h3>
+<div class="zh"><p>会计师几乎总是把对<strong>实物资产</strong>（physical assets，比如厂房、设备）的投资当作资本性支出（capex），记进资产负债表。但对<strong>非实物资产</strong>的投资，规则既不一致、也不可预测。</p>
+<ul><li>一家制药公司&lt;strong&gt;买&lt;/strong&gt;下另一家公司的专利，这笔支出被允许当作资本性支出；但一家公司靠自己做研发（R&amp;D）得到同样的结果，就&lt;strong&gt;不被允许&lt;/strong&gt;。</li><li>一家价值依赖&lt;strong&gt;人力资本&lt;/strong&gt;（human capital）的公司，几乎从来不被要求把它在人力资本上的长期投入（比如招聘和培训）当作资本性支出。</li><li>一家靠订阅者/用户赚钱的公司，花钱去获取用户或订阅者，这笔钱一般也&lt;strong&gt;不被允许&lt;/strong&gt;当作资本性支出。</li></ul>
+<p>Damodaran 的评语是：这里的做法既<strong>不一致</strong>（买来的算研发成果，自己做的不算），又<strong>不可预测</strong>（同样一笔投入，换个行业、换个形式，待遇完全不同）。下一页他用一个制药公司的实际数字，把这笔账重新算一遍。</p></div>
+<div class="en-block"><span class="en-label">English original</span>3. Non-Physical Capital Expenses
+
+¨   While accountants almost always treat investments in
+    physical assets as capital expenses and show them on the
+    balance sheet, they are inconsistent and unpredictable when
+    it comes to investments in non-physical assets.
+    ¤ A pharmaceutical company that buys a patent from another one is
+      allowed to treat that expenditure as a capital expenditure, but one
+      that does R&amp;D to arrive at the same result is not.
+    ¤ A company reliant on human capital for its value is almost never
+      required to treat what it invests in human capital for the long term
+      (recruiting and training, for example) as capital expenditures.
+    ¤ A subscriber/user based company that spends money acquiring users
+      or subscribers generally is not allowed to treat the money spent
+      acquiring customers as capital expenditures.</div>
+</div>
+<div class="slide" id="s8">
+<h3><span class="slide-no">幻灯 8</span>制药公司案例：把研发费用资本化<span class="en">A Pharmaceutical Company Example</span></h3>
+<div class="zh"><p><strong>第 1 步：确定研发费用的摊销年限。</strong>考虑美国食品药品监督管理局（FDA）新药审批流程的长度，Damodaran 假设 Amgen 的研发支出按 <strong>10 年</strong>直线摊销。</p>
+<p><strong>第 2 步：把历史研发费用资本化</strong>（单位：百万美元；每年摊销额 = 该年研发费用 ÷ 10）：</p>
+<ul><li>Current（当年）：研发费用 3,030.00｜未摊销余额 3,030.00｜当年摊销 0.00</li><li>-1 年：3,266.00｜2,939.40｜326.60</li><li>-2 年：3,366.00｜2,692.80｜336.60</li><li>-3 年：2,314.00｜1,619.80｜231.40</li><li>-4 年：2,028.00｜1,216.80｜202.80</li><li>-5 年：1,655.00｜827.50｜165.50</li><li>-6 年：1,117.00｜446.80｜111.70</li><li>-7 年：864.00｜259.20｜86.40</li><li>-8 年：845.00｜169.00｜84.50</li><li>-9 年：823.00｜82.30｜82.30</li><li>-10 年：663.00｜0.00｜66.30</li><li>&lt;strong&gt;合计：未摊销余额 13,283.60｜当年摊销 1,694.10&lt;/strong&gt;</li></ul>
+<p>图右侧的结论框把这一步翻译成三句话：当年研发费用 = <strong>资本支出 3,030 百万美元</strong>；研发摊销 = <strong>折旧 1,694 百万美元</strong>；未摊销研发 = <strong>已投入资本 13,284 百万美元</strong>。</p>
+<p><strong>第 3 步：重述盈利、账面价值与回报率</strong>（详见下表）。结论有两个方向相反的变化，而 Damodaran 特意把它们并排摆出来：净利润和营业利润都<strong>上升</strong>（因为费用被资本化、只扣摊销），可净资产收益率（ROE）却从 <strong>23.48% 掉到 17.75%</strong>、税前资本回报率从 <strong>25.44% 掉到 19.65%</strong>——因为分母（股东权益、投入资本）被撑大了。</p>
+<p>这正是「口径不一致」的代价所在：现行准则把 Amgen 十年来投入的 132.84 亿美元研发当作当期费用全部扣掉了，于是报表上的回报率被系统性地<strong>高估</strong>。Damodaran 要提醒的是：报表上那个更高的回报率，并不是这门生意真的更会赚钱，只是因为它的资本投入被会计藏了起来。</p></div>
+<div class="table-wrap"><table><thead><tr><th>项目 Item</th><th>未调整 Unadjusted</th><th>按 R&amp;D 调整后 Adjusted for R&amp;D</th><th>说明 Comments</th></tr></thead><tbody><tr><td>Net Income&lt;br&gt;净利润</td><td>$ 4,196</td><td>$ 4,196 + 3,030 − 1,694 = &lt;strong&gt;$ 5,532&lt;/strong&gt;</td><td>加回当年 R&amp;D，减去 R&amp;D 摊销&lt;br&gt;Add current year's R&amp;D and subtract R&amp;D amortization</td></tr><tr><td>Book value of equity&lt;br&gt;股东权益账面价值</td><td>$ 17,869</td><td>$ 17,869 + 13,284 = &lt;strong&gt;$ 31,153&lt;/strong&gt;</td><td>加上以前年度未摊销的 R&amp;D&lt;br&gt;Add unamortized R&amp;D from prior years</td></tr><tr><td>Return on Equity&lt;br&gt;净资产收益率</td><td>4,196 / 17,869 = 23.48%</td><td>5,532 / 31,153 = &lt;strong&gt;17.75%&lt;/strong&gt;</td><td>账面权益因并入 R&amp;D 而膨胀，即便净利润上升，ROE 仍下降&lt;br&gt;Return on equity drops when book equity is augmented by R&amp;D, even though net income rises.</td></tr><tr><td>Pre-tax Operating Income&lt;br&gt;税前营业利润</td><td>$ 5,594</td><td>$ 5,594 + 3,030 − 1,694 = &lt;strong&gt;$ 6,930&lt;/strong&gt;</td><td>加回当年 R&amp;D，减去 R&amp;D 摊销&lt;br&gt;Add current year's R&amp;D and subtract R&amp;D amortization</td></tr><tr><td>Book value of invested capital&lt;br&gt;投入资本账面价值</td><td>$ 21,985</td><td>$ 21,985 + 13,284 = &lt;strong&gt;$ 35,269&lt;/strong&gt;</td><td>加上以前年度未摊销的 R&amp;D&lt;br&gt;Add unamortized R&amp;D from prior years</td></tr><tr><td>Pre-tax Return on Capital&lt;br&gt;税前资本回报率</td><td>5,594 / 21,985 = 25.44%</td><td>6,930 / 35,269 = &lt;strong&gt;19.65%&lt;/strong&gt;</td><td>资本因并入 R&amp;D 而膨胀，即便营业利润上升，资本回报率仍下降&lt;br&gt;Return on capital drops when capital is augmented by R&amp;D, even though operating income rises.</td></tr></tbody></table></div>
+<div class="en-block"><span class="en-label">English original</span>A Pharmaceutical Company Example</div>
+<figure class="figure"><img src="../img/accounting101/session5A-p08.jpg" alt="Amgen 研发资本化三步测算：10 年摊销年限、历史研发摊销明细表、以及重述后的净利润/账面价值/ROE/投入资本回报率对照表" loading="lazy"><figcaption class="cap">这张 Amgen 的三步测算图在论证：研发费用一旦被资本化，报表上会出现一个「利润上升、回报率反降」的组合。净利润从 4,196 升到 5,532、税前营业利润从 5,594 升到 6,930（百万美元），但因为账面权益被加上 13,284 的未摊销研发，ROE 从 23.48% 降到 17.75%，税前资本回报率从 25.44% 降到 19.65%。换句话说：现行准则把 132.84 亿美元的研发投入当成费用扣掉，才让 Amgen 的回报率看起来那么高。</figcaption></figure>
+</div>
+<div class="slide" id="s9">
+<h3><span class="slide-no">幻灯 9</span>4. 股权激励（stock based compensation, SBC）<span class="en">4. Stock Based Compensation</span></h3>
+<div class="zh"><p>按 IFRS 和 GAAP 报告的公司，把<strong>当年的股权激励</strong>列作营业费用，其中期权和限制性股票（restricted stock）都按<strong>发行时</strong>的价值计量。</p>
+<p>即便如此，过去授予期权的<strong>余额</strong>仍然只会出现在这些公司的附注里——附注给出相关的剩余期限（remaining maturity）和行权价格（exercise price）这类信息（下一页就是 Netflix 的附注）。</p>
+<p>过去几年授予的<strong>限制性股票单位</strong>（restricted stock units, RSU），则会出现在关于股本数量的讨论中。</p>
+<p>而在<strong>两种情况下</strong>，公司随后都会试图把这项会计费用「翻回去」——在报告 pro-forma 或 adjusted earnings（调整后盈利）时声称它是<strong>非现金</strong>项目。</p></div>
+<div class="en-block"><span class="en-label">English original</span>4. Stock Based Compensation
+
+¨   Companies following IFRS and GAAP report the current
+    year’s stock- based compensation as an operating
+    expense, valuing both options and restricted stock at the
+    time of issuance.
+    ¤ That said, the residue of past option grants will show up in the
+      footnotes of these companies, with relevant information on
+      remaining maturity and exercise price.
+    ¤ The restricted stock units granted in past years will show up as
+      part of the discussion of share count.
+¨   In both cases, companies will then try to reverse the
+    accounting charge, claiming it is non-cash in reporting
+    pro-forma or adjusted earnings.</div>
+</div>
+<div class="slide" id="s10">
+<h3><span class="slide-no">幻灯 10</span>Netflix 的在外期权……<span class="en">Options Outstanding… at Netflix</span></h3>
+<div class="zh"><p>这是 Netflix 10-K 里<strong>股票期权计划</strong>（Stock Option Plans）的活动表（2011 Stock Plan，2011 年 6 月通过）。Damodaran 引用它，是为了说明一件被附注藏起来的事：股权激励的账虽然计完了，但<strong>义务没结清</strong>。</p>
+<p>2019 年 12 月 31 日，仍在外流通的期权是 <strong>20,859,326</strong> 份，加权平均行权价 <strong>$124.28</strong>，加权平均剩余合同期限 <strong>5.57 年</strong>，内在价值合计 <strong>$ 4,230,013 千美元</strong>（约 42.3 亿美元）；其中已归属且可行权（vested and exercisable）的同样是 20,859,326 份、$124.28、5.57 年、$ 4,230,013。</p>
+<p>再看行权价的轨迹：2016 年末在外期权 22,437,347 份、加权平均行权价 <strong>$44.83</strong>；2017 年末 21,647,350 份、<strong>$61.13</strong>；2018 年末 20,479,278 份、<strong>$89.61</strong>；2019 年末 20,859,326 份、<strong>$124.28</strong>。同期新授予（granted）的行权价一路抬到 159.56 → 311.66 → 320.66。</p>
+<p>Damodaran 要指出的矛盾就在这里：这批未来必然要被行权、必然要稀释现有股东的股份，在利润表上被当成「非现金」加回了；而真实的经济代价——股份被稀释——只出现在一张没人看的附注表里。</p></div>
+<div class="table-wrap"><table><thead><tr><th>项目</th><th>可授予股数 Shares Available for Grant</th><th>在外期权股数 Options Outstanding</th><th>加权平均行权价 Weighted-Avg Exercise Price</th><th>剩余合同期限（年）</th><th>内在价值合计（千美元）</th></tr></thead><tbody><tr><td>Balances as of December 31, 2016</td><td>13,289,953</td><td>22,437,347</td><td>$ 44.83</td><td></td><td></td></tr><tr><td>Granted</td><td>(2,550,038)</td><td>2,550,038</td><td>159.56</td><td></td><td></td></tr><tr><td>Exercised</td><td>—</td><td>(3,338,474)</td><td>26.79</td><td></td><td></td></tr><tr><td>Expired</td><td>—</td><td>(1,561)</td><td>3.25</td><td></td><td></td></tr><tr><td><strong>Balances as of December 31, 2017</strong></td><td>10,739,915</td><td>21,647,350</td><td><strong>$ 61.13</strong></td><td></td><td></td></tr><tr><td>Granted</td><td>(2,039,974)</td><td>2,039,974</td><td>311.66</td><td></td><td></td></tr><tr><td>Exercised</td><td>—</td><td>(3,205,911)</td><td>38.66</td><td></td><td></td></tr><tr><td>Expired</td><td>—</td><td>(2,135)</td><td>$ 4.60</td><td></td><td></td></tr><tr><td><strong>Balances as of December 31, 2018</strong></td><td>8,699,941</td><td>20,479,278</td><td><strong>$ 89.61</strong></td><td></td><td></td></tr><tr><td>Granted</td><td>(2,588,380)</td><td>2,588,380</td><td>320.66</td><td></td><td></td></tr><tr><td>Exercised</td><td>—</td><td>(2,208,052)</td><td>32.88</td><td></td><td></td></tr><tr><td>Expired</td><td>—</td><td>(280)</td><td>6.74</td><td></td><td></td></tr><tr><td><strong>Balances as of December 31, 2019</strong></td><td>6,111,561</td><td><strong>20,859,326</strong></td><td><strong>$ 124.28</strong></td><td><strong>5.57</strong></td><td><strong>$ 4,230,013</strong></td></tr><tr><td>Vested and exercisable at December 31, 2019</td><td></td><td>20,859,326</td><td>$ 124.28</td><td>5.57</td><td>$ 4,230,013</td></tr></tbody></table></div>
+<div class="en-block"><span class="en-label">English original</span>Options Outstanding… at Netflix</div>
+<figure class="figure"><img src="../img/accounting101/session5A-p10.jpg" alt="Netflix 股票期权计划活动表（2016–2019）：可授予股数、在外期权数、加权平均行权价、剩余合同期限与内在价值" loading="lazy"><figcaption class="cap">这张 Netflix 期权活动表在论证：SBC 是一笔「还没走完」的负债。2019 年末仍有 20,859,326 份期权在外、加权平均行权价 $124.28、剩余合同期限 5.57 年、内在价值合计 $4,230,013 千美元；而新授予期权的行权价从 159.56 一路升到 320.66。这笔未来必然稀释股东的股份，在利润表上却被当成非现金项目加了回去。</figcaption></figure>
+</div>
+<div class="slide" id="s11">
+<h3><span class="slide-no">幻灯 11</span>以及 Peloton 的 Adjusted EBITDA……<span class="en">And Adjusted EBITDA… at Peloton</span></h3>
+<div class="zh"><p>Netflix 那张表说明的是「义务还没结清」；Peloton 这张表说明的是「公司怎么把账翻回去」。这是 Peloton 披露的 <strong>Adjusted EBITDA 与 GAAP 净亏损的对账表</strong>（财年截至 6 月 30 日，单位：<strong>百万美元</strong>）。</p>
+<p>净亏损（net loss）：2017 财年 <strong>(71.1)</strong>、2018 财年 <strong>(47.9)</strong>、2019 财年 <strong>(195.6)</strong>。逐项加回后，Adjusted EBITDA 是 2017 财年 <strong>(51.8)</strong>、2018 财年 <strong>(30.4)</strong>、2019 财年 <strong>(71.3)</strong>；对应的 Adjusted EBITDA 利润率是 (23.7)%、(7.0)%、(7.8)%。</p>
+<p>关键在加回项里最大的一笔：<strong>股权激励费用</strong>（stock-based compensation expense）2017 财年 10.3、2018 财年 8.5、2019 财年 <strong>89.5</strong> 百万美元——一年之间跳了十倍。Damodaran 的意思是：这一笔 89.5 百万被「加回」掉的非现金费用，规模已经接近 2019 年 195.6 百万净亏损的一半。</p>
+<p>另外几笔加回也值得看：折旧与摊销 21.7、诉讼费用 12.1、与定制建设义务相关的土地租赁费 7.2、其他收支净额 +6.7、所得税 0.1、交易成本 0.4（2019 财年，百万美元）。</p>
+<p>顺带一提，Peloton 这张表里还藏着第 5A 讲开头的那个问题：最后那一行「与定制建设义务相关的土地租赁费」——租地在经营租赁资本化之后，它会被记进租赁资产、折旧和利息，而不是留在营业费用里。</p></div>
+<div class="table-wrap"><table><thead><tr><th>项目（Fiscal Year Ended June 30，$ in millions）</th><th>2017</th><th>2018</th><th>2019</th></tr></thead><tbody><tr><td><strong>Net loss</strong><br>净亏损</td><td><strong>$ (71.1)</strong></td><td><strong>$ (47.9)</strong></td><td><strong>$ (195.6)</strong></td></tr><tr><td>Other (expense) income, net&lt;br&gt;其他收支净额</td><td>(0.3)</td><td>(0.3)</td><td>6.7</td></tr><tr><td>Provision for income taxes&lt;br&gt;所得税费用</td><td>—</td><td>0.1</td><td>0.1</td></tr><tr><td>Depreciation and amortization expense&lt;br&gt;折旧与摊销</td><td>3.7</td><td>6.6</td><td>21.7</td></tr><tr><td>Stock-based compensation expense&lt;br&gt;股权激励费用</td><td>10.3</td><td>8.5</td><td><strong>89.5</strong></td></tr><tr><td>Transaction costs&lt;br&gt;交易成本</td><td>—</td><td>0.5</td><td>0.4</td></tr><tr><td>Litigation expenses&lt;br&gt;诉讼费用</td><td>5.0</td><td>1.5</td><td>12.1</td></tr><tr><td>Ground lease expense related to build-to-suit obligations&lt;br&gt;与定制建设义务相关的土地租赁费</td><td>—</td><td>—</td><td>7.2</td></tr><tr><td><strong>Adjusted EBITDA</strong><br>调整后 EBITDA</td><td><strong>$ (51.8)</strong></td><td><strong>$ (30.4)</strong></td><td><strong>$ (71.3)</strong></td></tr><tr><td>Adjusted EBITDA Margin&lt;br&gt;调整后 EBITDA 利润率</td><td>(23.7)%</td><td>(7.0)%</td><td>(7.8)%</td></tr></tbody></table></div>
+<div class="en-block"><span class="en-label">English original</span>And Adjusted EBITDA… at Peloton</div>
+<figure class="figure"><img src="../img/accounting101/session5A-p11.jpg" alt="Peloton 净亏损与 Adjusted EBITDA 对账表（2017–2019 财年，单位百万美元），含股权激励费用 89.5 一项" loading="lazy"><figcaption class="cap">这张 Peloton 对账表在论证：SBC 加回是一笔越滚越大的窟窿。股权激励费用从 2017 财年的 10.3、2018 财年的 8.5 跳到 2019 财年的 89.5 百万美元；公司把 195.6 百万美元的 GAAP 净亏损「调整」成 71.3 百万美元的 Adjusted EBITDA，其中 89.5 百万来自加回非现金的股权激励——这一笔就吞掉了亏损的近一半。把非现金费用全部加回之后，报表上看不出这家公司为了留住员工实际付出了多少。</figcaption></figure>
+</div>
+<div class="slide" id="s12">
+<h3><span class="slide-no">幻灯 12</span>小结（Bottom Line）<span class="en">Bottom Line</span></h3>
+<div class="zh"><p><strong>① 会计报表只是原料。</strong>在公司金融与估值中，财务报表是原始数据，应该被当作<strong>会计意见（accounting opinion）而不是事实</strong>来看。</p>
+<p><strong>② 你应该按自己的需要重塑它。</strong>只要会计视角已经过时、或者反映的是另一套优先事项，你就应该毫不犹豫地重做或重构这些报表。</p>
+<p><strong>③ 但你的选择会有后果。</strong>这会影响你怎么衡量利润、投入资本，甚至股本。你看到的那个公司，会比会计报表描述的那个公司更接近真相。</p>
+<p><strong>④ 市场不跟着会计走（而且比会计更明智）。</strong>大体上，市场学习并向前走的速度快过会计。所以市场几十年来一直假定「<strong>租赁就是债</strong>」来给零售股定价，而会计直到 2019 年才做出这个改变。</p></div>
+<div class="en-block"><span class="en-label">English original</span>Bottom Line
+
+¨   Accounting statements are just raw material: In corporate finance and
+    valuation, financial statements are raw data that should be viewed as
+    accounting opinion and not fact.
+¨   That you should mold to your own needs: To the extent that accounting
+    perspectives can be outdated or reflect a different set of priorities, you
+    should feel no qualms about redoing or reconstructing accounting
+    statements.
+¨   But your choices will have consequences: That can have consequences for
+    how you measure profits, invested capital and even share count. The
+    company that you see will be closer to the truth than the company
+    described in accounting statements.
+¨   Markets don’t follow (and are more sensible than) accountants: For the
+    most part, markets learn and move on faster than accountants do. Thus,
+    markets have been pricing in retailers, on the assumption that leases are
+    debt for decades, while accountants made the change in 2019.</div>
+</div>
+<h2>课后测试与答案<span class="en">Post-class test &amp; solutions</span></h2>
+<p class="meta">题目与选项为中英对照；答案与解析附在每题下方。</p>
+<div class="q">
+<p class="qno">第 1 题</p>
+<p class="qzh">【数据：Google 的研发费用（单位：百万美元）】最近 12 个月 $ 26,018；上一年 $ 21,419；两年前 $ 16,625；三年前 $ 13,948。
+假设 Google 的研发费用需要 3 年才能在商业用途上收回（pay off in commercial use），请估算：如果把研发费用资本化（capitalize），Google 最近 12 个月的&lt;strong&gt;税前营业利润&lt;/strong&gt;会变动多少？</p>
+<p class="meta">1. Assuming that Google’s R&amp;D takes 3 years to pay off in commercial use,
+      estimate how much Google’s pre-tax operating income in the last 12 months
+      will change if R&amp;D is capitalized?</p>
+<div class="ans"><strong>答案：+$8,687 million</strong> 税前营业利润增加 &lt;strong&gt;8,687 百万美元&lt;/strong&gt;（$8,687 million）
+<p>对营业利润的影响 = 加回最近 12 个月的研发费用，再减去研发摊销 = +26,018 − 17,331 = &lt;strong&gt;8,687 百万美元&lt;/strong&gt;。
+（配套的摊销表：最近 12 个月 26,018，未摊销余额 26,018.00，当年摊销 0；上一年 21,419，未摊销 14,279.33，摊销 7,139.67；两年前 16,625，未摊销 5,541.67，摊销 5,541.67；三年前 13,948，未摊销 0，摊销 4,649.33；合计未摊销 45,839.00、当年摊销 17,330.67——单位：百万美元。）</p>
+<div class="en-block"><span class="en-label">English original</span>1. Effect on operating income = Add back the R&amp;D expense from the last 12
+   months and subtract out amortization of R&amp;D = +$26,018 - $17,331 = $8,687
+   million</div>
+</div>
+</div>
+<div class="q">
+<p class="qno">第 2 题</p>
+<p class="qzh">【数据：Google 的研发费用（单位：百万美元）】最近 12 个月 $ 26,018；上一年 $ 21,419；两年前 $ 16,625；三年前 $ 13,948。
+假设 Google 的研发费用需要 3 年才能在商业用途上收回，请估算：如果把研发费用资本化，Google 的&lt;strong&gt;股东权益账面价值&lt;/strong&gt;（book value of equity）会变动多少？</p>
+<p class="meta">2. Assuming that Google’s R&amp;D takes 3 years to pay off in commercial use,
+      estimate how much Google’s book value of equity will change if R&amp;D is
+      capitalized?</p>
+<div class="ans"><strong>答案：+$45,839 million</strong> 股东权益账面价值增加 &lt;strong&gt;45,839 百万美元&lt;/strong&gt;（$45,839 million）
+<p>对股东权益账面价值的影响 = 加回未摊销的研发支出 = &lt;strong&gt;+45,839 百万美元&lt;/strong&gt;。（45,839 = 26,018 + 14,279.33 + 5,541.67 + 0。）</p>
+<div class="en-block"><span class="en-label">English original</span>2. Effect on book value of equity = Add back the unamortized portion of R&amp;D
+   = +$45,839 million
+
+               Year          Lease commitment       PV at 3%
+                 1                $333.00            $323.30
+                 2                $353.00            $332.74
+                 3                $327.00            $299.25
+                 4                $300.00            $266.55
+                 5                $252.00            $217.38
+             Yrs 6-10             $227.20            $897.55
+          Sum of PV of lease commitments            $2,336.76</div>
+</div>
+</div>
+<div class="q">
+<p class="qno">第 3 题</p>
+<p class="qzh">【数据：Nordstrom 的租赁承诺（单位：百万美元）】最近 12 个月 $ 374.00；第 +1 年 $ 333.00；第 +2 年 $ 353.00；第 +3 年 $ 327.00；第 +4 年 $ 300.00；第 +5 年 $ 252.00；第 5 年之后 $ 1,136.00。
+假设你正在把 Nordstrom 的租赁资本化，并且该公司的税率为 25%、债务成本为 3%、股权成本为 8%、资本成本为 7%。请估算这笔&lt;strong&gt;租赁承诺的债务价值&lt;/strong&gt;。</p>
+<p class="meta">3. Assume that you are capitalizing Nordstrom’s leases, and that the company
+      has a tax rate of 25%, a cost of debt of 3%, a cost of equity of 8% and a cost of
+      capital of 7%. Estimate the debt value of the lease commitment.</p>
+<div class="ans"><strong>答案：+$2,337 million</strong> 债务增加 &lt;strong&gt;2,337 百万美元&lt;/strong&gt;（$2,337 million）
+<p>对债务的影响 = 按租赁承诺的现值增加 = &lt;strong&gt;+2,337 百万美元&lt;/strong&gt;。
+按 3% 折现的现值表（单位：百万美元）：第 1 年承诺 333.00 → 现值 323.30；第 2 年 353.00 → 332.74；第 3 年 327.00 → 299.25；第 4 年 300.00 → 266.55；第 5 年 252.00 → 217.38；第 6–10 年 每年承诺 227.20 → 现值合计 897.55；租赁承诺现值合计 &lt;strong&gt;2,336.76&lt;/strong&gt;。</p>
+<div class="en-block"><span class="en-label">English original</span>3. Effect on debt = Increase by PV of lease commitments = +$2,337 million</div>
+</div>
+</div>
+<div class="q">
+<p class="qno">第 4 题</p>
+<p class="qzh">【数据：Nordstrom 的租赁承诺（单位：百万美元）】最近 12 个月 $ 374.00；第 +1 年 $ 333.00；第 +2 年 $ 353.00；第 +3 年 $ 327.00；第 +4 年 $ 300.00；第 +5 年 $ 252.00；第 5 年之后 $ 1,136.00。
+把 Nordstrom 的租赁资本化，对公司&lt;strong&gt;本年度的营业利润&lt;/strong&gt;会有什么影响？（你可以假设 Nordstrom 上一年的租赁承诺与今年大致相同。）</p>
+<p class="meta">4. What effect will capitalizing Nordstrom’s leases have on the company’s
+      operating income for the year? (You can assume that Nordstrom’s lease
+      commitments were similar in the prior year.)</p>
+<div class="ans"><strong>答案：+$140 million</strong> 营业利润增加 &lt;strong&gt;1.4 亿美元&lt;/strong&gt;（+$140 million）
+<p>对营业利润的影响 = 加回最近 12 个月的租赁费用，再减去租赁资产的折旧 = +374 百万 − 2,337 / 10 = &lt;strong&gt;+140 百万美元&lt;/strong&gt;。（折旧本应基于上一年的租赁资产价值计算，但既然租赁承诺变动不大，这里假设它与今年的数值相近。）</p>
+<div class="en-block"><span class="en-label">English original</span>4. Effect on operating income = Add back the lease expense from the last 12
+   months and subtract out depreciation of leased asset = +374 million -
+   $2337/10 = +$140 million. (The depreciation should be based upon the value
+   of the leased asset last year, but given that the lease commitment did not
+   change much, I am assuming it was similar in value to this year’s number.)</div>
+</div>
+</div>
+<div class="q">
+<p class="qno">第 5 题</p>
+<p class="qzh">【数据：Nordstrom 的租赁承诺（单位：百万美元）】最近 12 个月 $ 374.00；第 +1 年 $ 333.00；第 +2 年 $ 353.00；第 +3 年 $ 327.00；第 +4 年 $ 300.00；第 +5 年 $ 252.00；第 5 年之后 $ 1,136.00。
+把 Nordstrom 的租赁资本化，对公司&lt;strong&gt;本年度的利息费用&lt;/strong&gt;会有什么影响？（你可以假设 Nordstrom 上一年的租赁承诺与今年大致相同。）</p>
+<p class="meta">5. What effect will capitalizing Nordstrom’s leases have on the company’s
+      interest expense for the year? (You can assume that Nordstrom’s lease
+      commitments were similar in the prior year.)</p>
+<div class="ans"><strong>答案：$70.10 million</strong> 利息费用增加 &lt;strong&gt;7,010 万美元&lt;/strong&gt;（$70.10 million）
+<p>对利息费用的影响 = 租赁承诺现值 × 税前债务成本 = 2,337 百万 × 0.03 = &lt;strong&gt;70.10 百万美元&lt;/strong&gt;。</p>
+<div class="en-block"><span class="en-label">English original</span>5. Effect on interest expense = PV of lease commitments * Pre-tax cost of debt
+   = $2,337 million * .03 = $70.10 million</div>
+</div>
+</div>
+<div class="note"><strong>译者注</strong><br>本讲实例数字取自各公司当时的公开披露（Nordstrom 2019 年 10-K 的非流动负债部分、Netflix 2019 年 10-K 的流媒体内容义务表与股票期权计划表、Peloton 的 Adjusted EBITDA 对账表），金额单位以图为准（百万美元或千美元，各处不同，译者已在正文标明）。讲师在图上写下的假设参数（如 Nordstrom 租赁承诺按 4.7% 折现、Amgen 研发按 10 年直线摊销、Netflix 第 6–10 年租赁按每年 227.2 百万美元处理）是估算口径，不是准则规定。</div>
+<p class="sessnav"><a href="session5.html">← 第 5 讲</a> <a href="index.html">目录</a> <a href="session6.html">第 6 讲 →</a></p>
+<p class="footer">课程来源：<a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/webcastacctg.htm">Damodaran · Corporate Finance Online Class（Accounting 101）</a><br>幻灯与课后题版权归 Aswath Damodaran / NYU Stern 所有，本站仅作教学与中文对照阅读使用。<br><a href="../index.html">← 返回站主随笔</a></p>
+</body>
+</html>

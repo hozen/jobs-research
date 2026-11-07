@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Damodaran 的 Accounting 101 全课程中英对照：11 讲讲课视频 + 逐页幻灯 + 课后测试与答案。这是 NYU Stern 的 Corporate Finance Online Class 系列，主题是「会计对金融分析有什么用」，包含财务报表总览、利润表、资产负债表、现金流量表、会计不一致性与后果、财务比率六个单元。">
+<title>会计 101：给投资人的三张报表课 · 会计101 中英对照 — 乔布斯研究</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600&family=Charter:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #ffffff; --text: #1a1a1a; --meta: #888888; --rule: #e0e0e0; --max-w: 720px; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: var(--bg); color: var(--text); font-family: 'Noto Serif SC','Charter',serif; font-size: 17px; line-height: 1.7; max-width: var(--max-w); margin: 0 auto; padding: 0 24px 80px; overflow-wrap: anywhere; }
+a { color: var(--text); text-decoration: underline; text-decoration-color: var(--rule); }
+a:hover { text-decoration-color: var(--text); }
+h1 { font-size: 22px; font-weight: 600; margin: 48px 0 8px; letter-spacing: -0.3px; }
+h2 { font-size: 15px; font-weight: 600; color: var(--meta); text-transform: uppercase; letter-spacing: 1px; margin: 40px 0 16px; padding-top: 24px; border-top: 1px solid var(--rule); }
+h2 .en { display: block; font-size: 14px; color: var(--meta); text-transform: none; letter-spacing: 0; font-weight: 400; font-style: italic; margin-top: 4px; }
+h3 { font-size: 17px; font-weight: 600; margin: 32px 0 12px; }
+h3 .en { display: block; font-size: 14px; color: var(--meta); font-weight: 400; font-style: italic; margin-top: 2px; }
+.back { font-size: 14px; color: var(--meta); margin-bottom: 24px; }
+.meta { font-size: 13px; color: var(--meta); margin-left: 8px; }
+p { margin: 16px 0; }
+strong { font-weight: 600; }
+em.en-source { display: block; font-family: 'Charter', serif; font-size: 14px; font-style: italic; color: var(--meta); margin: 8px 0 24px; padding-left: 12px; border-left: 2px solid var(--rule); }
+blockquote { border-left: 3px solid var(--rule); padding: 4px 0 4px 20px; margin: 24px 0; color: #555; font-style: italic; }
+.source { font-size: 13px; color: var(--meta); margin-top: 12px; }
+.byline { font-size: 14px; color: var(--meta); margin: 8px 0 32px; }
+.tag-row { margin: 16px 0 32px; }
+.tag { display: inline-block; font-size: 12px; padding: 2px 10px; background: var(--rule); border-radius: 12px; color: var(--meta); margin-right: 6px; }
+.hero { background: #f9f9f9; border-radius: 8px; padding: 24px; margin: 0 0 32px; }
+.hero h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; }
+.hero p { font-size: 15px; color: #555; line-height: 1.7; margin: 8px 0; }
+.footer { margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--rule); font-size: 13px; color: var(--meta); }
+.footer a { color: var(--meta); }
+table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+.table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 16px 0; }
+.table-wrap table { margin: 0; min-width: 420px; }
+th, td { padding: 6px 10px; border: 1px solid var(--rule); text-align: left; vertical-align: top; }
+th { background: #f5f5f5; font-weight: 600; }
+.figure { margin: 32px 0; }
+.figure img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 4px; }
+.figure .cap { font-size: 13px; color: var(--meta); margin-top: 8px; line-height: 1.5; padding-left: 12px; border-left: 2px solid var(--rule); }
+.note { background: #f9f9f9; border-left: 3px solid #d4503a; border-radius: 4px; padding: 14px 18px; margin: 24px 0; font-size: 15px; color: #555; }
+.note strong { color: var(--text); }
+ol, ul { padding-left: 24px; margin: 16px 0; }
+li { margin: 8px 0; }
+@media (max-width: 600px) {
+  body { font-size: 16px; padding: 0 18px 60px; }
+  h1 { font-size: 20px; }
+  h2 { font-size: 14px; }
+  table { font-size: 12px; }
+  th, td { padding: 4px 6px; }
+}
+</style>
+<style>
+.kicker { font-size: 13px; color: var(--meta); letter-spacing: .5px; margin: 0 0 6px; }
+h1 .en { display: block; font-size: 15px; font-weight: 400; font-style: italic; color: var(--meta); margin-top: 6px; letter-spacing: 0; }
+.video-wrap { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 6px; margin: 24px 0 8px; background: #000; }
+.video-wrap iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+.video-cap { font-size: 13px; color: var(--meta); margin: 0 0 32px; }
+.slide { margin: 0 0 8px; padding: 20px 0 4px; border-top: 1px solid var(--rule); }
+.slide:first-of-type { border-top: none; }
+.slide h3 { margin: 0 0 12px; font-size: 16px; }
+.slide h3 .slide-no { display: inline-block; font-size: 12px; font-weight: 400; color: var(--meta); border: 1px solid var(--rule); border-radius: 10px; padding: 1px 8px; margin-right: 8px; vertical-align: 2px; }
+.slide h3 .en { display: block; font-size: 13px; color: var(--meta); font-style: italic; font-weight: 400; margin-top: 4px; }
+.slide .zh { margin: 0 0 10px; }
+.slide .zh p { margin: 10px 0; }
+.slide .zh ul, .slide .zh ol { margin: 8px 0; padding-left: 22px; }
+.slide .zh li { margin: 6px 0; }
+.en-block { font-family: 'Charter', serif; font-size: 14px; line-height: 1.6; color: var(--meta); background: #fbfbfb; border-left: 2px solid var(--rule); border-radius: 0 4px 4px 0; padding: 10px 14px; margin: 10px 0 0; white-space: pre-wrap; overflow-wrap: anywhere; }
+.en-block .en-label { display: block; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: #aaa; margin-bottom: 6px; }
+.q { margin: 24px 0; padding: 0 0 4px; border-bottom: 1px solid var(--rule); }
+.q .qno { font-size: 13px; color: var(--meta); }
+.q .qzh { font-weight: 600; }
+.q ol { margin: 8px 0; padding-left: 22px; }
+.q .opts { list-style: none; padding-left: 0; margin: 10px 0; }
+.q .opts li { margin: 7px 0; font-size: 15px; line-height: 1.55; }
+.q .opts .en { color: var(--meta); font-size: 13px; font-family: 'Charter', serif; }
+.ans { background: #f9f9f9; border-left: 3px solid #3a7d5c; border-radius: 4px; padding: 12px 16px; margin: 12px 0 24px; font-size: 15px; color: #555; }
+.ans strong { color: var(--text); }
+.toc-list { list-style: none; padding: 0; margin: 24px 0 0; }
+.toc-list li { margin: 0; padding: 16px 0; border-bottom: 1px solid var(--rule); }
+.toc-list a { font-size: 17px; font-weight: 600; text-decoration: none; }
+.toc-list a:hover { text-decoration: underline; }
+.toc-list .en { display: block; font-size: 13px; font-style: italic; color: var(--meta); font-weight: 400; margin-top: 4px; }
+.toc-list .sub { display: block; font-size: 14px; color: #555; margin-top: 6px; line-height: 1.6; }
+.toc-list .badge { font-size: 12px; color: var(--meta); }
+.sessnav { margin: 48px 0 0; padding-top: 20px; border-top: 1px solid var(--rule); display: flex; gap: 16px; flex-wrap: wrap; justify-content: space-between; font-size: 14px; }
+.sessnav a { color: var(--meta); text-decoration: none; }
+.sessnav a:hover { color: var(--text); text-decoration: underline; }
+.glossary td:first-child { white-space: nowrap; font-family: 'Charter', serif; }
+.glossary td:nth-child(2) { color: #555; }
+</style>
+</head>
+<body><p class="back">← <a href="../index.html">站主随笔</a></p>
+<p class="kicker">NYU Stern · Damodaran《Accounting 101》· 11 讲 + 课后题</p>
+<h1>会计 101：给投资人的三张报表课<span class="en">Accounting 101: A Financial Statement Course for Investors</span></h1>
+<p class="byline">全课程中英对照 · 每讲含讲课视频 + 逐页幻灯 + 课后测试与答案 · 讲师：Aswath Damodaran（NYU Stern 金融学教授）· 译者：站主（Mr. Buffett 委托）</p>
+<div class="video-wrap"><iframe src="https://www.youtube.com/embed/Jbp3-AU9v_g" title="Introduction to sessions" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<p class="video-cap">开篇视频：<a href="https://youtu.be/Jbp3-AU9v_g">Introduction to sessions</a>（Damodaran 自述：这是一门给「财务报表使用者」而非「会计准则制定者」的课）</p>
+<div class="hero"><h3>这套课在讲什么</h3>
+<p>这是一门<strong>从使用者视角</strong>讲会计的课：Damodaran 明确说，它不是给制定会计准则的人听的，而是给读财务报表做估值的人听的。</p>
+<p>课程结构很克制：先讲三张报表各自回答什么问题，再逐张拆解利润表、资产负债表、现金流量表，然后指出<strong>会计口径不一致的地方</strong>（股权激励、研发、租赁）会怎样在报表里留下痕迹，最后用财务比率把一切收口。每一讲都配 12–20 分钟的讲课视频、逐页幻灯和课后测试（含答案）。</p>
+<p>全系列 11 讲逐页中英对照，幻灯原图一张不落，课后题与答案全部译出。</p>
+<div class="tag-row"><span class="tag">Damodaran</span><span class="tag">三张报表</span><span class="tag">估值</span><span class="tag">财务比率</span><span class="tag">会计口径</span></div>
+</div>
+<h2>课程目录<span class="en">Table of contents</span></h2>
+<ul class="toc-list">
+<li><a href="session1.html">第 1 讲 · 财务三张报表总览</a><span class="en">Session 1: Financial Statements: An Overview</span><span class="sub">Damodaran 给这门课开的第一刀就切在会计本身：会计人不预测未来，也不给资产估值，他是记录已经发生的事的历史学家。 <span class="badge">· 幻灯 11 张 · 课后题 0 道</span></span></li>
+<li><a href="session2.html">第 2 讲 · 利润表：利润是怎么量出来的</a><span class="en">Session 2: Income Statements: Measuring Profits</span><span class="sub">利润表是三张报表里最容易被误读的一张：数字层层相减，每一层的口径都不一样，毛利高不等于净利高，营业利润高也可能被利息吃掉。 <span class="badge">· 幻灯 13 张 · 课后题 5 道</span></span></li>
+<li><a href="session2A.html">第 2A 讲 · 利润表比较：把七家公司并排放在一起看</a><span class="en">Income Statement Comparisons</span><span class="sub">这一讲不讲道理，只摆表。 <span class="badge">· 幻灯 13 张 · 课后题 5 道</span></span></li>
+<li><a href="session3.html">第 3 讲 · 资产负债表：拥有的资产与欠下的钱</a><span class="en">Session 3: Balance Sheets — Asset Base and Debt Due</span><span class="sub">这一讲拆资产负债表。 <span class="badge">· 幻灯 13 张 · 课后题 5 道</span></span></li>
+<li><a href="session3A.html">第 3A 讲 · 资产负债表的比较</a><span class="en">Balance Sheets: Illustrations</span><span class="sub">这一讲没有讲道理，全是报表。 <span class="badge">· 幻灯 15 张 · 课后题 5 道</span></span></li>
+<li><a href="session4.html">第 4 讲 · 现金流量表：现金怎么进来、怎么出去</a><span class="en">Cashflow Statements: Cash In and Out</span><span class="sub">这一讲处理现金流量表。 <span class="badge">· 幻灯 11 张 · 课后题 5 道</span></span></li>
+<li><a href="session4A.html">第 4A 讲 · 现金流量表的比较</a><span class="en">Cash Flow Statement Comparisons</span><span class="sub">这一讲是 Damodaran《Accounting 101》的第 4A 讲。 <span class="badge">· 幻灯 11 张 · 课后题 5 道</span></span></li>
+<li><a href="session5.html">第 5 讲 · 会计口径不一致，以及它带来的后果</a><span class="en">Accounting Inconsistencies &amp; Consequences</span><span class="sub">这一讲是全课程的转折点：Damodaran 列出四类「会计准则当年没跟上、后来又没改干净」的地方——税（三个税率互相打架）、股权激励、租赁、研发——然后逐个说清楚：会计怎么记的、报表会长什么样、以及他为什么认为记错了。 <span class="badge">· 幻灯 15 张 · 课后题 0 道</span></span></li>
+<li><a href="session5A.html">第 5A 讲 · 会计口径不一致：实例演示</a><span class="en">Accounting Inconsistency Examples</span><span class="sub">第 5 讲讲清了四类「会计口径不一致」，第 5A 讲把它们逐一落到真实公司的报表上：Nordstrom 的经营租赁如何从表外走进表内、Netflix 的内容付款承诺为什么还是看不见、Amgen 的研发费用被全部费用化之后回报率会怎么变、Netflix 与 Peloton 的股权激励（SBC）又是如何被「加回」掉的。 <span class="badge">· 幻灯 12 张 · 课后题 5 道</span></span></li>
+<li><a href="session6.html">第 6 讲 · 财务比率：盈利能力、效率、杠杆与流动性</a><span class="en">Financial Ratios: Of comps and peer groups</span><span class="sub">这一讲把绝对数换算成比率。 <span class="badge">· 幻灯 15 张 · 课后题 5 道</span></span></li>
+<li><a href="session6A.html">第 6A 讲 · 财务比率的实例演示</a><span class="en">Financial Ratios: Illustrations</span><span class="sub">第 6 讲讲了比率的原理与算法，这一讲把它落到真实公司身上。 <span class="badge">· 幻灯 13 张 · 课后题 5 道</span></span></li>
+</ul>
+<h2>术语对照表<span class="en">Glossary</span></h2>
+<p class="meta">阅读本系列时反复出现的会计与估值术语，中英对照。</p>
+<div class="table-wrap"><table class="glossary"><thead><tr><th>英文</th><th>中文</th><th>备注</th></tr></thead><tbody>
+<tr><td>Revenue / Revenues</td><td>营业收入</td><td>利润表第一行，注意与 sales（销售额）区别</td></tr>
+<tr><td>Cost of Goods Sold (COGS)</td><td>营业成本</td><td>对应 top line sales 的生产成本</td></tr>
+<tr><td>Gross Profit</td><td>毛利</td><td>收入减营业成本</td></tr>
+<tr><td>Operating Expenses</td><td>营业费用</td><td>含销售、一般及行政费用</td></tr>
+<tr><td>Operating Profit / Operating Income</td><td>营业利润</td><td>毛利减营业费用</td></tr>
+<tr><td>Financial Expenses</td><td>财务费用</td><td>债务等非权益资本的代价</td></tr>
+<tr><td>Taxable Income</td><td>应税所得</td><td>税前归母口径</td></tr>
+<tr><td>Net Income</td><td>净利润</td><td>税后归母口径</td></tr>
+<tr><td>Balance Sheet</td><td>资产负债表</td><td>时点报表</td></tr>
+<tr><td>Income Statement</td><td>利润表</td><td>期间报表</td></tr>
+<tr><td>Statement of Cash Flows</td><td>现金流量表</td><td>期间报表，分经营/投资/筹资三段</td></tr>
+<tr><td>Current Assets</td><td>流动资产</td><td>短期资产</td></tr>
+<tr><td>Fixed Assets</td><td>固定资产</td><td>长期有形资产</td></tr>
+<tr><td>Financial Assets</td><td>金融资产</td><td>证券投资等</td></tr>
+<tr><td>Intangible Assets</td><td>无形资产</td><td>非实物资产</td></tr>
+<tr><td>Current Liabilities</td><td>流动负债</td><td>短期义务</td></tr>
+<tr><td>Equity</td><td>股东权益</td><td>资产负债表的残差</td></tr>
+<tr><td>Accrual Accounting</td><td>权责发生制</td><td>按交易发生而非收付记账</td></tr>
+<tr><td>Cash Accounting</td><td>收付实现制</td><td>按现金收付记账</td></tr>
+<tr><td>Deferred Revenue</td><td>递延收入 / 预收账款</td><td>先收钱后服务，会计上先记为负债</td></tr>
+<tr><td>Capital Expenditure (Capex)</td><td>资本开支</td><td>记入资产而非当期费用</td></tr>
+<tr><td>Depreciation</td><td>折旧</td><td>资产账面价值的逐期摊销</td></tr>
+<tr><td>Stock-based Compensation (SBC)</td><td>股权激励费用</td><td>会计处理在各国不一致的一处</td></tr>
+<tr><td>R&amp;D</td><td>研发</td><td>资本化还是费用化，会计不一致的一处</td></tr>
+<tr><td>Operating Lease</td><td>经营租赁</td><td>与融资租赁的区分标准在变</td></tr>
+<tr><td>Free Cash Flow</td><td>自由现金流</td><td>经营现金流减资本开支</td></tr>
+<tr><td>Cash Earnings</td><td>现金收益</td><td>区别于会计利润</td></tr>
+<tr><td>Liquidity</td><td>流动性</td><td>短期偿付能力</td></tr>
+<tr><td>Leverage</td><td>杠杆</td><td>债务相对权益的比重</td></tr>
+<tr><td>Gross Margin</td><td>毛利率</td><td>毛利 / 收入</td></tr>
+<tr><td>Net Margin</td><td>净利率</td><td>净利润 / 收入</td></tr>
+<tr><td>Return on Equity (ROE)</td><td>净资产收益率</td><td>盈利能力的第一把尺子</td></tr>
+<tr><td>Current Ratio</td><td>流动比率</td><td>流动资产 / 流动负债</td></tr>
+<tr><td>Peer Group</td><td>可比公司组</td><td>比率分析必须有参照系</td></tr>
+<tr><td>GAAP</td><td>美国公认会计原则</td><td>FASB 制定</td></tr>
+<tr><td>IFRS</td><td>国际财务报告准则</td><td>IASB 制定，约 90 国采用（2020）</td></tr>
+<tr><td>Accrual vs. Cash</td><td>权责发生 vs. 收付实现</td><td>会计与现金流分歧的根源</td></tr>
+</tbody></table></div>
+<div class="note"><strong>译者注</strong><br>本系列依据 NYU Stern 公开课程页面（<a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/webcastacctg.htm">Corporate Finance Online Class · Accounting 101</a>）整理，幻灯、课后测试与答案均为该课程公开 PDF。全部内容版权归 Aswath Damodaran / NYU Stern 所有，本站仅作教学与中文对照阅读之用，不作商业用途。<br><br>译文遵循三条原则：一是保留关键会计与估值术语的英文原词（gross profit、operating profit、accrual 等），首次出现时给出中英对照；二是每页幻灯保留英文原文，供读者逐句核对；三是不替讲师圆场——他关于准则的尖锐评论按原意译出，观点归观点、准则归准则。</div>
+<p class="footer">课程来源：<a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/webcastacctg.htm">Damodaran · Corporate Finance Online Class（Accounting 101）</a> · 幻灯 / 课后题 / 答案 PDF 版权归 Aswath Damodaran / NYU Stern 所有。<br><a href="../index.html">← 返回站主随笔</a></p>
+</body>
+</html>

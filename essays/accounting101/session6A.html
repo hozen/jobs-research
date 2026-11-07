@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="第 6 讲讲了比率的原理与算法，这一讲把它落到真实公司身上。六张表，同一组比率：Peloton、Netflix、Coca Cola、Toyota、Total、Dr. Reddy's——分别在健身器材、流媒体、饮料、汽车、石油、制药六个行业，报表币种分别是美元、日元、卢比。
+
+Damodaran 依次讲五类比率：盈利能力（gross / operating / after-tax operating / net margin 与有效税率）、会计回报（ROE 与 ROIC）、效率（turnover）、债务比率（debt to equity、debt to capital、debt to EBITDA）、以及偿债保障与流动性（interest coverage、fixed charge coverage、current ratio、quick ratio）。每一节都是「一张表 + 一段解读」，而解读部分讲的多是比率背后的坑：利润率为什么在年轻公司身上是负的、高毛利行业为什么天然占便宜、杠杆怎么吃掉净利率、会计口径怎么扭曲回报率、增长为什么有阴暗面、现金为什么不能从债务里一扣了事。
+
+课后测试用 Navistar（卡车制造）做全套练习：给你利润表和资产负债表，让你算 margin、ROE 与 ROIC、turnover、debt to equity 与 debt to capital，再算含不含金融事业部的利息保障倍数。答案里有一个细节值得留意——Damodaran 在投入资本里把商誉（goodwill）扣掉了，而且他说自己对这件事「心情复杂」（mixed feelings）。">
+<title>第 6A 讲 · 财务比率的实例演示 · 会计101 中英对照 — 乔布斯研究</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600&family=Charter:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #ffffff; --text: #1a1a1a; --meta: #888888; --rule: #e0e0e0; --max-w: 720px; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: var(--bg); color: var(--text); font-family: 'Noto Serif SC','Charter',serif; font-size: 17px; line-height: 1.7; max-width: var(--max-w); margin: 0 auto; padding: 0 24px 80px; overflow-wrap: anywhere; }
+a { color: var(--text); text-decoration: underline; text-decoration-color: var(--rule); }
+a:hover { text-decoration-color: var(--text); }
+h1 { font-size: 22px; font-weight: 600; margin: 48px 0 8px; letter-spacing: -0.3px; }
+h2 { font-size: 15px; font-weight: 600; color: var(--meta); text-transform: uppercase; letter-spacing: 1px; margin: 40px 0 16px; padding-top: 24px; border-top: 1px solid var(--rule); }
+h2 .en { display: block; font-size: 14px; color: var(--meta); text-transform: none; letter-spacing: 0; font-weight: 400; font-style: italic; margin-top: 4px; }
+h3 { font-size: 17px; font-weight: 600; margin: 32px 0 12px; }
+h3 .en { display: block; font-size: 14px; color: var(--meta); font-weight: 400; font-style: italic; margin-top: 2px; }
+.back { font-size: 14px; color: var(--meta); margin-bottom: 24px; }
+.meta { font-size: 13px; color: var(--meta); margin-left: 8px; }
+p { margin: 16px 0; }
+strong { font-weight: 600; }
+em.en-source { display: block; font-family: 'Charter', serif; font-size: 14px; font-style: italic; color: var(--meta); margin: 8px 0 24px; padding-left: 12px; border-left: 2px solid var(--rule); }
+blockquote { border-left: 3px solid var(--rule); padding: 4px 0 4px 20px; margin: 24px 0; color: #555; font-style: italic; }
+.source { font-size: 13px; color: var(--meta); margin-top: 12px; }
+.byline { font-size: 14px; color: var(--meta); margin: 8px 0 32px; }
+.tag-row { margin: 16px 0 32px; }
+.tag { display: inline-block; font-size: 12px; padding: 2px 10px; background: var(--rule); border-radius: 12px; color: var(--meta); margin-right: 6px; }
+.hero { background: #f9f9f9; border-radius: 8px; padding: 24px; margin: 0 0 32px; }
+.hero h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; }
+.hero p { font-size: 15px; color: #555; line-height: 1.7; margin: 8px 0; }
+.footer { margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--rule); font-size: 13px; color: var(--meta); }
+.footer a { color: var(--meta); }
+table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+.table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 16px 0; }
+.table-wrap table { margin: 0; min-width: 420px; }
+th, td { padding: 6px 10px; border: 1px solid var(--rule); text-align: left; vertical-align: top; }
+th { background: #f5f5f5; font-weight: 600; }
+.figure { margin: 32px 0; }
+.figure img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 4px; }
+.figure .cap { font-size: 13px; color: var(--meta); margin-top: 8px; line-height: 1.5; padding-left: 12px; border-left: 2px solid var(--rule); }
+.note { background: #f9f9f9; border-left: 3px solid #d4503a; border-radius: 4px; padding: 14px 18px; margin: 24px 0; font-size: 15px; color: #555; }
+.note strong { color: var(--text); }
+ol, ul { padding-left: 24px; margin: 16px 0; }
+li { margin: 8px 0; }
+@media (max-width: 600px) {
+  body { font-size: 16px; padding: 0 18px 60px; }
+  h1 { font-size: 20px; }
+  h2 { font-size: 14px; }
+  table { font-size: 12px; }
+  th, td { padding: 4px 6px; }
+}
+</style>
+<style>
+.kicker { font-size: 13px; color: var(--meta); letter-spacing: .5px; margin: 0 0 6px; }
+h1 .en { display: block; font-size: 15px; font-weight: 400; font-style: italic; color: var(--meta); margin-top: 6px; letter-spacing: 0; }
+.video-wrap { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 6px; margin: 24px 0 8px; background: #000; }
+.video-wrap iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+.video-cap { font-size: 13px; color: var(--meta); margin: 0 0 32px; }
+.slide { margin: 0 0 8px; padding: 20px 0 4px; border-top: 1px solid var(--rule); }
+.slide:first-of-type { border-top: none; }
+.slide h3 { margin: 0 0 12px; font-size: 16px; }
+.slide h3 .slide-no { display: inline-block; font-size: 12px; font-weight: 400; color: var(--meta); border: 1px solid var(--rule); border-radius: 10px; padding: 1px 8px; margin-right: 8px; vertical-align: 2px; }
+.slide h3 .en { display: block; font-size: 13px; color: var(--meta); font-style: italic; font-weight: 400; margin-top: 4px; }
+.slide .zh { margin: 0 0 10px; }
+.slide .zh p { margin: 10px 0; }
+.slide .zh ul, .slide .zh ol { margin: 8px 0; padding-left: 22px; }
+.slide .zh li { margin: 6px 0; }
+.en-block { font-family: 'Charter', serif; font-size: 14px; line-height: 1.6; color: var(--meta); background: #fbfbfb; border-left: 2px solid var(--rule); border-radius: 0 4px 4px 0; padding: 10px 14px; margin: 10px 0 0; white-space: pre-wrap; overflow-wrap: anywhere; }
+.en-block .en-label { display: block; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: #aaa; margin-bottom: 6px; }
+.q { margin: 24px 0; padding: 0 0 4px; border-bottom: 1px solid var(--rule); }
+.q .qno { font-size: 13px; color: var(--meta); }
+.q .qzh { font-weight: 600; }
+.q ol { margin: 8px 0; padding-left: 22px; }
+.q .opts { list-style: none; padding-left: 0; margin: 10px 0; }
+.q .opts li { margin: 7px 0; font-size: 15px; line-height: 1.55; }
+.q .opts .en { color: var(--meta); font-size: 13px; font-family: 'Charter', serif; }
+.ans { background: #f9f9f9; border-left: 3px solid #3a7d5c; border-radius: 4px; padding: 12px 16px; margin: 12px 0 24px; font-size: 15px; color: #555; }
+.ans strong { color: var(--text); }
+.toc-list { list-style: none; padding: 0; margin: 24px 0 0; }
+.toc-list li { margin: 0; padding: 16px 0; border-bottom: 1px solid var(--rule); }
+.toc-list a { font-size: 17px; font-weight: 600; text-decoration: none; }
+.toc-list a:hover { text-decoration: underline; }
+.toc-list .en { display: block; font-size: 13px; font-style: italic; color: var(--meta); font-weight: 400; margin-top: 4px; }
+.toc-list .sub { display: block; font-size: 14px; color: #555; margin-top: 6px; line-height: 1.6; }
+.toc-list .badge { font-size: 12px; color: var(--meta); }
+.sessnav { margin: 48px 0 0; padding-top: 20px; border-top: 1px solid var(--rule); display: flex; gap: 16px; flex-wrap: wrap; justify-content: space-between; font-size: 14px; }
+.sessnav a { color: var(--meta); text-decoration: none; }
+.sessnav a:hover { color: var(--text); text-decoration: underline; }
+.glossary td:first-child { white-space: nowrap; font-family: 'Charter', serif; }
+.glossary td:nth-child(2) { color: #555; }
+</style>
+</head>
+<body><p class="back">← <a href="index.html">会计101 · 分讲阅读</a> · <a href="../index.html">站主随笔</a></p>
+<p class="kicker">NYU Stern · Damodaran《Accounting 101》· 第 6A 讲</p>
+<h1>第 6A 讲 · 财务比率的实例演示<span class="en">Financial Ratios: Illustrations</span></h1>
+<p class="byline">讲课视频 · 幻灯 13 张 · 课后题 5 道 · 讲师：Aswath Damodaran（NYU Stern）· 译者：站主（Mr. Buffett 委托）</p>
+<div class="video-wrap"><iframe src="https://www.youtube.com/embed/pL2wIDWXN68" title="Financial Ratios: Illustrations" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<p class="video-cap">本讲视频：<a href="https://youtu.be/pL2wIDWXN68">Financial Ratios: Illustrations</a>（YouTube，约 12–20 分钟）· 原始幻灯：<a href="https://www.stern.nyu.edu/~adamodar/pdfiles/Accounting101/slides/session6A.pdf">session6A.pdf</a></p>
+<div class="hero"><h3>一句话核心</h3>
+<p><strong>比率能把美元、卢比、日元换算成可比的刻度，但刻度本身不告诉你结论。</strong>六家公司、六张表，同一组比率算下来结果可能完全相反——Netflix 的 Debt/Equity 按账面是 194.66%，按市场价值只剩 6.82%；Toyota 的利息保障倍数高达 76.59，把债务本金也算进去之后固定费用保障倍数却只剩 1.55。所以读比率之前先问三件事：分子归谁？分母用账面还是市场？<strong>这家公司处在生命周期的哪一段？</strong></p>
+<div class="tag-row"><span class="tag">财务比率</span><span class="tag">利润率</span><span class="tag">ROE 与 ROIC</span><span class="tag">周转率</span><span class="tag">杠杆</span><span class="tag">流动性</span></div>
+</div>
+<h2>本讲导读<span class="en">Session guide</span></h2><p>第 6 讲讲了比率的原理与算法，这一讲把它落到真实公司身上。六张表，同一组比率：Peloton、Netflix、Coca Cola、Toyota、Total、Dr. Reddy's——分别在健身器材、流媒体、饮料、汽车、石油、制药六个行业，报表币种分别是美元、日元、卢比。
+
+Damodaran 依次讲五类比率：盈利能力（gross / operating / after-tax operating / net margin 与有效税率）、会计回报（ROE 与 ROIC）、效率（turnover）、债务比率（debt to equity、debt to capital、debt to EBITDA）、以及偿债保障与流动性（interest coverage、fixed charge coverage、current ratio、quick ratio）。每一节都是「一张表 + 一段解读」，而解读部分讲的多是比率背后的坑：利润率为什么在年轻公司身上是负的、高毛利行业为什么天然占便宜、杠杆怎么吃掉净利率、会计口径怎么扭曲回报率、增长为什么有阴暗面、现金为什么不能从债务里一扣了事。
+
+课后测试用 Navistar（卡车制造）做全套练习：给你利润表和资产负债表，让你算 margin、ROE 与 ROIC、turnover、debt to equity 与 debt to capital，再算含不含金融事业部的利息保障倍数。答案里有一个细节值得留意——Damodaran 在投入资本里把商誉（goodwill）扣掉了，而且他说自己对这件事「心情复杂」（mixed feelings）。</p>
+<h2>逐页幻灯（中文在上，英文原文在下）<span class="en">Slide by slide</span></h2>
+<div class="slide" id="s1">
+<h3><span class="slide-no">幻灯 1</span>第 6A 讲：比率分析（ratio analysis）<span class="en">SESSION 6A: RATIO ANALYSIS</span></h3>
+<div class="zh"><p>课程封面。本讲副题仍是「Accounting for Finance」（给财务报表使用者开的会计课），主题是<strong>比率分析</strong>。第 6 讲讲的是比率的原理与算法，这一讲把同一套比率搬到六家真实公司的报表上跑一遍——不同国家、不同币种、不同生命周期阶段，看比率会给出什么结论。</p></div>
+<div class="en-block"><span class="en-label">English original</span>SESSION 6A: RATIO ANALYSIS
+Accounting for Finance</div>
+</div>
+<div class="slide" id="s2">
+<h3><span class="slide-no">幻灯 2</span>财务比率：一个生命周期视角<span class="en">Financial Ratios: A Life Cycle Perspective</span></h3>
+<div class="zh"><p>Damodaran 给比率分析找的第一个坐标轴是<strong>企业生命周期</strong>（corporate life cycle）。同一组比率，在一家 3 岁的公司和一家 30 岁的公司身上，含义完全不同——所以读比率之前，得先知道这家公司处在哪一段。</p>
+<p>图的上半部是两条曲线：红线是收入（Revenues），绿线是收益（Earnings）。收入很早就开始爬坡，收益却要晚得多才转正——因为公司还在为增长而再投资；到了后期，收益的下滑又比收入陡得多，因为利润率在被压缩。横轴上标出了六个节点：灵光一现（The Lightbulb / Idea）、产品测试（The Product Test）、成人礼（The Bar Mitzvah）、规模化测试（The Scaling up Test）、中年危机（The Midlife Crisis）、终局（The End Game）。</p>
+<p>下半部是一张「生命周期阶段 × 三类比率」的对照表。列依次是：初创期（Start-up）、早期成长期（Young Growth）、高速成长期（High Growth）、成熟成长期（Mature Growth）、成熟稳定期（Mature Stable）、衰退期（Decline）；三行分别是：</p>
+<ul><li>利润率（Profit Margins）：初创期极负、有些甚至没有意义（还没收入）；早期成长仍为负，亏损跑在收入前面；高速成长转正但仍然偏低；成熟成长继续改善；成熟稳定保持稳定；衰退期开始下滑。</li><li>会计回报（Accounting Returns）：初创期极负；早期成长仍为负但逐年收窄；高速成长转正但可能仍然很低；成熟成长随规模经济（economies of scale）改善；成熟稳定期企稳；衰退期下降。</li><li>债务比率（Debt Ratios）：初创期通常为零或极低；早期成长保持低位；高速成长继续低位；成熟成长开始上升——公司这时开始动用债务容量；成熟稳定期债务比率收敛到一个稳态；衰退期则取决于公司在衰退过程中有没有还债。</li></ul>
+<p>一句话：<strong>比率不是孤立的数字，它必须放回公司的年龄与阶段里去读</strong>——高速成长公司债务比率低是正常的，成熟公司债务比率上升也是正常的。</p></div>
+<div class="en-block"><span class="en-label">English original</span>Financial Ratios: A Life Cycle Perspective</div>
+<figure class="figure"><img src="../img/accounting101/session6A-p02.jpg" alt="企业生命周期图：收入与收益曲线，加六阶段 × 三类比率（利润率 / 会计回报 / 债务比率）对照表" loading="lazy"><figcaption class="cap">企业生命周期图：上方是收入（红线）与收益（绿线）随时间的走势，标出 The Lightbulb、The Product Test、The Bar Mitzvah、The Scaling up Test、The Midlife Crisis、The End Game 六个节点；下方是六阶段（Start-up / Young Growth / High Growth / Mature Growth / Mature Stable / Decline）× 三类比率（Profit Margins / Accounting Returns / Debt Ratios）的对照表。这张图在论证：同一个比率数字，在不同生命阶段含义相反——初创期利润率为负是正常的，成熟期债务比率上升也是正常的，所以比率必须放回生命周期里读。</figcaption></figure>
+</div>
+<div class="slide" id="s3">
+<h3><span class="slide-no">幻灯 3</span>1. 盈利能力比率（profitability ratios）<span class="en">1. Profitability Ratios</span></h3>
+<div class="zh"><p>第一节用同一张利润表横向比较六家公司：<strong>Peloton（健身器材）</strong>、<strong>Netflix（流媒体）</strong>、<strong>Coca Cola（饮料）</strong>、<strong>Toyota（汽车）</strong>、<strong>Total（石油）</strong>、<strong>Dr. Reddy's（制药，印度）</strong>。报表币种分别是美元、日元、卢比——正因如此，比率才有意义。</p>
+<p>利润表关键行（各公司报告币种，单位百万）：Peloton 收入 219、毛利 74、营业利润 (71)、净利润 (71)；Netflix 收入 20,156、毛利 7,716、营业利润 2,605、净利润 1,866；Coca Cola 收入 37,266、毛利 22,647、营业利润 10,086、净利润 8,985；Toyota 收入 ¥30,225,681、毛利 ¥6,836,186、营业利润 ¥2,467,545、净利润 ¥1,985,587；Total 收入 200,316、毛利 60,028、营业利润 16,257、净利润 11,438；Dr. Reddy's 收入 ₹125,936、毛利 ₹100,371、营业利润 ₹28,216、净利润 ₹29,377。</p>
+<p>算出来的比率：</p>
+<ul><li>毛利率（gross margin）：Peloton 33.81%、Netflix 38.28%、Coca Cola 60.77%、Toyota 22.62%、Total 29.97%、Dr. Reddy's 79.70%。</li><li>营业利润率（operating margin）：Peloton (32.34)%、Netflix 12.92%、Coca Cola 27.06%、Toyota 8.16%、Total 8.12%、Dr. Reddy's 22.41%。</li><li>税后营业利润率（after-tax operating margin）：Peloton (32.34)%、Netflix 11.70%、Coca Cola 22.55%、Toyota 5.81%、Total 5.29%、Dr. Reddy's 23.71%。</li><li>净利率（net margin）：Peloton (32.53)%、Netflix 9.26%、Coca Cola 24.11%、Toyota 6.57%、Total 5.71%、Dr. Reddy's 23.33%。</li><li>有效税率（effective tax rate）：Peloton 0.00%、Netflix 9.47%、Coca Cola 16.70%、Toyota 28.88%、Total 34.76%、Dr. Reddy's (5.83)%。</li></ul>
+<p>三处值得停下来：其一，Peloton 是负利润率、有效税率 0.00%——亏损公司没有税可交；其二，Dr. Reddy's 的有效税率是<strong>负的 5.83%</strong>，于是它的<strong>税后营业利润率（23.71%）反而高于税前（22.41%）</strong>，净利润 ₹29,377 也高于营业利润 ₹28,216；其三，同样是「毛利率高」，Dr. Reddy's 的 79.70% 与 Coca Cola 的 60.77% 远高于 Toyota 的 22.62%——这不是经营水平差距，而是行业差距，下一页专门讲这个。</p></div>
+<div class="table-wrap"><table><thead><tr><th>项目 Item</th><th>Peloton（$M）</th><th>Netflix（$M）</th><th>Coca Cola（$M）</th><th>Toyota（¥M）</th><th>Total（$M）</th><th>Dr. Reddy's（₹M）</th></tr></thead><tbody><tr><td><strong>Revenues</strong><br>收入</td><td>219</td><td>20,156</td><td>37,266</td><td>30,225,681</td><td>200,316</td><td>125,936</td></tr><tr><td><strong>Gross Profit</strong><br>毛利</td><td>74</td><td>7,716</td><td>22,647</td><td>6,836,186</td><td>60,028</td><td>100,371</td></tr><tr><td><strong>Operating Income</strong><br>营业利润</td><td>(71)</td><td>2,605</td><td>10,086</td><td>2,467,545</td><td>16,257</td><td>28,216</td></tr><tr><td><strong>Net Income</strong><br>净利润</td><td>(71)</td><td>1,866</td><td>8,985</td><td>1,985,587</td><td>11,438</td><td>29,377</td></tr><tr><td><strong>Gross Margin</strong><br>毛利率</td><td>33.81%</td><td>38.28%</td><td>60.77%</td><td>22.62%</td><td>29.97%</td><td>79.70%</td></tr><tr><td><strong>Operating Margin</strong><br>营业利润率</td><td>(32.34)%</td><td>12.92%</td><td>27.06%</td><td>8.16%</td><td>8.12%</td><td>22.41%</td></tr><tr><td><strong>After-tax Operating Margin</strong><br>税后营业利润率</td><td>(32.34)%</td><td>11.70%</td><td>22.55%</td><td>5.81%</td><td>5.29%</td><td>23.71%</td></tr><tr><td><strong>Net Margin</strong><br>净利率</td><td>(32.53)%</td><td>9.26%</td><td>24.11%</td><td>6.57%</td><td>5.71%</td><td>23.33%</td></tr><tr><td><strong>Effective Tax Rate</strong><br>有效税率</td><td>0.00%</td><td>9.47%</td><td>16.70%</td><td>28.88%</td><td>34.76%</td><td>(5.83)%</td></tr></tbody></table></div>
+<div class="en-block"><span class="en-label">English original</span>1. Profitability Ratios</div>
+<figure class="figure"><img src="../img/accounting101/session6A-p03.jpg" alt="六家公司利润表与利润率对照表：收入、毛利、营业利润、净利润，毛利率 / 营业利润率 / 税后营业利润率 / 净利率与有效税率" loading="lazy"><figcaption class="cap">六家公司的利润表与利润率对照表（Peloton / Netflix / Coca Cola / Toyota / Total / Dr. Reddy's，币种分别为美元、日元、卢比，金额单位百万）。这张表在论证：把绝对数换成比率之后，跨币种、跨行业才谈得上可比——同为消费品，Dr. Reddy's 的毛利率 79.70%、Coca Cola 的 60.77%，远高于 Toyota 的 22.62%；Peloton 的营业利润率 (32.34)% 告诉你这家公司还在烧钱；而有效税率从 Peloton 的 0.00% 到 Total 的 34.76%、再到 Dr. Reddy's 的 (5.83)%，会把同样的经营利润率翻译成截然不同的净利率。</figcaption></figure>
+</div>
+<div class="slide" id="s4">
+<h3><span class="slide-no">幻灯 4</span>以及分析……<span class="en">And analysis…</span></h3>
+<div class="zh"><p>讲师对上一页那张表的解读分三层。</p>
+<p><strong>① 从年轻到年老（Young to old）</strong>：年轻公司的利润率往往是负的、或者极低，原因有两个——它们还在把收入堆起来（still building up their revenues）；以及它们的一部分营业费用是为<strong>未来增长</strong>服务的，不是为当期经营服务的。</p>
+<p><strong>② 行业差异（Business Differences）</strong>：高毛利率的行业占便宜。像 Coca Cola（品牌型消费品）和 Dr. Reddy's Labs（制药）这类公司，一开始就有<strong>极高的毛利率</strong>，然后这份高毛利一路传导到高营业利润率和高净利率。反过来，Toyota 这种重资产制造业的毛利率天然就低（22.62%），它的利润要在毛利率之后才能挣。</p>
+<p><strong>③ 杠杆效应（Leverage Effects）</strong>：债务比率高的公司，净利率可以很低，而营业利润率仍然很高——因为利息把利润从股东那一层切走了。</p>
+<p>换句话说：<strong>净利率低不一定是经营差，先要看是毛利端的问题还是利息端的问题。</strong></p></div>
+<div class="en-block"><span class="en-label">English original</span>And analysis…
+
+¨   Young to old: Young companies often have negative or
+    very low margins, for two reasons:
+    ¤ They are still building up their revenues
+    ¤ Some of their operating expenses are associated with future
+      growth, not current operations.
+¨ Business Differences: High gross margin businesses have
+  the advantage: Companies like Coca Cola (brand name
+  consumer product) and Dr. Reddy’s Labs
+  (pharmaceutical) start with sky-high gross margins,
+  which then feed into high operating and net margins.
+¨ Leverage Effects: Companies with high debt ratios can
+  have low net margins, while operating margins stay high.</div>
+</div>
+<div class="slide" id="s5">
+<h3><span class="slide-no">幻灯 5</span>2. 会计回报（accounting returns）<span class="en">2. Accounting Returns</span></h3>
+<div class="zh"><p>第二节把问题从「赚了多少」换成「赚得值不值」——用 ROE 和 ROIC 衡量。</p>
+<p>表分三块。<strong>盈利（Earnings）</strong>：营业利润属于所有资本提供者（债权人和股东），净利润只属于股东；所以 ROIC 的分子用营业利润，ROE 的分子用净利润。</p>
+<p><strong>投入资本（Invested Capital，上一年年末口径）= 账面权益 + 总债务 − 现金</strong>：Peloton 90 + 0 − 151 = <strong>(61)</strong>（负数，ROIC 无意义，记 NA）；Netflix 5,239 + 10,360 − 3,794 = <strong>11,805</strong>；Coca Cola 19,058 + 44,214 − 11,102 = <strong>52,170</strong>；Toyota ¥20,067,137 + ¥15,895,918 − ¥3,570,704 = <strong>¥32,392,351</strong>；Total 118,114 + 53,435 − 27,907 = <strong>143,642</strong>；Dr. Reddy's 126,841 + 8,917 − 1,132 = <strong>134,626</strong>。</p>
+<p>算出来的回报率：</p>
+<ul><li>ROE：Peloton (79.00)%、Netflix 35.62%、Coca Cola 47.15%、Toyota 9.89%、Total 9.68%、Dr. Reddy's 23.16%。</li><li>ROIC：Peloton NA、Netflix 22.07%、Coca Cola 19.33%、Toyota 7.62%、Total 11.32%、Dr. Reddy's 20.96%。</li><li>税后 ROIC：Peloton NA、Netflix 19.98%、Coca Cola 16.10%、Toyota 5.42%、Total 7.38%、Dr. Reddy's 22.18%。</li></ul>
+<p>两处最值得读：其一，Peloton 的投入资本是<strong>负数</strong>（现金 151 超过账面权益 90），所以 ROIC 只能记 NA——分母为负时，比率没有意义；其二，Dr. Reddy's 的<strong>税后 ROIC（22.18%）高于税前 ROIC（20.96%）</strong>，原因就是上一页那个负的有效税率 (5.83)%。</p></div>
+<div class="table-wrap"><table><thead><tr><th>项目 Item</th><th>Peloton（$M）</th><th>Netflix（$M）</th><th>Coca Cola（$M）</th><th>Toyota（¥M）</th><th>Total（$M）</th><th>Dr. Reddy's（₹M）</th></tr></thead><tbody><tr><td><strong>Operating Income</strong><br>营业利润</td><td>(71)</td><td>2,605</td><td>10,086</td><td>2,467,545</td><td>16,257</td><td>28,216</td></tr><tr><td><strong>After-tax Operating Income</strong><br>税后营业利润</td><td>(71)</td><td>2,358</td><td>8,402</td><td>1,755,024</td><td>10,607</td><td>29,862</td></tr><tr><td><strong>Net Income</strong><br>净利润</td><td>(71)</td><td>1,866</td><td>8,985</td><td>1,985,587</td><td>11,438</td><td>29,377</td></tr><tr><td><strong>Book Equity</strong><br>账面权益</td><td>90</td><td>5,239</td><td>19,058</td><td>20,067,137</td><td>118,114</td><td>126,841</td></tr><tr><td><strong>Total Debt</strong><br>总债务</td><td>—</td><td>10,360</td><td>44,214</td><td>15,895,918</td><td>53,435</td><td>8,917</td></tr><tr><td><strong>Cash</strong><br>现金</td><td>151</td><td>3,794</td><td>11,102</td><td>3,570,704</td><td>27,907</td><td>1,132</td></tr><tr><td><strong>Invested Capital</strong><br>投入资本</td><td>(61)</td><td>11,805</td><td>52,170</td><td>32,392,351</td><td>143,642</td><td>134,626</td></tr><tr><td><strong>Return on Equity</strong><br>ROE</td><td>(79.00)%</td><td>35.62%</td><td>47.15%</td><td>9.89%</td><td>9.68%</td><td>23.16%</td></tr><tr><td>ROIC</td><td>NA</td><td>22.07%</td><td>19.33%</td><td>7.62%</td><td>11.32%</td><td>20.96%</td></tr><tr><td><strong>After-tax ROIC</strong><br>税后 ROIC</td><td>NA</td><td>19.98%</td><td>16.10%</td><td>5.42%</td><td>7.38%</td><td>22.18%</td></tr></tbody></table></div>
+<div class="en-block"><span class="en-label">English original</span>2. Accounting Returns</div>
+<figure class="figure"><img src="../img/accounting101/session6A-p05.jpg" alt="六家公司会计回报表：营业利润、税后营业利润、净利润、投入资本构成，ROE / ROIC / 税后 ROIC" loading="lazy"><figcaption class="cap">六家公司的会计回报表（金额单位百万，币种美元 / 日元 / 卢比）。这张表在论证：回报率必须先把「分子归谁」和「分母归谁」定死——净利润配账面权益得 ROE，营业利润配投入资本得 ROIC。Peloton 的投入资本是负的 (61)（现金 151 超过账面权益 90），ROIC 只能写 NA；Dr. Reddy's 的税后 ROIC 22.18% 高于税前的 20.96%，正是因为它的有效税率为负。</figcaption></figure>
+</div>
+<div class="slide" id="s6">
+<h3><span class="slide-no">幻灯 6</span>以及分析……<span class="en">And analysis…</span></h3>
+<div class="zh"><p><strong>① 竞争优势（Competitive Advantages）</strong>：如果会计回报是真实回报的公允度量，那么它就是竞争优势的存放处。</p>
+<ul><li>进入壁垒高、或者有其他竞争优势占优的行业，资本回报率应当高于没有这些优势的公司。</li><li>在同一个行业里，有强竞争优势的公司，应当赚得比它的同业（peer group）更高。</li></ul>
+<p><strong>② 会计选择与不一致（Accounting choices and inconsistencies）</strong>：会计会影响、甚至扭曲回报率，办法有两个——</p>
+<ul><li>把资本性支出错分成营业费用或财务费用（misclassifying capital, operating and financial expenses）。</li><li>通过冲销（write offs）来反映过去犯下的错误。</li></ul>
+<p>所以看 ROE / ROIC 之前，先问一句：<strong>这个回报率是被会计口径撑起来的，还是被生意本身挣出来的？</strong></p></div>
+<div class="en-block"><span class="en-label">English original</span>Reflections of…
+
+¨   Competitive Advantages: If accounting returns are fair
+    measure of true returns, they are the repository for
+    competitive advantages.
+    ¤ Industries where barriers to entry are high or other competitive
+      advantages prevail should have higher returns on capital than
+      companies without these advantages.
+    ¤ Companies with strong competitive advantages within an
+      industry should earn higher returns than their peer group.
+¨   Accounting choices and inconsistencies: Accounting can
+    affect and sometimes skew returns:
+    ¤ By misclassifying capital, operating and financial expenses
+    ¤ By taking write offs to reflect mistakes made in the past.</div>
+</div>
+<div class="slide" id="s7">
+<h3><span class="slide-no">幻灯 7</span>3. 效率比率（efficiency ratios）<span class="en">3. Efficiency Ratios</span></h3>
+<div class="zh"><p>第三节转向效率：不是「赚了多少」，而是「为了赚这些钱，投了多少、周转得多快」。</p>
+<p>这一节没有实例表，讲的是<strong>周转率（turnover ratios）</strong>的逻辑框架，以及它与增长之间的关系。要看具体数字，请到课后测试里 Navistar 的那张表——那里要从资产和投入资本两个口径分别算销售周转率。</p></div>
+<div class="en-block"><span class="en-label">English original</span>3. Efficiency Ratios</div>
+</div>
+<div class="slide" id="s8">
+<h3><span class="slide-no">幻灯 8</span>增长的阴暗面（the dark side of growth）<span class="en">The dark side of growth</span></h3>
+<div class="zh"><p><strong>① 增长的取舍（The growth trade off）</strong>：增长有好的一面——它让公司把经营规模做上去；但它也有阴暗的一面——<strong>公司必须持续再投资，才能交出这份增长</strong>。</p>
+<p><strong>② 规模化的度量（Scaling up measure）</strong>：周转率看的正是「公司必须再投资多少」与「收入随时间增长多少」之间的联系。在这方面更高效的公司，能用<strong>更少的再投资</strong>换来收入的增长。</p>
+<p><strong>③ 从年轻到年老</strong>：公司年龄与周转率的关系会因业务类型而异——有些行业里老公司越来越高效，有些行业里反而越来越不高效。</p>
+<p><strong>④ 会计的影响</strong>：上一节说的那些会计口径问题（资本与费用的错分、过去的冲销）会同样污染周转率，因为分子分母都来自报表。</p>
+<p>一句话：<strong>增长不是免费的，turnover 就是用来衡量「增长的价钱」的。</strong></p></div>
+<div class="en-block"><span class="en-label">English original</span>The dark side of growth
+
+¨ The growth trade off: Growth has a good side, insofar as
+  it lets a company scale up its operations, but it has a
+  dark side, which is that companies have to reinvest to
+  deliver that growth.
+¨ Scaling up measure: Turnover ratios look at the link
+  between what a company has to reinvest, and how much
+  its revenues grow over time. Companies that are more
+  efficient on this measure will be able to grow revenues,
+  with less reinvestment.
+    ¤ Young to old: The link between company age and turnover ratios
+      will vary across different business types, with older companies
+      becoming more efficient in some, and less in others.
+    ¤ Accounting effects: The problems associated with accounting
+      choices and inconsistencies will affect turnover ratios as well.</div>
+</div>
+<div class="slide" id="s9">
+<h3><span class="slide-no">幻灯 9</span>4. 债务比率（debt ratios）<span class="en">4. Debt Ratios</span></h3>
+<div class="zh"><p>第四节看杠杆。先看<strong>绝对数</strong>（各公司报告币种，单位百万）：</p>
+<ul><li>Peloton：长期债务 0、总债务 0、净债务 (162)、账面权益 402、市场权益 8,100、EBITDA (181)。</li><li>Netflix：长期债务 14,759、总债务 14,759、净债务 9,741、账面权益 7,582、市场权益 216,350、EBITDA 11,924。</li><li>Coca Cola：长期债务 27,516、总债务 42,763、净债务 34,816、账面权益 52,170、市场权益 205,790、EBITDA 11,451。</li><li>Toyota：长期债务 ¥10,692,898、总债务 ¥20,552,969、净债务 ¥16,362,451、账面权益 ¥19,348,152、市场权益 ¥19,753,000、EBITDA ¥4,259,920。</li><li>Total：长期债务 47,773、总债务 62,592、净债务 35,240、账面权益 119,305、市场权益 104,610、EBITDA 32,658。</li><li>Dr. Reddy's：长期债务 ₹193、总债务 ₹10,629、净债务 ₹10,237、账面权益 ₹151,919、市场权益 ₹746,383、EBITDA ₹36,108。</li></ul>
+<p>再算比率：</p>
+<ul><li>Debt to Equity（账面）：Peloton 0.00%、Netflix 194.66%、Coca Cola 81.97%、Toyota 106.23%、Total 52.46%、Dr. Reddy's 7.00%。</li><li>Debt to Equity（市场）：Peloton 0.00%、Netflix 6.82%、Coca Cola 20.78%、Toyota 104.05%、Total 59.83%、Dr. Reddy's 1.42%。</li><li>Debt to Capital（账面）：Peloton 0.00%、Netflix 66.06%、Coca Cola 45.05%、Toyota 51.51%、Total 34.41%、Dr. Reddy's 6.54%。</li><li>Debt to Capital（市场）：Peloton 0.00%、Netflix 6.39%、Coca Cola 17.20%、Toyota 50.99%、Total 37.43%、Dr. Reddy's 1.40%。</li><li>Debt to EBITDA：Peloton NA、Netflix 1.24、Coca Cola 3.73、Toyota 4.82、Total 1.92、Dr. Reddy's 0.29。</li><li>Net Debt to EBITDA：Peloton NA、Netflix 0.00%、Coca Cola 3.04、Toyota 3.84、Total 1.08、Dr. Reddy's 0.28。</li></ul>
+<p>这张表最刺眼的一组对比是 Netflix：<strong>Debt/Equity 按账面是 194.66%，换成市场价值立刻掉到 6.82%</strong>——因为它的市场权益 216,350 是账面权益 7,582 的二十几倍。同一家公司，杠杆看起来天差地别，差别全在分母用账面还是用市场。（另注：表上 Netflix 的 Net Debt/EBITDA 写作 0.00%，而按同表数字 9,741 ÷ 11,924 应约为 0.82，此处疑为原表笔误。）</p></div>
+<div class="table-wrap"><table><thead><tr><th>项目 Item</th><th>Peloton（$M）</th><th>Netflix（$M）</th><th>Coca Cola（$M）</th><th>Toyota（¥M）</th><th>Total（$M）</th><th>Dr. Reddy's（₹M）</th></tr></thead><tbody><tr><td><strong>Long Term Debt</strong><br>长期债务</td><td>—</td><td>14,759</td><td>27,516</td><td>10,692,898</td><td>47,773</td><td>193</td></tr><tr><td><strong>Total Debt</strong><br>总债务</td><td>—</td><td>14,759</td><td>42,763</td><td>20,552,969</td><td>62,592</td><td>10,629</td></tr><tr><td><strong>Net Debt</strong><br>净债务</td><td>(162)</td><td>9,741</td><td>34,816</td><td>16,362,451</td><td>35,240</td><td>10,237</td></tr><tr><td><strong>Book Equity</strong><br>账面权益</td><td>402</td><td>7,582</td><td>52,170</td><td>19,348,152</td><td>119,305</td><td>151,919</td></tr><tr><td><strong>Market Equity</strong><br>市场权益</td><td>8,100</td><td>216,350</td><td>205,790</td><td>19,753,000</td><td>104,610</td><td>746,383</td></tr><tr><td>EBITDA</td><td>(181)</td><td>11,924</td><td>11,451</td><td>4,259,920</td><td>32,658</td><td>36,108</td></tr><tr><td><strong>Debt to Equity (Book)</strong><br>Debt/Equity（账面）</td><td>0.00%</td><td>194.66%</td><td>81.97%</td><td>106.23%</td><td>52.46%</td><td>7.00%</td></tr><tr><td><strong>Debt to Equity (Market)</strong><br>Debt/Equity（市场）</td><td>0.00%</td><td>6.82%</td><td>20.78%</td><td>104.05%</td><td>59.83%</td><td>1.42%</td></tr><tr><td><strong>Debt to Capital (Book)</strong><br>Debt/Capital（账面）</td><td>0.00%</td><td>66.06%</td><td>45.05%</td><td>51.51%</td><td>34.41%</td><td>6.54%</td></tr><tr><td><strong>Debt to Capital (Market)</strong><br>Debt/Capital（市场）</td><td>0.00%</td><td>6.39%</td><td>17.20%</td><td>50.99%</td><td>37.43%</td><td>1.40%</td></tr><tr><td>Debt to EBITDA</td><td>NA</td><td>1.24</td><td>3.73</td><td>4.82</td><td>1.92</td><td>0.29</td></tr><tr><td>Net Debt to EBITDA</td><td>NA</td><td>0.00%</td><td>3.04</td><td>3.84</td><td>1.08</td><td>0.28</td></tr></tbody></table></div>
+<div class="en-block"><span class="en-label">English original</span>4. Debt Ratios</div>
+<figure class="figure"><img src="../img/accounting101/session6A-p09.jpg" alt="六家公司债务比率表：长期债务、总债务、净债务、账面与市场权益、EBITDA，以及 Debt/Equity、Debt/Capital、Debt/EBITDA、Net Debt/EBITDA" loading="lazy"><figcaption class="cap">六家公司的债务比率表（金额单位百万，币种美元 / 日元 / 卢比）。这张表在论证：杠杆比率的结论完全取决于分母口径。Netflix 的 Debt/Equity 账面 194.66%、市场只有 6.82%，Debt/Capital 账面 66.06%、市场只有 6.39%——因为市场权益 216,350 远大于账面权益 7,582；而 Toyota 的市场权益（¥19,753,000）与账面权益（¥19,348,152）几乎一样，所以它的 Debt/Equity 两种口径基本没差别（106.23% 对 104.05%）。</figcaption></figure>
+</div>
+<div class="slide" id="s10">
+<h3><span class="slide-no">幻灯 10</span>债务：一把双刃剑（the double edged sword）<span class="en">Debt, the double edged sword</span></h3>
+<div class="zh"><p><strong>① 资本来源（Source of capital）</strong>：债务和权益一样，是企业的资本来源。它本身无所谓好坏，但在世界大部分地区，它是一笔交易——<strong>用税收优惠去换财务困境风险（distress risk）</strong>。</p>
+<p><strong>② 度量口径（Measurement choices）</strong>：跨公司比较时，债务必须用一致的口径去量。所以通常更好的做法是：</p>
+<ul><li>用总债务（total debt），而不是债务的某个子集；</li><li>用市场价值（market value），而不是账面价值（book value）。</li></ul>
+<p><strong>③ 毛债务 vs 净债务（Gross vs Net Debt）</strong>：把现金从债务里扣掉的逻辑无可挑剔（impeccable）——但<strong>现金是流动资产，今天在这儿，明天可能就没了</strong>。</p>
+<p>最后这一条是全讲的转折：上一页那张表里 Coca Cola 毛债务 42,763、净债务 34,816，差额 7,947 全是现金；这 7,947 究竟是缓冲，还是只是账面上的安慰，要看它下一年还在不在。</p></div>
+<div class="en-block"><span class="en-label">English original</span>Debt, the double edged sword
+
+¨ Source of capital: Debt is a source of capital for a business,
+  just as equity is. There is nothing inherently good or bad
+  about it, but in most parts of the world, it is a trade off
+  between tax benefits that accrue to borrowing and distress
+  risk.
+¨ Measurement choices: When comparing across companies,
+  you have to measure debt consistently across companies.
+  However, it is usually better to focus on
+    ¤ Total debt, rather than a subset of debt
+    ¤ Market value, rather than book value
+
+¨   Gross vs Net Debt: While the rationale for netting cash out
+    from debt is impeccable, cash is a transient asset, here today
+    and can be gone tomorrow.</div>
+</div>
+<div class="slide" id="s11">
+<h3><span class="slide-no">幻灯 11</span>5. 偿债保障与流动性比率（coverage &amp; liquidity ratios）<span class="en">5. Coverage &amp; Liquidity Ratios</span></h3>
+<div class="zh"><p>第五节问两个问题：公司还得上利息吗？短期还得上钱吗？</p>
+<p><strong>① 保障倍数（coverage）</strong>。表中的关键行：利息费用——Peloton 0、Netflix 626、Coca Cola 946、Toyota ¥32,217、Total 2,333、Dr. Reddy's ₹527；债务偿还——Peloton 0、Netflix 0、Coca Cola 24,850、Toyota ¥4,442,332、Total 5,829、Dr. Reddy's ₹1,805；营业利润沿用前面各表的数字。</p>
+<ul><li>利息保障倍数（interest coverage ratio）= 营业利润 ÷ 利息费用：Peloton NA、Netflix 4.16、Coca Cola 10.66、Toyota 76.59、Total 6.97、Dr. Reddy's 53.54。</li><li>固定费用保障倍数（fixed charge coverage）=（营业利润 + 利息费用 + 债务偿还）÷（利息费用 + 债务偿还）：Peloton NA、Netflix 5.16、Coca Cola 1.39、Toyota 1.55、Total 2.99、Dr. Reddy's 13.10。（该式由表内五个公司的数字反推验证，全部吻合。）</li></ul>
+<p><strong>② 流动性（liquidity）</strong>。流动资产：Peloton 582、Netflix 6,178、Coca Cola 20,411、Toyota ¥18,642,531、Total 85,265、Dr. Reddy's ₹101,067；流动负债：291、6,856、26,973、¥17,902,377、70,244、₹41,805；扣除存货后的流动资产：445、6,178、17,032、¥16,207,613、68,133、₹79,163。</p>
+<ul><li>流动比率（current ratio）：Peloton 2.00、Netflix 0.90、Coca Cola 0.76、Toyota 1.04、Total 1.21、Dr. Reddy's 2.42。</li><li>速动比率（quick ratio）：Peloton 1.53、Netflix 0.90、Coca Cola 0.63、Toyota 0.91、Total 0.97、Dr. Reddy's 1.89。</li></ul>
+<p>两个结论：其一，Coca Cola 的固定费用保障倍数只有 1.39、流动比率只有 0.76——光看利息保障倍数 10.66 会高估它的安全度，因为每年还要还掉 24,850 的债务本金；其二，Peloton 的流动比率 2.00 看着漂亮，但那是账上还热着钱、几乎没欠债的结果，不是经营现金流的胜利。</p></div>
+<div class="table-wrap"><table><thead><tr><th>项目 Item</th><th>Peloton（$M）</th><th>Netflix（$M）</th><th>Coca Cola（$M）</th><th>Toyota（¥M）</th><th>Total（$M）</th><th>Dr. Reddy's（₹M）</th></tr></thead><tbody><tr><td><strong>Interest Expenses</strong><br>利息费用</td><td>—</td><td>626</td><td>946</td><td>32,217</td><td>2,333</td><td>527</td></tr><tr><td><strong>Debt Repayments</strong><br>债务偿还</td><td>—</td><td>—</td><td>24,850</td><td>4,442,332</td><td>5,829</td><td>1,805</td></tr><tr><td><strong>Operating income</strong><br>营业利润</td><td>(71)</td><td>2,605</td><td>10,086</td><td>2,467,545</td><td>16,257</td><td>28,216</td></tr><tr><td><strong>Interest Coverage Ratio</strong><br>利息保障倍数</td><td>NA</td><td>4.16</td><td>10.66</td><td>76.59</td><td>6.97</td><td>53.54</td></tr><tr><td><strong>Fixed Charge Coverage</strong><br>固定费用保障倍数</td><td>NA</td><td>5.16</td><td>1.39</td><td>1.55</td><td>2.99</td><td>13.10</td></tr><tr><td><strong>Current Assets</strong><br>流动资产</td><td>582</td><td>6,178</td><td>20,411</td><td>18,642,531</td><td>85,265</td><td>101,067</td></tr><tr><td><strong>Current Liabilities</strong><br>流动负债</td><td>291</td><td>6,856</td><td>26,973</td><td>17,902,377</td><td>70,244</td><td>41,805</td></tr><tr><td><strong>Current Ratio</strong><br>流动比率</td><td>2.00</td><td>0.90</td><td>0.76</td><td>1.04</td><td>1.21</td><td>2.42</td></tr><tr><td><strong>Current Assets without inventory</strong><br>扣除存货后的流动资产</td><td>445</td><td>6,178</td><td>17,032</td><td>16,207,613</td><td>68,133</td><td>79,163</td></tr><tr><td><strong>Quick Ratio</strong><br>速动比率</td><td>1.53</td><td>0.90</td><td>0.63</td><td>0.91</td><td>0.97</td><td>1.89</td></tr></tbody></table></div>
+<div class="en-block"><span class="en-label">English original</span>5. Coverage &amp; Liquidity Ratios</div>
+<figure class="figure"><img src="../img/accounting101/session6A-p11.jpg" alt="六家公司偿债保障与流动性表：利息费用、债务偿还、营业利润，利息保障倍数、固定费用保障倍数、流动比率与速动比率" loading="lazy"><figcaption class="cap">六家公司的偿债保障与流动性表（金额单位百万，币种美元 / 日元 / 卢比）。这张表在论证：偿债安全不能只看利息保障倍数。Toyota 的利息保障倍数高达 76.59，但把债务偿还 ¥4,442,332 也算进固定费用之后只剩 1.55；Coca Cola 的利息保障倍数 10.66，固定费用保障倍数却只有 1.39、流动比率 0.76——它的短期压力主要来自每年要偿还的 24,850 本金，而不是利息。反过来 Peloton 流动比率 2.00、但利息保障倍数 NA，是「有钱无债」而非「经营稳健」。</figcaption></figure>
+</div>
+<div class="slide" id="s12">
+<h3><span class="slide-no">幻灯 12</span>以及分析……<span class="en">And analysis…</span></h3>
+<div class="zh"><p><strong>① 数字上的安全感（Safety in numbers）</strong>：其他条件相同，利息保障倍数和固定费用保障倍数更高的公司，缓冲垫应该更厚。</p>
+<p><strong>② 正常化（Normalization）？</strong>：话虽如此，这些比率会被年度之间的变化带偏，尤其是营业利润和债务偿还这两项。</p>
+<ul><li>对经营波动大的公司，好年坏年一交替，保障倍数就会从好到坏大起大落。解决办法是跨期取平均。</li><li>对年轻公司来说，在启动增长的阶段，保障倍数看起来会很难看；但这类公司的营业利润可以增长得很快，缓冲垫很快就补回来了。</li></ul>
+<p>也就是说：<strong>单一年度的保障倍数有可能只是噪音，跨期取平均之后才是信号。</strong></p></div>
+<div class="en-block"><span class="en-label">English original</span>And analysis…
+
+¨ Safety in numbers: All else held equal, companies that
+  score higher on interest and fixed charge coverage ratios
+  should have more buffer than companies that score
+  lower.
+¨ Normalization? That said, the ratios can be skewed by
+  year-to-year changes, especially in operating income and
+  debt repayments.
+    ¤ For companies in volatile businesses, this can translate into big
+      swings in coverage ratios from good to bad years. The solution is
+      to use an average across time.
+    ¤ For young companies, the coverage ratios can look bad, at least
+      as they start the growth process, but these companies can grow
+      operating income quickly to gain buffers.</div>
+</div>
+<div class="slide" id="s13">
+<h3><span class="slide-no">幻灯 13</span>最后几点（Final Thoughts）<span class="en">Final Thoughts</span></h3>
+<div class="zh"><p><strong>① 少即是多（Less is more）</strong>：如果你决定要用财务比率，<strong>少即是多</strong>。挑你真正需要的那几个比率去算，而不是算一堆比率制造噪音。</p>
+<p><strong>② 手段而非目的（A means to an end）</strong>：比率本身只是数字，什么都不是——除非你用它去判断一家公司哪里做得好、哪里做得不好，并据此调整你对这个公司的看法。</p>
+<p><strong>③ 过去与未来（Past versus future）</strong>：你的比率都属于过去，而投资与公司金融讲的是未来。</p>
+<p>全讲讲完，Damodaran 要的其实就这一句：<strong>比率是入口，不是结论。</strong></p></div>
+<div class="en-block"><span class="en-label">English original</span>Final Thoughts
+
+¨ Less is more: If you decide to use financial ratios, less
+  is more. Choose the ratios that you want, rather
+  than create noise by computing multiple ratios.
+¨ A means to an end: Ratios, by themselves, are just
+  numbers and mean nothing, unless you use them to
+  make judgments about what your company does
+  well or badly, and how this affects your perspective
+  for the company.
+¨ Past versus future: While your ratios are in the past,
+  investing and corporate finance are about the
+  future.</div>
+</div>
+<h2>课后测试与答案<span class="en">Post-class test &amp; solutions</span></h2>
+<p class="meta">题目与选项为中英对照；答案与解析附在每题下方。</p>
+<figure class="figure"><img src="../img/accounting101/session6A-test-p01.jpg" alt="Navistar 利润表：收入、毛利、营业利润、税前利润、所得税与净利润（百万美元）" loading="lazy"><figcaption class="cap">课后题数据表（1/2）：&lt;strong&gt;Navistar&lt;/strong&gt; 的利润表（最近一年，金额单位百万美元）。收入 9,398 + 金融事业部收入 187 = 总收入 9,585；销售成本 7,904、金融事业部营业费用 108、金融事业部利息费用 88 → 毛利 1,485；销售及管理费用 742、研发费用 322、其他营业费用合计 1,064 → 营业利润 421；利息费用 (185)、利息与投资收入 2 → 净利息支出 (183)；联营公司损益 (1)、汇兑损益 (4)、其他非经营性收支 27 → 剔除非常项目后的税前利润 260；重组费用 (15)、投资处置损益 —、资产处置损益 (2)、资产减值 (17)、诉讼和解 28、其他非常项目 (9) → 含非常项目税前利润 245；所得税 41 → 持续经营业务利润 204 → 少数股东损益 (20) → 净利润 184。</figcaption></figure>
+<figure class="figure"><img src="../img/accounting101/session6A-test-p02.jpg" alt="Navistar 资产负债表：资产、负债与股东权益（上一年 / 最近一年，百万美元）" loading="lazy"><figcaption class="cap">课后题数据表（2/2）：&lt;strong&gt;Navistar&lt;/strong&gt; 的资产负债表（上一年 / 最近一年，金额单位百万美元）。资产端：现金及等价物 957 / 853，应收账款 148 / 179，存货 1,978 / 1,920，预付费用 291 / 278，流动资产合计 3,374 / 3,230，固定资产净额 3,921 / 5,953，商誉 249 / 249，其他长期资产 342 / 305，资产总计 7,886 / 9,737。负债端：应付账款 1,469 / 1,576，应计费用 580 / 510，一年内到期长期债务 8 / —，一年内到期租赁 — / 244，预收收入 548 / 576，其他流动负债 776 / 614，流动负债合计 3,381 / 3,520，长期债务 2,677 / 2,676，长期租赁 — / 1,875，养老金及其他退休后福利 180 / 213，其他非流动负债 775 / 474，负债合计 7,013 / 8,758。权益端：普通股 3,048 / 3,129，留存收益 (2,138) / (2,082)，累计其他综合及其他 (37) / (68)，股东权益合计 873 / 979。</figcaption></figure>
+<div class="q">
+<p class="qno">第 1 题</p>
+<p class="qzh">【用到的数据（百万美元）】总收入 9,585、毛利 1,485、营业利润 421、含非常项目税前利润 245、所得税 41、净利润 184。
+根据 Navistar 最近一年的数字，计算它的毛利率、营业利润率（税前与税后）和净利率。</p>
+<p class="meta">1. Compute the gross margins, operating margins (pre-tax and post- tax) and
+   net margins for Navistar, based upon the most recent year’s numbers.</p>
+<div class="ans"><strong>答案：Gross Margin 15.49% / Operating Margin 4.39% / After-tax Operating Margin 3.66% / Net Margin 1.92%</strong> 毛利率 15.49%；营业利润率 4.39%；税后营业利润率 3.66%；净利率 1.92%
+<p>毛利率 = 毛利 ÷ 收入 = 1,485 ÷ 9,585 = 15.49%。
+营业利润率 = 营业利润 ÷ 收入 = 421 ÷ 9,585 = 4.39%。
+有效税率 = 所得税 ÷ 税前利润 = 41 ÷ 245 = 16.73%。
+税后营业利润率 = 营业利润 ×（1 − 有效税率）÷ 收入 = 421 ×（1 − 16.73%）÷ 9,585 = 3.66%。
+净利率 = 净利润 ÷ 收入 = 184 ÷ 9,585 = 1.92%。
+（注意分母用的是含金融事业部收入的总收入 9,585，而不是主营收入 9,398。）</p>
+<div class="en-block"><span class="en-label">English original</span>1.
+
+Gross Margin =              15.49% Gross Profit/ Revenues
+Operating Margin =           4.39% Operating Income/ Revenues
+Effective tax rate =        16.73% Taxes/ Earnings Before taxes
+After-tax Operating                Operating Income (1 - Effective tax rate) /
+Margin =                     3.66% Revenues
+Net Margin =                 1.92% Net Income/Revenues</div>
+</div>
+</div>
+<div class="q">
+<p class="qno">第 2 题</p>
+<p class="qzh">【用到的数据（百万美元）】净利润 184、营业利润 421、含非常项目税前利润 245、所得税 41；账面股东权益上一年 873 / 最近一年 979；投入资本上一年 2,352 / 最近一年 4,672（两者均已扣除现金与商誉）。
+计算 Navistar 的净资产收益率（ROE）和税后投入资本回报率（after-tax ROIC）。</p>
+<p class="meta">2. Compute the returns on equity and after-tax returns on invested capital for
+   Navistar.</p>
+<div class="ans"><strong>答案：ROE 21.08%（期初账面权益）/ 19.87%（平均账面权益）；ROIC 14.90%（期初投入资本）/ 9.98%（平均投入资本）</strong> ROE：期初账面权益口径 21.08%、平均账面权益口径 19.87%；ROIC：期初投入资本口径 14.90%、平均投入资本口径 9.98%（投入资本上一年 2,352 / 最近一年 4,672 / 平均 3,512）
+<p>ROE（期初账面权益）= 净利润 ÷ 上一年股东权益 = 184 ÷ 873 = 21.08%。
+ROE（平均账面权益）= 净利润 ÷（（上一年股东权益 + 本年股东权益）÷ 2）= 184 ÷（（873 + 979）÷ 2）= 19.87%。
+投入资本（上一年）= 账面权益 + 长期债务 + 租赁 + 短期债务 + 短期租赁 − 现金 − 商誉 = 873 + 2,677 + 0 + 8 + 0 − 957 − 249 = $2,352.00。
+投入资本（最近一年）= 979 + 2,676 + 1,875 + 0 + 244 − 853 − 249 = $4,672.00。
+投入资本（平均）=（2,352 + 4,672）÷ 2 = $3,512.00。
+ROIC（期初投入资本）= 营业利润 ×（1 − 有效税率）÷ 上一年投入资本 = 421 ×（1 − 16.73%）÷ 2,352 = 14.90%。
+ROIC（平均投入资本）= 421 ×（1 − 16.73%）÷ 3,512 = 9.98%。
+译者注（讲师原注）：我对「从投入资本里扣掉商誉」这件事心情复杂（mixed feelings）。如果商誉代表的是标的公司的成长潜力价值，那它就该被扣掉；如果是买贵了、或者会计账面价值本身记错了，那它就不该被扣。</p>
+<div class="en-block"><span class="en-label">English original</span>2.
+
+Return on
+equity (starting
+book equity) =            21.08% Net Income/ Shareholders Equity last year
+Return on
+equity (average                Net Income/ ((Shareholders equity last year + this
+book equity) =          19.87% year)/2)
+Invested capital               Book Equity + LT Debt + Leases + ST Debt + ST
+(last year) =       $ 2,352.00 Leases - Cash - Goodwill
+Invested capital               Book Equity + LT Debt + Leases + ST Debt + ST
+(current) =         $ 4,672.00 Leases - Cash – Goodwill*
+Invested capital
+(average) =         $ 3,512.00   (Invested Cap last year + Invested Cap this year)/2
+ROIC (starting                   Operating Income (1 - Effective tax rate) / Inv Cap
+capital)                  14.90% last year
+ROIC (average                    Operating Income (1 - Effective tax rate) / Average
+capital)                   9.98% Inv Cap
+
+       *I net out goodwill from invested capital with mixed feelings. If goodwill
+       represents the value of growth potential in a target firm, it should be netted
+       out. If it is overpayment or because the accounting book value is miststated,
+       it should not be.</div>
+</div>
+</div>
+<div class="q">
+<p class="qno">第 3 题</p>
+<p class="qzh">【用到的数据（百万美元）】总收入 9,585；资产总额上一年 7,886 / 最近一年 9,737；投入资本上一年 2,352 / 最近一年 4,672。
+计算 Navistar 的周转率（资产周转率与投入资本周转率）。</p>
+<p class="meta">3. Compute the turnover ratios (asset and capital) for Navistar.</p>
+<div class="ans"><strong>答案：Sales/Total Assets 1.22（期初）/ 1.09（平均）；Sales/Invested Capital 4.08（期初）/ 2.73（平均）</strong> 销售/总资产：期初 1.22、平均 1.09；销售/投入资本：期初 4.08、平均 2.73
+<p>销售/总资产（期初）= 收入 ÷ 上一年资产总额 = 9,585 ÷ 7,886 = 1.22。
+销售/总资产（平均）= 收入 ÷（（上一年资产总额 + 本年资产总额）÷ 2）= 9,585 ÷（（7,886 + 9,737）÷ 2）= 1.09。
+销售/投入资本（期初）= 收入 ÷ 上一年投入资本 = 9,585 ÷ 2,352 = 4.08。
+销售/投入资本（平均）= 收入 ÷ 平均投入资本 = 9,585 ÷ 3,512 = 2.73。</p>
+<div class="en-block"><span class="en-label">English original</span>3.
+
+Sales to Total Assets (starting)      1.22 Revenues/ Total Assets last year
+                                           Revenues/ ((Total Assets last year + this
+Sales to Total Assets (average)       1.09 year)/2)
+Sales to Invested Capital
+(starting)                            4.08 Revenues / Inv Cap last year
+Sales to Invested Capital
+(average)                             2.73 Revenues / Average Inv Cap</div>
+</div>
+</div>
+<div class="q">
+<p class="qno">第 4 题</p>
+<p class="qzh">【用到的数据（百万美元）】长期债务 2,676、长期租赁 1,875、短期债务 0、短期租赁 244；账面股东权益 979；市场价值口径下的股东权益 3,200（债务市场价值近似等于账面价值）。
+先按账面价值计算 Navistar 的 debt to equity 与 debt to capital 比率；再用市场价值口径重算一遍。</p>
+<p class="meta">4. Compute the debt to equity and debt to capital ratios for Navistar, based
+   upon book values. If the market value of Navistar’s equity is 3,200 million
+   and the market value of Navistar’s debt is close to its book value, re-estimate
+   the ratios based upon market values.</p>
+<div class="ans"><strong>答案：Debt to Equity 489.79%（账面）/ 149.84%（市场）；Debt to Capital 83.04%（账面）/ 59.97%（市场）</strong> Debt/Equity：账面 489.79%、市场 149.84%；Debt/Capital：账面 83.04%、市场 59.97%；资本账面价值 5,774、市场价值 7,995
+<p>债务合计 = 长期债务 + 租赁 + 短期债务 + 短期租赁 = 2,676 + 1,875 + 0 + 244 = 4,795。
+Debt to Equity（账面）= 4,795 ÷ 979 = 489.79%。
+Debt to Equity（市场）= 4,795 ÷ 3,200 = 149.84%。
+资本的账面价值 = 4,795 + 979 = $5,774.00；资本的市场价值 = 4,795 + 3,200 = $7,995.00。
+Debt to Capital（账面）= 4,795 ÷ 5,774 = 83.04%。
+Debt to Capital（市场）= 4,795 ÷ 7,995 = 59.97%。
+换句话说：分母从「账面权益 979」换成「市场权益 3,200」之后，Debt/Equity 从近 490% 降到 150%，Debt/Capital 从 83% 降到 60%——同一家公司、同一批债务，杠杆看起来完全不同。</p>
+<div class="en-block"><span class="en-label">English original</span>4.
+
+Debt to Equity                       (LT Debt + Leases + ST Debt + ST Leases)/ Book
+(Book)                    489.79%    Equity
+Debt to Equity                       (LT Debt + Leases + ST Debt + ST Leases)/ Market
+(Market)                  149.84%    Equity
+                        $            LT Debt + Leases + ST Debt + ST Leases + Book
+Book value of capital   5,774.00     Equity
+Market value of                      LT Debt + Leases + ST Debt + ST Leases + Market
+capital                 $ 7,995.00   Equity
+Debt to Capital                      (LT Debt + Leases + ST Debt + ST Leases)/ Book
+(Book)                     83.04%    Capital
+Debt to Capital                      (LT Debt + Leases + ST Debt + ST Leases)/ Market
+(Market)                   59.97%    Capital</div>
+</div>
+</div>
+<div class="q">
+<p class="qno">第 5 题</p>
+<p class="qzh">【用到的数据（百万美元）】营业利润 421；公司层面利息费用 185；金融事业部收入 187；金融事业部营业费用 108；金融事业部利息费用 88。
+计算 Navistar 的利息保障倍数，含金融事业部与不含金融事业部各算一次。</p>
+<p class="meta">5. Compute the interest coverage ratios for Navistar, with and without the
+   financing division.</p>
+<div class="ans"><strong>答案：1.85（不含金融事业部）/ 1.54（含金融事业部）</strong> 利息保障倍数：不含金融事业部 1.85；含金融事业部 1.54
+<p>不含金融事业部的利息保障倍数 =（营业利润 − 金融事业部收入 + 金融事业部营业费用）÷ 公司层面利息费用 =（421 − 187 + 108）÷ 185 = 1.85。
+含金融事业部的利息保障倍数 = 营业利润 ÷（金融事业部利息费用 + 公司层面利息费用）= 421 ÷（88 + 185）= 1.54。
+两种算法的差别在于分母：把金融事业部自己的利息也算进来之后，保障倍数从 1.85 降到 1.54——对 Navistar 这样的公司，金融事业部的自融资金结构本身就是杠杆的一部分。</p>
+<div class="en-block"><span class="en-label">English original</span>5.
+
+Interest coverage
+ratio (without               (Operating Income- Financing Rev + Financing Op Exp)/
+financing)              1.85 Int expense company
+Interest coverage
+ratio (with                  Operating Income/ (Int exp financing + Int expense
+financing)              1.54 company)"</div>
+</div>
+</div>
+<div class="note"><strong>译者注</strong><br>本讲六张表的币种与单位照原表：Peloton / Netflix / Coca Cola / Total 为百万美元，Toyota 为百万日元，Dr. Reddy's 为百万印度卢比，金额一律是百万（原表未在表头重复标注货币符号，只有表内各单元格自带符号）。三处原表瑕疵照实说明：（1）第 9 页 Netflix 的 Net Debt to EBITDA 印作 0.00%，但按同表数字 9,741 ÷ 11,924 应约为 0.82，疑为原表笔误；（2）第 11 页「利息保障倍数」一行原表拼作 "Inerest Coverage Ratio"；（3）第 9、11 页比率分组的标题沿用了 "Turnover Ratios" 一词，但内容实为债务比率与偿债/流动性比率。课后测试的两张 Navistar 数据表未标注报告期，课件只写「最近一年（most recent year）」与「上一年（last year）」；答案中的金额单位为百万美元。</div>
+<p class="sessnav"><a href="session6.html">← 第 6 讲</a> <a href="index.html">目录</a></p>
+<p class="footer">课程来源：<a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/webcastacctg.htm">Damodaran · Corporate Finance Online Class（Accounting 101）</a><br>幻灯与课后题版权归 Aswath Damodaran / NYU Stern 所有，本站仅作教学与中文对照阅读使用。<br><a href="../index.html">← 返回站主随笔</a></p>
+</body>
+</html>

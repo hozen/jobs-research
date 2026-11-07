@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="利润表是三张报表里最容易被误读的一张：数字层层相减，每一层的口径都不一样，毛利高不等于净利高，营业利润高也可能被利息吃掉。
+这一讲先把「利润是怎么量出来的」讲清楚——用权责发生制（accrual）还是收付实现制、费用怎么分类（营业、筹资、资本性）、每一层利润分别扣掉了什么；再讲收入的确认时点与拆分披露，以及那些让利润表「不干净」的东西：非经常性损益、pro-forma 备考数据、来自非经营性投资的收益。Damodaran 的态度很直白：pro-forma 数据永远不要照单全收，投资人得自己设计一套「嗅觉测试」，判断哪些费用该加回来。
+最后回到第 4 页那张图：「万物皆有其位」——一笔支出的归宿取决于它能带来几年收益，资产负债表的资产端与利润表的费用行，靠折旧这条线连起来。">
+<title>第 2 讲 · 利润表：利润是怎么量出来的 · 会计101 中英对照 — 乔布斯研究</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600&family=Charter:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #ffffff; --text: #1a1a1a; --meta: #888888; --rule: #e0e0e0; --max-w: 720px; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: var(--bg); color: var(--text); font-family: 'Noto Serif SC','Charter',serif; font-size: 17px; line-height: 1.7; max-width: var(--max-w); margin: 0 auto; padding: 0 24px 80px; overflow-wrap: anywhere; }
+a { color: var(--text); text-decoration: underline; text-decoration-color: var(--rule); }
+a:hover { text-decoration-color: var(--text); }
+h1 { font-size: 22px; font-weight: 600; margin: 48px 0 8px; letter-spacing: -0.3px; }
+h2 { font-size: 15px; font-weight: 600; color: var(--meta); text-transform: uppercase; letter-spacing: 1px; margin: 40px 0 16px; padding-top: 24px; border-top: 1px solid var(--rule); }
+h2 .en { display: block; font-size: 14px; color: var(--meta); text-transform: none; letter-spacing: 0; font-weight: 400; font-style: italic; margin-top: 4px; }
+h3 { font-size: 17px; font-weight: 600; margin: 32px 0 12px; }
+h3 .en { display: block; font-size: 14px; color: var(--meta); font-weight: 400; font-style: italic; margin-top: 2px; }
+.back { font-size: 14px; color: var(--meta); margin-bottom: 24px; }
+.meta { font-size: 13px; color: var(--meta); margin-left: 8px; }
+p { margin: 16px 0; }
+strong { font-weight: 600; }
+em.en-source { display: block; font-family: 'Charter', serif; font-size: 14px; font-style: italic; color: var(--meta); margin: 8px 0 24px; padding-left: 12px; border-left: 2px solid var(--rule); }
+blockquote { border-left: 3px solid var(--rule); padding: 4px 0 4px 20px; margin: 24px 0; color: #555; font-style: italic; }
+.source { font-size: 13px; color: var(--meta); margin-top: 12px; }
+.byline { font-size: 14px; color: var(--meta); margin: 8px 0 32px; }
+.tag-row { margin: 16px 0 32px; }
+.tag { display: inline-block; font-size: 12px; padding: 2px 10px; background: var(--rule); border-radius: 12px; color: var(--meta); margin-right: 6px; }
+.hero { background: #f9f9f9; border-radius: 8px; padding: 24px; margin: 0 0 32px; }
+.hero h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; }
+.hero p { font-size: 15px; color: #555; line-height: 1.7; margin: 8px 0; }
+.footer { margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--rule); font-size: 13px; color: var(--meta); }
+.footer a { color: var(--meta); }
+table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+.table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 16px 0; }
+.table-wrap table { margin: 0; min-width: 420px; }
+th, td { padding: 6px 10px; border: 1px solid var(--rule); text-align: left; vertical-align: top; }
+th { background: #f5f5f5; font-weight: 600; }
+.figure { margin: 32px 0; }
+.figure img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 4px; }
+.figure .cap { font-size: 13px; color: var(--meta); margin-top: 8px; line-height: 1.5; padding-left: 12px; border-left: 2px solid var(--rule); }
+.note { background: #f9f9f9; border-left: 3px solid #d4503a; border-radius: 4px; padding: 14px 18px; margin: 24px 0; font-size: 15px; color: #555; }
+.note strong { color: var(--text); }
+ol, ul { padding-left: 24px; margin: 16px 0; }
+li { margin: 8px 0; }
+@media (max-width: 600px) {
+  body { font-size: 16px; padding: 0 18px 60px; }
+  h1 { font-size: 20px; }
+  h2 { font-size: 14px; }
+  table { font-size: 12px; }
+  th, td { padding: 4px 6px; }
+}
+</style>
+<style>
+.kicker { font-size: 13px; color: var(--meta); letter-spacing: .5px; margin: 0 0 6px; }
+h1 .en { display: block; font-size: 15px; font-weight: 400; font-style: italic; color: var(--meta); margin-top: 6px; letter-spacing: 0; }
+.video-wrap { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 6px; margin: 24px 0 8px; background: #000; }
+.video-wrap iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+.video-cap { font-size: 13px; color: var(--meta); margin: 0 0 32px; }
+.slide { margin: 0 0 8px; padding: 20px 0 4px; border-top: 1px solid var(--rule); }
+.slide:first-of-type { border-top: none; }
+.slide h3 { margin: 0 0 12px; font-size: 16px; }
+.slide h3 .slide-no { display: inline-block; font-size: 12px; font-weight: 400; color: var(--meta); border: 1px solid var(--rule); border-radius: 10px; padding: 1px 8px; margin-right: 8px; vertical-align: 2px; }
+.slide h3 .en { display: block; font-size: 13px; color: var(--meta); font-style: italic; font-weight: 400; margin-top: 4px; }
+.slide .zh { margin: 0 0 10px; }
+.slide .zh p { margin: 10px 0; }
+.slide .zh ul, .slide .zh ol { margin: 8px 0; padding-left: 22px; }
+.slide .zh li { margin: 6px 0; }
+.en-block { font-family: 'Charter', serif; font-size: 14px; line-height: 1.6; color: var(--meta); background: #fbfbfb; border-left: 2px solid var(--rule); border-radius: 0 4px 4px 0; padding: 10px 14px; margin: 10px 0 0; white-space: pre-wrap; overflow-wrap: anywhere; }
+.en-block .en-label { display: block; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: #aaa; margin-bottom: 6px; }
+.q { margin: 24px 0; padding: 0 0 4px; border-bottom: 1px solid var(--rule); }
+.q .qno { font-size: 13px; color: var(--meta); }
+.q .qzh { font-weight: 600; }
+.q ol { margin: 8px 0; padding-left: 22px; }
+.q .opts { list-style: none; padding-left: 0; margin: 10px 0; }
+.q .opts li { margin: 7px 0; font-size: 15px; line-height: 1.55; }
+.q .opts .en { color: var(--meta); font-size: 13px; font-family: 'Charter', serif; }
+.ans { background: #f9f9f9; border-left: 3px solid #3a7d5c; border-radius: 4px; padding: 12px 16px; margin: 12px 0 24px; font-size: 15px; color: #555; }
+.ans strong { color: var(--text); }
+.toc-list { list-style: none; padding: 0; margin: 24px 0 0; }
+.toc-list li { margin: 0; padding: 16px 0; border-bottom: 1px solid var(--rule); }
+.toc-list a { font-size: 17px; font-weight: 600; text-decoration: none; }
+.toc-list a:hover { text-decoration: underline; }
+.toc-list .en { display: block; font-size: 13px; font-style: italic; color: var(--meta); font-weight: 400; margin-top: 4px; }
+.toc-list .sub { display: block; font-size: 14px; color: #555; margin-top: 6px; line-height: 1.6; }
+.toc-list .badge { font-size: 12px; color: var(--meta); }
+.sessnav { margin: 48px 0 0; padding-top: 20px; border-top: 1px solid var(--rule); display: flex; gap: 16px; flex-wrap: wrap; justify-content: space-between; font-size: 14px; }
+.sessnav a { color: var(--meta); text-decoration: none; }
+.sessnav a:hover { color: var(--text); text-decoration: underline; }
+.glossary td:first-child { white-space: nowrap; font-family: 'Charter', serif; }
+.glossary td:nth-child(2) { color: #555; }
+</style>
+</head>
+<body><p class="back">← <a href="index.html">会计101 · 分讲阅读</a> · <a href="../index.html">站主随笔</a></p>
+<p class="kicker">NYU Stern · Damodaran《Accounting 101》· 第 2 讲</p>
+<h1>第 2 讲 · 利润表：利润是怎么量出来的<span class="en">Session 2: Income Statements: Measuring Profits</span></h1>
+<p class="byline">讲课视频 · 幻灯 13 张 · 课后题 5 道 · 讲师：Aswath Damodaran（NYU Stern）· 译者：站主（Mr. Buffett 委托）</p>
+<div class="video-wrap"><iframe src="https://www.youtube.com/embed/Q8wKr1QDSwg" title="Session 2: Income Statements: Measuring Profits" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<p class="video-cap">本讲视频：<a href="https://youtu.be/Q8wKr1QDSwg">Session 2: Income Statements: Measuring Profits</a>（YouTube，约 12–20 分钟）· 原始幻灯：<a href="https://www.stern.nyu.edu/~adamodar/pdfiles/Accounting101/slides/session2.pdf">session2.pdf</a></p>
+<div class="hero"><h3>一句话核心</h3>
+<p>利润不是算出来的，是<strong>分类</strong>出来的。同一笔支出，是当期费用还是多年受益的资产，决定了它进利润表还是进资产负债表；而「这笔支出该归谁管」的判断口径，就是会计里最值钱、也最容易被动手脚的地方。</p>
+<div class="tag-row"><span class="tag">利润表</span><span class="tag">权责发生制</span><span class="tag">费用分类</span><span class="tag">收入确认</span><span class="tag">折旧</span><span class="tag">备考报表</span></div>
+</div>
+<h2>本讲导读<span class="en">Session guide</span></h2><p>利润表是三张报表里最容易被误读的一张：数字层层相减，每一层的口径都不一样，毛利高不等于净利高，营业利润高也可能被利息吃掉。
+这一讲先把「利润是怎么量出来的」讲清楚——用权责发生制（accrual）还是收付实现制、费用怎么分类（营业、筹资、资本性）、每一层利润分别扣掉了什么；再讲收入的确认时点与拆分披露，以及那些让利润表「不干净」的东西：非经常性损益、pro-forma 备考数据、来自非经营性投资的收益。Damodaran 的态度很直白：pro-forma 数据永远不要照单全收，投资人得自己设计一套「嗅觉测试」，判断哪些费用该加回来。
+最后回到第 4 页那张图：「万物皆有其位」——一笔支出的归宿取决于它能带来几年收益，资产负债表的资产端与利润表的费用行，靠折旧这条线连起来。</p>
+<h2>逐页幻灯（中文在上，英文原文在下）<span class="en">Slide by slide</span></h2>
+<div class="slide" id="s1">
+<h3><span class="slide-no">幻灯 1</span>第 2 讲：利润表与盈利能力指标<span class="en">SESSION 2: INCOME STATEMENTS &amp; PROFITABILITY MEASURES</span></h3>
+<div class="zh"><p>课程封面页。这一讲要回答的问题只有一个：<strong>利润是怎么量出来的</strong>——以及利润表上的每一行，究竟在讲什么。</p></div>
+<div class="en-block"><span class="en-label">English original</span>SESSION 2: INCOME STATEMENTS
+&amp; PROFITABILITY MEASURES
+Accounting for Finance</div>
+</div>
+<div class="slide" id="s2">
+<h3><span class="slide-no">幻灯 2</span>计量收入：权责发生制（accrual）与收付实现制<span class="en">Measuring Income: Accrual versus Cash Accounting</span></h3>
+<div class="zh"><p>在<strong>权责发生制会计（accrual accounting）</strong>下，你在交易发生时就记录，而不是等现金进出时才记录。</p>
+<ul><li>收入在产品或服务售出时确认，不是等客户付款时才确认。</li><li>费用一致地确认：与生产已售出产品或服务相关的费用，计入它所属的那一期——哪怕这笔钱你上个月已经付了，或者要到下个月才付。</li></ul>
+<p>在<strong>收付实现制（cash accounting）</strong>下，你收到钱才记收入，付钱才记费用。</p>
+<p>除非你做的是小本生意或个人生意，否则你必须遵守权责发生制的规则。</p></div>
+<div class="en-block"><span class="en-label">English original</span>Measuring Income: Accrual versus Cash
+Accounting
+q   In accrual accounting, you record transactions when they
+    occur, rather than when cash flows occur.
+    q Revenues are recorded when a product or service is sold, not
+      when the customer pays for that product or service.
+    q Expenses are recorded consistently, with the expenses
+      associated with producing the sold product or service shown in
+      the period, even though you may have spent the money in a
+      prior period or will not pay until a future period.
+q In cash accounting, you record revenues when you get
+  paid for providing a product or service, and expenses
+  when you pay.
+q Unless you are a small or personal business, you will
+  have to follow accrual accounting rules.</div>
+</div>
+<div class="slide" id="s3">
+<h3><span class="slide-no">幻灯 3</span>费用分类：营业费用、筹资费用与资本性支出<span class="en">Classifying Expenses: Operating, Financing and Capital Expenses</span></h3>
+<div class="zh"><p><strong>营业费用（operating expenses）</strong>：与企业经营相关的费用。既包括生产所售产品或服务的直接成本，也包括与生产相关的其他费用，比如销售、一般及行政费用（SG&A）。</p>
+<p><strong>筹资费用（financing expenses）</strong>：与使用非权益资本有关的费用。最常见的形态就是债务上的利息支出（interest expense）。</p>
+<p><strong>资本性支出（capital expenses）</strong>：能带来多年收益的支出。对制造业公司来说，通常是厂房与设备；对非制造业公司来说，形态可能更不传统、更无形——而会计向来不擅长处理这类东西。</p></div>
+<div class="en-block"><span class="en-label">English original</span>Classifying Expenses: Operating, Financing and
+Capital Expenses
+¨ Operating expenses are expenses associated with the
+  operations of the business. That includes not only the direct
+  costs of producing the product or service the firm sells, but
+  also other expenses associated with production, including S,
+  G &amp; A expenses.
+¨ Financing expenses are expenses associated with the use of
+  non-equity financing. Most often, this takes the form of
+  interest expenses on debt.
+¨ Capital expenses are expenses that provide benefits over
+  many years. For a manufacturing company, these can take the
+  form of plant and equipment. For non-manufacturing
+  companies, they can take on less conventional and tangible
+  forms (and accounting has never been good at dealing with
+  these).</div>
+</div>
+<div class="slide" id="s4">
+<h3><span class="slide-no">幻灯 4</span>万物皆有其位……<span class="en">Everything has a place….</span></h3>
+<div class="zh"><p>这是整讲的骨架图：<strong>利润表（income statement）与资产负债表（balance sheet）在图中间咬合</strong>，回答「一笔支出最终去了哪」。</p>
+<ul><li>只对本期有收益的支出（Operating expenses）→ 直接进利润表的 Operating Expenses。</li><li>能带来多年收益的支出（Capital expenses）→ 先作为资产留在资产负债表上（Shows up as asset on balance sheet），随后在资产寿命期内通过折旧逐期转入利润表（Written off as depreciation over life of asset）。</li><li>借款（Borrowings on balance sheet）→ 留在资产负债表的负债端，以利息的形式（Financing expenses）从利润表里扣掉。</li></ul>
+<p>换句话说：<strong>一笔支出算费用还是算资产，取决于它能管几年</strong>；资产负债表的资产端与利润表的费用行，靠折旧这条线连起来。</p></div>
+<div class="en-block"><span class="en-label">English original</span>Everything has a place….</div>
+<figure class="figure"><img src="../img/accounting101/session2-p04.jpg" alt="利润表与资产负债表联动示意图：营业费用、资本开支与折旧、借款与利息三条通路" loading="lazy"><figcaption class="cap">这张图在论证「万物皆有其位」：同一笔支出的归宿取决于它能带来几年收益——当期受益就进利润表的 Operating Expenses，多年受益则先资本化留在资产负债表上，再在资产寿命期内按折旧逐期转入利润表；而借款留在负债端，通过 Financing expenses（利息）从利润表扣回。图上半部是利润表自上而下的做减法结构（Revenues → Operating Profit → Taxable income → Net income），下半部是资产负债表的四类资产与四类负债及权益的对应关系，中间用黑框（Operating expenses / Capital expenses / Financing expenses）和灰框把三条通路连了起来。</figcaption></figure>
+</div>
+<div class="slide" id="s5">
+<h3><span class="slide-no">幻灯 5</span>重看利润表：逐行拆解<span class="en">Revisiting the Income Statement</span></h3>
+<div class="zh"><p>这一页把利润表摊开来看，每一步都是「减去一项费用，得到一个口径的利润」。</p>
+<ul><li>起点 Revenues 收入：会计对本期内企业各项交易产生的收入/销售的估计。</li><li>减 Cost of Goods Sold 营业成本：与生产产品或服务相关、对应 top line sales 的费用。</li><li>得 Gross Profit 毛利：生产环节的盈利能力。</li><li>减 Other Operating Expenses 其他营业费用：销售、一般及行政费用，以及与经营相关但不直接对应产品与服务生产的其他费用。</li><li>得 Operating Profit 营业利润：企业整体的盈利能力。</li><li>减 Financial Expenses 财务费用：与非权益资本（主要是债务）的使用相关的费用。</li><li>得 Taxable Income 应税所得：税前归属于股权投资者的收入。</li><li>减 Taxes 所得税：应税所得上应付的税款。</li><li>得 Net Income 净利润：税后归属于股权投资者的收入。</li></ul>
+<p>译者提示：原表 Financial Expenses（财务费用）那一行的英文解释与上一行 Cost of Goods Sold 完全相同（「Expenses associated with creating products or services that represent top line sales」），第 4 页的图上也是同样的重复——这是课件自身的笔误。按第 3 页的定义，它应指与非权益融资（主要是债务利息）相关的费用。</p></div>
+<div class="table-wrap"><table><thead><tr><th>步骤 Step</th><th>项目 Item</th><th>说明 Explanation</th></tr></thead><tbody><tr><td>Start with&lt;br&gt;起点</td><td>Revenues&lt;br&gt;营业收入</td><td>会计对本期内企业各项交易产生的收入/销售的估计。&lt;br&gt;Accountant's estimate of the revenues/sales generated by any transactions made the business during the period.</td></tr><tr><td>Net out&lt;br&gt;减去</td><td>Cost of Goods Sold&lt;br&gt;营业成本</td><td>与生产产品或服务相关、对应 top line sales 的费用。&lt;br&gt;Expenses associated with producing products or services that represent top line sales</td></tr><tr><td>To get&lt;br&gt;得到</td><td>Gross Profit&lt;br&gt;毛利</td><td>生产环节的盈利能力。&lt;br&gt;Production profitability</td></tr><tr><td>Net out&lt;br&gt;减去</td><td>Other Operating Expenses&lt;br&gt;其他营业费用</td><td>包括销售、一般及行政费用，以及与经营相关但不直接对应产品与服务生产的其他费用。&lt;br&gt;Includes selling, general and administrative and other expenses associated with operations, but not directly tied to producing goods and services</td></tr><tr><td>To get&lt;br&gt;得到</td><td>Operating Profit&lt;br&gt;营业利润</td><td>企业整体的盈利能力。&lt;br&gt;Profitability of business</td></tr><tr><td>Net out&lt;br&gt;减去</td><td>Financial Expenses&lt;br&gt;财务费用</td><td>与非权益资本（主要是债务）的使用相关的费用。&lt;br&gt;（课件原文此行的解释与上行重复，疑为笔误，见译注）&lt;br&gt;Expenses associated with creating products or services that represent top line sales</td></tr><tr><td>To get&lt;br&gt;得到</td><td>Taxable Income&lt;br&gt;应税所得</td><td>税前归属于股权投资者的收入。&lt;br&gt;Income for equity investors, prior to taxes</td></tr><tr><td>Net out&lt;br&gt;减去</td><td>Taxes&lt;br&gt;所得税</td><td>应税所得上应付的税款。&lt;br&gt;Taxes due on taxable income</td></tr><tr><td>To get&lt;br&gt;得到</td><td>Net Income&lt;br&gt;净利润</td><td>税后归属于股权投资者的收入。&lt;br&gt;Income for equity investors, after taxes</td></tr></tbody></table></div>
+<div class="en-block"><span class="en-label">English original</span>Revisiting the Income Statement
+                              Item                                 Explanation
+
+Start with   Revenues                   Accountant's estimate of the revenues/sales generated by
+                                        any transactions made the business during the period.
+
+Net out      Cost of Goods Sold         Expenses associated with producing products or services that
+                                        represent top line sales
+To get       Gross Profit               Production profitability
+
+                                        Includes selling, general and administrative and other
+Net out      Other Operating Expenses
+                                        expenses associated with operations, but not directly tied to
+                                        producing goods and services
+To get       Operating Profit           Profitability of business
+
+Net out      Financial Expenses         Expenses associated with creating products or services that
+                                        represent top line sales
+To get       Taxable Income             Income for equity investors, prior to taxes
+Net out      Taxes                      Taxes due on taxable income
+To get       Net Income                 Income for equity investors, after taxes</div>
+</div>
+<div class="slide" id="s6">
+<h3><span class="slide-no">幻灯 6</span>收入确认（revenue recognition）<span class="en">Revenue Recognition</span></h3>
+<div class="zh"><p>对多数公司来说，收入确认是个简单过程：产品或服务一卖出去，就记为收入。</p>
+<p>但对另一些公司——尤其是那些要卖很多年产品或服务的公司——这件事就变得棘手，因为<strong>多少收入记在销售当年、多少记在以后的年份</strong>变成了一个有争议的问题。</p>
+<p><strong>在 ASC 606 下</strong>：新模型在收入确认上的核心原则是「以反映主体预期有权就这些商品或服务换取的对价金额，描绘向客户转让已承诺商品或服务的情况」。</p>
+<ul><li>因此，对一个做多年期开发的房地产开发商来说，收入应当随工程进度确认。</li><li>对一家签多年合同的软件公司来说，履约义务（performance obligations）将决定收入在何时确认。</li></ul></div>
+<div class="en-block"><span class="en-label">English original</span>Revenue Recognition
+
+¨ For many firms, revenue recognition is a simple process,
+  where once a product or service is sold, it is recorded as
+  revenues.
+¨ For some firms, especially those that sell products or services
+  over many years, it becomes trickier, since the question of
+  how much of the revenue to record in the year of the sale
+  and how much in subsequent years becomes debatable.
+    ¤ Under ASC 606: “The new model’s core principle for revenue
+      recognition is to “depict the transfer of promised goods or services to
+      customers in an amount that reflects the consideration to which the
+      entity expects to be entitled in exchange for those goods or services.”
+    ¤ Thus, for a real estate developer working on a multi-year construction,
+      revenues should be recognized as construction progresses, and for a
+      software firm that enters in a contract over many years, performance
+      obligations will determine when revenues get recognized.</div>
+</div>
+<div class="slide" id="s7">
+<h3><span class="slide-no">幻灯 7</span>收入拆分（revenue breakdowns）<span class="en">Revenue Breakdowns</span></h3>
+<div class="zh"><p>当一家公司进入多个业务、多个地区时，知道收入究竟从哪里来就变得有用了。</p>
+<p>这种拆分有时会直接出现在利润表里，但更常见的是放在<strong>财务报表附注</strong>（footnotes）中：</p>
+<ul><li>公司一般按地区（geography）拆分收入，不过细度可能不同。</li><li>公司也会按业务分部（business segment）拆分收入，不过分部的划分方式本身带有主观性。</li></ul></div>
+<div class="en-block"><span class="en-label">English original</span>Revenue Breakdowns
+
+¨ As companies enter multiple businesses and
+  different geographies, it is useful to know where
+  they generate their revenues.
+¨ While the breakdown can sometimes by provided in
+  income statements, they are more likely to be part
+  of the footnotes to the financial statements:
+    ¤ Companies generally break down revenues by geography,
+      though the degree of detail can vary.
+    ¤ Companies also break down revenues by business
+      segment, though there is an element of subjectivity to the
+      segment categorization.</div>
+</div>
+<div class="slide" id="s8">
+<h3><span class="slide-no">幻灯 8</span>营业费用：拆开看<span class="en">Operating Expenses: A Break Down</span></h3>
+<div class="zh"><p><strong>营业成本 vs 其他营业费用</strong>：营业费用大体分成两块——一块是与生产商品或服务（收入的来源）直接相关的费用，即营业成本（cost of goods sold）；另一块是与经营相关、但与收入没有这么直接关系的费用。</p>
+<ul><li>前者在收入端直接扣减，得到毛利（gross profit）。</li><li>后者从毛利里扣减，得到营业利润（operating income）。</li></ul>
+<p><strong>销售、一般及行政费用（SG&A）</strong>：在很多公司里，这是最大的非营业费用项——一个边界模糊的大杂烩，众所周知除了洗碗机本身，什么都往里装。</p></div>
+<div class="en-block"><span class="en-label">English original</span>Operating Expenses: A Break Down
+
+¨   COGS versus Other Operating Expenses: Operating
+    expenses are broadly broken down into expenses
+    directly related to producing the goods or services that
+    give rise to revenues, i.e. cost of goods sold, and
+    expenses that are related to operations, but which are
+    not as directly tied to revenues.
+    ¤ The former are netted out from revenues to get to gross profits
+    ¤ The latter get netted out of gross profits to get to operating
+      income
+¨   Selling, General and Administrative Costs: In many
+    companies, the largest non-operating expense is S,G &amp;A,
+    an amorphous item which can include everything but
+    the proverbial kitchen sink.</div>
+</div>
+<div class="slide" id="s9">
+<h3><span class="slide-no">幻灯 9</span>折旧：会计口径、税务口径与经济口径<span class="en">Depreciation: Accounting, Tax and Economic Forms</span></h3>
+<div class="zh"><p>同一样资产，有三套折旧口径。</p>
+<p><strong>经济折旧（economic depreciation）</strong>：反映一项资产随着变老而发生的价值（盈利能力）损失。它需要细致的判断；即使是同一类资产，也会因使用方式不同而有差异。</p>
+<p><strong>会计折旧（accounting depreciation）</strong>：更机械一些，主要由资产的老化驱动；差别通常在于它是在资产寿命期内均匀摊销，还是加速摊销。</p>
+<p><strong>税务折旧（tax depreciation）</strong>：反映税务机关在计算应税所得时允许扣除的折旧额。</p></div>
+<div class="en-block"><span class="en-label">English original</span>Depreciation: Accounting, Tax and
+Economic Forms
+•   Economic depreciation reflects the loss in value (earning
+    power) in an asset, as it ages. It requires nuance, and will
+    vary across even the same type of assets, depending on
+    how it is used.
+•   Accounting depreciation is more mechanical and is
+    driven largely by the aging of the asset, with the
+    differences often being in whether it happens uniformly
+    over the life of the asset or is more accelerated.
+•   Tax depreciation reflects what the tax authorities will
+    allow as depreciation for purposes of computing taxable
+    income.</div>
+</div>
+<div class="slide" id="s10">
+<h3><span class="slide-no">幻灯 10</span>财务费用（financial expenses）<span class="en">Financial Expenses</span></h3>
+<div class="zh"><p>最常见的财务费用是<strong>债务的利息支出</strong>——形式要么是银行贷款，要么是公司债（corporate bonds）。</p>
+<p>由于会计把其他承诺（例如租赁）也当作债务来分类，其中一部分利息支出是<strong>隐含的</strong>：会计根据自己对承诺的债务等价值（debt equivalent value）的评估，再结合当前利率倒算出来。</p>
+<p>有些公司会把利息支出与公司从现金持有和金融投资中赚到的<strong>利息收入</strong>对冲，列报为<strong>净利息费用</strong>（net interest expense）；如果利息收入超过利息支出，这一行就变成净利息收入。</p></div>
+<div class="en-block"><span class="en-label">English original</span>Financial Expenses
+
+¨ The most common financial expense is interest expense on
+  debt, either in the form of bank loans or corporate bonds.
+¨ As accountants classify other commitments (such as leases)
+  as debt, some of the interest expense is implicit, i.e., it is
+  calculated by accountants based upon their assessment of
+  the debt equivalent value of commitments and current
+  interest rates.
+¨ In some companies, interest expenses are netted out against
+  interest income earned by the company on its cash holdings
+  and financial investments, and reported as a net interest
+  expense. If interest income exceeds interest expense, this
+  number will measure net interest income.</div>
+</div>
+<div class="slide" id="s11">
+<h3><span class="slide-no">幻灯 11</span>非经营性投资的收益<span class="en">Income from non-operating investments</span></h3>
+<div class="zh"><p><strong>现金与有价证券（Cash &amp; Marketable Securities）</strong>：现金持有所赚取的收益（多数公司会把现金投向国库券、商业票据等有价证券），要么单独列报为一项收入，要么与利息支出对冲。</p>
+<p><strong>持有其他公司的股份</strong>：列报方式取决于持股比例的大小：</p>
+<ul><li>当你持有另一家公司的（小比例或少数）股权时，该项投资的收益通常计入利润表。</li><li>但如果你持有的是多数股权，一般就必须合并报表（consolidate）——这意味着你要把子公司的收入、营业费用和营业利润 100% 全部算作自己的。</li></ul></div>
+<div class="en-block"><span class="en-label">English original</span>Income from non-operating investments
+
+¨ Cash &amp; Marketable Securities: Income earned on cash
+  holdings (which is invested in marketable securities, like
+  treasury bills and commercial paper in most companies)
+  will be reported either as a stand alone income or netted
+  against interest expenses.
+¨ Cross holdings in other companies: The reporting can
+  vary depending upon the magnitude of your holding:
+    ¤ When you hold a (small or minority) portion of another
+      company, the income from that holding will usually be reported
+      in the income statement.
+    ¤ However, if you hold a majority stake of another company, you
+      will generally have to consolidate your financials. That will
+      require you to count 100% of the subsidiary’s revenues,
+      operating expenses and operating income as your own.</div>
+</div>
+<div class="slide" id="s12">
+<h3><span class="slide-no">幻灯 12</span>非经常性损益（extraordinary income/expenses）<span class="en">Extraordinary Income/ Expenses</span></h3>
+<div class="zh"><p>正如这个词的字面意思，非经常性收入与费用是用来捕捉<strong>企业在正常经营过程中不会遇到</strong>的事项。</p>
+<p>非经常性项目包括：</p>
+<ul><li>出售资产或业务部门所带来的一次性费用或收益</li><li>与过去的某个项目、诉讼或罚款相关的核销（write-off）或计提（charge）</li><li>过去收购形成的商誉减值（impairment of goodwill）</li></ul>
+<p>如果一项项目确实是<strong>非经常性</strong>的，它就该很少出现，而且与之相关的金额每次都应当不同。如果它年年都出现，那它就不是非经常性的——<strong>哪怕它正负号交替</strong>（有的年份是利润、有的年份是亏损）也一样。</p></div>
+<div class="en-block"><span class="en-label">English original</span>Extraordinary Income/ Expenses
+
+¨ As the term implies, extraordinary income and expenses
+  are designed to capture what a company does not face
+  in the ordinary course of operations.
+¨ Extraordinary items include
+    ¤ One-time expense or gain from sale of assets or divisions
+    ¤ Write offs or charges associated with past project, lawsuits or
+      fines
+    ¤ Impairment of goodwill from acquisitions in the past
+
+¨   If an item is truly extraordinary, it should show up
+    infrequently and the amount associated with it should
+    vary. If it shows up every year, it is not extraordinary,
+    even if switches signs (goes from profits in some years to
+    losses in others).</div>
+</div>
+<div class="slide" id="s13">
+<h3><span class="slide-no">幻灯 13</span>备考（Pro-forma）会计：障眼法还是正当的重述？<span class="en">Pro-forma Accounting: Con game or legitimate restatement?</span></h3>
+<div class="zh"><p>近年来，公司在列报<strong>备考财务数据（pro-forma financial statements）</strong>时越来越有创意。</p>
+<ul><li>有些情况是为了修正他们所认为的会计不一致（accounting inconsistencies）。</li><li>另一些情况，动机则是提高自己的盈利能力。</li></ul>
+<p>作为投资者，你<strong>永远不该照单全收 pro-forma 财务数据</strong>，而要自己设计一套「嗅觉测试」（smell test）：判断哪些东西该加回来、哪些不该，才能算出备考利润。</p>
+<p>一般而言，有两类项目最值得你盯住：</p>
+<ul><li>费用从营业费用挪成资本性支出——有时是正当的，有时不是。</li><li>因为「一次性」或「非经常性」而被剔除的费用。</li></ul></div>
+<div class="en-block"><span class="en-label">English original</span>Pro-forma Accounting: Con game or
+legitimate restatement?
+¨   In recent years, companies have become creative in reporting
+    pro-forma financial statements.
+    ¤ In some cases, they do so to correct for what they believe are
+      accounting inconsistencies.
+    ¤ In other cases, they are motivated by the desire to increase their
+      profitability.
+¨    As investors, you should never take pro-forma financials at
+    face value but devise your own smell test on what should be
+    added back and what should not to get to proforma income.
+    In general, there are two items you should focus the most
+    attention to:
+    ¤ The movement of expenses from operating to capital, sometimes
+      merited, sometimes not.
+    ¤ The removal of expenses because they are one time or extraordinary.</div>
+</div>
+<h2>课后测试与答案<span class="en">Post-class test &amp; solutions</span></h2>
+<p class="meta">题目与选项为中英对照；答案与解析附在每题下方。</p>
+<div class="q">
+<p class="qno">第 1 题</p>
+<p class="qzh">在权责发生制（accrual accounting）下，你在交易发生时记录交易，而不是在收到或付出款项时才记录。假设你在某个财年年初卖出一份 3 年期服务合同，金额 $150 million，其中一半预付，另一半两年后才支付。按照权责发生制的原则，今年你应当列报多少收入？</p>
+<p class="meta">In accrual accounting, you record transactions as they occur, not when
+payment is received or made. Assume that you sell a 3-year service contract
+for $150 million at the start of a fiscal year, and that you get paid half of that
+amount up front and the other half two years from now. Using accrual
+accounting principles, how much should you show as revenues this year?</p>
+<ul class="opts">
+<li><strong>a.</strong> 5000 万美元 <span class="en">$ 50 million</span></li>
+<li><strong>b.</strong> 7500 万美元 <span class="en">$ 75 million</span></li>
+<li><strong>c.</strong> 1.25 亿美元 <span class="en">$ 125 million</span></li>
+<li><strong>d.</strong> 1.5 亿美元 <span class="en">$ 150 million</span></li>
+<li><strong>e.</strong> 以上都不对 <span class="en">None of the above</span></li>
+</ul>
+<div class="ans"><strong>答案：a</strong> 5000 万美元（$50 million）
+<p>这是一份 3 年期合同，服务要在三年内交付，所以本年只应确认这笔交易收入的三分之一。收款节奏是无关紧要的（至少对利润表而言）。</p>
+<div class="en-block"><span class="en-label">English original</span>a. $50 million. Since it is a 3-year contract and the services will be spread
+over three years, I would record one third of the transaction revenues this
+year. The payment schedule is irrelevant (at least for income statements)</div>
+</div>
+</div>
+<div class="q">
+<p class="qno">第 2 题</p>
+<p class="qzh">会计在计算毛利和营业利润时，会区分营业成本（cost of goods sold）与其他营业费用。作为一家制造企业，下列各项费用分别应归入这两组中的哪一组？</p>
+<p class="meta">Accountants draw a distinction between cost of goods sold and other
+operating expenses in computing gross and operating income. As a
+manufacturing company, in which of these two groups would you include
+each of the following expenses?</p>
+<ul class="opts">
+<li><strong>a.</strong> 生产产品/服务所用的材料 <span class="en">Material used to produce products/services</span></li>
+<li><strong>b.</strong> 人工费用 <span class="en">Labor expenses</span></li>
+<li><strong>c.</strong> 销售与市场费用 <span class="en">Selling and Marketing Expenses</span></li>
+<li><strong>d.</strong> 一般及行政费用（G&amp;A） <span class="en">G&amp;A costs</span></li>
+<li><strong>e.</strong> 工厂维护费用 <span class="en">Factory maintenance costs</span></li>
+</ul>
+<div class="ans"><strong>答案：a, b and e</strong> a、b、e 属于营业成本（cost of goods sold）；c、d 属于其他营业费用。
+<p>a、b、e 是营业成本，c 与 d 是其他营业费用。工厂维护、人工和材料都与已售出的产品直接相关，销售费用和一般及行政费用则不是。（工厂维护也许不是变动成本，但它仍然是营业成本的一部分。）</p>
+<div class="en-block"><span class="en-label">English original</span>a, b and e are cost of goods sold, and c &amp; d are other operating expenses.
+Factory maintenance, labor and material are all related directly to products
+that are sold. Selling and G&amp;A expenses are not. (Factory maintenance may
+not be a variable cost, but it is still part of cost of goods sold).</div>
+</div>
+</div>
+<div class="q">
+<p class="qno">第 3 题</p>
+<p class="qzh">利润表里通常有三个利润口径：毛利（gross profits）、营业利润（operating income）和净利润（net income）。对于一家营业成本极低、销售与一般及行政费用极高、同时债务繁重的公司，你在利润表上会预期看到什么？</p>
+<p class="meta">There are usually three measures of income in an income statement: gross
+profits, operating income and net income. For a company that has a very low
+cost of goods sold, very high selling and G&amp;A expenses and lots of debt, which
+of the following would you expect to see in the income statement?</p>
+<ul class="opts">
+<li><strong>a.</strong> 高毛利、高营业利润、高净利润 <span class="en">High gross profits, high operating profits, high net profits</span></li>
+<li><strong>b.</strong> 高毛利、低营业利润、高净利润 <span class="en">High gross profits, low operating profits, high net profits</span></li>
+<li><strong>c.</strong> 高毛利、低营业利润、更低的净利润 <span class="en">High gross profits, low operating profits, even lower net profits</span></li>
+<li><strong>d.</strong> 低毛利、低营业利润、更低的净利润 <span class="en">Low gross profits, low operating profits, even lower net profits</span></li>
+<li><strong>e.</strong> 高毛利、高营业利润、低净利润 <span class="en">High gross profits, high operating profits, low net profits</span></li>
+</ul>
+<div class="ans"><strong>答案：c</strong> 高毛利、低营业利润、更低的净利润。
+<p>低营业成本应当带来高毛利；但高销售费用和高一般及行政费用会让营业利润变低，而债务上的高利息支出会让净利润更低。</p>
+<div class="en-block"><span class="en-label">English original</span>c. High gross profits, low operating profits, even lower net profits. Low
+cost of goods sold should translate into high gross profits, but high selling
+and G&amp;A expenses will make operating profit low, and high interest
+payments on debt will make net profit even lower.</div>
+</div>
+</div>
+<div class="q">
+<p class="qno">第 4 题</p>
+<p class="qzh">如果你的公司持有另一家公司（子公司）5% 的（少数）股权，这项持股的利润影响预计会出现在利润表的哪里？</p>
+<p class="meta">If your company owns a 5% (minority) stake in another company
+(subsidiary), where in the income statement would you expect to see the
+profit effects of this holding?</p>
+<ul class="opts">
+<li><strong>a.</strong> 公司的收入（revenues） <span class="en">In the company’s revenues</span></li>
+<li><strong>b.</strong> 公司的毛利（gross profits） <span class="en">In the company’s gross profits</span></li>
+<li><strong>c.</strong> 公司的营业利润（operating profits） <span class="en">In the company’s operating profits</span></li>
+<li><strong>d.</strong> 公司的净利润（net profits） <span class="en">In the company’s net profits</span></li>
+<li><strong>e.</strong> 哪儿都不会出现 <span class="en">No where</span></li>
+</ul>
+<div class="ans"><strong>答案：d</strong> 公司的净利润。
+<p>持有另一家公司 5% 的股权时，这项持股带来的利润会出现在利润表营业利润线以下，因此是净利润的一部分。</p>
+<div class="en-block"><span class="en-label">English original</span>d. In the company’s net profits. When you own a 5% stake in another
+company, the profits from this holding will show up in the income statement
+below the operating income line and thus will be part of net income.</div>
+</div>
+</div>
+<div class="q">
+<p class="qno">第 5 题</p>
+<p class="qzh">如果某一项是非经常性费用（extraordinary expense），那么在你的利润表上，随着时间推移，你应当预期这一项呈现什么样的特征？</p>
+<p class="meta">If an item is an extraordinary expense, which of the following should you
+expect to see for this item in your income statements over time?</p>
+<ul class="opts">
+<li><strong>a.</strong> 该费用每年都会出现，只是金额不同 <span class="en">The expense will show up every year, albeit with different values</span></li>
+<li><strong>b.</strong> 该费用在多数年份出现，有时为正、有时为负 <span class="en">The expense will show up most years, sometimes positive, sometimes
+negative.</span></li>
+<li><strong>c.</strong> 该费用按固定间隔出现（比如每 3 年一次） <span class="en">The expense will show up at regular intervals (every 3 years)</span></li>
+<li><strong>d.</strong> 该费用出现频率低，且不规律 <span class="en">The expense will show up infrequently and without regularity</span></li>
+<li><strong>e.</strong> 以上都不对 <span class="en">None of the above</span></li>
+</ul>
+<div class="ans"><strong>答案：d</strong> 该费用出现频率低，且不规律。
+<p>如果一项费用每年都出现，或者按固定间隔出现，它就是公司日常经营的一部分，不应被视为非经常性项目。</p>
+<div class="en-block"><span class="en-label">English original</span>d. The expense will show up infrequently and be irregular. If an expense
+shows up every year or at regular intervals, it is part of the company’s
+business operations and should not be considered extraordinary.</div>
+</div>
+</div>
+<div class="note"><strong>译者注</strong><br>术语说明：本讲保留 gross profit / operating profit / net income / accrual 等会计术语的英文，必要处给出中英对照。
+第 5 页表格中 Financial Expenses（财务费用）一行的英文解释与上一行 Cost of Goods Sold 完全相同（原文如此，第 4 页的图上也是同样的重复），属课件笔误；按第 3 页的定义，它应指与非权益融资（主要是债务利息）相关的费用，译者照录原文并在页内注明。
+第 13 页标题原文为「Con game or legitimate restatement?」，con game 意为障眼法、把戏（与「骗局 / con」一词双关）。
+课后答案文件原文把第 5 题的答案误编号为「6.」，此处按题目顺序对应到第 5 题。</div>
+<p class="sessnav"><a href="session1.html">← 第 1 讲</a> <a href="index.html">目录</a> <a href="session2A.html">第 2A 讲 →</a></p>
+<p class="footer">课程来源：<a href="https://pages.stern.nyu.edu/~adamodar/New_Home_Page/webcastacctg.htm">Damodaran · Corporate Finance Online Class（Accounting 101）</a><br>幻灯与课后题版权归 Aswath Damodaran / NYU Stern 所有，本站仅作教学与中文对照阅读使用。<br><a href="../index.html">← 返回站主随笔</a></p>
+</body>
+</html>
