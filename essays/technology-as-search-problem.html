@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Construction Physics：把技术进步看成一次搜索过程——组合爆炸有多大，信息如何把搜索空间砍半，模块化搜索为何把 10 亿次尝试降到 1300 次，以及多目标优化为什么让技术选择变难。中英对照全文，含 16 张原图与逐条数据核验。">
+<title>技术进步是一个搜索问题 · 中英对照 — 乔布斯研究</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600&family=Charter:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #ffffff; --text: #1a1a1a; --meta: #888888; --rule: #e0e0e0; --max-w: 720px; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: var(--bg); color: var(--text); font-family: 'Noto Serif SC','Charter',serif; font-size: 17px; line-height: 1.7; max-width: var(--max-w); margin: 0 auto; padding: 0 24px 80px; overflow-wrap: anywhere; }
+a { color: var(--text); text-decoration: underline; text-decoration-color: var(--rule); }
+a:hover { text-decoration-color: var(--text); }
+h1 { font-size: 22px; font-weight: 600; margin: 48px 0 8px; letter-spacing: -0.3px; }
+h2 { font-size: 15px; font-weight: 600; color: var(--meta); text-transform: uppercase; letter-spacing: 1px; margin: 40px 0 16px; padding-top: 24px; border-top: 1px solid var(--rule); }
+h2 .en { display: block; font-size: 14px; color: var(--meta); text-transform: none; letter-spacing: 0; font-weight: 400; font-style: italic; margin-top: 4px; }
+h3 { font-size: 17px; font-weight: 600; margin: 32px 0 12px; }
+h3 .en { display: block; font-size: 14px; color: var(--meta); font-weight: 400; font-style: italic; margin-top: 2px; }
+.back { font-size: 14px; color: var(--meta); margin-bottom: 24px; }
+.meta { font-size: 13px; color: var(--meta); margin-left: 8px; }
+p { margin: 16px 0; }
+strong { font-weight: 600; }
+em.en-source { display: block; font-family: 'Charter', serif; font-size: 14px; font-style: italic; color: var(--meta); margin: 8px 0 24px; padding-left: 12px; border-left: 2px solid var(--rule); }
+blockquote { border-left: 3px solid var(--rule); padding: 4px 0 4px 20px; margin: 24px 0; color: #555; font-style: italic; }
+.source { font-size: 13px; color: var(--meta); margin-top: 12px; }
+.byline { font-size: 14px; color: var(--meta); margin: 8px 0 32px; }
+.tag-row { margin: 16px 0 32px; }
+.tag { display: inline-block; font-size: 12px; padding: 2px 10px; background: var(--rule); border-radius: 12px; color: var(--meta); margin-right: 6px; }
+.hero { background: #f9f9f9; border-radius: 8px; padding: 24px; margin: 0 0 32px; }
+.hero h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; }
+.hero p { font-size: 15px; color: #555; line-height: 1.7; margin: 8px 0; }
+.footer { margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--rule); font-size: 13px; color: var(--meta); }
+.footer a { color: var(--meta); }
+table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+.table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 16px 0; }
+.table-wrap table { margin: 0; min-width: 420px; }
+th, td { padding: 6px 10px; border: 1px solid var(--rule); text-align: left; }
+th { background: #f5f5f5; font-weight: 600; }
+.figure { margin: 32px 0; }
+.figure img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 4px; }
+.figure .cap { font-size: 13px; color: var(--meta); margin-top: 8px; line-height: 1.5; padding-left: 12px; border-left: 2px solid var(--rule); }
+.note { background: #f9f9f9; border-left: 3px solid #d4503a; border-radius: 4px; padding: 14px 18px; margin: 24px 0; font-size: 15px; color: #555; }
+.note strong { color: var(--text); }
+ol, ul { padding-left: 24px; margin: 16px 0; }
+li { margin: 8px 0; }
+@media (max-width: 600px) {
+  body { font-size: 16px; padding: 0 18px 60px; }
+  h1 { font-size: 20px; }
+  h2 { font-size: 14px; }
+  table { font-size: 12px; }
+  th, td { padding: 4px 6px; }
+}
+</style>
+</head>
+<body>
+
+<p class="back">← <a href="../index.html">乔布斯研究</a> · <a href="index.html">站主随笔</a></p>
+
+<h1>技术进步是一个搜索问题：设计空间有多大，信息怎么把它压下来</h1>
+<p class="byline">
+  Technology as a Search Problem · Construction Physics · 中英对照<br>
+  原文：<a href="https://www.construction-physics.com/p/technology-as-a-search-problem">Construction Physics</a> · 2026-11-12<br>
+  作者：Brian Potter · 译者：站主（Mr. Buffett 委托）· 2026-11-14
+</p>
+
+<p class="tag-row">
+  <span class="tag">Construction Physics</span>
+  <span class="tag">中英对照</span>
+  <span class="tag">16 张原图</span>
+</p>
+
+<div class="hero">
+  <h3>一句话核心论点</h3>
+  <p>造出一门新技术，本质上是在一个巨大的高维「设计空间」里<strong>搜索</strong>。空间的组合规模大到荒谬：光 272 条规律的两两组合就超过可观测宇宙的原子总数；一个 8 位加法器只是 10<sup>177,554</sup> 种电路表型中的一种。</p>
+  <p>但信息可以把空间砍半，每一条比特都砍一次。作者用 PTOP 模型（Phenomena Triggered by Objects with Properties，「带属性的对象触发的现象」）把这件事做成可模拟的实验，得到三个可迁移的结论：<strong>① 模组化搜索把 10 亿次盲搜降到约 1,300 次</strong>；<strong>② 「有性繁殖」（双亲交叉）比纯突变快一个数量级以上</strong>（约 100 代 vs 2,000 代）；<strong>③ 一旦要同时优化多个维度，搜索难度超线性上升，且不同目标的最优设计互不相同</strong>。</p>
+  <div class="tag-row">
+    <span class="tag">设计空间 design space</span>
+    <span class="tag">模组化 modularity</span>
+    <span class="tag">技术演化</span>
+  </div>
+</div>
+
+<h2>把造新技术当成一次搜索<span class="en">My current line of thinking is that creating some new technology is best thought of as a search process.</span></h2>
+
+<p>我一直在研究的一个问题是：技术进步到底是什么性质？新技术如何进入世界、又如何随时间改进？什么因素在影响它？总体上应该怎么看待它？我从几个不同角度碰过这个问题：写过贝尔实验室的运营与遗产，写过具体技术如何一步步改进，写过"多重发明"有多常见、以及我们要等多久才等到下一次发明，等等。</p>
+
+<p>我当前的想法是：<strong>创造某项新技术，最适合被理解为一个搜索过程</strong>。一项技术可以被看作高维「设计空间」或「技术空间」中的一个点，这个空间包含所有可能的技术：零件、材料、自然现象等等的一切可能排列。想当发明家的人要做的是在这个空间里导航，把那些行不通的排列筛出去，找到行得通的那些。</p>
+
+<p>这个搜索之所以困难，是因为——就像任何需要枚举大量元素组合的情形一样——技术空间大到不可理解。经济学家 Matt Clancy 在《Are Technologies Inevitable?》里做过一个粗略估算：维基百科列出的 272 条「命名方程」描述了世界上的各种规律，从纳维-斯托克斯方程（描述流体运动）到阿伦尼乌斯方程（描述化学反应的速率随温度变化）再到埃克斯纳方程（描述泥沙如何在河流中沉积）。如果把这当作「一项技术可以利用的现象数量」的极粗略估计，就意味着可能造出来的技术数量极其庞大。Clancy 写道：</p>
+
+<blockquote>If we've got 272 regularities to work with, for example, then the number of possible combinations of these regularities is two, raised to the power of 272 (since every regularity can be used or not used: two options). But 2^272 is more than some estimates of the number of atoms in the observable universe.</blockquote>
+
+<p class="source">—— Matt Clancy,《Are Technologies Inevitable?》（本文引自 Construction Physics 原文）</p>
+
+<p>相比之下，对宇宙原子数的常见估计是 10<sup>80</sup>，约等于 2<sup>265</sup>。而且很可能还有远远多得多、某项技术可以利用的规律，远不止 272 条（作者补充：一些他尚未完成的研究提示至少有几千条）。</p>
+
+<p>正如 Clancy 指出的，这个大得离谱的数字还**严重低估**了可能技术的数量，因为它没有考虑同一个现象可以有很多种不同的用法。在 Brian Arthur 与 Wolfgang Polak 的论文《The Evolution of Technology within a Simple Computer Model》（今年早些时候我们解读过）里，两人指出：即便只考虑由三种基本元件（NAND 门，以及 1 和 0 两个取值）搭成的逻辑电路这个宇宙，输入输出数量不多时，能搭出的不同电路数量就已经惊人：</p>
+
+<blockquote>If a component has n inputs and m outputs there are (2^m)^(2^n) possible phenotypes… For example, an 8-bit adder is one of over 10^177,554 phenotypes with 16 inputs and 9 outputs.</blockquote>
+
+<p class="source">—— Arthur &amp; Polak</p>
+
+<p>所以，某个新技术的搜索空间是巨大的。而我们对付巨大搜索空间的手段就是<strong>信息</strong>：</p>
+
+<em class="en-source">Each bit of information cuts a search space in half, so even a relatively small amount of information can quickly narrow down what seems like a huge search space.</em>
+
+<p>每一比特信息把搜索空间砍掉一半，所以哪怕相对少量的信息，也能迅速把看似巨大的空间压缩掉。当我们创造某项新技术时，我们实际在做的就是<strong>收集信息</strong>：搞清什么行得通、什么不行，什么有希望、什么没希望，从而在技术的巨大可能性空间里收窄，找到一个能满足某个特定目标的方案。</p>
+
+<p>19 世纪就有很多人对造飞行器感兴趣，但当时并不清楚哪种元素排列才能成功。好在人们已经掌握了物理定律，也见过鸟类这个「存在性证明」，想当发明家的人其实已经在一个被大幅收窄过的空间里工作：他们大致知道飞行器需要哪些要素——升力面、推进系统、控制手段——也有个关于这些要素该怎么排布的大致想法。但用这些基本要素造飞行器仍有海量 ways，人们花了大量时间精力造出一堆并不work的机器。莱特兄弟最终的成功，很大程度上要归功于他们<strong>极其擅长收集信息</strong>，让他们比竞争对手快得多地收敛到一个能飞的飞机设计上。</p>
+
+<h2>PTOP 模型：把技术拆成"现象—对象—属性"<span class="en">The PTOP model</span></h2>
+
+<p>我之前解读 Arthur 与 Polak 那篇技术演化论文时已经探讨过技术搜索的性质（那篇论文用一个简单模拟演化出不同的逻辑电路，在 enormous 的可能性海洋里找到可行的技术）。我很喜欢 Arthur 在论文里的基本模拟方法——随机生成技术，看找到可行方案有多容易有多难——但他自己想用模拟再往下挖一层。Arthur 用的是数字电路（像 NAND、OR、AND 这种逻辑门的不同排列，可以实现加法之类的功能），而我希望有一个更通用的模型，既能刻画多种不同类型技术的本性，又简单到容易模拟。</p>
+
+<p>我想出来的模型受 Brian Arthur 另一本著作《The Nature of Technology》启发。Arthur 在书里把技术定义为「被捕捉并加以利用的一组现象」（"a set of phenomena captured and put to use"）：</p>
+
+<blockquote>… a practical technology consists of many phenomena working together. A radio receiver is not just a collection of parts. Nor is it merely a miniature signal processing factory. It is the orchestration of a collection of phenomena — induction, electron attraction and repulsion, electron emission, voltage drop across resistance, frequency resonance — all convened and set up to work in concert for a specific purpose.</blockquote>
+
+<p class="source">—— Brian Arthur,《The Nature of Technology》</p>
+
+<p>例如，爱迪生的灯泡就同时用到了几个不同的现象：焦耳热（电流通过材料会使其升温）、白炽（足够热的物体会发光）、透明（某些材料允许光穿过），等等。这类现象通常在条件具备时会<strong>自动触发</strong>——你可以把条件理解为「正确的对象，带着正确的属性，被放在某种特定排列上」。在灯泡里，电流流过灯丝时焦耳热自动发生，灯丝足够热时白炽自动发生；而灯泡里抽成真空，是为了防止另一个<em>不想要</em>的现象——碳与氧反应——自动发生并毁掉碳丝。</p>
+
+<p>这三个要素——现象（Phenomena）、对象（Objects）、属性（Properties）——就是我这个技术模型的基本组件，我把它叫做 <strong>PTOP</strong>：Phenomena Triggered by Objects with Properties。模型里有一批对象，每个对象带一组指定的属性；只要正确的对象带着正确的属性被放在正确的排列上，一个现象就会被自动触发，并可能产生各种效果：改变已有对象的属性、创造新对象，等等。把正确的对象与现象按正确顺序串起来，就能造出你想要的结果——某个带着特定理想属性的对象。比如灯泡的一个简化版 PTOP 模型大概长这样：</p>
+
+<em class="en-source">These three elements — Phenomena, Objects, and Properties — are the basic components of the technological model I came up with, which I call PTOP, for Phenomena Triggered by Objects with Properties.</em>
+
+<figure class="figure">
+<img src="img/technology-as-search-problem/01_ptop_lightbulb.jpg" alt="灯泡的概念 PTOP 模型框图：左起矩形框依次为电流（电压110伏、电流0.8安）、灯丝（电阻140欧、熔点3550摄氏度、温度2000摄氏度）、气氛（压力10^-6大气压）、玻璃泡（1毫米厚透明）、光（波长400–700纳米、亮度200流明）；金色圆节点分别是焦耳热、白炽发光与透光性，低压气氛与玻璃泡的抑制线指向虚线圆节点「氧化被阻断」。">
+<div class="cap">图 1｜这张图在说明"技术 = 被正确触发的现象链"：电流经焦耳热把灯丝烧到 2000°C，白炽发光产生光，玻璃的透光性让光出来，而 10⁻⁶ 大气压的真空则抑制"碳与氧反应"这个会毁掉灯丝的多余现象——技术不只是零件堆砌，而是现象的编排。资料来源：Construction Physics 原文（作者用 Claude Opus 5.5 生成）。</div>
+</figure>
+
+<p>把合适的灯丝、气氛、泡壳和电流安排到位，就能触发一串现象，最终得到具有理想属性的「光」。更复杂技术的 PTOP 模型大概是这样，比如施乐复印机，它用「光电导」「电晕放电」等现象来生成文件副本：</p>
+
+<figure class="figure">
+<img src="img/technology-as-search-problem/02_ptop_xerox.jpg" alt="复印机的概念 PTOP 流程图：从左到右的矩形组件框与圆形过程节点相连，依次为光反射、光电导、静电吸附与热熔定影，最终输出复印件。">
+<div class="cap">图 2｜同一套逻辑换到复印机上：扫描 → 光反射 → 光电导 → 静电吸附 → 热熔定影 → 成品副本。PTOP 的价值在于它把"不同技术"放进同一个可搜索、可模拟的框架里。资料来源：Construction Physics 原文（Claude Opus 5.5 生成）。</div>
+</figure>
+
+<p>我喜欢这个模型，因为它抓住了所有类型技术共有的基本要素——自然现象以及触发它们的条件——从而让我们可以研究可能技术的那个「空间」。而这个基本想法可以有很多种实现方式，从极简的技术表示到极复杂的都行（某种程度上这是缺点，比如我花了超级久才想出一个自己满意的、可模拟的实现），但它对研究技术搜索的不同侧面很有用。下面看几个不同实现，看看能得到什么。</p>
+
+<h2>一级 PTOP 模型：搜索空间与模组化<span class="en">A level 1 PTOP model</span></h2>
+
+<p>先从极简版本开始。这一版有 10 种可能的对象，每种有两个可能属性。第一个属性 P0 取 1 到 10 的任意值，是该对象固有且唯一的，可以理解成模型里有 10 种不同的化学元素，各自取不同的 P0 值。第二个属性是尺寸（size），同样取 1 到 10，但<strong>可调</strong>：所以你可以有 P0=1、size=10 的大对象，也可以有 P0=1、size=1 的小对象。总体上共有 100 种可能的对象形态：10 种对象类型，每种有 10 种尺寸。</p>
+
+<p>这一版模型总共只有四个现象。每个现象在两个对象被正确连接、且第一个对象（称之为输入对象）尺寸正确时被触发；触发时，它给第二个对象（输出对象）添加一个特定属性。所以在下图里，当一个 P0=1、size=5 的对象连到 P0=2 的对象上时，就触发一个现象，给第二个对象加上新属性 P1。</p>
+
+<figure class="figure">
+<img src="img/technology-as-search-problem/03_level1_trigger_p1.jpg" alt="「现象 1」的示意图：左侧输入对象框写着 P0=1、Size=5，右侧输出对象框写着 P0=2、Size=any 并新增 P1，中间圆形节点为现象1，左右由箭头相连。">
+<div class="cap">图 3｜一级模型的最小机制：现象 1 被"正确尺寸的输入对象"触发后，把 P1 属性加到输出对象上——技术链条的最小单位就是"接对了、尺寸对了"的一次触发。资料来源：Construction Physics 原文。</div>
+</figure>
+
+<p>模型里的现象是<strong>层级排列</strong>的：触发每个现象，都需要一个带着上一个现象所加属性的对象。也就是说，要触发加上 P2 的现象，你需要有一个带 P1 属性的对象；P3 又需要带 P2 的对象，以此类推。你可以把这种层级理解成：「要触发白炽，我需要一个高温的对象；要达到高温，我得用焦耳热这个现象，而它要靠正确种类的电流来触发；要造出电流，我需要……」</p>
+
+<p>这一版模型的目标，是造出一个带 P4 这个「最终」属性的对象。你可以把它想成「亮度合适的光」或「尺寸和球度都合格的铅弹」。做法是排出一组恰好正确的排列：五个对象排成一条线，每个都带正确的 P0 与尺寸。</p>
+
+<figure class="figure">
+<img src="img/technology-as-search-problem/04_level1_goal_five_objects.jpg" alt="五个矩形「对象」框横向排成一条线，上方四个圆形「现象」节点分别标着输入值、输出值与动作，斜向箭头指向链条上的下一个对象。">
+<div class="cap">图 4｜目标形态：一条直线五个对象、四次触发，最后一个对象拿到 P4——"技术"在这个最简模型里就是一条能走通的链。资料来源：Construction Physics 原文。</div>
+</figure>
+
+<p>这是一个非常简单的 PTOP 实现，我们称之为「一级模型」。但它已经能说明技术搜索过程的几个事实。<strong>第一，即使在这个极简模型里，搜索空间也很大</strong>：10 种对象类型、10 种尺寸、共 5 个对象，意味着 (10×10)<sup>5</sup> = 100 亿种可能排列。<sup>1</sup> 如果放大到 100 种对象、100 种尺寸、10 个现象，就是 10<sup>40</sup> 种选择；再加点属性维度（比如对象除了尺寸还有「温度」「密度」），数字很快就会超出天文量级。</p>
+
+<p><strong>第二，这个简单版本也展示了信息对大搜索空间的力量。</strong>我们看 Arthur 的电路搜索时注意到，让搜索变得可行的关键是<strong>模组化</strong>（modularity）：先为某个子部件找到可用设计，把它锁定进系统，当作可重复使用的「基本元件」继续组合。模组化让你不必一次性把设计的每个部分都做对，它实际上筛掉了大量可能性，缩小了必须穿越的搜索空间。在那个模拟里：</p>
+
+<blockquote>A useful way of thinking about our 68 NAND gate search is that it's like a huge, branching tree… until at the end we have 2^852 possible "leaves," each one representing a unique way of wiring up all 68 gates.</blockquote>
+
+<p class="source">—— Brian Potter（引自作者此前解读 Arthur 模拟的那篇文章）</p>
+
+<p>相比之下，每加一个门就检查一次对不对，会极大压缩可能性：每当发现一个门接错了，就消灭了从那个点分叉出去的所有可能。如果每个门有 1000 种接法，每猜对一次，就把下游的可能性砍掉 99.9%。于是我们能看到同样的基本机制在 PTOP 模型里起作用：10 种对象类型、10 种尺寸、4 个现象、10 亿种有效可能，若靠随机生成技术一次性猜中整个正确设计，平均需要 <strong>10 亿次</strong>尝试。</p>
+
+<em class="en-source">With 10 object types, 10 sizes, 4 phenomena, and 1 billion effective possibilities, it takes (on average) 1 billion attempts to guess the entire correct design in one shot by randomly generating possible technologies.</em>
+
+<figure class="figure">
+<img src="img/technology-as-search-problem/05_level1_random_search_1billion.jpg" alt="终端输出截图：程序 line_search_1.py 的配置与逻辑定义、盲搜统计，最终报告在 1,133,916,844 次尝试、29 秒、14 个线程后找到正确排列，并列出五个对象的 P0、size、是否触发与连接关系。">
+<div class="cap">图 5｜这张图在说明盲搜的代价：作者自己的程序输出——1,133,916,844 次尝试、29 秒、14 个线程，才偶然拼出正确设计；正文里"平均 10 亿次"就来自这里。资料来源：Construction Physics 原文。</div>
+</figure>
+
+<p>但如果我们做<strong>模组化搜索</strong>——每次只随机加一个对象、并随机调整上一个对象的尺寸，直到触发下一个现象，然后把成功的设计锁定下来再继续——搜索就快得多，因为<strong>我们把一个 10 亿可能的空间，换成了一连串 100 可能的空间</strong>。找到那个「10 类型、10 尺寸、4 现象」的答案，平均只需 <strong>1,300 次</strong>尝试；连天文数字级的搜索空间也因此变得可行。</p>
+
+<em class="en-source">It takes on average 1,300 attempts to find the 10 type, 10 size, 4 phenomena answer, and even astronomically enormous technology space search problems become tractable.</em>
+
+<figure class="figure">
+<img src="img/technology-as-search-problem/06_level1_modular_search_1300.jpg" alt="终端输出截图：build-up search 的配置、现象定义、工作技术与概率计算，对比盲搜与逐步搭建搜索的效率，并列出五个对象在一次运行中具体如何相连。">
+<div class="cap">图 6｜同一目标换一种搜法：把"一次猜中"换成"逐级锁定"，每一步只在约 100 种组合里试，平均 1,300 次即命中。资料来源：Construction Physics 原文。</div>
+</figure>
+
+<p>这一版还显示，<strong>模组化的程度对一项技术有多容易找到，影响巨大</strong>：能锁定的模块越多，爬到可用技术的每一级台阶就越短、越容易。把 10 类型 10 尺寸的模型拉到 100 个现象层级，搜索空间变成 10<sup>200</sup>，但有 100 级可以锁定，随机搜索平均约 <strong>10,000 次</strong>就能找到；而同样大小的搜索空间，若拆成 10 个现象层级、每层却有 100 亿种对象类型与尺寸组合（只给 10 级台阶），那么即便用模组化搜索也<strong>完全不可能</strong>靠随机找到。</p>
+
+<figure class="figure">
+<img src="img/technology-as-search-problem/07_level1_deep_levels_impossible.jpg" alt="标题为「Level 1 PTOP Search」的对照表：两行的搜索空间都是 1E+200；第一行「10 objects, 10 sizes, 100 phenomena levels」模组化期望次数约 10800，第二行「1B objects, 1B sizes, 10 phenomena levels」期望次数 1E+30。">
+<div class="cap">图 7｜这张图在说明"同样的搜索空间，拆法决定可行性"：两行搜索空间都是 1E+200，但 100 级台阶只需约 1.08 万次，10 级台阶要 1E+30 次——差的不是运气，是台阶数。资料来源：Construction Physics 原文。</div>
+</figure>
+
+<p>这一版还让我们看到，<strong>不同种类的知识能让搜索变容易</strong>。正如 Joel Mokyr 在《The Gifts of Athena》里所说，科学知识在创造新技术时非常有用，因为「如果搜索者对起作用的自然原理一无所知，那么需要搜索的实验可能性范围会大得多」。在一级 PTOP 模型里，科学知识大概长这样：「现象 3 不能和 2 型对象一起用」或「现象 4 的两个对象必须等大」。</p>
+
+<p>这类科学知识的作用，取决于它<strong>筛掉了多少可能性</strong>：筛掉的越多，提供的信息比特越多，越有用。像「现象 5 不能用对象 1」或「对象 3 不能碰对象 4」这类知识，提供的信息量相对较小，因为它排除的可能性不多；相反，「现象 4 <strong>必须</strong>用对象 1」或「对象 3 <strong>必须</strong>碰对象 4」筛掉的可能性多得多，提供的信息也多得多，把搜索收窄得有效得多。</p>
+
+<p>现实中技术发展之所以可行，一个原因就是我们的很多知识属于后者。现象通常有具体的触发条件，这些条件可以被观察和发现：马可尼做无线电时知道产生电磁波需要什么，爱迪生知道让灯丝白炽需要什么条件，曼哈顿工程的科学家们大致知道触发核链式反应需要什么条件。</p>
+
+<h2>二级 PTOP 模型：多输入、多现象，以及"有性繁殖"<span class="en">A level 2 PTOP model</span></h2>
+
+<p>即便这个高度简化的版本，也足够用来研究技术搜索的各种动态，但要说技术搜索更有意思的动态，它还是太简单了。那就加点复杂度。第一，真实现象往往需要<strong>多个输入对象</strong>，而不止一个：汽油机里要触发「燃烧」现象，需要燃料、氧化剂和电火花。第二，要达成某个目标，常常有<strong>多个不同的现象</strong>可用：比如你想产生机械运动，可以利用多种现象，为它们设计的马达——电动机、液压马达、内燃机——工作方式各不相同。所以我们让每一层不止一个现象，每个现象各自需要一组带正确属性的对象来触发。</p>
+
+<p>一级模型里，一个技术只有唯一可行版本；二级模型则存在多个可行设计。而且与上一版对象排成直线不同，这一版会形成<strong>分叉的树状链条</strong>。</p>
+
+<figure class="figure">
+<img src="img/technology-as-search-problem/08_level2_branching_chains.jpg" alt="左右并排的两个概念模型对照：左边 Level 1 是数据沿单一现象链线性流动；右边 Level 2 是多个输入汇聚后经过相连的现象层层分叉，整体自左向右。">
+<div class="cap">图 8｜从"一条链"到"一棵树"：一级模型只有一条可行路径，二级模型每层多输入多现象 → 路径开始分叉，可行设计不止一种。资料来源：Construction Physics 原文。</div>
+</figure>
+
+<p>在这一版里（我们称之为「二级模型」），虽然可行的设计数量很多，但<strong>不可行的技术数量要大得多</strong>，纯盲搜很快就变得不划算。</p>
+
+<p>解法是换一种模组化搜索的 flavor，很像 Arthur 在技术演化论文里用的「封装」（encapsulation）：模型先随机组合不同对象、不同属性、不同连接方式；每当某个对象排列触发了某些现象，这个排列就被<strong>打包成一个新对象</strong>，之后这个新对象可以被模拟随机地与其他对象继续组合。和之前那种更简单的模组化搜索一样，这让模拟能积累部分解、在巨大的搜索空间里快速找到可行技术。</p>
+
+<em class="en-source">We can solve this with a slightly different flavor of modular search, very similar to the "encapsulation" that Arthur uses in his technological evolution paper.</em>
+
+<figure class="figure">
+<img src="img/technology-as-search-problem/09_level2_encapsulation_search.jpg" alt="流程图：从对象库中随机取对象并连接，若触发现象则把该组合打包为新对象写回对象库，循环直到生成带 P4 的目标对象。">
+<div class="cap">图 9｜封装式搜索：把"碰巧能用的组合"变成新的基本元件存起来 —— 局部解被复用，整体搜索因此从"不可能"变成"可行"。资料来源：Construction Physics 原文。</div>
+</figure>
+
+<p>二级模型还可以用来展示<strong>有性繁殖积累信息的能力</strong>。作者在另一篇文章里写过：有性繁殖本身就是一种模组化搜索——让孩子从两个父母那里各继承一部分基因，使许多不同谱系做出的有用基因「发现」得以在整个种群中传播；这与无性繁殖形成对照，后者只有一个谱系最终存活，其他谱系的发现会因为一种叫「克隆干扰」（clonal interference）的现象而消失。有性繁殖的种群因此能快得多地收敛到最大适应度。</p>
+
+<p>用二级 PTOP 模型能看到同样的事。作者跑了一个版本，两个"技术种群"，每个种群里有 1,000 个随机生成的技术：一个种群实现无性繁殖——每一代，每个技术随机发生一次变异（删一个对象、加一个对象，或改变某个对象的属性），按"解锁的现象层级"衡量最-fit 的成员进入下一代；另一个实现有性繁殖——除了随机变异，子代还由两个亲代的分支随机交叉生成。在 5 个现象层级的设定下，示例中<strong>无性繁殖在 2,000 代之后仍未达到最高现象层级；有性繁殖则只用了一百多代就找到了</strong>。</p>
+
+<figure class="figure">
+<img src="img/technology-as-search-problem/10_level2_sexual_vs_asexual.jpg" alt="终端输出截图：进化算法模拟的配置参数、P1–P4 四个现象的逻辑定义、无性与有性两次运行的性能统计，以及一个成功设计的分层缩进结构。">
+<div class="cap">图 10｜这张图在说明"交叉"的价值：同样的变异机制，加上双亲交叉后，收敛速度差出一个数量级（2,000 代 vs 一百多代）——因为交叉让不同谱系的发现互相传播。资料来源：Construction Physics 原文。</div>
+</figure>
+
+<em class="en-source">With 5 levels of phenomena, asexual reproduction couldn't achieve the maximum phenomena level after 2,000 generations in the example below; sexual reproduction, by contrast, found it after just over 100 generations.</em>
+
+<h2>三级 PTOP 模型：连续值、性能调优与多目标取舍<span class="en">A level 3 PTOP model</span></h2>
+
+<p>这个版本的 PTOP 更丰富，能展示更广的技术搜索动态，但还是有点简单，于是再加复杂度。</p>
+
+<p>第一，不再让被触发的属性 P1、P2、P3……是二元的（开/关），而是让它们可以取多个值：属性在被开启前取值为 0，一旦某个现象触发，它可以取 1 到 10。它的取值由两件事决定：<strong>输入对象的大小</strong>与<strong>前一个现象的取值</strong>。所以对于触发 P2 的现象，P2 的值取决于 P1 的值和它那个对象的大小。可以把它理解成「灯泡灯丝的温度取决于流过它的电流的性质」：电流更大或电压更高，灯丝温度就更高；而发出光的亮度，又取决于灯丝的温度值。</p>
+
+<p>被触发现象的取值按两种方式之一确定：要么在前一个现象的取值与对象大小<strong>相等</strong>时达到最大，要么在两者<strong>尽可能不同</strong>时达到最大。所以 P2 可以在 P1 与其尺寸都等于 1、2、3 时取 10，也可以在一个是 10、另一个是 1 时取 10。（对由多个输入对象触发的现象，取各对象分别算出的值的平均。）我们把这个版本叫「三级模型」。</p>
+
+<figure class="figure">
+<img src="img/technology-as-search-problem/11_level3_model.jpg" alt="「现象 2」的逻辑图：中央节点分别连向输入对象与输出对象，标出 P1 与 size 参数，底部两个计算框分别给出两种取最大值的规则。">
+<div class="cap">图 11｜三级模型的关键改动：被触发属性的取值不再只是"有/没有"，而是一个 1–10 的数，由"前一层取值"和"对象尺寸"共同决定（相等时最大 / 差异最大时最大）。资料来源：Construction Physics 原文。</div>
+</figure>
+
+<p>这个改动其实让技术搜索的<strong>初始阶段</strong>容易多了：触发一个现象不再需要正确的对象尺寸（只需要正确的对象类型），所以要拿到一个能触发最终现象的技术变得非常容易（当然，这很容易被改回去——比如让被触发属性的取值依赖某个新属性、同时让"是否触发"仍然依赖尺寸）。但这样就引入了<strong>性能调优</strong>这个环节：一个"能用"的技术（即最终被触发属性取正值）可能很容易找到，但要把性能推到最好（让最终现象取值达到 10），就得继续迭代，继续拨弄各个对象的尺寸，把性能一点点推上去。</p>
+
+<p>这个"调音"步骤对应的是技术开发过程：把一项已经能用的技术性能再往上推，或者做出一个以某种特定方式工作的版本。以爱迪生的灯泡为例：白炽灯泡在 19 世纪初就已被演示过，但性能很差——烧得快、泡内壁发黑、或者太费电。爱迪生拿的是一项配置大体已定的技术（高熔点灯丝、玻璃泡、尽量降低反应性的气氛，在之前的灯泡里都是常见特征），然后通过微调各个要素的性质把性能推上去：真空度、灯丝尺寸、碳的具体种类，等等。</p>
+
+<p>三级模型还有一个变化：不同现象能达到的<strong>触发属性取值范围不同</strong>——一种触发 P2 的方式可能最高只能到 7，另一种则能到 10。对某些技术这没问题；另一些情况下，想把性能拉满就必须换用另一个现象。</p>
+
+<p>这同样映射到真实技术：当开发新技术时，设计者会面对许多种完成某项特定任务的方式，取决于性能要求，不同方案可能各有优劣。在灯泡里，碳丝的 Performance 只能推到某个上限，于是灯泡最终改用钨丝，而这又要求发明新的可延性钨丝生产工艺。同样，内燃机的气门也有多种实现方式；要达到 F1 赛车所需的每分钟转速，就必须用上压缩空气这类复杂气门，而不是传统的钢丝弹簧；但你要造的是一辆四门轿车，便宜简单的钢丝弹簧就够了。</p>
+
+<p>现在给三级模型再加一个元素。到目前为止，我们只有<strong>一条</strong>属性链：一个现象触发另一个，另一个再触发下一个。现在加上一组<strong>并行</strong>的属性，由一组并行现象触发。在灯泡的例子里，可以理解为灯丝温度不仅触发白炽，还触发热膨胀与热电子发射。</p>
+
+<p>（在这个例子里，所有这些现象都由同一个属性——温度——触发；在我们的模型里，为了建模方便，每个并行现象由它自己的属性触发。）</p>
+
+<p>这些并行现象在与主现象相同的条件下被触发，但它们的取值未必按同样的方式确定：让 P2 取到 10 的条件，可能让并行属性 T2 只取到 5 或 1。一项技术的最终性能，将取决于两个最终被触发属性的取值——比如不只 P9，还有 T9。</p>
+
+<figure class="figure">
+<img src="img/technology-as-search-problem/12_level3_parallel_properties.jpg" alt="P2 与 T2 两个现象各自连向输入输出对象，标注由 P1、T1 与 size 推导，底部文本框给出公式：P2 在相等时取最大，T2 在不同时取最大。">
+<div class="cap">图 12｜并行属性的意义：同一批输入条件，可以同时触发"主属性"和"并行属性"，但两者的最优规则未必相同——技术于是有了多维度的性能，搜索也随之变难。资料来源：Construction Physics 原文。</div>
+</figure>
+
+<p>这带来几个后果。其一，<strong>技术搜索变得更难</strong>：如果目标是同时最大化 P9 和 T9，靠随机调尺寸去"调音"需要的迭代次数，要比只最大化其中一个多得多。这镜像了技术的一般规律：<strong>你关心的性能维度越多，把技术做到"够好"就越难</strong>。</p>
+
+<em class="en-source">This mirrors technology more generally: the more dimensions of performance you care about, the more difficult getting a technology that's good enough is.</em>
+
+<figure class="figure">
+<img src="img/technology-as-search-problem/13_level3_performance_tuning.jpg" alt="左侧为阶梯状折线与散点图：横轴「size changes tried」0–150+，纵轴性能 0–80，蓝色折线爬升到峰值 80，灰色散点为废弃尝试；右侧为 8 个可调对象的表格与具体调整值；标题写明「tuned from P 2 × T 10 = 20 to P 10 × T 8 = 80 in 194 changes」。">
+<div class="cap">图 13｜这张图在说明"性能是调出来的"：左图是每次改尺寸后性能如何阶梯式爬升（灰点是废弃尝试），右表列出 8 个可调对象；一次运行把性能从 P2×T10=20 推到 P10×T8=80，用了 194 次改动。资料来源：Construction Physics 原文。</div>
+</figure>
+
+<p>其二，我们现在有了<strong>设计取舍</strong>。每层有多个现象（以及并行现象），就能构造出不同的设计，它们可能达到不同的性能水平。作者跑了一次三级搜索：生成随机技术原型，然后针对几个不同的性能目标分别调优——最大化 P7 和 T7、最小化它们、以及各自取某个特定值。运行结束时，每个目标对应的对象尺寸安排<strong>在根本上不同</strong>：同一门基本技术，取决于性能目标，最佳实现方式是不一样的。</p>
+
+<figure class="figure">
+<img src="img/technology-as-search-problem/14_level3_design_tradeoffs.jpg" alt="标题「Goals compared」的表格：四行目标分别为 P7×T7、P7 单独、T7 单独、最低的 P7×T7；列为 TARGET、P7、T7、P×T、FROM NEAR (3,7) OBJECTS、FROM THE PROTOTYPE AT TRIAL、EVALUATIONS、HIT、ITS TUNING CHANGES。">
+<div class="cap">图 14｜这张表在说明"目标决定设计"：同一个技术底子，四个目标下的最优尺寸安排各不相同，命中所需的评估次数与调参次数也差着量级。资料来源：Construction Physics 原文。</div>
+</figure>
+
+<figure class="figure">
+<img src="img/technology-as-search-problem/15_level3_combined_goal_cost.jpg" alt="一张自左向右汇聚的计算流图：矩形与圆形节点标着编号标签与数值参数，顶部标注 P7 的计算过程，最右末端节点标着值 1.375。">
+<div class="cap">图 15｜只最大化单一目标（P7）时的最终设计：一张层层汇聚的运算图，末端节点值 1.375。资料来源：Construction Physics 原文。</div>
+</figure>
+
+<figure class="figure">
+<img src="img/technology-as-search-problem/16_level3_p7_vs_p7t7.jpg" alt="一张有向无环运算图：彩色圆角方块节点含 1–10 的整数，经编号圆形运算标签（1a、2a…7b）汇聚到右侧虚线目标框「4」；顶部写「P7 × T7：P7 = 10 × T7 = 10 = 100，target ≥ 100，hit」，并注明整张设计含 209 个对象、图中只画出对最终输出有贡献的 30 个。">
+<div class="cap">图 16｜同时最大化两个目标（P7 与 T7）的设计：末端 P7=10 × T7=10 = 100（目标 ≥100，命中），整张设计含 209 个对象，图里只画出对最终输出有贡献的 30 个 —— 和图 15 的单目标设计结构完全不同。资料来源：Construction Physics 原文。</div>
+</figure>
+
+<h2>结论<span class="en">Conclusion</span></h2>
+
+<p>要理解技术进步的性质，把"创造一门新技术"看作一种<strong>搜索过程</strong>是很有用的——而这个搜索之所以变得可行，靠的是对信息的聪明获取与应用。反过来，我们可以通过研究搜索过程的性质来理解技术进步：是什么让搜索变容易、是什么让它变难、我们能动用哪些信息获取方法，等等。</p>
+
+<p>上面这几个 PTOP 模型，在我看来是探索这类技术搜索动态的一个有用工具：它们易于模拟、足够灵活，又能抓住技术开发中相当多的真实要素。</p>
+
+<em class="en-source">To understand the nature of technological progress, it's useful to think of creating a new technology as a sort of search process, one that's made tractable by the intelligent acquisition and application of information.</em>
+
+<div class="table-wrap">
+<table>
+  <thead><tr><th>关键数据点</th><th>原文</th><th>译注与核验结论</th></tr></thead>
+  <tbody>
+    <tr><td>2^272 vs 宇宙原子数</td><td>"2^272 is more than some estimates of the number of atoms in the observable universe"</td><td>✅ 复算一致：2^272 ≈ 7.55×10^81 &gt; 10^80；10^80 ≈ 2^265.75</td></tr>
+    <tr><td>272 条规律的出处</td><td>"As Clancy writes"（原文未点名）</td><td>📌 实为经济学家 <strong>Matt Clancy</strong>《Are Technologies Inevitable?》——维基百科的"命名方程"清单</td></tr>
+    <tr><td>8 位加法器表型数</td><td>"over 10^177,554 phenotypes with 16 inputs and 9 outputs"</td><td>✅ 复算一致：(2^9)^(2^16) = 2^589,824 ≈ 10^177,554</td></tr>
+    <tr><td>一级模型搜索空间</td><td>(10x10)^5 = 10 billion（脚注：实际 10 亿）</td><td>✅ 一致；与图 5 实测 1,133,916,844 次吻合</td></tr>
+    <tr><td>10^200 的两种拆法</td><td>100 层 × (10 物型×10 尺寸) vs 10 层 × (10 亿物型×10 亿尺寸)</td><td>✅ 一致；图 7 原表两行 search space 均 1E+200，期望次数 ~10,800 vs 1E+30</td></tr>
+    <tr><td>模组化 vs 盲搜</td><td>1,300 次 vs 10 亿次；100 层时约 10,000 次</td><td>❓ 作者自建模拟，无法外部复算；图 5/6/7 截图数值与正文吻合</td></tr>
+    <tr><td>有性 vs 无性繁殖</td><td>无性 2,000 代未达最高层级；有性一百多代即找到</td><td>❓ 作者自建模拟（2 个种群 × 1,000 个技术）</td></tr>
+    <tr><td>2^852 片叶子（68 个 NAND 门）</td><td>"until at the end we have 2^852 possible leaves"</td><td>⚠️ 口径存疑：按本文"每门 1000 种接法"应为 1000^68 ≈ 2^678；该数字引自作者此前那篇模拟文章</td></tr>
+    <tr><td>调参实例</td><td>P2×T10=20 → P10×T8=80，用 194 次改动</td><td>✅ 与图 13 标题逐字一致</td></tr>
+  </tbody>
+</table>
+</div>
+
+<div class="note">
+  <strong>译者注 / 数据核验</strong>：本文每条数字都做了核验，结论如下（完整核验表见 rosie-workspace 的 <code>docs/data-checks/technology-as-search-problem-data-check.md</code>，不随站发布）：
+  <ol>
+    <li><strong>✅ 核实一致（可自己复算）</strong> —— 2^272 ≈ 7.55×10<sup>81</sup>，确实大于宇宙原子数的常见估计 10<sup>80</sup>；而 10<sup>80</sup> ≈ 2<sup>265.75</sup>，原文写的"~2^265"正确。</li>
+    <li><strong>✅ 核实一致</strong> —— Arthur 与 Polak 的表型数：(2<sup>9</sup>)^(2<sup>16</sup>) = 2<sup>589,824</sup> ≈ 10<sup>177,554</sup>，与原文"over 10^177,554 phenotypes"逐位吻合。</li>
+    <li><strong>📌 提醒（原文省略了出处）</strong> —— "272 regularities" 出自经济学家 <strong>Matt Clancy</strong> 的《Are Technologies Inevitable?》，指的是维基百科上那份"命名方程"清单（纳维-斯托克斯、阿伦尼乌斯、埃克斯纳等）。严格说这是"被命名的方程条数"，不等于"自然规律的总数"；Clancy 本人也强调这仍是严重低估。</li>
+    <li><strong>✅ 核实一致</strong> —— 一级模型 (10×10)<sup>5</sup> = 10<sup>10</sup> = 100 亿；脚注说明因最后一个对象的尺寸不影响任何现象，实际搜索空间是 10 亿。作者图 5 的终端输出实测 1,133,916,844 次尝试、29 秒、14 线程，与"约 10 亿次"吻合。</li>
+    <li><strong>✅ 核实一致</strong> —— 10<sup>200</sup> 空间的两种拆法：100 层 × (10×10) 与 10 层 × (10<sup>10</sup>×10<sup>10</sup>) 都得到 10<sup>200</sup>；作者图 7 原表两行 search space 均写 1E+200，模组化期望次数分别约 10,800 与 1E+30。</li>
+    <li><strong>⚠️ 口径存疑</strong> —— "2^852 片叶子"（68 个 NAND 门）与他自己同一段里"每个门约 1000 种接法"对不上：按 1000 种接法算是 1000<sup>68</sup> ≈ 10<sup>204</sup> ≈ 2<sup>678</sup>。该数字是<strong>引自作者此前解读 Arthur 模拟的那篇文章</strong>，本篇没有给推导；读者若要引用，请回查那篇原文。</li>
+    <li><strong>❓ 无法核验（作者自建模拟）</strong> —— 模组化约 1,300 次、有性繁殖一百多代 vs 无性 2,000 代、三级模型 194 次调参等，均为作者自己写的模拟（截图可见其程序输出与参数），外部无法独立复算；译文如实标注为作者模拟结果。</li>
+    <li><strong>✅ 核实一致</strong> —— 图 13 的标题写明"tuned from P 2 × T 10 = 20 to P 10 × T 8 = 80 in 194 changes"，与正文"调优"一节一致；图 16 顶部标注 P7 = 10 × T7 = 10 = 100、目标 ≥ 100 命中、整张设计含 209 个对象（只画出贡献最终输出的 30 个）。</li>
+    <li><strong>✅ 引文出处</strong> —— Brian Arthur《The Nature of Technology》（"a set of phenomena captured and put to use"及无线电接收机的段落）、Arthur &amp; Polak《The Evolution of Technology within a Simple Computer Model》、Joel Mokyr《The Gifts of Athena》（"the range of experimentation possibilities that needs to be searched over is far larger if the searcher knows nothing about the natural principles at work"）——三处均为作者注明，译文照录。</li>
+  </ol>
+</div>
+
+<details>
+<summary style="cursor: pointer; font-size: 15px; color: #555; margin: 16px 0;">展开：原文脚注、引文出处与相关文章</summary>
+<div style="font-size: 13px; color: #777; line-height: 1.6; margin-top: 12px;">
+<p><strong>原文脚注 1</strong>：The actual search space is 1 billion, not 10, because the size of the last object doesn't affect any phenomena.（正文对应处已译为脚注：实际搜索空间是 10 亿而非 100 亿，因为最后一个对象的尺寸不影响任何现象。）</p>
+<p><strong>文中引文出处</strong>：① Matt Clancy,《Are Technologies Inevitable?》（https://mattsclancy.substack.com/p/are-technologies-inevitable ）；② Brian Arthur &amp; Wolfgang Polak, "The Evolution of Technology within a Simple Computer Model"；③ Brian Arthur,《The Nature of Technology》；④ Joel Mokyr,《The Gifts of Athena》。</p>
+<p><strong>作者</strong>：Brian Potter，Construction Physics 主理人（该专栏讨论物理限制下的技术进步与生产率）。本文的 16 张图均由作者用 Claude Opus 5.5 生成或运行其模拟程序得到。</p>
+<p><strong>相关文章</strong>：Has Broader Stock Market Participation Changed How Interest Rates Affect the Economy? · Why Are Credit Card Rates So High?</p>
+<p><strong>原文页脚声明</strong>：Construction Physics 由订阅者支持；评论区见原文。</p>
+</div>
+</details>
+
+<div class="note">
+  <strong>站主注</strong>：这篇东西把"技术进步"从一件浪漫的事，变成一件<strong>可以算的工程</strong>。四条对我们有用的：
+  ① <strong>技术进步是搜出来的，不是想出来的</strong> → 别人搜过的那片空间就是信息。一个已被别人走通的技术路径，对我们而言搜索成本大幅下降——这正是"看别人做成了什么"（而非要自己重造）的经济学依据。
+  ② <strong>模组化 = 可复用性 = 复利</strong> → 能不能把研发变成"可锁定的模块 + 可复用的搜索"，决定了这门生意是线性还是复利。我们自己的研究流水线（数据脚本 + 模板 + 核验表 + 发布脚本）就是模组化：每做一篇译文/报告，边际成本递减，而质量下限被锁住——这就是"1,300 次 vs 10 亿次"在我们自己业务上的对应物。
+  ③ <strong>有性繁殖 = 交叉，不是各闷头突变</strong> → 把两个来源的优点交叉（跨行业经验、跨市场数据、跨学科方法）比自己在一条谱系里慢慢变异快得多。这条对我们尤其实际：A 赛道的经验搬到 B 赛道，往往就是那条捷径。
+  ④ <strong>多目标要付超线性的代价</strong> → 同时追求增长、现金流、确定性，等于把搜索维度从 1 个加到 3 个；P7 和 P7×T7 的最优设计结构完全不同。做配置决策时，先问清楚"到底要什么"，比"怎么优化"更决定结果——因为目标变了，最优解不是同一个解。
+</div>
+
+<div class="footer">
+<a href="../index.html">← 返回首页</a> · <a href="index.html">全部站主随笔</a><br>
+本文为中英对照翻译，英文原句全部保留供交叉核验；数据点核验过程见上方「译者注 / 数据核验」。
+</div>
+
+</body>
+</html>
